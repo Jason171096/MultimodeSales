@@ -1,6 +1,6 @@
 ﻿namespace MultimodeSales
 {
-    partial class Form1
+    partial class Formulario
     {
         /// <summary>
         /// Variable del diseñador necesaria.

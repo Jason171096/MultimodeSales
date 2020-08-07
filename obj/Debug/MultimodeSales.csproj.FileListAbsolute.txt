@@ -1,0 +1,12 @@
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.csprojAssemblyReference.cache
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.Properties.Resources.resources
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.csproj.GenerateResource.cache
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.csproj.CoreCompileInputs.cache
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\bin\Debug\MultimodeSales.exe.config
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\bin\Debug\MultimodeSales.exe
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\bin\Debug\MultimodeSales.pdb
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\bin\Debug\MaterialSkin.dll
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.Formulario.resources
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.csproj.CopyComplete
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.exe
+C:\Users\halo_\Documents\Visual Studio 2019\Projects\Hotel\Jason171096\MultimodeSales\obj\Debug\MultimodeSales.pdb
