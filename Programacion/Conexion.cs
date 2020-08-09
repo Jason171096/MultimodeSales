@@ -11,14 +11,14 @@ namespace MultimodeSales.Programacion
 {
     class Conexion
     {
-        
-        public string ConnectionString()
-        {
-            string conststring = "Server=localhost;Database=multimodesales;Uid=root;Pwd=''";
+        private string conststring = "Server=localhost;Database=multimodesales;Uid=root;Pwd=''";
+        private MySqlConnection cnn;
+        private string ConnectionString()
+        {          
             return conststring;
         }
 
-        public void ProbarConexion()
+        private void ProbarConexion()
         {
             MySqlConnection con = new MySqlConnection(ConnectionString());
             con.Open();
@@ -27,6 +27,29 @@ namespace MultimodeSales.Programacion
             else
                 MessageBox.Show("Conexion fallida");
         }
-        
+
+        public bool OpenConection()
+        {
+            cnn = new MySqlConnection(ConnectionString());
+            try
+            {
+                cnn.Open();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo conectar con el servidor: " + ex);
+                return false;
+            }          
+        }
+        public void CloseConnection()
+        {
+            cnn.Close();
+        }
+
+        public MySqlConnection GetConnection()
+        {
+            return cnn;
+        }
     }
 }

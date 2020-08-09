@@ -17,11 +17,10 @@ namespace MultimodeSales
         {
             InitializeComponent();
         }
-
+        Conexion conexion = new Conexion();
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            Conexion conexion = new Conexion();
-            conexion.ProbarConexion();
+            conexion.OpenConection();
         }
     }
 }
