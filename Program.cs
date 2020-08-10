@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultimodeSales.Vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MultimodeSales
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formulario());
+            Application.Run(new ImportarListaMarca());
         }
     }
 }
