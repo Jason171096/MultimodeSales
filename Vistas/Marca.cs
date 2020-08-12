@@ -33,13 +33,11 @@ namespace MultimodeSales.Vistas
                 marca.AgregarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
                 LlenarDataGridViewMarca();
             }
-            
-
         }
 
         private void btnEditarMarca_Click(object sender, EventArgs e)
         {
-            LlenarDataGridViewMarca();
+
         }
 
         private void LlenarDataGridViewMarca()
