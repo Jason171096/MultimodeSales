@@ -17,7 +17,7 @@ namespace MultimodeSales
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImportarListaMarca());
+            Application.Run(new Formulario());
         }
     }
 }

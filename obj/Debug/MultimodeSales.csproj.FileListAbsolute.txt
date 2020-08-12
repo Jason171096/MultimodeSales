@@ -46,3 +46,4 @@ C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.csproj.CopyComple
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.exe
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.pdb
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.ImportarListaMarca.resources
+C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Cliente.resources

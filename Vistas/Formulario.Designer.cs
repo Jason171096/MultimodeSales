@@ -28,34 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelCliente = new System.Windows.Forms.Panel();
+            this.picImportExcel = new System.Windows.Forms.PictureBox();
+            this.picCliente = new System.Windows.Forms.PictureBox();
+            this.panelImportExcel = new System.Windows.Forms.Panel();
+            this.lbCliente = new System.Windows.Forms.Label();
+            this.lbImportExcel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialFlatButton1
+            // panel1
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(346, 102);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(181, 36);
-            this.materialFlatButton1.TabIndex = 0;
-            this.materialFlatButton1.Text = "materialFlatButton1";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
-            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(151, 596);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Purple;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(151, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1002, 28);
+            this.panel2.TabIndex = 2;
+            // 
+            // panelCliente
+            // 
+            this.panelCliente.BackColor = System.Drawing.Color.Purple;
+            this.panelCliente.Location = new System.Drawing.Point(187, 210);
+            this.panelCliente.Name = "panelCliente";
+            this.panelCliente.Size = new System.Drawing.Size(171, 10);
+            this.panelCliente.TabIndex = 3;
+            // 
+            // picImportExcel
+            // 
+            this.picImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picImportExcel.Image = global::MultimodeSales.Properties.Resources.csv128px;
+            this.picImportExcel.Location = new System.Drawing.Point(410, 59);
+            this.picImportExcel.Name = "picImportExcel";
+            this.picImportExcel.Size = new System.Drawing.Size(169, 161);
+            this.picImportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picImportExcel.TabIndex = 6;
+            this.picImportExcel.TabStop = false;
+            this.picImportExcel.Click += new System.EventHandler(this.picImportExcel_Click);
+            this.picImportExcel.MouseEnter += new System.EventHandler(this.picImportExcel_MouseEnter);
+            this.picImportExcel.MouseLeave += new System.EventHandler(this.picImportExcel_MouseLeave);
+            // 
+            // picCliente
+            // 
+            this.picCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCliente.Image = global::MultimodeSales.Properties.Resources.client128px;
+            this.picCliente.Location = new System.Drawing.Point(187, 59);
+            this.picCliente.Name = "picCliente";
+            this.picCliente.Size = new System.Drawing.Size(171, 161);
+            this.picCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picCliente.TabIndex = 4;
+            this.picCliente.TabStop = false;
+            this.picCliente.Click += new System.EventHandler(this.picCliente_Click);
+            this.picCliente.MouseEnter += new System.EventHandler(this.picCliente_MouseEnter);
+            this.picCliente.MouseLeave += new System.EventHandler(this.picCliente_MouseLeave);
+            // 
+            // panelImportExcel
+            // 
+            this.panelImportExcel.BackColor = System.Drawing.Color.Purple;
+            this.panelImportExcel.Location = new System.Drawing.Point(410, 210);
+            this.panelImportExcel.Name = "panelImportExcel";
+            this.panelImportExcel.Size = new System.Drawing.Size(171, 10);
+            this.panelImportExcel.TabIndex = 4;
+            // 
+            // lbCliente
+            // 
+            this.lbCliente.AutoSize = true;
+            this.lbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCliente.Location = new System.Drawing.Point(235, 223);
+            this.lbCliente.Name = "lbCliente";
+            this.lbCliente.Size = new System.Drawing.Size(75, 24);
+            this.lbCliente.TabIndex = 7;
+            this.lbCliente.Text = "Cliente";
+            // 
+            // lbImportExcel
+            // 
+            this.lbImportExcel.AutoSize = true;
+            this.lbImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportExcel.Location = new System.Drawing.Point(424, 223);
+            this.lbImportExcel.Name = "lbImportExcel";
+            this.lbImportExcel.Size = new System.Drawing.Size(145, 24);
+            this.lbImportExcel.TabIndex = 8;
+            this.lbImportExcel.Text = "Importar Excel";
             // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 531);
-            this.Controls.Add(this.materialFlatButton1);
+            this.BackColor = System.Drawing.Color.Moccasin;
+            this.ClientSize = new System.Drawing.Size(1153, 596);
+            this.Controls.Add(this.lbImportExcel);
+            this.Controls.Add(this.lbCliente);
+            this.Controls.Add(this.panelImportExcel);
+            this.Controls.Add(this.picImportExcel);
+            this.Controls.Add(this.panelCliente);
+            this.Controls.Add(this.picCliente);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Formulario";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -63,7 +148,14 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelCliente;
+        private System.Windows.Forms.PictureBox picCliente;
+        private System.Windows.Forms.PictureBox picImportExcel;
+        private System.Windows.Forms.Panel panelImportExcel;
+        private System.Windows.Forms.Label lbCliente;
+        private System.Windows.Forms.Label lbImportExcel;
     }
 }
 
