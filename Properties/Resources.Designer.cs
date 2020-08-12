@@ -63,6 +63,16 @@ namespace MultimodeSales.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap catalog128px {
+            get {
+                object obj = ResourceManager.GetObject("catalog128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap client128px {
             get {
                 object obj = ResourceManager.GetObject("client128px", resourceCulture);

@@ -21,10 +21,12 @@ namespace MultimodeSales
             #region Panel Visible
             panelCliente.Visible = false;
             panelImportExcel.Visible = false;
+            panelMarca.Visible = false;
             #endregion
-            #region Labels Visisble
+            #region Labels Visible
             lbCliente.Visible = false;
             lbImportExcel.Visible = false;
+            lbMarca.Visible = false;
             #endregion
         }
         #region picCliente
@@ -63,6 +65,25 @@ namespace MultimodeSales
         {
             panelImportExcel.Visible = false;
             lbImportExcel.Visible = false;
+        }
+        #endregion
+        #region picMarca
+        private void picMarca_Click(object sender, EventArgs e)
+        {
+            Marca marca = new Marca();
+            marca.Show();
+        }
+       
+        private void picMarca_MouseEnter(object sender, EventArgs e)
+        {
+            panelMarca.Visible = true;
+            lbMarca.Visible = true;
+        }
+
+        private void picMarca_MouseLeave(object sender, EventArgs e)
+        {
+            panelMarca.Visible = false;
+            lbMarca.Visible = false;
         }
         #endregion
     }

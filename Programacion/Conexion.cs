@@ -11,7 +11,7 @@ namespace MultimodeSales.Programacion
 {
     class Conexion
     {
-        private string conststring = "Server=localhost;Database=multimodesales;Uid=root;Pwd=''";
+        private string conststring = "Server=localhost;Database=multifashion;Uid=root;Pwd=''";
         private MySqlConnection cnn;
         private string ConnectionString()
         {          
@@ -28,7 +28,7 @@ namespace MultimodeSales.Programacion
                 MessageBox.Show("Conexion fallida");
         }
 
-        public bool OpenConection()
+        public bool OpenConnection()
         {
             cnn = new MySqlConnection(ConnectionString());
             try
