@@ -60,7 +60,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(151, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1002, 28);
+            this.panel2.Size = new System.Drawing.Size(1002, 37);
             this.panel2.TabIndex = 2;
             // 
             // panelCliente
