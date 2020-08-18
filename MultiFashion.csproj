@@ -34,6 +34,50 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -97,13 +141,19 @@
     <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Zeroit.Framework.ButtonThematic, Version=1.0.7032.33577, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>packages\Zeroit.Framework.ButtonThematic.1.0.0\lib\Zeroit.Framework.ButtonThematic.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroit.Framework.Metro, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>packages\Zeroit.Framework.Metro.1.0.0\lib\Zeroit.Framework.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Programacion\Conexion.cs" />
-    <Compile Include="Programacion\ImportaListaBD.cs" />
+    <Compile Include="Programacion\Excel\ExcelDB.cs" />
     <Compile Include="Programacion\Marca\MarcaBD.cs" />
     <Compile Include="Programacion\Validaciones.cs" />
     <Compile Include="Vistas\Cliente.cs">
@@ -111,6 +161,12 @@
     </Compile>
     <Compile Include="Vistas\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Excel\ImportarPor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Excel\ImportarPor.Designer.cs">
+      <DependentUpon>ImportarPor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Formulario.cs">
       <SubType>Form</SubType>
@@ -120,10 +176,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\ImportarListaMarca.cs">
+    <Compile Include="Vistas\Excel\ImportarListaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\ImportarListaMarca.Designer.cs">
+    <Compile Include="Vistas\Excel\ImportarListaMarca.Designer.cs">
       <DependentUpon>ImportarListaMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Marca.cs">
@@ -132,8 +188,17 @@
     <Compile Include="Vistas\Marca.Designer.cs">
       <DependentUpon>Marca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\PedidosFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\PedidosFinal.Designer.cs">
+      <DependentUpon>PedidosFinal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Excel\ImportarPor.resx">
+      <DependentUpon>ImportarPor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
@@ -148,11 +213,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vistas\ImportarListaMarca.resx">
+    <EmbeddedResource Include="Vistas\Excel\ImportarListaMarca.resx">
       <DependentUpon>ImportarListaMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Marca.resx">
       <DependentUpon>Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\PedidosFinal.resx">
+      <DependentUpon>PedidosFinal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -179,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\catalog128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search128px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

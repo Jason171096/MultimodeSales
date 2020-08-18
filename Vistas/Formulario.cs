@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Programacion;
 using MultimodeSales.Vistas;
+using MultimodeSales.Vistas.Excel;
 
 namespace MultimodeSales
 {
@@ -22,11 +23,13 @@ namespace MultimodeSales
             panelCliente.Visible = false;
             panelImportExcel.Visible = false;
             panelMarca.Visible = false;
+            panelPedidosFinal.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
             lbImportExcel.Visible = false;
             lbMarca.Visible = false;
+            lbPedidosFinal.Visible = false;
             #endregion
         }
         #region picCliente
@@ -51,8 +54,8 @@ namespace MultimodeSales
         #region picImportExcel
         private void picImportExcel_Click(object sender, EventArgs e)
         {
-            ImportarListaMarca importarListaMarca = new ImportarListaMarca();
-            importarListaMarca.Show();
+            ImportarPor importarPor = new ImportarPor();
+            importarPor.ShowDialog();         
         }
 
         private void picImportExcel_MouseEnter(object sender, EventArgs e)
@@ -84,6 +87,25 @@ namespace MultimodeSales
         {
             panelMarca.Visible = false;
             lbMarca.Visible = false;
+        }
+        #endregion
+        #region Pedidos Final
+        private void picPedidosFinal_Click(object sender, EventArgs e)
+        {
+            PedidosFinal pedidosFinal = new PedidosFinal();
+            pedidosFinal.Show();
+        }
+
+        private void picPedidosFinal_MouseEnter(object sender, EventArgs e)
+        {
+            panelPedidosFinal.Visible = true;
+            lbPedidosFinal.Visible = true;
+        }
+
+        private void picPedidosFinal_MouseLeave(object sender, EventArgs e)
+        {
+            panelPedidosFinal.Visible = false;
+            lbPedidosFinal.Visible = false;
         }
         #endregion
     }

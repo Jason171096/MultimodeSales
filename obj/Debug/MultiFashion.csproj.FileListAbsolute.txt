@@ -25,7 +25,6 @@ C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\System.Buffers.xml
 C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\System.Memory.xml
 C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csprojAssemblyReference.cache
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Cliente.resources
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Formulario.resources
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Properties.Resources.resources
@@ -36,3 +35,8 @@ C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csproj.CoreCompileI
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csproj.CopyComplete
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.exe
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.pdb
+C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.PedidosFinal.resources
+C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\Zeroit.Framework.ButtonThematic.dll
+C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\Zeroit.Framework.Metro.dll
+C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csprojAssemblyReference.cache
+C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Excel.ImportarPor.resources

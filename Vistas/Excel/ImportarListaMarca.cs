@@ -3,18 +3,36 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using excel = Microsoft.Office.Interop.Excel;
+using MultimodeSales.Programacion.Marca;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MultimodeSales.Vistas
 {
     public partial class ImportarListaMarca : Form
     {
+        MarcaBD marca = new MarcaBD();
         public ImportarListaMarca()
         {
             InitializeComponent();
+            LlenarComboBoxMarca();
+        }
+
+        public void LlenarComboBoxMarca()
+        {
+            List<object[]> list = marca.VerMarcas2();           
+            Dictionary<string, string> keyValues = new Dictionary<string, string>();
+            foreach (object[] item in list)
+            {
+                keyValues.Add(item[0].ToString(), item[1].ToString());
+            }
+            cobxMarca.DataSource = new BindingSource(keyValues, null);
+            cobxMarca.DisplayMember = "Value";
+            cobxMarca.ValueMember = "Key";
             
         }
 
-        private void btnCargarExcel_Click(object sender, EventArgs e)
+        private void btnCargar_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Title = "Select file";
@@ -25,7 +43,7 @@ namespace MultimodeSales.Vistas
             openFile.RestoreDirectory = true;
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                lblRoot.Text = openFile.FileName;
+                lbRuta.Text = openFile.FileName;
                 //string sheetName = System.IO.Path.GetFileNameWithoutExtension(openFile.FileName);
                 Application.DoEvents();
                 string constr = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={openFile.FileName};Extended Properties='Excel 12.0 XML;HDR=YES;';";
@@ -50,6 +68,14 @@ namespace MultimodeSales.Vistas
                 dgvExcel.Columns[1].Width = 300;
                 dgvExcel.Columns[2].Width = 400;
                 dgvExcel.Columns[3].Width = 150;
+            }
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in dgvExcel.Rows)
+            {
+
             }
         }
     }
