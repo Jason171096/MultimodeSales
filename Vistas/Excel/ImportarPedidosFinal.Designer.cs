@@ -1,6 +1,6 @@
-﻿namespace MultimodeSales.Vistas
+﻿namespace MultimodeSales.Vistas.Excel
 {
-    partial class ImportarListaMarca
+    partial class ImportarPedidosFinal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,77 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportarPedidosFinal));
+            System.Drawing.Drawing2D.ColorBlend colorBlend1 = new System.Drawing.Drawing2D.ColorBlend();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportarListaMarca));
-            System.Drawing.Drawing2D.ColorBlend colorBlend1 = new System.Drawing.Drawing2D.ColorBlend();
             System.Drawing.Drawing2D.ColorBlend colorBlend2 = new System.Drawing.Drawing2D.ColorBlend();
-            this.cobxMarca = new System.Windows.Forms.ComboBox();
-            this.dgvExcel = new System.Windows.Forms.DataGridView();
-            this.btnCargar = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbRuta = new System.Windows.Forms.Label();
-            this.btnImportar = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCargar = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
+            this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnImportar = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.SuspendLayout();
             // 
-            // cobxMarca
+            // lbRuta
             // 
-            this.cobxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobxMarca.FormattingEnabled = true;
-            this.cobxMarca.Location = new System.Drawing.Point(122, 32);
-            this.cobxMarca.Name = "cobxMarca";
-            this.cobxMarca.Size = new System.Drawing.Size(174, 32);
-            this.cobxMarca.TabIndex = 2;
+            this.lbRuta.AutoSize = true;
+            this.lbRuta.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRuta.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbRuta.Location = new System.Drawing.Point(275, 41);
+            this.lbRuta.Name = "lbRuta";
+            this.lbRuta.Size = new System.Drawing.Size(19, 27);
+            this.lbRuta.TabIndex = 17;
+            this.lbRuta.Text = ".";
+            this.lbRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvExcel
+            // label3
             // 
-            this.dgvExcel.AllowUserToAddRows = false;
-            this.dgvExcel.AllowUserToDeleteRows = false;
-            this.dgvExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvExcel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvExcel.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dgvExcel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvExcel.ColumnHeadersHeight = 50;
-            this.dgvExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvExcel.EnableHeadersVisualStyles = false;
-            this.dgvExcel.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvExcel.Location = new System.Drawing.Point(27, 70);
-            this.dgvExcel.Name = "dgvExcel";
-            this.dgvExcel.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvExcel.RowHeadersVisible = false;
-            this.dgvExcel.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvExcel.RowTemplate.Height = 30;
-            this.dgvExcel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExcel.Size = new System.Drawing.Size(1019, 483);
-            this.dgvExcel.TabIndex = 6;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label3.Location = new System.Drawing.Point(199, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 27);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Ruta:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCargar
             // 
@@ -537,7 +504,7 @@
             this.btnCargar.ImageSize = new System.Drawing.Size(0, 0);
             this.btnCargar.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.btnCargar.KnightRounded = false;
-            this.btnCargar.Location = new System.Drawing.Point(316, 25);
+            this.btnCargar.Location = new System.Drawing.Point(31, 34);
             this.btnCargar.LoginMaximum = 100;
             this.btnCargar.Loginstyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.LoginStyles.Button;
             this.btnCargar.LoginValue = 0;
@@ -558,7 +525,7 @@
             this.btnCargar.SimplaColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.SimplaColorSchemes.DarkGray;
             this.btnCargar.Size = new System.Drawing.Size(149, 39);
             this.btnCargar.Smoothing = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.btnCargar.TabIndex = 10;
+            this.btnCargar.TabIndex = 15;
             this.btnCargar.TeenAccentColor = System.Drawing.Color.DodgerBlue;
             this.btnCargar.TeenColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.teenColorSchemes.Dark;
             this.btnCargar.Text = "Cargar";
@@ -575,43 +542,64 @@
             this.btnCargar.UpperLeftCurve = 10;
             this.btnCargar.UpperRightCurve = 10;
             this.btnCargar.XVisualShade = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.xVisualInnerShade.Dark;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // label1
+            // dgvExcel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label1.Location = new System.Drawing.Point(22, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 27);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Marca:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dgvExcel.AllowUserToAddRows = false;
+            this.dgvExcel.AllowUserToDeleteRows = false;
+            this.dgvExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvExcel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvExcel.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvExcel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExcel.ColumnHeadersHeight = 50;
+            this.dgvExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvExcel.EnableHeadersVisualStyles = false;
+            this.dgvExcel.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dgvExcel.Location = new System.Drawing.Point(20, 79);
+            this.dgvExcel.Name = "dgvExcel";
+            this.dgvExcel.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvExcel.RowHeadersVisible = false;
+            this.dgvExcel.RowHeadersWidth = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvExcel.RowTemplate.Height = 30;
+            this.dgvExcel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvExcel.Size = new System.Drawing.Size(1094, 467);
+            this.dgvExcel.TabIndex = 14;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(484, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 27);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Ruta:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbRuta
-            // 
-            this.lbRuta.AutoSize = true;
-            this.lbRuta.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRuta.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbRuta.Location = new System.Drawing.Point(560, 32);
-            this.lbRuta.Name = "lbRuta";
-            this.lbRuta.Size = new System.Drawing.Size(19, 27);
-            this.lbRuta.TabIndex = 13;
-            this.lbRuta.Text = ".";
-            this.lbRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label2.Location = new System.Drawing.Point(732, 560);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 81);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Importa la \r\nlista a la\r\nBase de Datos";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnImportar
             // 
@@ -1050,7 +1038,7 @@
             this.btnImportar.ImageSize = new System.Drawing.Size(0, 0);
             this.btnImportar.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.btnImportar.KnightRounded = false;
-            this.btnImportar.Location = new System.Drawing.Point(832, 579);
+            this.btnImportar.Location = new System.Drawing.Point(915, 583);
             this.btnImportar.LoginMaximum = 100;
             this.btnImportar.Loginstyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.LoginStyles.Button;
             this.btnImportar.LoginValue = 0;
@@ -1071,7 +1059,7 @@
             this.btnImportar.SimplaColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.SimplaColorSchemes.DarkGray;
             this.btnImportar.Size = new System.Drawing.Size(205, 38);
             this.btnImportar.Smoothing = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.btnImportar.TabIndex = 14;
+            this.btnImportar.TabIndex = 18;
             this.btnImportar.TeenAccentColor = System.Drawing.Color.DodgerBlue;
             this.btnImportar.TeenColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.teenColorSchemes.Dark;
             this.btnImportar.Text = "Importar";
@@ -1090,39 +1078,20 @@
             this.btnImportar.XVisualShade = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.xVisualInnerShade.Dark;
             this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label2.Location = new System.Drawing.Point(649, 556);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 81);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Importa la \r\nlista a la\r\nBase de Datos";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ImportarListaMarca
+            // ImportarPedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1068, 640);
+            this.ClientSize = new System.Drawing.Size(1135, 659);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.lbRuta);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dgvExcel);
-            this.Controls.Add(this.cobxMarca);
-            this.ForeColor = System.Drawing.SystemColors.Window;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "ImportarListaMarca";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Importar Lista Marca";
+            this.Name = "ImportarPedidosFinal";
+            this.Text = "ImportarPedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1130,13 +1099,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cobxMarca;
-        private System.Windows.Forms.DataGridView dgvExcel;
-        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnCargar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+
         private System.Windows.Forms.Label lbRuta;
-        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnImportar;
+        private System.Windows.Forms.Label label3;
+        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnCargar;
+        private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.Label label2;
+        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnImportar;
     }
 }

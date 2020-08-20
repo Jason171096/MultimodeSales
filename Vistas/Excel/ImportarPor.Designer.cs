@@ -32,7 +32,7 @@
             System.Drawing.Drawing2D.ColorBlend colorBlend1 = new System.Drawing.Drawing2D.ColorBlend();
             System.Drawing.Drawing2D.ColorBlend colorBlend2 = new System.Drawing.Drawing2D.ColorBlend();
             this.btnImportarPrecios = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
-            this.buttonThematic2 = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
+            this.btnImportarPedidos = new Zeroit.Framework.ButtonThematic.Controls.ButtonThematic();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -514,61 +514,61 @@
             this.btnImportarPrecios.XVisualShade = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.xVisualInnerShade.Dark;
             this.btnImportarPrecios.Click += new System.EventHandler(this.btnImportarPrecios_Click);
             // 
-            // buttonThematic2
+            // btnImportarPedidos
             // 
-            this.buttonThematic2.AdobeAlternate = false;
-            this.buttonThematic2.AdvancedSystemGlow = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(95)))), ((int)(((byte)(210)))));
-            this.buttonThematic2.AllowClickAnimation = true;
-            this.buttonThematic2.AlphaBorders = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AdobeAlternate = false;
+            this.btnImportarPedidos.AdvancedSystemGlow = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(95)))), ((int)(((byte)(210)))));
+            this.btnImportarPedidos.AllowClickAnimation = true;
+            this.btnImportarPedidos.AlphaBorders = new System.Drawing.Color[] {
         System.Drawing.Color.Lime,
         System.Drawing.Color.DimGray};
-            this.buttonThematic2.AngelBackground = System.Drawing.Color.Black;
-            this.buttonThematic2.AngelColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AngelBackground = System.Drawing.Color.Black;
+            this.btnImportarPedidos.AngelColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(78)))), ((int)(((byte)(108))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(45)))), ((int)(((byte)(67))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(103)))), ((int)(((byte)(143))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Black};
-            this.buttonThematic2.Anomborder = System.Drawing.Color.Black;
-            this.buttonThematic2.AnombuttonBottom = System.Drawing.Color.Gainsboro;
-            this.buttonThematic2.AnombuttonTop = System.Drawing.Color.Beige;
-            this.buttonThematic2.AnomDown = new System.Drawing.Color[] {
+            this.btnImportarPedidos.Anomborder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.AnombuttonBottom = System.Drawing.Color.Gainsboro;
+            this.btnImportarPedidos.AnombuttonTop = System.Drawing.Color.Beige;
+            this.btnImportarPedidos.AnomDown = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))))};
-            this.buttonThematic2.AnomHatchColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AnomHatchColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.AnomNone = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AnomNone = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))))};
-            this.buttonThematic2.ArcColour = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.buttonThematic2.ArrowBorderColour = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.buttonThematic2.ArrowColour = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
-            this.buttonThematic2.AryanBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.ArcColour = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.btnImportarPedidos.ArrowBorderColour = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnImportarPedidos.ArrowColour = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(233)))), ((int)(((byte)(234)))));
+            this.btnImportarPedidos.AryanBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))))};
-            this.buttonThematic2.AryanDownstateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AryanDownstateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))))};
-            this.buttonThematic2.AryanNonestateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AryanNonestateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))))};
-            this.buttonThematic2.AryanOverstateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AryanOverstateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))))};
-            this.buttonThematic2.AvatarBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.AvatarButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.buttonThematic2.AvatarButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.buttonThematic2.AvatarStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.AvatarBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.AvatarButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.btnImportarPedidos.AvatarButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.btnImportarPedidos.AvatarStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.Avgbackground = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(143)))), ((int)(((byte)(124)))));
-            this.buttonThematic2.AvgBorder = System.Drawing.Color.Transparent;
-            this.buttonThematic2.Background = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.buttonThematic2.BackgroundColour = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(98)))), ((int)(((byte)(158)))));
-            this.buttonThematic2.BaseColour = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.buttonThematic2.BasicBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.Avgbackground = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(143)))), ((int)(((byte)(124)))));
+            this.btnImportarPedidos.AvgBorder = System.Drawing.Color.Transparent;
+            this.btnImportarPedidos.Background = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnImportarPedidos.BackgroundColour = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(98)))), ((int)(((byte)(158)))));
+            this.btnImportarPedidos.BaseColour = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.btnImportarPedidos.BasicBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
@@ -577,72 +577,72 @@
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
         System.Drawing.Color.Black};
-            this.buttonThematic2.BasicColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.BasicColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.BasicDisabled = new System.Drawing.Color[] {
+            this.btnImportarPedidos.BasicDisabled = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.BasicHighlights = new System.Drawing.Color[] {
+            this.btnImportarPedidos.BasicHighlights = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.BasicStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.BasicStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.BetaBlueDark = false;
-            this.buttonThematic2.BeyondDrawMode = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.BeyondDrawStyle.Basic;
-            this.buttonThematic2.BloodyBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.BloodyButtonColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonThematic2.BlueC1 = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(123)))), ((int)(((byte)(173)))));
-            this.buttonThematic2.BlueC2 = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
-            this.buttonThematic2.BorderButtonStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.BorderButtonStyles.Full;
-            this.buttonThematic2.BorderButtonSubText = null;
-            this.buttonThematic2.BorderColour = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.buttonThematic2.BorderSize = 1;
-            this.buttonThematic2.BullionImage = null;
-            this.buttonThematic2.ClickMaxOffset = 10;
-            this.buttonThematic2.ClickOffset = 1;
-            this.buttonThematic2.ClickSpeed = 1;
-            this.buttonThematic2.ClsStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ClsStyles.Blue;
-            this.buttonThematic2.Color = System.Drawing.Color.Empty;
-            this.buttonThematic2.Colors = new Zeroit.Framework.ButtonThematic.ThemeManagers.Bloom[0];
-            this.buttonThematic2.Curve = 20;
-            this.buttonThematic2.CustomAdvantiumBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.buttonThematic2.CustomAdvantiumBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.BetaBlueDark = false;
+            this.btnImportarPedidos.BeyondDrawMode = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.BeyondDrawStyle.Basic;
+            this.btnImportarPedidos.BloodyBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.BloodyButtonColor = System.Drawing.Color.WhiteSmoke;
+            this.btnImportarPedidos.BlueC1 = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(123)))), ((int)(((byte)(173)))));
+            this.btnImportarPedidos.BlueC2 = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
+            this.btnImportarPedidos.BorderButtonStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.BorderButtonStyles.Full;
+            this.btnImportarPedidos.BorderButtonSubText = null;
+            this.btnImportarPedidos.BorderColour = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnImportarPedidos.BorderSize = 1;
+            this.btnImportarPedidos.BullionImage = null;
+            this.btnImportarPedidos.ClickMaxOffset = 10;
+            this.btnImportarPedidos.ClickOffset = 1;
+            this.btnImportarPedidos.ClickSpeed = 1;
+            this.btnImportarPedidos.ClsStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ClsStyles.Blue;
+            this.btnImportarPedidos.Color = System.Drawing.Color.Empty;
+            this.btnImportarPedidos.Colors = new Zeroit.Framework.ButtonThematic.ThemeManagers.Bloom[0];
+            this.btnImportarPedidos.Curve = 20;
+            this.btnImportarPedidos.CustomAdvantiumBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnImportarPedidos.CustomAdvantiumBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))))};
-            this.buttonThematic2.CustomAdvantiumDownColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAdvantiumDownColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))))};
-            this.buttonThematic2.CustomAdvantiumNoneColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAdvantiumNoneColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))))};
-            this.buttonThematic2.CustomAdvantiumOffsets = new int[] {
+            this.btnImportarPedidos.CustomAdvantiumOffsets = new int[] {
         1,
         0,
         0};
-            this.buttonThematic2.CustomAdvantiumOverColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAdvantiumOverColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))))};
-            this.buttonThematic2.CustomAdvSysColorDilution = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonThematic2.CustomAresioBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAdvSysColorDilution = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnImportarPedidos.CustomAresioBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(70)))))};
-            this.buttonThematic2.CustomAresioDownColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAresioDownColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomAresioNoneColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAresioNoneColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(200)))), ((int)(((byte)(70))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(160)))), ((int)(((byte)(40)))))};
-            this.buttonThematic2.CustomAresioOverColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomAresioOverColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomBasicBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBasicBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
@@ -651,32 +651,32 @@
         System.Drawing.Color.Black,
         System.Drawing.Color.Black,
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomBasicColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBasicColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.CustomBasicDisabled = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBasicDisabled = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.CustomBasicHighlights = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBasicHighlights = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.CustomBasicOffset = 3;
-            this.buttonThematic2.CustomBasicStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBasicOffset = 3;
+            this.btnImportarPedidos.CustomBasicStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.CustomBitDefenderBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomBitDefenderC1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.buttonThematic2.CustomBitDefenderC2 = System.Drawing.Color.White;
-            this.buttonThematic2.CustomBitDefenderC3 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.buttonThematic2.CustomBitDefenderC4 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.buttonThematic2.CustomBitDefenderC5 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.buttonThematic2.CustomBitDefenderC6 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.buttonThematic2.CustomBitDefenderFadeColor = System.Drawing.Color.White;
-            this.buttonThematic2.CustomBlackShadesDownColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBitDefenderBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomBitDefenderC1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btnImportarPedidos.CustomBitDefenderC2 = System.Drawing.Color.White;
+            this.btnImportarPedidos.CustomBitDefenderC3 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnImportarPedidos.CustomBitDefenderC4 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnImportarPedidos.CustomBitDefenderC5 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnImportarPedidos.CustomBitDefenderC6 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnImportarPedidos.CustomBitDefenderFadeColor = System.Drawing.Color.White;
+            this.btnImportarPedidos.CustomBlackShadesDownColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(57))))),
@@ -686,7 +686,7 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(31)))), ((int)(((byte)(43))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(65)))), ((int)(((byte)(68))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))))};
-            this.buttonThematic2.CustomBlackShadesNoneColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBlackShadesNoneColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Transparent,
@@ -694,7 +694,7 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(65)))), ((int)(((byte)(68))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(103)))), ((int)(((byte)(105))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))))};
-            this.buttonThematic2.CustomBlackShadesOverColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBlackShadesOverColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Transparent,
@@ -704,49 +704,49 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(99)))), ((int)(((byte)(103)))), ((int)(((byte)(105))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(31)))), ((int)(((byte)(33))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.CustomBnWInactiveBorder = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
-            this.buttonThematic2.CustomBnWOffsetFill = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBnWInactiveBorder = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(185)))), ((int)(((byte)(185)))));
+            this.btnImportarPedidos.CustomBnWOffsetFill = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))))};
-            this.buttonThematic2.CustomBnWRounding = 50;
-            this.buttonThematic2.CustomBoosterColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBnWRounding = 50;
+            this.btnImportarPedidos.CustomBoosterColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.CustomBoosterGradientAngle = 270F;
-            this.buttonThematic2.CustomBoosterHatchColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBoosterGradientAngle = 270F;
+            this.btnImportarPedidos.CustomBoosterHatchColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(95)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.CustomBoosterHoverTransparency = 50F;
-            this.buttonThematic2.CustomBoosterInfluenceOuter = false;
-            this.buttonThematic2.CustomBoosterInnerBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomBoosterOffset = 6;
-            this.buttonThematic2.CustomBoosterOuterBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomBwOffset = 10;
-            this.buttonThematic2.CustomClassicBackground = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.buttonThematic2.CustomClassicBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomClassicColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomBoosterHoverTransparency = 50F;
+            this.btnImportarPedidos.CustomBoosterInfluenceOuter = false;
+            this.btnImportarPedidos.CustomBoosterInnerBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomBoosterOffset = 6;
+            this.btnImportarPedidos.CustomBoosterOuterBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomBwOffset = 10;
+            this.btnImportarPedidos.CustomClassicBackground = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.btnImportarPedidos.CustomClassicBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomClassicColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomClassicHighlight = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.buttonThematic2.CustomClassicShadow = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonThematic2.CustomDeumosBackground = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
-            this.buttonThematic2.CustomDeumosBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomClassicHighlight = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnImportarPedidos.CustomClassicShadow = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnImportarPedidos.CustomDeumosBackground = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.btnImportarPedidos.CustomDeumosBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomDeumosCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.buttonThematic2.CustomDeumosDownStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomDeumosCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.btnImportarPedidos.CustomDeumosDownStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))))};
-            this.buttonThematic2.CustomDeumosNoneStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomDeumosNoneStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.CustomDeumosOverStateColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonThematic2.CustomExcisionBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomDeumosOverStateColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnImportarPedidos.CustomExcisionBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.White};
-            this.buttonThematic2.CustomExcisionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.CustomExcisionStyles.Default;
-            this.buttonThematic2.CustomFocusScales = ((System.Drawing.PointF)(resources.GetObject("buttonThematic2.CustomFocusScales")));
+            this.btnImportarPedidos.CustomExcisionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.CustomExcisionStyles.Default;
+            this.btnImportarPedidos.CustomFocusScales = ((System.Drawing.PointF)(resources.GetObject("btnImportarPedidos.CustomFocusScales")));
             colorBlend2.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32))))),
@@ -755,240 +755,241 @@
         0F,
         0.5F,
         1F};
-            this.buttonThematic2.CustomFusionBlend = colorBlend2;
-            this.buttonThematic2.CustomFusionCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.buttonThematic2.CustomFusionDownBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.buttonThematic2.CustomFusionGradColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomFusionBlend = colorBlend2;
+            this.btnImportarPedidos.CustomFusionCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnImportarPedidos.CustomFusionDownBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.btnImportarPedidos.CustomFusionGradColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))))};
-            this.buttonThematic2.CustomFusionNoneBorderColor = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomFusionOverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.buttonThematic2.CustomGameBoosterBotGradient = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.buttonThematic2.CustomGameBoosterBotGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.buttonThematic2.CustomGameBoosterBotGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.buttonThematic2.CustomGameBoosterCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonThematic2.CustomGameBoosterInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.buttonThematic2.CustomGameBoosterInnerBorderClick = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.buttonThematic2.CustomGameBoosterInnerBorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.buttonThematic2.CustomGameBoosterOuterBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomGameBoosterOuterBorderClick = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomGameBoosterOuterBorderHover = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomGameBoosterTopGradient = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.buttonThematic2.CustomGameBoosterTopGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.buttonThematic2.CustomGameBoosterTopGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.buttonThematic2.CustomIntelBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttonThematic2.CustomIntelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
-            this.buttonThematic2.CustomIntelGlow = 100;
-            this.buttonThematic2.CustomIntelShade = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomizableAdobeBackground = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.buttonThematic2.CustomizableAdobeBorderOffset = 2;
-            this.buttonThematic2.CustomizableAdobeCoefficient = 15;
-            this.buttonThematic2.CustomizableAdobeColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomFusionNoneBorderColor = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomFusionOverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.btnImportarPedidos.CustomGameBoosterBotGradient = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnImportarPedidos.CustomGameBoosterBotGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnImportarPedidos.CustomGameBoosterBotGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btnImportarPedidos.CustomGameBoosterCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnImportarPedidos.CustomGameBoosterInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.btnImportarPedidos.CustomGameBoosterInnerBorderClick = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.btnImportarPedidos.CustomGameBoosterInnerBorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.btnImportarPedidos.CustomGameBoosterOuterBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomGameBoosterOuterBorderClick = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomGameBoosterOuterBorderHover = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomGameBoosterTopGradient = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.btnImportarPedidos.CustomGameBoosterTopGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnImportarPedidos.CustomGameBoosterTopGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.btnImportarPedidos.CustomIntelBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportarPedidos.CustomIntelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
+            this.btnImportarPedidos.CustomIntelGlow = 100;
+            this.btnImportarPedidos.CustomIntelShade = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomizableAdobeBackground = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnImportarPedidos.CustomizableAdobeBorderOffset = 2;
+            this.btnImportarPedidos.CustomizableAdobeCoefficient = 15;
+            this.btnImportarPedidos.CustomizableAdobeColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48))))),
         System.Drawing.Color.White,
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomizableAdvancedSystemGlow = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(95)))), ((int)(((byte)(210)))));
-            this.buttonThematic2.CustomizableAdvancedSystemSlope = 5;
-            this.buttonThematic2.CustomizableAdvSysBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.buttonThematic2.CustomizableStyle = Zeroit.Framework.ButtonThematic.BaseContainer.CustomizableStyles.Intel;
-            this.buttonThematic2.Customization = "";
-            this.buttonThematic2.Customize = new Zeroit.Framework.ButtonThematic.Controls.ButtonInput(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128))))), System.Drawing.Color.Black, 20, 100);
-            this.buttonThematic2.CustomizedBtnActive = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizableAdvancedSystemGlow = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(95)))), ((int)(((byte)(210)))));
+            this.btnImportarPedidos.CustomizableAdvancedSystemSlope = 5;
+            this.btnImportarPedidos.CustomizableAdvSysBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.btnImportarPedidos.CustomizableStyle = Zeroit.Framework.ButtonThematic.BaseContainer.CustomizableStyles.Intel;
+            this.btnImportarPedidos.Customization = "";
+            this.btnImportarPedidos.Customize = new Zeroit.Framework.ButtonThematic.Controls.ButtonInput(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(128))))), System.Drawing.Color.Black, 20, 100);
+            this.btnImportarPedidos.CustomizedBtnActive = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))))};
-            this.buttonThematic2.CustomizedBtnActiveBorder = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnActiveBorder = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))))};
-            this.buttonThematic2.CustomizedBtnInactive = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnInactive = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))))};
-            this.buttonThematic2.CustomizedBtnInactiveBorder = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonThematic2.CustomizedBtnOffset = 3;
-            this.buttonThematic2.CustomizedBtnOffsetBorder = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnInactiveBorder = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnImportarPedidos.CustomizedBtnOffset = 3;
+            this.btnImportarPedidos.CustomizedBtnOffsetBorder = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))))};
-            this.buttonThematic2.CustomizedBtnOffsetGradient = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnOffsetGradient = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))))};
-            this.buttonThematic2.CustomizedBtnPressed = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnPressed = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))))};
-            this.buttonThematic2.CustomizedBtnPressedBorder = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomizedBtnPressedBorder = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))))};
-            this.buttonThematic2.CustomNamelessBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNamelessBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50))))),
         System.Drawing.Color.Black,
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomNamelessCorners = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomNamelessDownHighlight = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNamelessCorners = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomNamelessDownHighlight = new System.Drawing.Color[] {
         System.Drawing.Color.White,
         System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))))};
-            this.buttonThematic2.CustomNamelessNoneHighlight = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNamelessNoneHighlight = new System.Drawing.Color[] {
         System.Drawing.Color.White,
         System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))))};
-            this.buttonThematic2.CustomNamelessOverHighlight = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNamelessOverHighlight = new System.Drawing.Color[] {
         System.Drawing.Color.White,
         System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))))};
-            this.buttonThematic2.CustomNetSealCenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.buttonThematic2.CustomNetSealPathBorders = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNetSealCenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnImportarPedidos.CustomNetSealPathBorders = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))))};
-            this.buttonThematic2.CustomNetSealSurroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.buttonThematic2.CustomOrainsButton = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomNetSealSurroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.btnImportarPedidos.CustomOrainsButton = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))))};
-            this.buttonThematic2.CustomOrainsHatch = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomOrainsHatch = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomOrainsHeader = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.buttonThematic2.CustomOrainsInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.buttonThematic2.CustomOrainsOuterBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomReconBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.buttonThematic2.CustomReconBorder = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomOrainsHeader = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnImportarPedidos.CustomOrainsInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnImportarPedidos.CustomOrainsOuterBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomReconBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnImportarPedidos.CustomReconBorder = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))))};
-            this.buttonThematic2.CustomReconDownStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomReconDownStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomReconNoneStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomReconNoneStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))))};
-            this.buttonThematic2.CustomReconOverStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomReconOverStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50))))),
         System.Drawing.Color.Transparent};
-            this.buttonThematic2.CustomRoasterBackgroundStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomRoasterBackgroundStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.White,
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomRoasterBorderColor = System.Drawing.Color.Black;
-            this.buttonThematic2.CustomRoasterGradientColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomRoasterBorderColor = System.Drawing.Color.Black;
+            this.btnImportarPedidos.CustomRoasterGradientColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))))};
-            this.buttonThematic2.CustomSpicyBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
-            this.buttonThematic2.CustomSpicyBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomSpicyBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.btnImportarPedidos.CustomSpicyBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.Black};
-            this.buttonThematic2.CustomSpicyCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.buttonThematic2.CustomSpicyDownStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomSpicyCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnImportarPedidos.CustomSpicyDownStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(4))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))))};
-            this.buttonThematic2.CustomSpicyHighlight = System.Drawing.Color.White;
-            this.buttonThematic2.CustomSpicyNoneStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomSpicyHighlight = System.Drawing.Color.White;
+            this.btnImportarPedidos.CustomSpicyNoneStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))))};
-            this.buttonThematic2.CustomSpicyOverStateColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomSpicyOverStateColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))))};
-            this.buttonThematic2.CustomZeusBackground = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.buttonThematic2.CustomZeusBorderColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomZeusBackground = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnImportarPedidos.CustomZeusBorderColors = new System.Drawing.Color[] {
         System.Drawing.Color.Black,
         System.Drawing.Color.AliceBlue};
-            this.buttonThematic2.CustomZeusClickLocate = 2;
-            this.buttonThematic2.CustomZeusClickReduce = 5;
-            this.buttonThematic2.CustomZeusGradientColors = new System.Drawing.Color[] {
+            this.btnImportarPedidos.CustomZeusClickLocate = 2;
+            this.btnImportarPedidos.CustomZeusClickReduce = 5;
+            this.btnImportarPedidos.CustomZeusGradientColors = new System.Drawing.Color[] {
         System.Drawing.Color.AliceBlue,
         System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))))};
-            this.buttonThematic2.DarkTheme = false;
-            this.buttonThematic2.DestinyBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.DestinyG1 = System.Drawing.Color.Teal;
-            this.buttonThematic2.DestinyG2 = System.Drawing.Color.Black;
-            this.buttonThematic2.DestinyG3 = System.Drawing.Color.Black;
-            this.buttonThematic2.DestinyG4 = System.Drawing.Color.Teal;
-            this.buttonThematic2.DestinyG5 = System.Drawing.Color.Teal;
-            this.buttonThematic2.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
-            this.buttonThematic2.DownLeftCurve = 10;
-            this.buttonThematic2.DownRightCurve = 10;
-            this.buttonThematic2.DrawMode = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.RenderMode.Gradient;
-            this.buttonThematic2.EffectualStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.EffectualStyles.Blue;
-            this.buttonThematic2.EightBallAnimation = true;
-            this.buttonThematic2.ElegantBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.buttonThematic2.ElegantBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(190)))), ((int)(((byte)(146)))));
-            this.buttonThematic2.ElegantPressedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.buttonThematic2.ElementBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(75)))), ((int)(((byte)(60)))));
-            this.buttonThematic2.EmpireButtonStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.EmpireButtonStyles.Normal;
-            this.buttonThematic2.EnableGlass = true;
-            this.buttonThematic2.ExcisionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ExcisionStyles.Default;
-            this.buttonThematic2.FlatUIBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.buttonThematic2.FlatUIRounded = false;
-            this.buttonThematic2.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThematic2.FontColour = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonThematic2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonThematic2.GameBoosterBotGradient = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.buttonThematic2.GameBoosterBotGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.buttonThematic2.GameBoosterBotGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.buttonThematic2.GameBoosterCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonThematic2.GameBoosterInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.buttonThematic2.GameBoosterInnerBorderClick = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.buttonThematic2.GameBoosterInnerBorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.buttonThematic2.GameBoosterOuterBorder = System.Drawing.Color.Black;
-            this.buttonThematic2.GameBoosterOuterBorderClick = System.Drawing.Color.Black;
-            this.buttonThematic2.GameBoosterOuterBorderHover = System.Drawing.Color.Black;
-            this.buttonThematic2.GameBoosterTopGradient = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.buttonThematic2.GameBoosterTopGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.buttonThematic2.GameBoosterTopGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.buttonThematic2.GradientAngle = 90F;
-            this.buttonThematic2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.buttonThematic2.HatchStyle = System.Drawing.Drawing2D.HatchStyle.LightDownwardDiagonal;
-            this.buttonThematic2.HoverColour = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.buttonThematic2.HuraAccentColor = System.Drawing.Color.Empty;
-            this.buttonThematic2.HuraBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.buttonThematic2.HuraColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.HuraColorSchemes.Dark;
-            this.buttonThematic2.Image = null;
-            this.buttonThematic2.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttonThematic2.ImageCodeString = resources.GetString("buttonThematic2.ImageCodeString");
-            this.buttonThematic2.ImageSize = new System.Drawing.Size(0, 0);
-            this.buttonThematic2.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            this.buttonThematic2.KnightRounded = false;
-            this.buttonThematic2.Location = new System.Drawing.Point(89, 311);
-            this.buttonThematic2.LoginMaximum = 100;
-            this.buttonThematic2.Loginstyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.LoginStyles.Button;
-            this.buttonThematic2.LoginValue = 0;
-            this.buttonThematic2.LoyalOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.buttonThematic2.metrodiskBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.buttonThematic2.MetrodiskRounded = false;
-            this.buttonThematic2.Name = "buttonThematic2";
-            this.buttonThematic2.NeoBuxStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.NeoBuxStyles.Blue;
-            this.buttonThematic2.NormalColour = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(199)))));
-            this.buttonThematic2.NoRounding = false;
-            this.buttonThematic2.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.None;
-            this.buttonThematic2.PressedColour = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.buttonThematic2.ProgressColour = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.buttonThematic2.RedemptionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.RedemptionStyles.Rectangle;
-            this.buttonThematic2.SharpColor2 = false;
-            this.buttonThematic2.ShowText = true;
-            this.buttonThematic2.SideColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
-            this.buttonThematic2.SimplaColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.SimplaColorSchemes.DarkGray;
-            this.buttonThematic2.Size = new System.Drawing.Size(311, 96);
-            this.buttonThematic2.Smoothing = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            this.buttonThematic2.TabIndex = 1;
-            this.buttonThematic2.TeenAccentColor = System.Drawing.Color.DodgerBlue;
-            this.buttonThematic2.TeenColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.teenColorSchemes.Dark;
-            this.buttonThematic2.Text = "Importar Excel Pedidos";
-            this.buttonThematic2.TextAlign = System.Drawing.StringAlignment.Center;
-            this.buttonThematic2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.buttonThematic2.TextRendering = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.buttonThematic2.Theme = Zeroit.Framework.ButtonThematic.BaseContainer.Themes.Customized;
-            this.buttonThematic2.ThemeStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ColorTheme.GammaRay;
-            this.buttonThematic2.ThiefAccentColor = System.Drawing.Color.Empty;
-            this.buttonThematic2.Transparent = false;
-            this.buttonThematic2.TwitchRounding = true;
-            this.buttonThematic2.TwitchStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.TwitchStyles.Default;
-            this.buttonThematic2.UpperColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
-            this.buttonThematic2.UpperLeftCurve = 10;
-            this.buttonThematic2.UpperRightCurve = 10;
-            this.buttonThematic2.XVisualShade = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.xVisualInnerShade.Dark;
+            this.btnImportarPedidos.DarkTheme = false;
+            this.btnImportarPedidos.DestinyBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.DestinyG1 = System.Drawing.Color.Teal;
+            this.btnImportarPedidos.DestinyG2 = System.Drawing.Color.Black;
+            this.btnImportarPedidos.DestinyG3 = System.Drawing.Color.Black;
+            this.btnImportarPedidos.DestinyG4 = System.Drawing.Color.Teal;
+            this.btnImportarPedidos.DestinyG5 = System.Drawing.Color.Teal;
+            this.btnImportarPedidos.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
+            this.btnImportarPedidos.DownLeftCurve = 10;
+            this.btnImportarPedidos.DownRightCurve = 10;
+            this.btnImportarPedidos.DrawMode = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.RenderMode.Gradient;
+            this.btnImportarPedidos.EffectualStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.EffectualStyles.Blue;
+            this.btnImportarPedidos.EightBallAnimation = true;
+            this.btnImportarPedidos.ElegantBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.btnImportarPedidos.ElegantBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(190)))), ((int)(((byte)(146)))));
+            this.btnImportarPedidos.ElegantPressedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.btnImportarPedidos.ElementBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(75)))), ((int)(((byte)(60)))));
+            this.btnImportarPedidos.EmpireButtonStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.EmpireButtonStyles.Normal;
+            this.btnImportarPedidos.EnableGlass = true;
+            this.btnImportarPedidos.ExcisionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ExcisionStyles.Default;
+            this.btnImportarPedidos.FlatUIBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnImportarPedidos.FlatUIRounded = false;
+            this.btnImportarPedidos.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarPedidos.FontColour = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnImportarPedidos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnImportarPedidos.GameBoosterBotGradient = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnImportarPedidos.GameBoosterBotGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnImportarPedidos.GameBoosterBotGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.btnImportarPedidos.GameBoosterCornerColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnImportarPedidos.GameBoosterInnerBorder = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.btnImportarPedidos.GameBoosterInnerBorderClick = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.btnImportarPedidos.GameBoosterInnerBorderHover = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.btnImportarPedidos.GameBoosterOuterBorder = System.Drawing.Color.Black;
+            this.btnImportarPedidos.GameBoosterOuterBorderClick = System.Drawing.Color.Black;
+            this.btnImportarPedidos.GameBoosterOuterBorderHover = System.Drawing.Color.Black;
+            this.btnImportarPedidos.GameBoosterTopGradient = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.btnImportarPedidos.GameBoosterTopGradientClick = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnImportarPedidos.GameBoosterTopGradientHover = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.btnImportarPedidos.GradientAngle = 90F;
+            this.btnImportarPedidos.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnImportarPedidos.HatchStyle = System.Drawing.Drawing2D.HatchStyle.LightDownwardDiagonal;
+            this.btnImportarPedidos.HoverColour = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnImportarPedidos.HuraAccentColor = System.Drawing.Color.Empty;
+            this.btnImportarPedidos.HuraBackground = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnImportarPedidos.HuraColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.HuraColorSchemes.Dark;
+            this.btnImportarPedidos.Image = null;
+            this.btnImportarPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnImportarPedidos.ImageCodeString = resources.GetString("btnImportarPedidos.ImageCodeString");
+            this.btnImportarPedidos.ImageSize = new System.Drawing.Size(0, 0);
+            this.btnImportarPedidos.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            this.btnImportarPedidos.KnightRounded = false;
+            this.btnImportarPedidos.Location = new System.Drawing.Point(89, 311);
+            this.btnImportarPedidos.LoginMaximum = 100;
+            this.btnImportarPedidos.Loginstyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.LoginStyles.Button;
+            this.btnImportarPedidos.LoginValue = 0;
+            this.btnImportarPedidos.LoyalOutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.btnImportarPedidos.metrodiskBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnImportarPedidos.MetrodiskRounded = false;
+            this.btnImportarPedidos.Name = "btnImportarPedidos";
+            this.btnImportarPedidos.NeoBuxStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.NeoBuxStyles.Blue;
+            this.btnImportarPedidos.NormalColour = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(199)))));
+            this.btnImportarPedidos.NoRounding = false;
+            this.btnImportarPedidos.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.None;
+            this.btnImportarPedidos.PressedColour = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.btnImportarPedidos.ProgressColour = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.btnImportarPedidos.RedemptionStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.RedemptionStyles.Rectangle;
+            this.btnImportarPedidos.SharpColor2 = false;
+            this.btnImportarPedidos.ShowText = true;
+            this.btnImportarPedidos.SideColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
+            this.btnImportarPedidos.SimplaColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.SimplaColorSchemes.DarkGray;
+            this.btnImportarPedidos.Size = new System.Drawing.Size(311, 96);
+            this.btnImportarPedidos.Smoothing = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            this.btnImportarPedidos.TabIndex = 1;
+            this.btnImportarPedidos.TeenAccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnImportarPedidos.TeenColorScheme = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.teenColorSchemes.Dark;
+            this.btnImportarPedidos.Text = "Importar Excel Pedidos";
+            this.btnImportarPedidos.TextAlign = System.Drawing.StringAlignment.Center;
+            this.btnImportarPedidos.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnImportarPedidos.TextRendering = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.btnImportarPedidos.Theme = Zeroit.Framework.ButtonThematic.BaseContainer.Themes.Customized;
+            this.btnImportarPedidos.ThemeStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.ColorTheme.GammaRay;
+            this.btnImportarPedidos.ThiefAccentColor = System.Drawing.Color.Empty;
+            this.btnImportarPedidos.Transparent = false;
+            this.btnImportarPedidos.TwitchRounding = true;
+            this.btnImportarPedidos.TwitchStyle = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.TwitchStyles.Default;
+            this.btnImportarPedidos.UpperColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(68)))), ((int)(((byte)(126)))));
+            this.btnImportarPedidos.UpperLeftCurve = 10;
+            this.btnImportarPedidos.UpperRightCurve = 10;
+            this.btnImportarPedidos.XVisualShade = Zeroit.Framework.ButtonThematic.Controls.ButtonThematic.xVisualInnerShade.Dark;
+            this.btnImportarPedidos.Click += new System.EventHandler(this.btnImportarPedidos_Click);
             // 
             // label1
             // 
@@ -1020,7 +1021,7 @@
             this.ClientSize = new System.Drawing.Size(500, 452);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonThematic2);
+            this.Controls.Add(this.btnImportarPedidos);
             this.Controls.Add(this.btnImportarPrecios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -1035,7 +1036,7 @@
         #endregion
 
         private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnImportarPrecios;
-        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic buttonThematic2;
+        private Zeroit.Framework.ButtonThematic.Controls.ButtonThematic btnImportarPedidos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

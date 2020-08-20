@@ -255,7 +255,7 @@
             this.MaximizeBox = false;
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMarca)).EndInit();

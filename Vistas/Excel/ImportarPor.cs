@@ -22,5 +22,11 @@ namespace MultimodeSales.Vistas.Excel
             ImportarListaMarca importarLista = new ImportarListaMarca();
             importarLista.ShowDialog();
         }
+
+        private void btnImportarPedidos_Click(object sender, EventArgs e)
+        {
+            ImportarPedidosFinal importarPedidos = new ImportarPedidosFinal();
+            importarPedidos.ShowDialog();
+        }
     }
 }
