@@ -33,5 +33,27 @@ namespace MultimodeSales.Programacion.Excel
                 return false;
             }
         }
+
+        public bool AgregarPedidosFinal()
+        {
+            //try
+            //{
+            //    MySqlCommand cmd = new MySqlCommand("AgregarListaMarca", conexion.GetConnection());
+            //    cmd.CommandType = CommandType.StoredProcedure;
+            //    cmd.Parameters.Add(new MySqlParameter("idmarca", marca));
+            //    cmd.Parameters.Add(new MySqlParameter("modelo", modelo));
+            //    cmd.Parameters.Add(new MySqlParameter("color", color));
+            //    cmd.Parameters.Add(new MySqlParameter("talla", talla));
+            //    cmd.Parameters.Add(new MySqlParameter("precioCliente", precio));
+            //    cmd.ExecuteNonQuery();
+            //    conexion.CloseConnection();
+            //    return true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    conexion.CloseConnection();
+            //    return false;
+            //}
+        }
     }
 }
