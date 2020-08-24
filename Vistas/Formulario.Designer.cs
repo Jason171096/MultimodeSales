@@ -171,6 +171,9 @@
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBuscar.TabIndex = 16;
             this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
+            this.picBuscar.MouseEnter += new System.EventHandler(this.picBuscar_MouseEnter);
+            this.picBuscar.MouseLeave += new System.EventHandler(this.picBuscar_MouseLeave);
             // 
             // picPedidosFinal
             // 

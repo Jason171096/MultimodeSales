@@ -52,6 +52,18 @@ namespace MultimodeSales.Programacion.Marca
             MessageBox.Show("Se agrego nueva marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cmd.Connection.Close();
         }
+
+        public void EditarMarca(string numeromarca, string nombremarca)
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("EditarMarca", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("numero", numeromarca));
+            cmd.Parameters.Add(new MySqlParameter("nombre", nombremarca));
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Se edito la marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cmd.Connection.Close();
+        }
         
     }
 }

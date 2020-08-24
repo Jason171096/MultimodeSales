@@ -24,12 +24,14 @@ namespace MultimodeSales
             panelImportExcel.Visible = false;
             panelMarca.Visible = false;
             panelPedidosFinal.Visible = false;
+            panelBuscar.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
             lbImportExcel.Visible = false;
             lbMarca.Visible = false;
             lbPedidosFinal.Visible = false;
+            lbBuscar.Visible = false;
             #endregion
         }
         #region picCliente
@@ -108,5 +110,22 @@ namespace MultimodeSales
             lbPedidosFinal.Visible = false;
         }
         #endregion
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBuscar_MouseEnter(object sender, EventArgs e)
+        {
+            panelBuscar.Visible = true;
+            lbBuscar.Visible = true;
+        }
+
+        private void picBuscar_MouseLeave(object sender, EventArgs e)
+        {
+            panelBuscar.Visible = false;
+            lbBuscar.Visible = false;
+        }
     }
 }

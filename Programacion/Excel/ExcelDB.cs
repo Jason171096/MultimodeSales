@@ -52,7 +52,7 @@ namespace MultimodeSales.Programacion.Excel
             //catch (Exception ex)
             //{
             //    conexion.CloseConnection();
-            //    return false;
+                return false;
             //}
         }
     }

@@ -156,6 +156,12 @@
     <Compile Include="Programacion\Excel\ExcelDB.cs" />
     <Compile Include="Programacion\Marca\MarcaBD.cs" />
     <Compile Include="Programacion\Validaciones.cs" />
+    <Compile Include="Vistas\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <Compile Include="Vistas\PedidosFinal.Designer.cs">
       <DependentUpon>PedidosFinal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
