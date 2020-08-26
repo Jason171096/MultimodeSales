@@ -16,14 +16,13 @@ namespace MultimodeSales.Vistas.Excel
         {
             InitializeComponent();
         }
-
-        private void btnImportarPrecios_Click(object sender, EventArgs e)
+        private void btnImportarPrecios_Click_1(object sender, EventArgs e)
         {
             ImportarListaMarca importarLista = new ImportarListaMarca();
             importarLista.ShowDialog();
         }
 
-        private void btnImportarPedidos_Click(object sender, EventArgs e)
+        private void btnImportarPedidos_Click_1(object sender, EventArgs e)
         {
             ImportarPedidosFinal importarPedidos = new ImportarPedidosFinal();
             importarPedidos.ShowDialog();

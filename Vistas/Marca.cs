@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Programacion.Marca;
-using System.Security.Cryptography.X509Certificates;
 
 namespace MultimodeSales.Vistas
 {
@@ -31,8 +30,7 @@ namespace MultimodeSales.Vistas
             dgvMarcas.DataSource = marca.VerMarcas();
             dgvMarcas.Columns[1].Width = 165;
         }
-
-        private void btnAgregarMarca_Click_1(object sender, EventArgs e)
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtNombreMarca.Text) || String.IsNullOrWhiteSpace(txtNumeroMarca.Text))
                 MessageBox.Show("No pueden estar los campos vacios de Numero de Marca o Nombre Marca", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -43,7 +41,7 @@ namespace MultimodeSales.Vistas
             }
         }
 
-        private void btnEditarMarca_Click(object sender, EventArgs e)
+        private void btnEditarMarca_Click_1(object sender, EventArgs e)
         {
             btnAgregarMarca.Enabled = true;
             int cont = 0;
@@ -53,16 +51,15 @@ namespace MultimodeSales.Vistas
                     if (Rowindex != dgvMarcas.Rows[i].Index)
                         cont++;
             }
-            if(cont>=1)
+            if (cont >= 1)
                 MessageBox.Show("No pueden existir dos marcas con Numeros Iguales, intente con otro NUMERO", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 marca.EditarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
                 LlenarDataGridViewMarca();
             }
-            
-        }
 
+        }
         private void dgvMarcas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnAgregarMarca.Enabled = false;
@@ -71,14 +68,13 @@ namespace MultimodeSales.Vistas
             Rowindex = e.RowIndex;
         }
 
-
-
-
         #region Validaciones
         private void txtNumeroMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacion.SoloNumeros(e);
         }
         #endregion
+
+       
     }
 }

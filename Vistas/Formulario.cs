@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Programacion;
 using MultimodeSales.Vistas;
+using MultimodeSales.Vistas.Buscar;
 using MultimodeSales.Vistas.Excel;
 
 namespace MultimodeSales
@@ -110,10 +111,11 @@ namespace MultimodeSales
             lbPedidosFinal.Visible = false;
         }
         #endregion
-
+        #region picBuscar
         private void picBuscar_Click(object sender, EventArgs e)
         {
-
+            BuscarPor buscar = new BuscarPor();
+            buscar.ShowDialog();
         }
 
         private void picBuscar_MouseEnter(object sender, EventArgs e)
@@ -127,5 +129,6 @@ namespace MultimodeSales
             panelBuscar.Visible = false;
             lbBuscar.Visible = false;
         }
+        #endregion
     }
 }

@@ -38,7 +38,7 @@ C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.pdb
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.PedidosFinal.resources
 C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\Zeroit.Framework.ButtonThematic.dll
 C:\Users\halo_\Desktop\MultimodeSales\bin\Debug\Zeroit.Framework.Metro.dll
-C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csprojAssemblyReference.cache
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Excel.ImportarPor.resources
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Excel.ImportarPedidosFinal.resources
 C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultimodeSales.Vistas.Buscar.resources
+C:\Users\halo_\Desktop\MultimodeSales\obj\Debug\MultiFashion.csprojAssemblyReference.cache

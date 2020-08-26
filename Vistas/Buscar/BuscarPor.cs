@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MultimodeSales.Vistas
+namespace MultimodeSales.Vistas.Buscar
 {
-    public partial class Buscar : Form
+    public partial class BuscarPor : Form
     {
-        public Buscar()
+        public BuscarPor()
         {
             InitializeComponent();
         }

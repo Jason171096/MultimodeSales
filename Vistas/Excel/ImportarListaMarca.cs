@@ -38,7 +38,7 @@ namespace MultimodeSales.Vistas
             
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
+        private void btnCargar_Click_1(object sender, EventArgs e)
         {
             dgvExcel.DataSource = null;
             OpenFileDialog openFile = new OpenFileDialog();
@@ -92,7 +92,7 @@ namespace MultimodeSales.Vistas
             }
         }
 
-        private void btnImportar_Click(object sender, EventArgs e)
+        private void btnImportar_Click_1(object sender, EventArgs e)
         {
             ExcelDB excelDB = new ExcelDB();
             foreach (DataGridViewRow row in dgvExcel.Rows)
