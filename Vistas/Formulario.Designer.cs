@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.lbFecha = new System.Windows.Forms.Label();
             this.panelCliente = new System.Windows.Forms.Panel();
             this.panelImportExcel = new System.Windows.Forms.Panel();
             this.lbCliente = new System.Windows.Forms.Label();
@@ -46,9 +48,7 @@
             this.picMarca = new System.Windows.Forms.PictureBox();
             this.picImportExcel = new System.Windows.Forms.PictureBox();
             this.picCliente = new System.Windows.Forms.PictureBox();
-            this.lbFecha = new System.Windows.Forms.Label();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
-            this.lbHora = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
@@ -78,10 +78,32 @@
             this.panel2.Size = new System.Drawing.Size(1036, 37);
             this.panel2.TabIndex = 2;
             // 
+            // lbHora
+            // 
+            this.lbHora.AutoSize = true;
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbHora.Location = new System.Drawing.Point(902, 9);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(63, 20);
+            this.lbHora.TabIndex = 1;
+            this.lbHora.Text = "tiempo";
+            // 
+            // lbFecha
+            // 
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbFecha.Location = new System.Drawing.Point(6, 9);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(63, 20);
+            this.lbFecha.TabIndex = 0;
+            this.lbFecha.Text = "tiempo";
+            // 
             // panelCliente
             // 
             this.panelCliente.BackColor = System.Drawing.Color.Purple;
-            this.panelCliente.Location = new System.Drawing.Point(398, 433);
+            this.panelCliente.Location = new System.Drawing.Point(416, 210);
             this.panelCliente.Name = "panelCliente";
             this.panelCliente.Size = new System.Drawing.Size(171, 10);
             this.panelCliente.TabIndex = 3;
@@ -89,7 +111,7 @@
             // panelImportExcel
             // 
             this.panelImportExcel.BackColor = System.Drawing.Color.Purple;
-            this.panelImportExcel.Location = new System.Drawing.Point(191, 210);
+            this.panelImportExcel.Location = new System.Drawing.Point(203, 210);
             this.panelImportExcel.Name = "panelImportExcel";
             this.panelImportExcel.Size = new System.Drawing.Size(171, 10);
             this.panelImportExcel.TabIndex = 4;
@@ -98,7 +120,7 @@
             // 
             this.lbCliente.AutoSize = true;
             this.lbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCliente.Location = new System.Drawing.Point(446, 446);
+            this.lbCliente.Location = new System.Drawing.Point(464, 223);
             this.lbCliente.Name = "lbCliente";
             this.lbCliente.Size = new System.Drawing.Size(75, 24);
             this.lbCliente.TabIndex = 7;
@@ -108,7 +130,7 @@
             // 
             this.lbImportExcel.AutoSize = true;
             this.lbImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportExcel.Location = new System.Drawing.Point(205, 223);
+            this.lbImportExcel.Location = new System.Drawing.Point(217, 223);
             this.lbImportExcel.Name = "lbImportExcel";
             this.lbImportExcel.Size = new System.Drawing.Size(145, 24);
             this.lbImportExcel.TabIndex = 8;
@@ -118,7 +140,7 @@
             // 
             this.lbMarca.AutoSize = true;
             this.lbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarca.Location = new System.Drawing.Point(678, 223);
+            this.lbMarca.Location = new System.Drawing.Point(690, 223);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(67, 24);
             this.lbMarca.TabIndex = 11;
@@ -127,7 +149,7 @@
             // panelMarca
             // 
             this.panelMarca.BackColor = System.Drawing.Color.Purple;
-            this.panelMarca.Location = new System.Drawing.Point(624, 210);
+            this.panelMarca.Location = new System.Drawing.Point(636, 210);
             this.panelMarca.Name = "panelMarca";
             this.panelMarca.Size = new System.Drawing.Size(171, 10);
             this.panelMarca.TabIndex = 9;
@@ -136,7 +158,7 @@
             // 
             this.lbPedidosFinal.AutoSize = true;
             this.lbPedidosFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedidosFinal.Location = new System.Drawing.Point(853, 223);
+            this.lbPedidosFinal.Location = new System.Drawing.Point(865, 223);
             this.lbPedidosFinal.Name = "lbPedidosFinal";
             this.lbPedidosFinal.Size = new System.Drawing.Size(138, 24);
             this.lbPedidosFinal.TabIndex = 14;
@@ -145,7 +167,7 @@
             // panelPedidosFinal
             // 
             this.panelPedidosFinal.BackColor = System.Drawing.Color.Purple;
-            this.panelPedidosFinal.Location = new System.Drawing.Point(839, 210);
+            this.panelPedidosFinal.Location = new System.Drawing.Point(851, 210);
             this.panelPedidosFinal.Name = "panelPedidosFinal";
             this.panelPedidosFinal.Size = new System.Drawing.Size(171, 10);
             this.panelPedidosFinal.TabIndex = 12;
@@ -154,7 +176,7 @@
             // 
             this.lbBuscar.AutoSize = true;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(235, 446);
+            this.lbBuscar.Location = new System.Drawing.Point(247, 446);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(74, 24);
             this.lbBuscar.TabIndex = 17;
@@ -163,7 +185,7 @@
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.Color.Purple;
-            this.panelBuscar.Location = new System.Drawing.Point(189, 433);
+            this.panelBuscar.Location = new System.Drawing.Point(201, 433);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(171, 10);
             this.panelBuscar.TabIndex = 15;
@@ -172,7 +194,7 @@
             // 
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::MultimodeSales.Properties.Resources.search128px;
-            this.picBuscar.Location = new System.Drawing.Point(189, 282);
+            this.picBuscar.Location = new System.Drawing.Point(201, 282);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(169, 161);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -186,7 +208,7 @@
             // 
             this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
-            this.picPedidosFinal.Location = new System.Drawing.Point(839, 59);
+            this.picPedidosFinal.Location = new System.Drawing.Point(851, 59);
             this.picPedidosFinal.Name = "picPedidosFinal";
             this.picPedidosFinal.Size = new System.Drawing.Size(169, 161);
             this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -200,7 +222,7 @@
             // 
             this.picMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMarca.Image = global::MultimodeSales.Properties.Resources.catalog128px;
-            this.picMarca.Location = new System.Drawing.Point(624, 59);
+            this.picMarca.Location = new System.Drawing.Point(636, 59);
             this.picMarca.Name = "picMarca";
             this.picMarca.Size = new System.Drawing.Size(169, 161);
             this.picMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -214,7 +236,7 @@
             // 
             this.picImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picImportExcel.Image = global::MultimodeSales.Properties.Resources.csv128px;
-            this.picImportExcel.Location = new System.Drawing.Point(191, 59);
+            this.picImportExcel.Location = new System.Drawing.Point(203, 59);
             this.picImportExcel.Name = "picImportExcel";
             this.picImportExcel.Size = new System.Drawing.Size(169, 161);
             this.picImportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -228,7 +250,7 @@
             // 
             this.picCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCliente.Image = global::MultimodeSales.Properties.Resources.client128px;
-            this.picCliente.Location = new System.Drawing.Point(398, 282);
+            this.picCliente.Location = new System.Drawing.Point(416, 59);
             this.picCliente.Name = "picCliente";
             this.picCliente.Size = new System.Drawing.Size(171, 161);
             this.picCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -238,32 +260,10 @@
             this.picCliente.MouseEnter += new System.EventHandler(this.picCliente_MouseEnter);
             this.picCliente.MouseLeave += new System.EventHandler(this.picCliente_MouseLeave);
             // 
-            // lbFecha
-            // 
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbFecha.Location = new System.Drawing.Point(6, 9);
-            this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(63, 20);
-            this.lbFecha.TabIndex = 0;
-            this.lbFecha.Text = "tiempo";
-            // 
             // timerHora
             // 
             this.timerHora.Enabled = true;
             this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
-            // 
-            // lbHora
-            // 
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbHora.Location = new System.Drawing.Point(902, 9);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(63, 20);
-            this.lbHora.TabIndex = 1;
-            this.lbHora.Text = "tiempo";
             // 
             // Formulario
             // 

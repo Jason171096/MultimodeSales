@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,8 +39,8 @@
             this.txtNombreMarca = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNumeroMarca = new System.Windows.Forms.TextBox();
-            this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEditarMarca
@@ -49,7 +49,7 @@
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(336, 269);
+            this.btnEditarMarca.Location = new System.Drawing.Point(336, 284);
             this.btnEditarMarca.Name = "btnEditarMarca";
             this.btnEditarMarca.Size = new System.Drawing.Size(200, 78);
             this.btnEditarMarca.TabIndex = 31;
@@ -62,7 +62,7 @@
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(97, 269);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(97, 284);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(200, 78);
             this.btnAgregarMarca.TabIndex = 30;
@@ -75,7 +75,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(50, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 21);
+            this.panel2.Size = new System.Drawing.Size(920, 21);
             this.panel2.TabIndex = 29;
             // 
             // panel1
@@ -85,7 +85,7 @@
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 491);
+            this.panel1.Size = new System.Drawing.Size(50, 586);
             this.panel1.TabIndex = 28;
             // 
             // label3
@@ -124,59 +124,59 @@
             this.txtNumeroMarca.Size = new System.Drawing.Size(268, 35);
             this.txtNumeroMarca.TabIndex = 24;
             // 
-            // dgvMarcas
+            // dgvClientes
             // 
-            this.dgvMarcas.AllowUserToAddRows = false;
-            this.dgvMarcas.AllowUserToDeleteRows = false;
-            this.dgvMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMarcas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvMarcas.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dgvMarcas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMarcas.ColumnHeadersHeight = 50;
-            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvMarcas.EnableHeadersVisualStyles = false;
-            this.dgvMarcas.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvMarcas.Location = new System.Drawing.Point(588, 40);
-            this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMarcas.RowHeadersVisible = false;
-            this.dgvMarcas.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMarcas.RowTemplate.Height = 30;
-            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(240, 439);
-            this.dgvMarcas.TabIndex = 32;
+            this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvClientes.ColumnHeadersHeight = 50;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dgvClientes.Location = new System.Drawing.Point(588, 40);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.RowHeadersWidth = 30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvClientes.RowTemplate.Height = 30;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(370, 534);
+            this.dgvClientes.TabIndex = 32;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(849, 491);
-            this.Controls.Add(this.dgvMarcas);
+            this.ClientSize = new System.Drawing.Size(970, 586);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.panel2);
@@ -185,9 +185,12 @@
             this.Controls.Add(this.txtNombreMarca);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNumeroMarca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +205,6 @@
         private System.Windows.Forms.TextBox txtNombreMarca;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNumeroMarca;
-        private System.Windows.Forms.DataGridView dgvMarcas;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }

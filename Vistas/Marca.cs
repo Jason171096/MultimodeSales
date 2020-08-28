@@ -28,7 +28,7 @@ namespace MultimodeSales.Vistas
         {
             dgvMarcas.DataSource = null;
             dgvMarcas.DataSource = marca.VerMarcas();
-            dgvMarcas.Columns[1].Width = 165;
+            dgvMarcas.Columns[1].Width = 250;
         }
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
