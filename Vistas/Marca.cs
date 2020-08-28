@@ -36,8 +36,19 @@ namespace MultimodeSales.Vistas
                 MessageBox.Show("No pueden estar los campos vacios de Numero de Marca o Nombre Marca", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                marca.AgregarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
-                LlenarDataGridViewMarca();
+                int cont = 0;
+                for (int i = 0; i < dgvMarcas.Rows.Count; i++)
+                {
+                    if (txtNumeroMarca.Text == dgvMarcas.Rows[i].Cells[0].Value.ToString())
+                        cont++;
+                }
+                if (cont >= 1)
+                    MessageBox.Show("No pueden existir dos marcas con Numeros Iguales, intente con otro NUMERO", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    marca.AgregarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
+                    LlenarDataGridViewMarca();
+                }
             }
         }
 

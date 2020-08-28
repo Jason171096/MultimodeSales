@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelCliente = new System.Windows.Forms.Panel();
@@ -45,6 +46,10 @@
             this.picMarca = new System.Windows.Forms.PictureBox();
             this.picImportExcel = new System.Windows.Forms.PictureBox();
             this.picCliente = new System.Windows.Forms.PictureBox();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.timerHora = new System.Windows.Forms.Timer(this.components);
+            this.lbHora = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMarca)).BeginInit();
@@ -59,16 +64,18 @@
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(151, 596);
+            this.panel1.Size = new System.Drawing.Size(171, 596);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Purple;
+            this.panel2.Controls.Add(this.lbHora);
+            this.panel2.Controls.Add(this.lbFecha);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(151, 0);
+            this.panel2.Location = new System.Drawing.Point(171, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1056, 37);
+            this.panel2.Size = new System.Drawing.Size(1036, 37);
             this.panel2.TabIndex = 2;
             // 
             // panelCliente
@@ -231,6 +238,33 @@
             this.picCliente.MouseEnter += new System.EventHandler(this.picCliente_MouseEnter);
             this.picCliente.MouseLeave += new System.EventHandler(this.picCliente_MouseLeave);
             // 
+            // lbFecha
+            // 
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbFecha.Location = new System.Drawing.Point(6, 9);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(63, 20);
+            this.lbFecha.TabIndex = 0;
+            this.lbFecha.Text = "tiempo";
+            // 
+            // timerHora
+            // 
+            this.timerHora.Enabled = true;
+            this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
+            // 
+            // lbHora
+            // 
+            this.lbHora.AutoSize = true;
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbHora.Location = new System.Drawing.Point(902, 9);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(63, 20);
+            this.lbHora.TabIndex = 1;
+            this.lbHora.Text = "tiempo";
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +293,8 @@
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMarca)).EndInit();
@@ -288,6 +324,9 @@
         private System.Windows.Forms.Label lbBuscar;
         private System.Windows.Forms.Panel panelBuscar;
         private System.Windows.Forms.PictureBox picBuscar;
+        private System.Windows.Forms.Label lbFecha;
+        private System.Windows.Forms.Timer timerHora;
+        private System.Windows.Forms.Label lbHora;
     }
 }
 

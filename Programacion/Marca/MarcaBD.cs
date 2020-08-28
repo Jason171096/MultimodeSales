@@ -46,7 +46,7 @@ namespace MultimodeSales.Programacion.Marca
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("AgregarMarca", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("numero", numeromarca));
+            cmd.Parameters.Add(new MySqlParameter("idmarca", numeromarca));
             cmd.Parameters.Add(new MySqlParameter("nombre", nombremarca));
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se agrego nueva marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);

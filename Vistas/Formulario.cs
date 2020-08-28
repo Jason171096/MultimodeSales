@@ -130,5 +130,11 @@ namespace MultimodeSales
             lbBuscar.Visible = false;
         }
         #endregion
+
+        private void timerHora_Tick(object sender, EventArgs e)
+        {
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+            lbHora.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
