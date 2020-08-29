@@ -176,7 +176,7 @@
             // 
             this.lbBuscar.AutoSize = true;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(247, 446);
+            this.lbBuscar.Location = new System.Drawing.Point(251, 466);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(74, 24);
             this.lbBuscar.TabIndex = 17;
@@ -185,7 +185,7 @@
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.Color.Purple;
-            this.panelBuscar.Location = new System.Drawing.Point(201, 433);
+            this.panelBuscar.Location = new System.Drawing.Point(205, 453);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(171, 10);
             this.panelBuscar.TabIndex = 15;
@@ -194,7 +194,7 @@
             // 
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::MultimodeSales.Properties.Resources.search128px;
-            this.picBuscar.Location = new System.Drawing.Point(201, 282);
+            this.picBuscar.Location = new System.Drawing.Point(205, 302);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(169, 161);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
