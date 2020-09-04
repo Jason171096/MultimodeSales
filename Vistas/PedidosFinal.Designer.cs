@@ -31,13 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidosFinal));
-            System.Drawing.Drawing2D.ColorBlend colorBlend1 = new System.Drawing.Drawing2D.ColorBlend();
-            System.Drawing.Drawing2D.ColorBlend colorBlend2 = new System.Drawing.Drawing2D.ColorBlend();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.lbRuta = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-   
+            this.btnEditarMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +60,7 @@
             this.dgvExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvExcel.EnableHeadersVisualStyles = false;
             this.dgvExcel.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvExcel.Location = new System.Drawing.Point(33, 83);
+            this.dgvExcel.Location = new System.Drawing.Point(33, 110);
             this.dgvExcel.Name = "dgvExcel";
             this.dgvExcel.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -111,16 +108,28 @@
             this.label3.Text = "Ruta:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnEditarMarca
+            // 
+            this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEditarMarca.Location = new System.Drawing.Point(33, 32);
+            this.btnEditarMarca.Name = "btnEditarMarca";
+            this.btnEditarMarca.Size = new System.Drawing.Size(145, 47);
+            this.btnEditarMarca.TabIndex = 23;
+            this.btnEditarMarca.Text = "Cargar";
+            this.btnEditarMarca.UseVisualStyleBackColor = false;
+            // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1219, 650);
-       
+            this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.lbRuta);
             this.Controls.Add(this.label3);
-         
             this.Controls.Add(this.dgvExcel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -138,5 +147,6 @@
         private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.Label lbRuta;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnEditarMarca;
     }
 }
