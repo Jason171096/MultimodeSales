@@ -34,26 +34,24 @@ namespace MultimodeSales.Programacion.Excel
             }
         }
 
-        public bool AgregarPedidosFinal()
+        public bool AgregarPedidosFinal(string modelo, string idusuario)
         {
-            //try
-            //{
-            //    MySqlCommand cmd = new MySqlCommand("AgregarListaMarca", conexion.GetConnection());
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.Add(new MySqlParameter("idmarca", marca));
-            //    cmd.Parameters.Add(new MySqlParameter("modelo", modelo));
-            //    cmd.Parameters.Add(new MySqlParameter("color", color));
-            //    cmd.Parameters.Add(new MySqlParameter("talla", talla));
-            //    cmd.Parameters.Add(new MySqlParameter("precioCliente", precio));
-            //    cmd.ExecuteNonQuery();
-            //    conexion.CloseConnection();
-            //    return true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    conexion.CloseConnection();
+            conexion.OpenConnection();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("AgregarPedidosFinal", conexion.GetConnection());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new MySqlParameter("modelo", modelo));
+                cmd.Parameters.Add(new MySqlParameter("idusuario", idusuario));
+                cmd.ExecuteNonQuery();
+                conexion.CloseConnection();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                conexion.CloseConnection();
                 return false;
-            //}
+            }
         }
     }
 }

@@ -146,6 +146,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Programacion\BuscarPedidoFinal.cs" />
     <Compile Include="Programacion\Cliente\ClienteDB.cs" />
     <Compile Include="Programacion\Conexion.cs" />
     <Compile Include="Programacion\Excel\ExcelDB.cs" />

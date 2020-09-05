@@ -40,6 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +153,7 @@
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(101, 274);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(95, 299);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(200, 78);
             this.btnAgregarMarca.TabIndex = 21;
@@ -166,7 +167,7 @@
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(340, 274);
+            this.btnEditarMarca.Location = new System.Drawing.Point(334, 299);
             this.btnEditarMarca.Name = "btnEditarMarca";
             this.btnEditarMarca.Size = new System.Drawing.Size(200, 78);
             this.btnEditarMarca.TabIndex = 22;
@@ -174,12 +175,24 @@
             this.btnEditarMarca.UseVisualStyleBackColor = false;
             this.btnEditarMarca.Click += new System.EventHandler(this.btnEditarMarca_Click_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(336, 394);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 87);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Haga doble click \r\nen la Marca \r\nque quiera editar";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Marca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(928, 528);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.panel2);
@@ -211,5 +224,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnEditarMarca;
+        private System.Windows.Forms.Label label3;
     }
 }

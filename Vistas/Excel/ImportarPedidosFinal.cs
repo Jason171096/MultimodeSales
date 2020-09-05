@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultimodeSales.Programacion.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace MultimodeSales.Vistas.Excel
         }
         private string modelo = "MODELO";
         private string idusuario = "USUARIO";
+        private bool successfulExecute;
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
@@ -63,11 +65,24 @@ namespace MultimodeSales.Vistas.Excel
                         data2.Rows.Add(rows.ItemArray);
                     }
                 }
-                dgvExcel.DataSource = data2;
+                dgvExcel2.DataSource = data2;
                 dgvExcel2.Columns[0].Width = 120;
                 dgvExcel2.Columns[1].Width = 300;
                 con.Close();
             }
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            ExcelDB excelDB = new ExcelDB();
+            foreach (DataGridViewRow row in dgvExcel.Rows)
+            {
+                successfulExecute = excelDB.AgregarPedidosFinal(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+                if (!successfulExecute)
+                    MessageBox.Show($"Error en subir el modelo {row.Cells[0].Value} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (successfulExecute)
+                MessageBox.Show($"Importacion exitosa", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

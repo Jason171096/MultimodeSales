@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
-            this.lbRuta = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnEditarMarca = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rbtnFecha = new System.Windows.Forms.RadioButton();
+            this.rbtnNumPedido = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvExcel
@@ -48,88 +51,108 @@
             this.dgvExcel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvExcel.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvExcel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExcel.ColumnHeadersHeight = 50;
             this.dgvExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvExcel.EnableHeadersVisualStyles = false;
             this.dgvExcel.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvExcel.Location = new System.Drawing.Point(33, 110);
+            this.dgvExcel.Location = new System.Drawing.Point(33, 114);
             this.dgvExcel.Name = "dgvExcel";
             this.dgvExcel.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvExcel.RowHeadersVisible = false;
             this.dgvExcel.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvExcel.RowTemplate.Height = 30;
             this.dgvExcel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExcel.Size = new System.Drawing.Size(1143, 507);
+            this.dgvExcel.Size = new System.Drawing.Size(1195, 532);
             this.dgvExcel.TabIndex = 7;
             // 
-            // lbRuta
+            // btnBuscar
             // 
-            this.lbRuta.AutoSize = true;
-            this.lbRuta.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRuta.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbRuta.Location = new System.Drawing.Point(277, 32);
-            this.lbRuta.Name = "lbRuta";
-            this.lbRuta.Size = new System.Drawing.Size(19, 27);
-            this.lbRuta.TabIndex = 16;
-            this.lbRuta.Text = ".";
-            this.lbRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBuscar.Location = new System.Drawing.Point(346, 25);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(153, 36);
+            this.btnBuscar.TabIndex = 22;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // label3
+            // groupBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(201, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 27);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Ruta:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.rbtnFecha);
+            this.groupBox1.Controls.Add(this.rbtnNumPedido);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(33, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(538, 83);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar Por:";
             // 
-            // btnEditarMarca
+            // dateTimePicker1
             // 
-            this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(33, 32);
-            this.btnEditarMarca.Name = "btnEditarMarca";
-            this.btnEditarMarca.Size = new System.Drawing.Size(145, 47);
-            this.btnEditarMarca.TabIndex = 23;
-            this.btnEditarMarca.Text = "Cargar";
-            this.btnEditarMarca.UseVisualStyleBackColor = false;
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(183, 51);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(142, 26);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // rbtnFecha
+            // 
+            this.rbtnFecha.AutoSize = true;
+            this.rbtnFecha.Location = new System.Drawing.Point(6, 55);
+            this.rbtnFecha.Name = "rbtnFecha";
+            this.rbtnFecha.Size = new System.Drawing.Size(72, 24);
+            this.rbtnFecha.TabIndex = 12;
+            this.rbtnFecha.TabStop = true;
+            this.rbtnFecha.Text = "Fecha";
+            this.rbtnFecha.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNumPedido
+            // 
+            this.rbtnNumPedido.AutoSize = true;
+            this.rbtnNumPedido.Location = new System.Drawing.Point(6, 25);
+            this.rbtnNumPedido.Name = "rbtnNumPedido";
+            this.rbtnNumPedido.Size = new System.Drawing.Size(158, 24);
+            this.rbtnNumPedido.TabIndex = 10;
+            this.rbtnNumPedido.TabStop = true;
+            this.rbtnNumPedido.Text = "Numero de Pedido";
+            this.rbtnNumPedido.UseVisualStyleBackColor = true;
             // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1219, 650);
-            this.Controls.Add(this.btnEditarMarca);
-            this.Controls.Add(this.lbRuta);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1271, 675);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvExcel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -137,16 +160,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvExcel;
-        private System.Windows.Forms.Label lbRuta;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnEditarMarca;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RadioButton rbtnFecha;
+        private System.Windows.Forms.RadioButton rbtnNumPedido;
     }
 }

@@ -120,7 +120,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label2.Location = new System.Drawing.Point(385, 564);
+            this.label2.Location = new System.Drawing.Point(212, 565);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 81);
             this.label2.TabIndex = 19;
@@ -133,12 +133,13 @@
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImportar.Location = new System.Drawing.Point(568, 573);
+            this.btnImportar.Location = new System.Drawing.Point(395, 574);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(212, 46);
             this.btnImportar.TabIndex = 27;
             this.btnImportar.Text = "Importar";
             this.btnImportar.UseVisualStyleBackColor = false;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // btnCargar
             // 
@@ -197,7 +198,7 @@
             this.dgvExcel2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvExcel2.RowTemplate.Height = 30;
             this.dgvExcel2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExcel2.Size = new System.Drawing.Size(779, 442);
+            this.dgvExcel2.Size = new System.Drawing.Size(595, 442);
             this.dgvExcel2.TabIndex = 28;
             // 
             // ImportarPedidosFinal
@@ -205,13 +206,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(803, 659);
+            this.ClientSize = new System.Drawing.Size(619, 659);
             this.Controls.Add(this.dgvExcel2);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbRuta);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ImportarPedidosFinal";
             this.Text = "ImportarPedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).EndInit();
