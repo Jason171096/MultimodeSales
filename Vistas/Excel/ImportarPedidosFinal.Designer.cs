@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lbRuta = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnImportar = new System.Windows.Forms.Button();
@@ -44,30 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbRuta
-            // 
-            this.lbRuta.AutoSize = true;
-            this.lbRuta.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRuta.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbRuta.Location = new System.Drawing.Point(275, 41);
-            this.lbRuta.Name = "lbRuta";
-            this.lbRuta.Size = new System.Drawing.Size(19, 27);
-            this.lbRuta.TabIndex = 17;
-            this.lbRuta.Text = ".";
-            this.lbRuta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(199, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 27);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Ruta:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvExcel
             // 
@@ -118,11 +92,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label2.Location = new System.Drawing.Point(212, 565);
+            this.label2.Location = new System.Drawing.Point(238, 562);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 81);
+            this.label2.Size = new System.Drawing.Size(141, 63);
             this.label2.TabIndex = 19;
             this.label2.Text = "Importa la \r\nlista a la\r\nBase de Datos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +107,7 @@
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImportar.Location = new System.Drawing.Point(395, 574);
+            this.btnImportar.Location = new System.Drawing.Point(395, 569);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(212, 46);
             this.btnImportar.TabIndex = 27;
@@ -147,11 +121,11 @@
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCargar.Location = new System.Drawing.Point(25, 38);
+            this.btnCargar.Location = new System.Drawing.Point(210, 30);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(151, 34);
+            this.btnCargar.Size = new System.Drawing.Size(189, 34);
             this.btnCargar.TabIndex = 26;
-            this.btnCargar.Text = "Cargar";
+            this.btnCargar.Text = "Cargar Lista";
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
@@ -177,7 +151,7 @@
             this.dgvExcel2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvExcel2.EnableHeadersVisualStyles = false;
             this.dgvExcel2.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvExcel2.Location = new System.Drawing.Point(12, 94);
+            this.dgvExcel2.Location = new System.Drawing.Point(12, 79);
             this.dgvExcel2.Name = "dgvExcel2";
             this.dgvExcel2.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -198,7 +172,7 @@
             this.dgvExcel2.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvExcel2.RowTemplate.Height = 30;
             this.dgvExcel2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExcel2.Size = new System.Drawing.Size(595, 442);
+            this.dgvExcel2.Size = new System.Drawing.Size(595, 465);
             this.dgvExcel2.TabIndex = 28;
             // 
             // ImportarPedidosFinal
@@ -206,16 +180,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(619, 659);
+            this.ClientSize = new System.Drawing.Size(619, 643);
             this.Controls.Add(this.dgvExcel2);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbRuta);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ImportarPedidosFinal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImportarPedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel2)).EndInit();
@@ -225,9 +198,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbRuta;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnImportar;

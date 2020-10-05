@@ -13,11 +13,12 @@ namespace MultimodeSales.Programacion.Marca
     {
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();
-        DataTable dt = new DataTable();
+        
 
         public DataTable VerMarcas()
         {
             conexion.OpenConnection();
+            DataTable dt = new DataTable();
             MySqlCommand cmd = new MySqlCommand("VerMarcas", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
             da.SelectCommand = cmd;

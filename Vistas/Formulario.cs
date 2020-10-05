@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MultimodeSales.Programacion;
 using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Buscar;
 using MultimodeSales.Vistas.Excel;
@@ -16,7 +15,6 @@ namespace MultimodeSales
 {
     public partial class Formulario : Form
     {
-        Conexion conexion = new Conexion();
         public Formulario()
         {
             InitializeComponent();
@@ -26,6 +24,7 @@ namespace MultimodeSales
             panelMarca.Visible = false;
             panelPedidosFinal.Visible = false;
             panelBuscar.Visible = false;
+            panelModelos.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
@@ -33,6 +32,7 @@ namespace MultimodeSales
             lbMarca.Visible = false;
             lbPedidosFinal.Visible = false;
             lbBuscar.Visible = false;
+            lbModelos.Visible = false;
             #endregion
         }
         #region picCliente
@@ -92,7 +92,7 @@ namespace MultimodeSales
             lbMarca.Visible = false;
         }
         #endregion
-        #region Pedidos Final
+        #region picPedidos Final
         private void picPedidosFinal_Click(object sender, EventArgs e)
         {
             PedidosFinal pedidosFinal = new PedidosFinal();
@@ -130,11 +130,30 @@ namespace MultimodeSales
             lbBuscar.Visible = false;
         }
         #endregion
+        #region picModelos
+        private void picModelos_Click(object sender, EventArgs e)
+        {
+            Modelos modelos = new Modelos();
+            modelos.ShowDialog();
+        }
+        private void picModelos_MouseEnter(object sender, EventArgs e)
+        {
+            panelModelos.Visible = true;
+            lbModelos.Visible = true;
+        }
+        private void picModelos_MouseLeave(object sender, EventArgs e)
+        {
+            panelModelos.Visible = false;
+            lbModelos.Visible = false;
+        }
+        #endregion}
 
         private void timerHora_Tick(object sender, EventArgs e)
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lbHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+        
     }
 }
