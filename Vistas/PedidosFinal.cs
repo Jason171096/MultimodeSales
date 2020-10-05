@@ -59,6 +59,54 @@ namespace MultimodeSales.Vistas
             DataTable dt;
             dt = listaPedidosFinal.ObtenerListaPedidosFinal();
             dgvPedidosFinal.DataSource = dt;
+            DarFormatoTabla();
+        }
+
+        private void DarFormatoTabla()
+        {
+            dgvPedidosFinal.Columns[0].Width = 100;
+            dgvPedidosFinal.Columns[1].Width = 200;
+            dgvPedidosFinal.Columns[2].Width = 200;
+            dgvPedidosFinal.Columns[3].Width = 200;
+            dgvPedidosFinal.Columns[4].Width = 300;
+            dgvPedidosFinal.Columns[5].Width = 200;
+        }
+
+        private void dgvPedidosFinal_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridViewTextBoxEditingControl tb = (DataGridViewTextBoxEditingControl)e.Control;
+            tb.KeyPress += new KeyPressEventHandler(dgvEditCell_KeyPress);
+            e.Control.KeyPress += new KeyPressEventHandler(dgvEditCell_KeyPress);
+        }
+
+        private void dgvEditCell_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 's')
+            {
+                dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+            }
+        }
+
+        private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                {
+                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
+                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
+                }
+                else
+                {
+                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.Black;
+                }
+            }
+        }
+
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

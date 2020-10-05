@@ -68,7 +68,7 @@
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(171, 596);
+            this.panel1.Size = new System.Drawing.Size(171, 595);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -79,7 +79,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(171, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1094, 37);
+            this.panel2.Size = new System.Drawing.Size(1104, 37);
             this.panel2.TabIndex = 2;
             // 
             // lbHora
@@ -306,7 +306,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1265, 596);
+            this.ClientSize = new System.Drawing.Size(1275, 595);
             this.Controls.Add(this.lbModelos);
             this.Controls.Add(this.panelModelos);
             this.Controls.Add(this.picModelos);
