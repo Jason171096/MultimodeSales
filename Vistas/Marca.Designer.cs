@@ -38,10 +38,15 @@
             this.txtNumeroMarca = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMarcas
@@ -66,7 +71,7 @@
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMarcas.EnableHeadersVisualStyles = false;
             this.dgvMarcas.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvMarcas.Location = new System.Drawing.Point(597, 40);
+            this.dgvMarcas.Location = new System.Drawing.Point(597, 69);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -80,14 +85,14 @@
             this.dgvMarcas.RowHeadersVisible = false;
             this.dgvMarcas.RowHeadersWidth = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray;
             this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMarcas.RowTemplate.Height = 30;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(319, 476);
+            this.dgvMarcas.Size = new System.Drawing.Size(339, 476);
             this.dgvMarcas.TabIndex = 7;
             this.dgvMarcas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellDoubleClick);
             // 
@@ -131,21 +136,49 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 528);
+            this.panel1.Size = new System.Drawing.Size(69, 557);
             this.panel1.TabIndex = 17;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Purple;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::MultimodeSales.Properties.Resources.background5;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.picClose);
+            this.panel2.Controls.Add(this.picMinimize);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(50, 0);
+            this.panel2.Location = new System.Drawing.Point(69, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(878, 21);
+            this.panel2.Size = new System.Drawing.Size(879, 49);
             this.panel2.TabIndex = 18;
+            // 
+            // picClose
+            // 
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
+            this.picClose.Location = new System.Drawing.Point(828, 0);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(48, 48);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picClose.TabIndex = 24;
+            this.picClose.TabStop = false;
+            // 
+            // picMinimize
+            // 
+            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
+            this.picMinimize.Location = new System.Drawing.Point(778, 0);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(48, 48);
+            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMinimize.TabIndex = 23;
+            this.picMinimize.TabStop = false;
             // 
             // btnAgregarMarca
             // 
@@ -191,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
-            this.ClientSize = new System.Drawing.Size(928, 528);
+            this.ClientSize = new System.Drawing.Size(948, 557);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEditarMarca);
             this.Controls.Add(this.btnAgregarMarca);
@@ -202,12 +235,16 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumeroMarca);
             this.Controls.Add(this.dgvMarcas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Marca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marca";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +262,7 @@
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnEditarMarca;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.PictureBox picMinimize;
     }
 }

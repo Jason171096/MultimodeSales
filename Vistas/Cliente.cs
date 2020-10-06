@@ -1,4 +1,5 @@
-﻿using MultimodeSales.Programacion.Cliente;
+﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ namespace MultimodeSales.Vistas
     public partial class Cliente : Form
     {
         ClienteDB cliente = new ClienteDB();
+        CDataGridView CDataGrid = new CDataGridView();
         public Cliente()
         {
             InitializeComponent();
+            CDataGrid.FormattingDataGridView(dgvClientes);
             LlenarDataGridView();
         }
 

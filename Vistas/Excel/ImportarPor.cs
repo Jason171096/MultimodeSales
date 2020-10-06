@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultimodeSales.Programacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace MultimodeSales.Vistas.Excel
 {
     public partial class ImportarPor : Form
     {
+        CPanelBarras cPanel = new CPanelBarras();
+        private int MX = 0;
+        private int MY = 0;
         public ImportarPor()
         {
             InitializeComponent();
+
         }
         private void btnImportarPrecios_Click_1(object sender, EventArgs e)
         {
@@ -26,6 +31,30 @@ namespace MultimodeSales.Vistas.Excel
         {
             ImportarPedidosFinal importarPedidos = new ImportarPedidosFinal();
             importarPedidos.ShowDialog();
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void panelBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
         }
     }
 }

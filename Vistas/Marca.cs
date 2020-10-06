@@ -16,11 +16,13 @@ namespace MultimodeSales.Vistas
     {
         MarcaBD marca = new MarcaBD();
         Validaciones validacion = new Validaciones();
+        CDataGridView CDataGrid = new CDataGridView();
         private int Rowindex;
 
         public Marca()
         {
             InitializeComponent();
+            CDataGrid.FormattingDataGridView(dgvMarcas);
             LlenarDataGridViewMarca();
         }
 
@@ -84,8 +86,7 @@ namespace MultimodeSales.Vistas
         {
             validacion.SoloNumeros(e);
         }
-        #endregion
 
-       
+        #endregion
     }
 }

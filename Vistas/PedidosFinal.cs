@@ -17,9 +17,11 @@ namespace MultimodeSales.Vistas
     {
         private int Buscar;
         ListaPedidosFinal listaPedidosFinal = new ListaPedidosFinal();
+        CDataGridView CDataGrid = new CDataGridView();
         public PedidosFinal()
         {
             InitializeComponent();
+            CDataGrid.FormattingDataGridView(dgvPedidosFinal);
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             CargarLista();

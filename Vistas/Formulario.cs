@@ -15,6 +15,8 @@ namespace MultimodeSales
 {
     public partial class Formulario : Form
     {
+        private int MX = 0;
+        private int MY = 0;
         public Formulario()
         {
             InitializeComponent();
@@ -148,12 +150,36 @@ namespace MultimodeSales
         }
         #endregion}
 
+       
+
+        #region Barra Superior
+        private void panelBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
         private void timerHora_Tick(object sender, EventArgs e)
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lbHora.Text = DateTime.Now.ToLongTimeString();
         }
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
 
-        
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
     }
 }
