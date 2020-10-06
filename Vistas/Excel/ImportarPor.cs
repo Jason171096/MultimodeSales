@@ -1,19 +1,10 @@
-﻿using MultimodeSales.Programacion;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace MultimodeSales.Vistas.Excel
 {
     public partial class ImportarPor : Form
     {
-        CPanelBarras cPanel = new CPanelBarras();
         private int MX = 0;
         private int MY = 0;
         public ImportarPor()

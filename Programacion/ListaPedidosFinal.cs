@@ -21,5 +21,14 @@ namespace MultimodeSales.Programacion
             conexion.CloseConnection();
             return dt;
         }
+
+        public void UpdatePedidoLlego(string idcliente, string idmodelo)
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("ActualizarPedidoFinal", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idmodelo", idmodelo));
+            cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
+        }
     }
 }

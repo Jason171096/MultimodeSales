@@ -108,7 +108,11 @@ namespace MultimodeSales.Vistas
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            {
+                if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
+                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value + "", rows.Cells[2].Value + "");
+            }
         }
     }
 }

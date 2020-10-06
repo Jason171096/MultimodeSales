@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Buscar;
 using MultimodeSales.Vistas.Excel;
+using MultimodeSales.Programacion;
 
 namespace MultimodeSales
 {
@@ -36,6 +30,7 @@ namespace MultimodeSales
             lbBuscar.Visible = false;
             lbModelos.Visible = false;
             #endregion
+            
         }
         #region picCliente
         private void picCliente_Click(object sender, EventArgs e)
@@ -155,16 +150,7 @@ namespace MultimodeSales
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Left)
-            {
-                MX = e.X;
-                MY = e.Y;
-            }
-            else
-            {
-                Left = Left + (e.X - MX);
-                Top = Top + (e.Y - MY);
-            }
+            MouseMove(sender, e);
         }
         private void timerHora_Tick(object sender, EventArgs e)
         {
@@ -179,6 +165,28 @@ namespace MultimodeSales
         private void picClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void lbFecha_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void lbHora_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
         }
         #endregion
     }

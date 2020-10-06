@@ -49,11 +49,11 @@
             this.picImportExcel = new System.Windows.Forms.PictureBox();
             this.picCliente = new System.Windows.Forms.PictureBox();
             this.panelBarra = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.lbHora = new System.Windows.Forms.Label();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
             this.lbFecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.picClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
@@ -61,8 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
             this.panelBarra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCliente
@@ -278,6 +278,18 @@
             this.panelBarra.TabIndex = 2;
             this.panelBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarra_MouseMove);
             // 
+            // picClose
+            // 
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
+            this.picClose.Location = new System.Drawing.Point(1076, 0);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(48, 48);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picClose.TabIndex = 22;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // lbHora
             // 
             this.lbHora.AutoSize = true;
@@ -289,30 +301,7 @@
             this.lbHora.Size = new System.Drawing.Size(73, 24);
             this.lbHora.TabIndex = 1;
             this.lbHora.Text = "tiempo";
-            // 
-            // lbFecha
-            // 
-            this.lbFecha.AutoSize = true;
-            this.lbFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbFecha.Location = new System.Drawing.Point(6, 13);
-            this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(73, 24);
-            this.lbFecha.TabIndex = 0;
-            this.lbFecha.Text = "tiempo";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 614);
-            this.panel1.TabIndex = 1;
+            this.lbHora.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHora_MouseMove);
             // 
             // picMinimize
             // 
@@ -326,17 +315,30 @@
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
-            // picClose
+            // lbFecha
             // 
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(1076, 0);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(48, 48);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picClose.TabIndex = 22;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lbFecha.Location = new System.Drawing.Point(6, 13);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(73, 24);
+            this.lbFecha.TabIndex = 0;
+            this.lbFecha.Text = "tiempo";
+            this.lbFecha.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbFecha_MouseMove);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(201, 614);
+            this.panel1.TabIndex = 1;
             // 
             // Formulario
             // 
@@ -377,8 +379,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).EndInit();
             this.panelBarra.ResumeLayout(false);
             this.panelBarra.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

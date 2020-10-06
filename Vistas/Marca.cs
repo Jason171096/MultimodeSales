@@ -17,6 +17,9 @@ namespace MultimodeSales.Vistas
         MarcaBD marca = new MarcaBD();
         Validaciones validacion = new Validaciones();
         CDataGridView CDataGrid = new CDataGridView();
+        DataTable dt = new DataTable();
+        private int MX = 0;
+        private int MY = 0;
         private int Rowindex;
 
         public Marca()
@@ -29,8 +32,11 @@ namespace MultimodeSales.Vistas
         private void LlenarDataGridViewMarca()
         {
             dgvMarcas.DataSource = null;
-            dgvMarcas.DataSource = marca.VerMarcas();
-            dgvMarcas.Columns[1].Width = 250;
+            dt.Clear();
+            dt = marca.VerMarcas();
+            dgvMarcas.DataSource = dt;
+            dgvMarcas.Columns[0].Width = 200;
+            dgvMarcas.Columns[1].Width = 650;
         }
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
@@ -87,6 +93,53 @@ namespace MultimodeSales.Vistas
             validacion.SoloNumeros(e);
         }
 
+        #endregion
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.SoloLetrasyNumeros(sender, e);
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = string.Format("Convert(IDMarca, 'System.String') LIKE '%{0}%' OR Nombre LIKE '%{0}%'", txtBuscar.Text);
+            dgvMarcas.DataSource = dv;
+        }
+
+        #region Panel Barras
+        private void panelBarras_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void lbClientes_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
         #endregion
     }
 }
