@@ -25,6 +25,7 @@ namespace MultimodeSales.Vistas
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             CargarLista();
+            dgvPedidosFinal.Columns[0].Visible = false;
         }
 
         private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
@@ -111,7 +112,7 @@ namespace MultimodeSales.Vistas
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
                 if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
-                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value + "", rows.Cells[2].Value + "");
+                    listaPedidosFinal.UpdatePedidoLlego2(rows.Cells[0].Value + "");
             }
         }
     }

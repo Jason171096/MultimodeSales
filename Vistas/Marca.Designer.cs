@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreMarca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNumeroMarca = new System.Windows.Forms.TextBox();
+            this.txtIDMarca = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBarras = new System.Windows.Forms.Panel();
+            this.lbClientes = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEditarMarca = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbClientes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -65,14 +66,14 @@
             this.dgvMarcas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMarcas.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvMarcas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMarcas.ColumnHeadersHeight = 50;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMarcas.EnableHeadersVisualStyles = false;
@@ -80,22 +81,22 @@
             this.dgvMarcas.Location = new System.Drawing.Point(61, 318);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMarcas.RowHeadersVisible = false;
             this.dgvMarcas.RowHeadersWidth = 30;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.SlateGray;
-            this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray;
+            this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMarcas.RowTemplate.Height = 30;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarcas.Size = new System.Drawing.Size(867, 335);
@@ -106,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 111);
+            this.label2.Location = new System.Drawing.Point(32, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 11;
@@ -115,7 +116,7 @@
             // txtNombreMarca
             // 
             this.txtNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreMarca.Location = new System.Drawing.Point(210, 108);
+            this.txtNombreMarca.Location = new System.Drawing.Point(145, 92);
             this.txtNombreMarca.Name = "txtNombreMarca";
             this.txtNombreMarca.Size = new System.Drawing.Size(268, 35);
             this.txtNombreMarca.TabIndex = 10;
@@ -124,20 +125,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 60);
+            this.label1.Location = new System.Drawing.Point(25, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 29);
+            this.label1.Size = new System.Drawing.Size(114, 29);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Numero Marca:";
+            this.label1.Text = "ID Marca:";
             // 
-            // txtNumeroMarca
+            // txtIDMarca
             // 
-            this.txtNumeroMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroMarca.Location = new System.Drawing.Point(210, 57);
-            this.txtNumeroMarca.Name = "txtNumeroMarca";
-            this.txtNumeroMarca.Size = new System.Drawing.Size(268, 35);
-            this.txtNumeroMarca.TabIndex = 8;
-            this.txtNumeroMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroMarca_KeyPress);
+            this.txtIDMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDMarca.Location = new System.Drawing.Point(145, 41);
+            this.txtIDMarca.Name = "txtIDMarca";
+            this.txtIDMarca.Size = new System.Drawing.Size(268, 35);
+            this.txtIDMarca.TabIndex = 8;
+            this.txtIDMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroMarca_KeyPress);
             // 
             // panel1
             // 
@@ -165,6 +166,19 @@
             this.panelBarras.Size = new System.Drawing.Size(890, 49);
             this.panelBarras.TabIndex = 18;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
+            // 
+            // lbClientes
+            // 
+            this.lbClientes.AutoSize = true;
+            this.lbClientes.BackColor = System.Drawing.Color.Transparent;
+            this.lbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbClientes.Location = new System.Drawing.Point(6, 9);
+            this.lbClientes.Name = "lbClientes";
+            this.lbClientes.Size = new System.Drawing.Size(91, 29);
+            this.lbClientes.TabIndex = 37;
+            this.lbClientes.Text = "Marcas";
+            this.lbClientes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbClientes_MouseMove);
             // 
             // picClose
             // 
@@ -196,9 +210,9 @@
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(34, 170);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(37, 161);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(193, 58);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(190, 45);
             this.btnAgregarMarca.TabIndex = 21;
             this.btnAgregarMarca.Text = "Agregar Marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = false;
@@ -207,12 +221,13 @@
             // btnEditarMarca
             // 
             this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnEditarMarca.Enabled = false;
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(273, 170);
+            this.btnEditarMarca.Location = new System.Drawing.Point(242, 161);
             this.btnEditarMarca.Name = "btnEditarMarca";
-            this.btnEditarMarca.Size = new System.Drawing.Size(178, 58);
+            this.btnEditarMarca.Size = new System.Drawing.Size(180, 45);
             this.btnEditarMarca.TabIndex = 22;
             this.btnEditarMarca.Text = "Editar Marca";
             this.btnEditarMarca.UseVisualStyleBackColor = false;
@@ -222,7 +237,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(622, 108);
+            this.label3.Location = new System.Drawing.Point(542, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 87);
             this.label3.TabIndex = 23;
@@ -231,8 +246,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtNumeroMarca);
+            this.groupBox1.Controls.Add(this.txtIDMarca);
             this.groupBox1.Controls.Add(this.btnEditarMarca);
             this.groupBox1.Controls.Add(this.txtNombreMarca);
             this.groupBox1.Controls.Add(this.btnAgregarMarca);
@@ -240,15 +256,30 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(56, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 257);
+            this.groupBox1.Size = new System.Drawing.Size(470, 257);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Marca";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.Location = new System.Drawing.Point(242, 212);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(180, 32);
+            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(660, 277);
+            this.txtBuscar.Location = new System.Drawing.Point(641, 277);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(268, 35);
             this.txtBuscar.TabIndex = 36;
@@ -259,24 +290,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(561, 280);
+            this.label4.Location = new System.Drawing.Point(542, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 29);
             this.label4.TabIndex = 37;
             this.label4.Text = "Buscar:";
-            // 
-            // lbClientes
-            // 
-            this.lbClientes.AutoSize = true;
-            this.lbClientes.BackColor = System.Drawing.Color.Transparent;
-            this.lbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbClientes.Location = new System.Drawing.Point(6, 9);
-            this.lbClientes.Name = "lbClientes";
-            this.lbClientes.Size = new System.Drawing.Size(91, 29);
-            this.lbClientes.TabIndex = 37;
-            this.lbClientes.Text = "Marcas";
-            this.lbClientes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbClientes_MouseMove);
             // 
             // Marca
             // 
@@ -314,7 +332,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreMarca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNumeroMarca;
+        private System.Windows.Forms.TextBox txtIDMarca;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelBarras;
         private System.Windows.Forms.Button btnAgregarMarca;
@@ -326,5 +344,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbClientes;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -28,24 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnEditarMarca = new System.Windows.Forms.Button();
-            this.btnAgregarMarca = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnEditarCliente = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbClientes = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreMarca = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNumeroMarca = new System.Windows.Forms.TextBox();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -53,31 +55,34 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEditarMarca
+            // btnEditarCliente
             // 
-            this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(270, 183);
-            this.btnEditarMarca.Name = "btnEditarMarca";
-            this.btnEditarMarca.Size = new System.Drawing.Size(178, 58);
-            this.btnEditarMarca.TabIndex = 31;
-            this.btnEditarMarca.Text = "Editar Cliente";
-            this.btnEditarMarca.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnEditarCliente.Enabled = false;
+            this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEditarCliente.Location = new System.Drawing.Point(259, 167);
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Size = new System.Drawing.Size(180, 45);
+            this.btnEditarCliente.TabIndex = 31;
+            this.btnEditarCliente.Text = "Editar Cliente";
+            this.btnEditarCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
-            // btnAgregarMarca
+            // btnAgregarCliente
             // 
-            this.btnAgregarMarca.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(29, 183);
-            this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(210, 58);
-            this.btnAgregarMarca.TabIndex = 30;
-            this.btnAgregarMarca.Text = "Agregar Cliente";
-            this.btnAgregarMarca.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(46, 167);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(190, 45);
+            this.btnAgregarCliente.TabIndex = 30;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // panelBarras
             // 
@@ -149,37 +154,38 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 119);
+            this.label3.Location = new System.Drawing.Point(41, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 29);
             this.label3.TabIndex = 27;
             this.label3.Text = "Nombre:";
             // 
-            // txtNombreMarca
+            // txtNombreCliente
             // 
-            this.txtNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreMarca.Location = new System.Drawing.Point(201, 116);
-            this.txtNombreMarca.Name = "txtNombreMarca";
-            this.txtNombreMarca.Size = new System.Drawing.Size(268, 35);
-            this.txtNombreMarca.TabIndex = 26;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.Location = new System.Drawing.Point(154, 101);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(268, 35);
+            this.txtNombreCliente.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 68);
+            this.label4.Location = new System.Drawing.Point(24, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 29);
+            this.label4.Size = new System.Drawing.Size(124, 29);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Numero Cliente:";
+            this.label4.Text = "ID Cliente:";
             // 
-            // txtNumeroMarca
+            // txtIDCliente
             // 
-            this.txtNumeroMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroMarca.Location = new System.Drawing.Point(201, 65);
-            this.txtNumeroMarca.Name = "txtNumeroMarca";
-            this.txtNumeroMarca.Size = new System.Drawing.Size(268, 35);
-            this.txtNumeroMarca.TabIndex = 24;
+            this.txtIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDCliente.Location = new System.Drawing.Point(154, 50);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.Size = new System.Drawing.Size(268, 35);
+            this.txtIDCliente.TabIndex = 24;
+            this.txtIDCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDCliente_KeyPress);
             // 
             // dgvClientes
             // 
@@ -192,14 +198,14 @@
             this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvClientes.ColumnHeadersHeight = 50;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.EnableHeadersVisualStyles = false;
@@ -207,39 +213,41 @@
             this.dgvClientes.Location = new System.Drawing.Point(61, 325);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvClientes.RowHeadersVisible = false;
             this.dgvClientes.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvClientes.RowTemplate.Height = 30;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(867, 328);
             this.dgvClientes.TabIndex = 32;
+            this.dgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellDoubleClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtNumeroMarca);
-            this.groupBox1.Controls.Add(this.btnEditarMarca);
-            this.groupBox1.Controls.Add(this.txtNombreMarca);
-            this.groupBox1.Controls.Add(this.btnAgregarMarca);
+            this.groupBox1.Controls.Add(this.txtIDCliente);
+            this.groupBox1.Controls.Add(this.btnEditarCliente);
+            this.groupBox1.Controls.Add(this.txtNombreCliente);
+            this.groupBox1.Controls.Add(this.btnAgregarCliente);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(56, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 267);
+            this.groupBox1.Size = new System.Drawing.Size(462, 267);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
@@ -247,7 +255,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(661, 284);
+            this.txtBuscar.Location = new System.Drawing.Point(638, 284);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(268, 35);
             this.txtBuscar.TabIndex = 34;
@@ -258,11 +266,37 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(562, 287);
+            this.label1.Location = new System.Drawing.Point(539, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 29);
             this.label1.TabIndex = 35;
             this.label1.Text = "Buscar:";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.Location = new System.Drawing.Point(259, 218);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(180, 32);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(555, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(198, 87);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Haga doble click \r\nen la Cliente \r\nque quiera editar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Cliente
             // 
@@ -270,6 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(940, 665);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -294,14 +329,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnEditarMarca;
-        private System.Windows.Forms.Button btnAgregarMarca;
+        private System.Windows.Forms.Button btnEditarCliente;
+        private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Panel panelBarras;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombreMarca;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNumeroMarca;
+        private System.Windows.Forms.TextBox txtIDCliente;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -309,5 +344,7 @@
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.Label lbClientes;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label2;
     }
 }

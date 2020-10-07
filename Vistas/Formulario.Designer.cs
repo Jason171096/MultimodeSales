@@ -54,6 +54,8 @@
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.lbFecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbAdmin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
@@ -63,6 +65,8 @@
             this.panelBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCliente
@@ -296,7 +300,7 @@
             this.lbHora.BackColor = System.Drawing.Color.Transparent;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHora.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbHora.Location = new System.Drawing.Point(868, 10);
+            this.lbHora.Location = new System.Drawing.Point(868, 12);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(73, 24);
             this.lbHora.TabIndex = 1;
@@ -333,12 +337,35 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lbAdmin);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(201, 614);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MultimodeSales.Properties.Resources.admin128px;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 134);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbAdmin
+            // 
+            this.lbAdmin.AutoSize = true;
+            this.lbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbAdmin.Location = new System.Drawing.Point(39, 150);
+            this.lbAdmin.Name = "lbAdmin";
+            this.lbAdmin.Size = new System.Drawing.Size(115, 24);
+            this.lbAdmin.TabIndex = 9;
+            this.lbAdmin.Text = "Bienvenido";
             // 
             // Formulario
             // 
@@ -381,6 +408,9 @@
             this.panelBarra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,6 +443,8 @@
         private System.Windows.Forms.PictureBox picModelos;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbAdmin;
     }
 }
 

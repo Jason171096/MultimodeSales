@@ -43,6 +43,6 @@ namespace MultimodeSales.Programacion
         //        this.Top = this.Top + (e.Y - MY);
         //    }
         //    Verificar = false;
-        }
+        //}
     }
 }

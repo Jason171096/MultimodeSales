@@ -42,27 +42,28 @@ namespace MultimodeSales.Programacion.Marca
             return res;
         }
 
-        public void AgregarMarca(string numeromarca, string nombremarca)
+        public void AgregarMarca(string idmarca, string nombre)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("AgregarMarca", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("idmarca", numeromarca));
-            cmd.Parameters.Add(new MySqlParameter("nombre", nombremarca));
+            cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
+            cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se agrego nueva marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cmd.Connection.Close();
         }
 
-        public void EditarMarca(string numeromarca, string nombremarca)
+        public void EditarMarca(string idmarcaActual, string idmarca, string nombre)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("EditarMarca", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("numero", numeromarca));
-            cmd.Parameters.Add(new MySqlParameter("nombre", nombremarca));
+            cmd.Parameters.Add(new MySqlParameter("idmarcaActual", idmarcaActual));
+            cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
+            cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se edito la marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se edito la marca correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cmd.Connection.Close();
         }
         

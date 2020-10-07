@@ -1,12 +1,6 @@
 ﻿using MultimodeSales.Programacion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Programacion.Marca;
 
@@ -40,41 +34,43 @@ namespace MultimodeSales.Vistas
         }
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtNombreMarca.Text) || String.IsNullOrWhiteSpace(txtNumeroMarca.Text))
-                MessageBox.Show("No pueden estar los campos vacios de Numero de Marca o Nombre Marca", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (String.IsNullOrWhiteSpace(txtNombreMarca.Text) || String.IsNullOrWhiteSpace(txtIDMarca.Text))
+                MessageBox.Show("No pueden estar los campos vacios de ID de Marca o Nombre", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 int cont = 0;
                 for (int i = 0; i < dgvMarcas.Rows.Count; i++)
                 {
-                    if (txtNumeroMarca.Text == dgvMarcas.Rows[i].Cells[0].Value.ToString())
+                    if (txtIDMarca.Text == dgvMarcas.Rows[i].Cells[0].Value.ToString())
                         cont++;
                 }
                 if (cont >= 1)
-                    MessageBox.Show("No pueden existir dos marcas con Numeros Iguales, intente con otro NUMERO", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No pueden existir dos ID's iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    marca.AgregarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
+                    marca.AgregarMarca(txtIDMarca.Text, txtNombreMarca.Text);
                     LlenarDataGridViewMarca();
                 }
             }
         }
-
         private void btnEditarMarca_Click_1(object sender, EventArgs e)
         {
-            btnAgregarMarca.Enabled = true;
             int cont = 0;
             for (int i = 0; i < dgvMarcas.Rows.Count; i++)
             {
-                if (txtNumeroMarca.Text == dgvMarcas.Rows[i].Cells[0].Value.ToString())
+                if (txtIDMarca.Text == dgvMarcas.Rows[i].Cells[0].Value.ToString())
                     if (Rowindex != dgvMarcas.Rows[i].Index)
                         cont++;
             }
             if (cont >= 1)
-                MessageBox.Show("No pueden existir dos marcas con Numeros Iguales, intente con otro NUMERO", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No pueden existir dos marcas con ID's Iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                marca.EditarMarca(txtNumeroMarca.Text, txtNombreMarca.Text);
+                btnAgregarMarca.Enabled = true;
+                btnEditarMarca.Enabled = false;
+                btnCancelar.Visible = false;
+                marca.EditarMarca(txtIDMarca.Tag + "", txtIDMarca.Text, txtNombreMarca.Text);
+                BorrarDatos();
                 LlenarDataGridViewMarca();
             }
 
@@ -82,31 +78,41 @@ namespace MultimodeSales.Vistas
         private void dgvMarcas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnAgregarMarca.Enabled = false;
-            txtNumeroMarca.Text = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
+            btnEditarMarca.Enabled = true;
+            btnCancelar.Visible = true;
+            txtIDMarca.Text = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
             txtNombreMarca.Text = dgvMarcas.CurrentRow.Cells[1].Value.ToString();
+            txtIDMarca.Tag = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
             Rowindex = e.RowIndex;
         }
-
-        #region Validaciones
-        private void txtNumeroMarca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validacion.SoloNumeros(e);
-        }
-
-        #endregion
-
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validacion.SoloLetrasyNumeros(sender, e);
-        }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             DataView dv = new DataView(dt);
             dv.RowFilter = string.Format("Convert(IDMarca, 'System.String') LIKE '%{0}%' OR Nombre LIKE '%{0}%'", txtBuscar.Text);
             dgvMarcas.DataSource = dv;
         }
-
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            BorrarDatos();
+            btnAgregarMarca.Enabled = true;
+            btnEditarMarca.Enabled = false;
+            btnCancelar.Visible = false;
+        }
+        private void BorrarDatos()
+        {
+            txtIDMarca.Text = "";
+            txtNombreMarca.Text = "";
+        }
+        #region Validaciones
+        private void txtNumeroMarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.SoloNumeros(e);
+        }
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacion.SoloLetrasyNumeros(sender, e);
+        }
+        #endregion
         #region Panel Barras
         private void panelBarras_MouseMove(object sender, MouseEventArgs e)
         {
@@ -141,5 +147,7 @@ namespace MultimodeSales.Vistas
             }
         }
         #endregion
+
+       
     }
 }
