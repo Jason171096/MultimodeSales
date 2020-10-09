@@ -183,6 +183,16 @@ namespace MultimodeSales.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap order128px {
+            get {
+                object obj = ResourceManager.GetObject("order128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap request128px {
             get {
                 object obj = ResourceManager.GetObject("request128px", resourceCulture);
@@ -206,6 +216,26 @@ namespace MultimodeSales.Properties {
         internal static System.Drawing.Bitmap shoes128px {
             get {
                 object obj = ResourceManager.GetObject("shoes128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap size_color {
+            get {
+                object obj = ResourceManager.GetObject("size-color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap size_colors {
+            get {
+                object obj = ResourceManager.GetObject("size-colors", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

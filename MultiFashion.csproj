@@ -157,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Programacion\BuscarPedidoFinal.cs" />
+    <Compile Include="Programacion\CColoresyTallas.cs" />
     <Compile Include="Programacion\CFormBorder.cs" />
     <Compile Include="Programacion\Cliente\ClienteDB.cs" />
     <Compile Include="Programacion\Conexion.cs" />
@@ -217,17 +218,35 @@
     <Compile Include="Vistas\Marca.Designer.cs">
       <DependentUpon>Marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Modelos.cs">
+    <Compile Include="Vistas\Modelos\EditModelo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Modelos.Designer.cs">
+    <Compile Include="Vistas\Modelos\EditModelo.Designer.cs">
+      <DependentUpon>EditModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Modelos\Modelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Modelos\Modelos.Designer.cs">
       <DependentUpon>Modelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\PedidosFinal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\PedidosFinal.Designer.cs">
       <DependentUpon>PedidosFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\TallasyColores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\TallasyColores.Designer.cs">
+      <DependentUpon>TallasyColores.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vistas\Buscar\BuscarPor.resx">
       <DependentUpon>BuscarPor.cs</DependentUpon>
@@ -255,11 +274,20 @@
     <EmbeddedResource Include="Vistas\Marca.resx">
       <DependentUpon>Marca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Modelos.resx">
+    <EmbeddedResource Include="Vistas\Modelos\EditModelo.resx">
+      <DependentUpon>EditModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modelos\Modelos.resx">
       <DependentUpon>Modelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\PedidosFinal.resx">
       <DependentUpon>PedidosFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TallasyColores.resx">
+      <DependentUpon>TallasyColores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -319,6 +347,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\admin128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size-colors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order128px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

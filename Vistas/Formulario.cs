@@ -21,6 +21,8 @@ namespace MultimodeSales
             panelPedidosFinal.Visible = false;
             panelBuscar.Visible = false;
             panelModelos.Visible = false;
+            panelColTall.Visible = false;
+            panelPedido.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
@@ -29,6 +31,8 @@ namespace MultimodeSales
             lbPedidosFinal.Visible = false;
             lbBuscar.Visible = false;
             lbModelos.Visible = false;
+            lbColTall.Visible = false;
+            lbPedido.Visible = false;
             #endregion
             
         }
@@ -130,7 +134,7 @@ namespace MultimodeSales
         #region picModelos
         private void picModelos_Click(object sender, EventArgs e)
         {
-            Modelos modelos = new Modelos();
+            Modeloss modelos = new Modeloss();
             modelos.ShowDialog();
         }
         private void picModelos_MouseEnter(object sender, EventArgs e)
@@ -143,9 +147,46 @@ namespace MultimodeSales
             panelModelos.Visible = false;
             lbModelos.Visible = false;
         }
-        #endregion}
+        #endregion
+        #region picColTall
+        private void picColTall_MouseEnter(object sender, EventArgs e)
+        {
+            panelColTall.Visible = true;
+            lbColTall.Visible = true;
+        }
 
-       
+        private void picColTall_MouseLeave(object sender, EventArgs e)
+        {
+            panelColTall.Visible = false;
+            lbColTall.Visible = false;
+        }
+
+        private void picColTall_Click(object sender, EventArgs e)
+        {
+            TallasyColores tallasyColores = new TallasyColores();
+            tallasyColores.Show();
+            
+            
+        }
+        #endregion
+        #region picPedido
+        private void picPedido_MouseEnter(object sender, EventArgs e)
+        {
+            panelPedido.Visible = true;
+            lbPedido.Visible = true;
+        }
+        private void picPedido_MouseLeave(object sender, EventArgs e)
+        {
+            panelPedido.Visible = false;
+            lbPedido.Visible = false;
+        }
+        private void picPedido_Click(object sender, EventArgs e)
+        {
+            Pedido pedido = new Pedido();
+            pedido.ShowDialog();
+        }
+        #endregion
+
 
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
@@ -188,6 +229,10 @@ namespace MultimodeSales
                 Top = Top + (e.Y - MY);
             }
         }
+
+
         #endregion
+
+        
     }
 }

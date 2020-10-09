@@ -16,21 +16,26 @@ namespace MultimodeSales.Vistas
     {
         MarcaBD marca = new MarcaBD();
         CImportarCSVyExcel importarCSV = new CImportarCSVyExcel();
+        CDataGridView cDataGrid = new CDataGridView();
         public ImportarListaMarca()
         {
             InitializeComponent();
             LlenarComboBoxMarca();
+            cDataGrid.FormattingDataGridView(dgvExcel);
         }
         private string modelo = "MODELO";
         private string color = "COLOR";
         private string talla = "TALLA";
         private string claves = "CLAVES";
         private bool successfulExecute;
+        private int MX;
+        private int MY;
 
         public void LlenarComboBoxMarca()
         {
             List<object[]> list = marca.VerMarcas2();
             Dictionary<string, string> keyValues = new Dictionary<string, string>();
+            keyValues.Add("-1", "--Elegir Marca--");
             foreach (object[] item in list)
             {
                 keyValues.Add(item[0].ToString(), item[1].ToString());
@@ -64,16 +69,10 @@ namespace MultimodeSales.Vistas
         {
             DataTable dt;
             dgvExcel.DataSource = null;
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Title = "Select file";
-            openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            openFile.Filter = "CSV(*.csv)|*.csv|All Files(*.*)|*.*";
-            openFile.FilterIndex = 1;
-            openFile.Multiselect = false;
-            openFile.RestoreDirectory = true;
-            if (openFile.ShowDialog() == DialogResult.OK)
+            string openFile = importarCSV.GetFileName();
+            if (!openFile.Equals(""))
             {
-                dt = importarCSV.ImportarCSV(openFile.FileName);
+                dt = importarCSV.ImportarCSV(openFile);
 
                 if (dt.Columns.Count > 4)
                 {
@@ -153,6 +152,43 @@ namespace MultimodeSales.Vistas
                 MessageBox.Show("Los parametros recibidos no son validos, intente de nuevo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #region Panel Barras
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void lbClientes_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void panelBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
+        #endregion
     }
 }

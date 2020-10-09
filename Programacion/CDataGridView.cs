@@ -12,6 +12,7 @@ namespace MultimodeSales.Programacion
     {
         public void FormattingDataGridView(DataGridView dataGrid)
         {
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGrid.GridColor = Color.DarkSlateBlue;
             dataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkSlateBlue;
             dataGrid.RowsDefaultCellStyle.BackColor = Color.Indigo;
