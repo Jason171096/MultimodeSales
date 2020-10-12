@@ -26,6 +26,19 @@ namespace MultimodeSales.Programacion.Cliente
             conexion.CloseConnection();
             return dt;
         }
+        public List<object[]> VerClientes2()
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("VerClientes", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            List<object[]> res = new List<object[]>();
+            while (rdr.Read())
+            {
+                res.Add(new object[] { rdr[0], rdr[1] });
+            }
+            return res;
+        }
         public void AgregarCliente(string idcliente, string nombre)
         {
             conexion.OpenConnection();

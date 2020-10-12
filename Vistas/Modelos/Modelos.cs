@@ -98,6 +98,7 @@ namespace MultimodeSales.Vistas
         private void btnAgregarModelo_Click(object sender, EventArgs e)
         {
             new EditModelo(true, "", "", "", "", "").ShowDialog();
+            CargarModelos();
         }
 
         private void btnEditarModelo_Click(object sender, EventArgs e)
@@ -109,6 +110,7 @@ namespace MultimodeSales.Vistas
             string precioCliente = dgvModelos.CurrentRow.Cells[5].Value + "";
                  
             new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
+            CargarModelos();
         }
     }
 }

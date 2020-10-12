@@ -9,6 +9,7 @@ using System.Linq;
 using MultimodeSales.Programacion.Excel;
 using System.Diagnostics;
 using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Modelo;
 
 namespace MultimodeSales.Vistas
 {
@@ -16,6 +17,7 @@ namespace MultimodeSales.Vistas
     {
         MarcaBD marca = new MarcaBD();
         CImportarCSVyExcel importarCSV = new CImportarCSVyExcel();
+        ModelosDB modelos = new ModelosDB();
         CDataGridView cDataGrid = new CDataGridView();
         public ImportarListaMarca()
         {
@@ -27,7 +29,6 @@ namespace MultimodeSales.Vistas
         private string color = "COLOR";
         private string talla = "TALLA";
         private string claves = "CLAVES";
-        private bool successfulExecute;
         private int MX;
         private int MY;
 
@@ -54,16 +55,12 @@ namespace MultimodeSales.Vistas
 
         private void btnImportar_Click_1(object sender, EventArgs e)
         {
-            ExcelDB excelDB = new ExcelDB();
             string idmarca = cobxMarca.SelectedValue.ToString();
             foreach (DataGridViewRow row in dgvExcel.Rows)
             {
-                successfulExecute = excelDB.AgregarListaMarca(row.Cells[0].Value.ToString(), idmarca, row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString());
-                if (!successfulExecute)
-                    MessageBox.Show($"Error en subir el modelo {row.Cells[0].Value} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                modelos.AgregarModelo(row.Cells[0].Value.ToString(), idmarca, row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString());
             }
-            if (successfulExecute)
-                MessageBox.Show($"Importacion exitosa", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Importacion exitosa", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void CargarCSV()
         {

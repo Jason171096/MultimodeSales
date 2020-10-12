@@ -108,6 +108,7 @@
             // 
             // txtIDModelo
             // 
+            this.txtIDModelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDModelo.Location = new System.Drawing.Point(211, 138);
             this.txtIDModelo.Name = "txtIDModelo";
@@ -126,6 +127,7 @@
             // 
             // txtColor
             // 
+            this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColor.Location = new System.Drawing.Point(211, 193);
             this.txtColor.Name = "txtColor";
@@ -144,6 +146,7 @@
             // 
             // txtTalla
             // 
+            this.txtTalla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTalla.Location = new System.Drawing.Point(211, 252);
             this.txtTalla.Name = "txtTalla";
@@ -162,6 +165,7 @@
             // 
             // txtPrecioCliente
             // 
+            this.txtPrecioCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioCliente.Location = new System.Drawing.Point(211, 307);
             this.txtPrecioCliente.Name = "txtPrecioCliente";
@@ -180,6 +184,7 @@
             // 
             // txtPrecioPublico
             // 
+            this.txtPrecioPublico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioPublico.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioPublico.Location = new System.Drawing.Point(211, 363);
             this.txtPrecioPublico.Name = "txtPrecioPublico";
@@ -201,9 +206,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cobxMarca);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(180, 31);
+            this.groupBox1.Location = new System.Drawing.Point(137, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 90);
+            this.groupBox1.Size = new System.Drawing.Size(374, 90);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marcas";
@@ -222,11 +227,12 @@
             // 
             // cobxMarca
             // 
-            this.cobxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cobxMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.cobxMarca.FormattingEnabled = true;
-            this.cobxMarca.Location = new System.Drawing.Point(136, 35);
+            this.cobxMarca.Location = new System.Drawing.Point(136, 31);
             this.cobxMarca.Name = "cobxMarca";
-            this.cobxMarca.Size = new System.Drawing.Size(174, 32);
+            this.cobxMarca.Size = new System.Drawing.Size(206, 37);
             this.cobxMarca.TabIndex = 2;
             // 
             // groupBox2
@@ -262,6 +268,7 @@
             this.btnModelo.TabIndex = 50;
             this.btnModelo.Text = "Agregar Modelo";
             this.btnModelo.UseVisualStyleBackColor = false;
+            this.btnModelo.Click += new System.EventHandler(this.btnModelo_Click);
             // 
             // btnCancelar
             // 

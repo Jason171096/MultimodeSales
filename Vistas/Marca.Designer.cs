@@ -115,6 +115,7 @@
             // 
             // txtNombreMarca
             // 
+            this.txtNombreMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreMarca.Location = new System.Drawing.Point(145, 92);
             this.txtNombreMarca.Name = "txtNombreMarca";
@@ -278,6 +279,7 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(641, 277);
             this.txtBuscar.Name = "txtBuscar";

@@ -27,9 +27,9 @@ namespace MultimodeSales.Vistas
             dt.Clear();
             dt = cliente.VerClientes();
             dgvClientes.DataSource = dt;
+            dgvClientes.Columns[0].HeaderText = "ID Cliente";
             dgvClientes.Columns[0].Width = 200;
             dgvClientes.Columns[1].Width = 650;
-
         }
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
@@ -75,13 +75,16 @@ namespace MultimodeSales.Vistas
         }
         private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnAgregarCliente.Enabled = false;
-            btnEditarCliente.Enabled = true;
-            btnCancelar.Visible = true;
-            txtIDCliente.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
-            txtNombreCliente.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-            txtIDCliente.Tag = dgvClientes.CurrentRow.Cells[0].Value.ToString();
-            Rowindex = e.RowIndex;
+            if (e.RowIndex != -1)
+            {
+                btnAgregarCliente.Enabled = false;
+                btnEditarCliente.Enabled = true;
+                btnCancelar.Visible = true;
+                txtIDCliente.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+                txtNombreCliente.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+                txtIDCliente.Tag = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+                Rowindex = e.RowIndex;
+            }
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {

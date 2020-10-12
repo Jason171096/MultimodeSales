@@ -1,4 +1,5 @@
 ﻿using MultimodeSales.Programacion.Marca;
+using MultimodeSales.Programacion.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,16 +9,17 @@ namespace MultimodeSales.Vistas.Modelos
     public partial class EditModelo : Form
     {
         MarcaBD marca = new MarcaBD();
+        ModelosDB modelo = new ModelosDB();
         private readonly bool Bandera;
         private int MX;
         private int MY;
 
-        public EditModelo(bool Bandera, string idmodelo, string idmarca, string color, string talla, string precioCliente)
+        public EditModelo(bool agregar, string idmodelo, string idmarca, string color, string talla, string precioCliente)
         {
             InitializeComponent();
-            this.Bandera = Bandera;
+            this.Bandera = agregar;
             LlenarComboBoxMarca();
-            if(Bandera)
+            if(agregar)
             {
                 lb.Text = "Agregar Modelo";
                 btnModelo.Text = "Agregar Modelo";
@@ -32,13 +34,12 @@ namespace MultimodeSales.Vistas.Modelos
                 txtTalla.Text = talla;
                 txtPrecioCliente.Text = precioCliente;
             }
-            
         }
         public void LlenarComboBoxMarca()
         {
             List<object[]> list = marca.VerMarcas2();
             Dictionary<string, string> keyValues = new Dictionary<string, string>();
-            keyValues.Add("-1", "--Elegir Marca--");
+            keyValues.Add("0", "--Elegir Marca--");
             foreach (object[] item in list)
             {
                 keyValues.Add(item[0].ToString(), item[1].ToString());
@@ -46,6 +47,19 @@ namespace MultimodeSales.Vistas.Modelos
             cobxMarca.DataSource = new BindingSource(keyValues, null);
             cobxMarca.DisplayMember = "Value";
             cobxMarca.ValueMember = "Key";
+        }
+        private void btnModelo_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(txtIDModelo.Text) || !String.IsNullOrWhiteSpace(txtColor.Text)
+                || !String.IsNullOrWhiteSpace(txtTalla.Text) || !String.IsNullOrWhiteSpace(txtPrecioPublico.Text) )
+            {
+                if(cobxMarca.SelectedIndex != 0)
+                    modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedIndex + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
+                else
+                    MessageBox.Show("Por favor de escoger la marca para el modelo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("Por favor de rellenar los espacios", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -83,6 +97,7 @@ namespace MultimodeSales.Vistas.Modelos
         {
             WindowState = FormWindowState.Minimized;
         }
+
         #endregion
 
         

@@ -11,29 +11,6 @@ namespace MultimodeSales.Programacion.Excel
     class ExcelDB
     {
         Conexion conexion = new Conexion();
-        public bool AgregarListaMarca(string modelo, string marca, string color, string talla, string precio)
-        {
-            conexion.OpenConnection();
-            try
-            {    
-                MySqlCommand cmd = new MySqlCommand("AgregarListaMarca", conexion.GetConnection());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new MySqlParameter("idmodelo", modelo));
-                cmd.Parameters.Add(new MySqlParameter("idmarca", marca));
-                cmd.Parameters.Add(new MySqlParameter("color", color));
-                cmd.Parameters.Add(new MySqlParameter("talla", talla));
-                cmd.Parameters.Add(new MySqlParameter("precioCliente", precio));
-                cmd.ExecuteNonQuery();
-                conexion.CloseConnection();
-                return true;
-            }
-            catch(Exception ex)
-            {
-                conexion.CloseConnection();
-                return false;
-            }
-        }
-
         public bool AgregarPedidosFinal(string modelo, string idusuario)
         {
             conexion.OpenConnection();

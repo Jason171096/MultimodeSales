@@ -29,6 +29,7 @@ namespace MultimodeSales.Vistas
             dt.Clear();
             dt = marca.VerMarcas();
             dgvMarcas.DataSource = dt;
+            dgvMarcas.Columns[0].HeaderText = "ID Marca";
             dgvMarcas.Columns[0].Width = 200;
             dgvMarcas.Columns[1].Width = 650;
         }
@@ -77,13 +78,16 @@ namespace MultimodeSales.Vistas
         }
         private void dgvMarcas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnAgregarMarca.Enabled = false;
-            btnEditarMarca.Enabled = true;
-            btnCancelar.Visible = true;
-            txtIDMarca.Text = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
-            txtNombreMarca.Text = dgvMarcas.CurrentRow.Cells[1].Value.ToString();
-            txtIDMarca.Tag = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
-            Rowindex = e.RowIndex;
+            if (e.RowIndex != -1)
+            {
+                btnAgregarMarca.Enabled = false;
+                btnEditarMarca.Enabled = true;
+                btnCancelar.Visible = true;
+                txtIDMarca.Text = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
+                txtNombreMarca.Text = dgvMarcas.CurrentRow.Cells[1].Value.ToString();
+                txtIDMarca.Tag = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
+                Rowindex = e.RowIndex;
+            }
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
