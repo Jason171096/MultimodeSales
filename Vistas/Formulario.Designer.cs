@@ -153,7 +153,7 @@
             // 
             this.lbBuscar.AutoSize = true;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(275, 508);
+            this.lbBuscar.Location = new System.Drawing.Point(273, 508);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(74, 24);
             this.lbBuscar.TabIndex = 17;
@@ -162,7 +162,7 @@
             // panelBuscar
             // 
             this.panelBuscar.BackColor = System.Drawing.Color.Purple;
-            this.panelBuscar.Location = new System.Drawing.Point(231, 495);
+            this.panelBuscar.Location = new System.Drawing.Point(229, 495);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(171, 10);
             this.panelBuscar.TabIndex = 15;
@@ -212,7 +212,7 @@
             // 
             this.lbPedido.AutoSize = true;
             this.lbPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedido.Location = new System.Drawing.Point(506, 508);
+            this.lbPedido.Location = new System.Drawing.Point(492, 508);
             this.lbPedido.Name = "lbPedido";
             this.lbPedido.Size = new System.Drawing.Size(76, 24);
             this.lbPedido.TabIndex = 26;
@@ -221,7 +221,7 @@
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.Purple;
-            this.panelPedido.Location = new System.Drawing.Point(462, 495);
+            this.panelPedido.Location = new System.Drawing.Point(448, 495);
             this.panelPedido.Name = "panelPedido";
             this.panelPedido.Size = new System.Drawing.Size(171, 10);
             this.panelPedido.TabIndex = 24;
@@ -230,7 +230,7 @@
             // 
             this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedido.Image = global::MultimodeSales.Properties.Resources.order128px;
-            this.picPedido.Location = new System.Drawing.Point(462, 344);
+            this.picPedido.Location = new System.Drawing.Point(448, 344);
             this.picPedido.Name = "picPedido";
             this.picPedido.Size = new System.Drawing.Size(169, 161);
             this.picPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -272,7 +272,7 @@
             // 
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::MultimodeSales.Properties.Resources.search128px;
-            this.picBuscar.Location = new System.Drawing.Point(233, 344);
+            this.picBuscar.Location = new System.Drawing.Point(231, 344);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(169, 161);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

@@ -41,11 +41,11 @@
             this.btnEditarModelo = new System.Windows.Forms.Button();
             this.btnAgregarModelo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbModelos = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -167,6 +167,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(268, 35);
             this.txtBuscar.TabIndex = 37;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnEditarModelo
             // 
@@ -208,6 +209,17 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar o Editar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(268, 87);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Seleccione el Modelo, \r\nluego de en el boton de\r\nEditar Modelo";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelBarras
             // 
@@ -260,17 +272,6 @@
             this.picMinimize.TabIndex = 23;
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(268, 87);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Seleccione el Modelo, \r\nluego de en el boton de\r\nEditar Modelo";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Modeloss
             // 

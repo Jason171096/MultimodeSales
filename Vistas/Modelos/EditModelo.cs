@@ -28,6 +28,7 @@ namespace MultimodeSales.Vistas.Modelos
             {
                 lb.Text = "Editar Modelo";
                 btnModelo.Text = "Editar Modelo";
+                txtIDModelo.Tag = idmodelo;
                 txtIDModelo.Text = idmodelo;
                 cobxMarca.SelectedValue = idmarca;
                 txtColor.Text = color;
@@ -51,10 +52,13 @@ namespace MultimodeSales.Vistas.Modelos
         private void btnModelo_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtIDModelo.Text) || !String.IsNullOrWhiteSpace(txtColor.Text)
-                || !String.IsNullOrWhiteSpace(txtTalla.Text) || !String.IsNullOrWhiteSpace(txtPrecioPublico.Text) )
+                || !String.IsNullOrWhiteSpace(txtTalla.Text) || !String.IsNullOrWhiteSpace(txtPrecioPublico.Text))
             {
-                if(cobxMarca.SelectedIndex != 0)
-                    modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedIndex + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
+                if (cobxMarca.SelectedIndex != 0)
+                    if (Bandera)
+                        modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
+                    else
+                        modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text);
                 else
                     MessageBox.Show("Por favor de escoger la marca para el modelo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

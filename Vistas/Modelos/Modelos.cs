@@ -112,5 +112,10 @@ namespace MultimodeSales.Vistas
             new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
             CargarModelos();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
