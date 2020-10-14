@@ -49,6 +49,7 @@ namespace MultimodeSales.Vistas
                 {
                     cliente.AgregarCliente(txtIDCliente.Text, txtNombreCliente.Text);
                     LlenarDataGridViewCliente();
+                    BorrarDatos();
                 }
             }
         }

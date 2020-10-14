@@ -13,7 +13,20 @@ namespace MultimodeSales.Programacion.Modelo
     {
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();
-        public DataTable ObtenerModelos()
+        public DataTable ObtenerModelos(int inicio)
+        {
+            conexion.OpenConnection();
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("VerModelosLimit", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("inicio", inicio));
+            da.SelectCommand = cmd;
+            dt.Clear();
+            da.Fill(dt);
+            conexion.CloseConnection();
+            return dt;
+        }
+        public DataTable ObtenerModelos2()
         {
             conexion.OpenConnection();
             DataTable dt = new DataTable();
@@ -66,6 +79,20 @@ namespace MultimodeSales.Programacion.Modelo
             {
                 MessageBox.Show($"Error en subir el modelo {idmodelo} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public DataTable BuscarModelo(string idmodelo)
+        {
+            conexion.OpenConnection();
+            DataTable dt = new DataTable();
+            MySqlCommand cmd = new MySqlCommand("BuscarModelo", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("buscar", idmodelo));
+            da.SelectCommand = cmd;
+            dt.Clear();
+            da.Fill(dt);
+            conexion.CloseConnection();
+            return dt;
         }
     }
 }

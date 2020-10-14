@@ -39,7 +39,7 @@ namespace MultimodeSales.Vistas
         }
         private void Modelos()
         {
-            DataTable dt = modelos.ObtenerModelos();
+            DataTable dt = modelos.ObtenerModelos2();
             IDModelo.DisplayMember = "IDModelo";
             IDModelo.DataSource = dt;
 

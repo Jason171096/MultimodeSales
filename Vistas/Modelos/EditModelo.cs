@@ -1,4 +1,5 @@
-﻿using MultimodeSales.Programacion.Marca;
+﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Marca;
 using MultimodeSales.Programacion.Modelo;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace MultimodeSales.Vistas.Modelos
     {
         MarcaBD marca = new MarcaBD();
         ModelosDB modelo = new ModelosDB();
+        Validaciones validaciones = new Validaciones();
         private readonly bool Bandera;
         private int MX;
         private int MY;
@@ -56,18 +58,43 @@ namespace MultimodeSales.Vistas.Modelos
             {
                 if (cobxMarca.SelectedIndex != 0)
                     if (Bandera)
+                    {
                         modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
+                        MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BorrarDatos();
+                    }
                     else
+                    {
                         modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text);
+                        MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BorrarDatos();
+                    }
                 else
                     MessageBox.Show("Por favor de escoger la marca para el modelo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("Por favor de rellenar los espacios", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+        private void BorrarDatos() 
+        {
+            txtIDModelo.Text = "";
+            txtColor.Text = "";
+            txtTalla.Text = "";
+            txtPrecioCliente.Text = "";
+            txtPrecioPublico.Text = "";
+            cobxMarca.SelectedIndex = 0;
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void txtPrecioCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.SoloDecimales(sender, e);
+        }
+        private void txtPrecioPublico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.SoloDecimales(sender, e);
         }
         #region Panel Barras
         private void lb_MouseMove(object sender, MouseEventArgs e)
@@ -102,8 +129,8 @@ namespace MultimodeSales.Vistas.Modelos
             WindowState = FormWindowState.Minimized;
         }
 
-        #endregion
 
+        #endregion
         
     }
 }

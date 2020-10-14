@@ -88,6 +88,10 @@ namespace MultimodeSales.Vistas
             dgvExcel.Columns[1].Width = 300;
             dgvExcel.Columns[2].Width = 400;
             dgvExcel.Columns[3].Width = 150;
+            dgvExcel.Columns[0].HeaderText = "MODELO";
+            dgvExcel.Columns[1].HeaderText = "COLOR";
+            dgvExcel.Columns[2].HeaderText = "TALLA";
+            dgvExcel.Columns[3].HeaderText = "PRECIO";
         }
         private void CargarExcel()
         {

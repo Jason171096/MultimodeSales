@@ -91,7 +91,7 @@
             this.dgvModelos.RowHeadersWidth = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
             this.dgvModelos.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -99,6 +99,7 @@
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModelos.Size = new System.Drawing.Size(1093, 404);
             this.dgvModelos.TabIndex = 7;
+            this.dgvModelos.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvModelos_Scroll);
             // 
             // groupBox1
             // 

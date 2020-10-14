@@ -17,21 +17,36 @@ namespace MultimodeSales.Vistas
     {
         ModelosDB modelos = new ModelosDB();
         CDataGridView cDataGrid = new CDataGridView();
+        DataTable dt = new DataTable();
+        DataTable Data = new DataTable();
         private int MX;
         private int MY;
+        private int count = 0;
+        private bool stop = false;
 
         public Modeloss()
         {
             InitializeComponent();
+            Data.Columns.Add("IDModelo");
+            Data.Columns.Add("IDMarca");
+            Data.Columns.Add("Nombre");
+            Data.Columns.Add("Color");
+            Data.Columns.Add("Talla");
+            Data.Columns.Add("PrecioCliente");
+            Data.Columns.Add("Fecha");
             CargarModelos();
             cDataGrid.FormattingDataGridView(dgvModelos);
+            AsignarDataTableToDataGridView();
         }
 
         private void CargarModelos()
         {
-            DataTable dt;
-            dt = modelos.ObtenerModelos();
-            dgvModelos.DataSource = dt;
+            dt = modelos.ObtenerModelos(count);
+            AsignarTable();
+        }
+        private void AsignarDataTableToDataGridView()
+        {
+            dgvModelos.DataSource = Data;
             DarFormatoTabla();
         }
         private void DarFormatoTabla()
@@ -115,7 +130,32 @@ namespace MultimodeSales.Vistas
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            dgvModelos.DataSource = null;
+            dt = modelos.BuscarModelo(txtBuscar.Text);
+            dgvModelos.DataSource = dt;
+        }
 
+        private void dgvModelos_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (dgvModelos.DisplayedRowCount(false) + dgvModelos.FirstDisplayedScrollingRowIndex >= dgvModelos.Rows.Count && stop == false)
+            {   
+                count += 100;
+                stop = true;
+                CargarModelos();
+                AsignarDataTableToDataGridView();
+            }
+            else
+                stop = false;
+        }
+        private void AsignarTable()
+        {
+            if (dt.Rows.Count != 0)
+            {
+                foreach (DataRow rows in dt.Rows)
+                {
+                    Data.ImportRow(rows);
+                }
+            }
         }
     }
 }

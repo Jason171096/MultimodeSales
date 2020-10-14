@@ -171,6 +171,7 @@
             this.txtPrecioCliente.Name = "txtPrecioCliente";
             this.txtPrecioCliente.Size = new System.Drawing.Size(268, 35);
             this.txtPrecioCliente.TabIndex = 44;
+            this.txtPrecioCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCliente_KeyPress);
             // 
             // label3
             // 
@@ -190,6 +191,7 @@
             this.txtPrecioPublico.Name = "txtPrecioPublico";
             this.txtPrecioPublico.Size = new System.Drawing.Size(268, 35);
             this.txtPrecioPublico.TabIndex = 46;
+            this.txtPrecioPublico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioPublico_KeyPress);
             // 
             // label5
             // 
