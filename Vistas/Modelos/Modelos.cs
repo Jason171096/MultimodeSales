@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;
@@ -21,12 +17,15 @@ namespace MultimodeSales.Vistas
         DataTable Data = new DataTable();
         private int MX;
         private int MY;
-        private int count = 0;
-        private bool stop = false;
+        private int count = 0, opcion = 1;
+        private bool stop = false, datePickerChangeValue = false;
 
         public Modeloss()
         {
             InitializeComponent();
+            cDataGrid.FormattingDataGridView(dgvModelos);
+            dtpFecha.MinDate = DateTime.Parse("01/01/2020");
+            dtpFecha.MaxDate = DateTime.Now;
             Data.Columns.Add("IDModelo");
             Data.Columns.Add("IDMarca");
             Data.Columns.Add("Nombre");
@@ -35,17 +34,12 @@ namespace MultimodeSales.Vistas
             Data.Columns.Add("PrecioCliente");
             Data.Columns.Add("Fecha");
             CargarModelos();
-            cDataGrid.FormattingDataGridView(dgvModelos);
-            AsignarDataTableToDataGridView();
         }
 
         private void CargarModelos()
         {
-            dt = modelos.ObtenerModelos(count);
+            dt = modelos.ObtenerModelos(count, opcion, txtBuscar.Text, dtpFecha.Value);
             AsignarTable();
-        }
-        private void AsignarDataTableToDataGridView()
-        {
             dgvModelos.DataSource = Data;
             DarFormatoTabla();
         }
@@ -53,7 +47,7 @@ namespace MultimodeSales.Vistas
         {
             dgvModelos.Columns[1].Visible = false;
             dgvModelos.Columns[0].Width = 100;
-
+            //dgvModelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
         }
         private void btnCambiar_Click(object sender, EventArgs e)
         {
@@ -63,7 +57,7 @@ namespace MultimodeSales.Vistas
                 txtBuscar.Enabled = false;
                 dtpFecha.Enabled = true;
                 btnCambiar.Text = "Modelo";
-                
+                opcion = 1;
             }
             else
             {
@@ -71,6 +65,7 @@ namespace MultimodeSales.Vistas
                 dtpFecha.Enabled = false;
                 txtBuscar.Enabled = true;
                 btnCambiar.Text = "Fecha";
+                opcion = 2;
             }
         }
 
@@ -115,7 +110,6 @@ namespace MultimodeSales.Vistas
             new EditModelo(true, "", "", "", "", "").ShowDialog();
             CargarModelos();
         }
-
         private void btnEditarModelo_Click(object sender, EventArgs e)
         {
             string idmodelo = dgvModelos.CurrentRow.Cells[0].Value + "";
@@ -127,12 +121,11 @@ namespace MultimodeSales.Vistas
             new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
             CargarModelos();
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            dgvModelos.DataSource = null;
-            dt = modelos.BuscarModelo(txtBuscar.Text);
-            dgvModelos.DataSource = dt;
+            count = 0;
+            BorrarTable();
+            CargarModelos();
         }
 
         private void dgvModelos_Scroll(object sender, ScrollEventArgs e)
@@ -142,7 +135,6 @@ namespace MultimodeSales.Vistas
                 count += 100;
                 stop = true;
                 CargarModelos();
-                AsignarDataTableToDataGridView();
             }
             else
                 stop = false;
@@ -156,6 +148,22 @@ namespace MultimodeSales.Vistas
                     Data.ImportRow(rows);
                 }
             }
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            //if (datePickerChangeValue)
+            //{
+                BorrarTable();
+                CargarModelos();
+            //}
+            //datePickerChangeValue = true;
+        }
+
+        private void BorrarTable()
+        {
+            dgvModelos.DataSource = null;
+            Data.Clear();
         }
     }
 }

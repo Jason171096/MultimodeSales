@@ -13,13 +13,16 @@ namespace MultimodeSales.Programacion.Modelo
     {
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();
-        public DataTable ObtenerModelos(int inicio)
+        public DataTable ObtenerModelos(int inicio, int opcion, string buscar, DateTime dateTime)
         {
             conexion.OpenConnection();
             DataTable dt = new DataTable();
             MySqlCommand cmd = new MySqlCommand("VerModelosLimit", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("inicio", inicio));
+            cmd.Parameters.Add(new MySqlParameter("opcion", opcion));
+            cmd.Parameters.Add(new MySqlParameter("buscar", buscar));
+            cmd.Parameters.Add(new MySqlParameter("fecha", dateTime.Date));
             da.SelectCommand = cmd;
             dt.Clear();
             da.Fill(dt);
@@ -81,18 +84,18 @@ namespace MultimodeSales.Programacion.Modelo
             }
         }
 
-        public DataTable BuscarModelo(string idmodelo)
-        {
-            conexion.OpenConnection();
-            DataTable dt = new DataTable();
-            MySqlCommand cmd = new MySqlCommand("BuscarModelo", conexion.GetConnection());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("buscar", idmodelo));
-            da.SelectCommand = cmd;
-            dt.Clear();
-            da.Fill(dt);
-            conexion.CloseConnection();
-            return dt;
-        }
+        //public DataTable BuscarModelo(string idmodelo)
+        //{
+        //    conexion.OpenConnection();
+        //    DataTable dt = new DataTable();
+        //    MySqlCommand cmd = new MySqlCommand("BuscarModelo", conexion.GetConnection());
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.Add(new MySqlParameter("buscar", "%"+idmodelo+"%"));
+        //    da.SelectCommand = cmd;
+        //    dt.Clear();
+        //    da.Fill(dt);
+        //    conexion.CloseConnection();
+        //    return dt;
+        //}
     }
 }

@@ -160,6 +160,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(142, 35);
             this.dtpFecha.TabIndex = 38;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // txtBuscar
             // 

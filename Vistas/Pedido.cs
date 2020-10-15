@@ -18,6 +18,8 @@ namespace MultimodeSales.Vistas
         ModelosDB modelos = new ModelosDB();
         CPedido pedido = new CPedido();
         CColoresyTallas ColoresyTallas = new CColoresyTallas();
+        DataTable DataModels = new DataTable();
+        private bool CellValueChange = false;
         private int MX;
         private int MY;
 
@@ -29,6 +31,7 @@ namespace MultimodeSales.Vistas
             Modelos();
             Colores();
             Tallas();
+            IDMarca.ReadOnly = true;
         }
         private void Clientes()
         {
@@ -42,7 +45,7 @@ namespace MultimodeSales.Vistas
             DataTable dt = modelos.ObtenerModelos2();
             IDModelo.DisplayMember = "IDModelo";
             IDModelo.DataSource = dt;
-
+            DataModels = dt;
             //foreach (DataRow rows in dt.Rows)
             //{
             //    IDColor.Items.Add(rows[0].ToString());
@@ -91,7 +94,11 @@ namespace MultimodeSales.Vistas
         {
             foreach (DataGridViewRow rows in dgvPedido.Rows)
             {
-                pedido.AgregarPedido(rows.Cells[0].Value + "", cboxCliente.SelectedValue + "", rows.Cells[1].Value + "", rows.Cells[2].Value + "");
+                if (rows.Cells[0].Value + "" != "")
+                {
+                    pedido.AgregarPedido(rows.Cells[0].Value + "", cboxCliente.SelectedValue + "", rows.Cells[2].Value + "", rows.Cells[3].Value + "");
+                }
+                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -130,5 +137,26 @@ namespace MultimodeSales.Vistas
 
 
         #endregion
+
+        private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (CellValueChange != false)
+            {
+                //dgvPedido.CellValueChanged += dgvPedido_CellValueChanged;
+                if (e.ColumnIndex == 0)
+                {
+                    string value = dgvPedido.Rows[e.RowIndex].Cells[0].Value + "";
+                    string marca = "";
+                    foreach (DataRow rows in DataModels.Rows)
+                    {
+                        if (value == rows[0] + "")
+                            marca = rows[2] + "";
+                    }
+                    dgvPedido.Rows[e.RowIndex].Cells[1].Value = marca;
+                }
+            }
+            CellValueChange = true;
+            
+        }
     }
 }
