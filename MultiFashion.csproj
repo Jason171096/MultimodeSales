@@ -157,19 +157,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Programacion\BuscarPedidoFinal.cs" />
-    <Compile Include="Programacion\CColoresyTallas.cs" />
-    <Compile Include="Programacion\CFormBorder.cs" />
+    <Compile Include="Programacion\ColoresyTallas\CColoresyTallas.cs" />
+    <Compile Include="Programacion\Utilerias\CFormBorder.cs" />
     <Compile Include="Programacion\Cliente\ClienteDB.cs" />
     <Compile Include="Programacion\Conexion.cs" />
-    <Compile Include="Programacion\CDataGridView.cs" />
-    <Compile Include="Programacion\CPanelBarras.cs" />
+    <Compile Include="Programacion\Utilerias\CDataGridView.cs" />
+    <Compile Include="Programacion\Utilerias\CPanelBarras.cs" />
     <Compile Include="Programacion\Excel\ExcelDB.cs" />
     <Compile Include="Programacion\Excel\CImportarCSVyExcel.cs" />
     <Compile Include="Programacion\ListaPedidosFinal.cs" />
     <Compile Include="Programacion\Marca\MarcaBD.cs" />
     <Compile Include="Programacion\Modelo\ModelosDB.cs" />
     <Compile Include="Programacion\CPedido.cs" />
-    <Compile Include="Programacion\Validaciones.cs" />
+    <Compile Include="Programacion\Utilerias\Validaciones.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -357,6 +357,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\order128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil128px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

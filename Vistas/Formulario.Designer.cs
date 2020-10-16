@@ -37,8 +37,6 @@
             this.panelMarca = new System.Windows.Forms.Panel();
             this.lbPedidosFinal = new System.Windows.Forms.Label();
             this.panelPedidosFinal = new System.Windows.Forms.Panel();
-            this.lbBuscar = new System.Windows.Forms.Label();
-            this.panelBuscar = new System.Windows.Forms.Panel();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.lbModelos = new System.Windows.Forms.Label();
             this.panelModelos = new System.Windows.Forms.Panel();
@@ -49,7 +47,6 @@
             this.picPedido = new System.Windows.Forms.PictureBox();
             this.picColTall = new System.Windows.Forms.PictureBox();
             this.picModelos = new System.Windows.Forms.PictureBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.picPedidosFinal = new System.Windows.Forms.PictureBox();
             this.picMarca = new System.Windows.Forms.PictureBox();
             this.picImportExcel = new System.Windows.Forms.PictureBox();
@@ -65,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).BeginInit();
@@ -135,7 +131,7 @@
             // 
             this.lbPedidosFinal.AutoSize = true;
             this.lbPedidosFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedidosFinal.Location = new System.Drawing.Point(692, 508);
+            this.lbPedidosFinal.Location = new System.Drawing.Point(922, 508);
             this.lbPedidosFinal.Name = "lbPedidosFinal";
             this.lbPedidosFinal.Size = new System.Drawing.Size(138, 24);
             this.lbPedidosFinal.TabIndex = 14;
@@ -144,28 +140,10 @@
             // panelPedidosFinal
             // 
             this.panelPedidosFinal.BackColor = System.Drawing.Color.Purple;
-            this.panelPedidosFinal.Location = new System.Drawing.Point(678, 495);
+            this.panelPedidosFinal.Location = new System.Drawing.Point(908, 495);
             this.panelPedidosFinal.Name = "panelPedidosFinal";
             this.panelPedidosFinal.Size = new System.Drawing.Size(171, 10);
             this.panelPedidosFinal.TabIndex = 12;
-            // 
-            // lbBuscar
-            // 
-            this.lbBuscar.AutoSize = true;
-            this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(273, 508);
-            this.lbBuscar.Name = "lbBuscar";
-            this.lbBuscar.Size = new System.Drawing.Size(74, 24);
-            this.lbBuscar.TabIndex = 17;
-            this.lbBuscar.Text = "Buscar";
-            // 
-            // panelBuscar
-            // 
-            this.panelBuscar.BackColor = System.Drawing.Color.Purple;
-            this.panelBuscar.Location = new System.Drawing.Point(229, 495);
-            this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(171, 10);
-            this.panelBuscar.TabIndex = 15;
             // 
             // timerHora
             // 
@@ -212,7 +190,7 @@
             // 
             this.lbPedido.AutoSize = true;
             this.lbPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedido.Location = new System.Drawing.Point(492, 508);
+            this.lbPedido.Location = new System.Drawing.Point(275, 508);
             this.lbPedido.Name = "lbPedido";
             this.lbPedido.Size = new System.Drawing.Size(76, 24);
             this.lbPedido.TabIndex = 26;
@@ -221,7 +199,7 @@
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.Purple;
-            this.panelPedido.Location = new System.Drawing.Point(448, 495);
+            this.panelPedido.Location = new System.Drawing.Point(231, 495);
             this.panelPedido.Name = "panelPedido";
             this.panelPedido.Size = new System.Drawing.Size(171, 10);
             this.panelPedido.TabIndex = 24;
@@ -230,7 +208,7 @@
             // 
             this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedido.Image = global::MultimodeSales.Properties.Resources.order128px;
-            this.picPedido.Location = new System.Drawing.Point(448, 344);
+            this.picPedido.Location = new System.Drawing.Point(231, 344);
             this.picPedido.Name = "picPedido";
             this.picPedido.Size = new System.Drawing.Size(169, 161);
             this.picPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -268,25 +246,11 @@
             this.picModelos.MouseEnter += new System.EventHandler(this.picModelos_MouseEnter);
             this.picModelos.MouseLeave += new System.EventHandler(this.picModelos_MouseLeave);
             // 
-            // picBuscar
-            // 
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = global::MultimodeSales.Properties.Resources.search128px;
-            this.picBuscar.Location = new System.Drawing.Point(231, 344);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(169, 161);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBuscar.TabIndex = 16;
-            this.picBuscar.TabStop = false;
-            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
-            this.picBuscar.MouseEnter += new System.EventHandler(this.picBuscar_MouseEnter);
-            this.picBuscar.MouseLeave += new System.EventHandler(this.picBuscar_MouseLeave);
-            // 
             // picPedidosFinal
             // 
             this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
-            this.picPedidosFinal.Location = new System.Drawing.Point(678, 344);
+            this.picPedidosFinal.Location = new System.Drawing.Point(908, 344);
             this.picPedidosFinal.Name = "picPedidosFinal";
             this.picPedidosFinal.Size = new System.Drawing.Size(169, 161);
             this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -372,7 +336,7 @@
             this.lbHora.BackColor = System.Drawing.Color.Transparent;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHora.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbHora.Location = new System.Drawing.Point(783, 9);
+            this.lbHora.Location = new System.Drawing.Point(828, 9);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(93, 29);
             this.lbHora.TabIndex = 1;
@@ -454,9 +418,6 @@
             this.Controls.Add(this.lbModelos);
             this.Controls.Add(this.panelModelos);
             this.Controls.Add(this.picModelos);
-            this.Controls.Add(this.lbBuscar);
-            this.Controls.Add(this.panelBuscar);
-            this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.lbPedidosFinal);
             this.Controls.Add(this.panelPedidosFinal);
             this.Controls.Add(this.picPedidosFinal);
@@ -479,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMarca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).EndInit();
@@ -512,9 +472,6 @@
         private System.Windows.Forms.Label lbPedidosFinal;
         private System.Windows.Forms.Panel panelPedidosFinal;
         private System.Windows.Forms.PictureBox picPedidosFinal;
-        private System.Windows.Forms.Label lbBuscar;
-        private System.Windows.Forms.Panel panelBuscar;
-        private System.Windows.Forms.PictureBox picBuscar;
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Timer timerHora;
         private System.Windows.Forms.Label lbHora;

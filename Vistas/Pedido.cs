@@ -19,7 +19,7 @@ namespace MultimodeSales.Vistas
         CPedido pedido = new CPedido();
         CColoresyTallas ColoresyTallas = new CColoresyTallas();
         DataTable DataModels = new DataTable();
-        private bool CellValueChange = false;
+        private bool CellValueChange = false, SelectIndexChange = false;
         private int MX;
         private int MY;
 
@@ -32,13 +32,16 @@ namespace MultimodeSales.Vistas
             Colores();
             Tallas();
             IDMarca.ReadOnly = true;
+            dgvPedido.Columns[0].Visible = false;
         }
         private void Clientes()
         {
             DataTable dt = cliente.VerClientes();
             cboxCliente.DisplayMember = "Nombre";
             cboxCliente.ValueMember = "IDCliente";
+            dt.Rows.Add(0, "--Seleccione el cliente--");
             cboxCliente.DataSource = dt;
+            cboxCliente.SelectedIndex = cboxCliente.Items.Count - 1;
         }
         private void Modelos()
         {
@@ -46,30 +49,18 @@ namespace MultimodeSales.Vistas
             IDModelo.DisplayMember = "IDModelo";
             IDModelo.DataSource = dt;
             DataModels = dt;
-            //foreach (DataRow rows in dt.Rows)
-            //{
-            //    IDColor.Items.Add(rows[0].ToString());
-            //}
         }
         private void Colores()
         {
             DataTable dt = ColoresyTallas.VerColores();
             IDColor.DisplayMember = "Nombre";
             IDColor.DataSource = dt;
-            //foreach (DataRow rows in dt.Rows)
-            //{
-            //    auto.Add(rows[1].ToString());
-            //}
         }
         private void Tallas()
         {
             DataTable dt = ColoresyTallas.VerTallas();
             IDTalla.DisplayMember = "Numero";
             IDTalla.DataSource = dt;
-            //foreach (DataRow rows in dt.Rows)
-            //{
-            //    auto.Add(rows[1].ToString());
-            //}
         }
         private void btnAgregarModelo_Click(object sender, EventArgs e)
         {
@@ -77,7 +68,6 @@ namespace MultimodeSales.Vistas
             modelo.ShowDialog();
             Modelos();
         }
-
         private void btnAgregarColorTalla_Click(object sender, EventArgs e)
         {
             TallasyColores tallasyColores = new TallasyColores();
@@ -89,16 +79,20 @@ namespace MultimodeSales.Vistas
         {
             Close();
         }
-
         private void btnTerminar_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow rows in dgvPedido.Rows)
             {
-                if (rows.Cells[0].Value + "" != "")
+                if (cboxCliente.SelectedIndex == 0)
                 {
-                    pedido.AgregarPedido(rows.Cells[0].Value + "", cboxCliente.SelectedValue + "", rows.Cells[2].Value + "", rows.Cells[3].Value + "");
+                    if (rows.Cells[1].Value + "" != "")
+                    {
+                        pedido.AgregarPedido(rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
+                    }
+                    MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show("Seleccione Cliente", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -139,24 +133,63 @@ namespace MultimodeSales.Vistas
         #endregion
 
         private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (CellValueChange != false)
+        { 
+            if (e.ColumnIndex == 1)
             {
-                //dgvPedido.CellValueChanged += dgvPedido_CellValueChanged;
-                if (e.ColumnIndex == 0)
+                if (CellValueChange)
                 {
-                    string value = dgvPedido.Rows[e.RowIndex].Cells[0].Value + "";
+                    string value = dgvPedido.Rows[e.RowIndex].Cells[1].Value + "";
                     string marca = "";
                     foreach (DataRow rows in DataModels.Rows)
                     {
-                        if (value == rows[0] + "")
-                            marca = rows[2] + "";
+                        if (value == rows[1] + "")
+                            marca = rows[3] + "";
                     }
                     dgvPedido.Rows[e.RowIndex].Cells[1].Value = marca;
                 }
+                CellValueChange = true;
             }
-            CellValueChange = true;
-            
+        }
+
+        private void dgvPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 5)
+                {
+                    dgvPedido.Rows.Remove(dgvPedido.Rows[e.RowIndex]);
+                    pedido.EliminarPedido(dgvPedido.Rows[e.RowIndex].Cells[0].Value + "");
+                }
+                else
+                {
+                    dgvPedido.Rows[e.RowIndex].Cells[5].Value = Properties.Resources.basura24px;
+                    dgvPedido.Refresh();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No se puede eliminar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void cboxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectIndexChange)
+            {
+                DataTable dt = pedido.CargarPedido(cboxCliente.SelectedValue + "");
+                int i = 0;
+                foreach (DataRow rows in dt.Rows)
+                {
+                    dgvPedido.Rows.Add();
+                    dgvPedido.Rows[i].Cells[0].Value = rows[0];
+                    dgvPedido.Rows[i].Cells[1].Value = rows[1];
+                    dgvPedido.Rows[i].Cells[3].Value = rows[2];
+                    dgvPedido.Rows[i].Cells[4].Value = rows[3];
+                    i++;
+                }
+            }
+            SelectIndexChange = true;
         }
     }
 }

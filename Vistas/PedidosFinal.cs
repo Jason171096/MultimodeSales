@@ -18,6 +18,9 @@ namespace MultimodeSales.Vistas
         private int Buscar;
         ListaPedidosFinal listaPedidosFinal = new ListaPedidosFinal();
         CDataGridView CDataGrid = new CDataGridView();
+        private int MX;
+        private int MY;
+
         public PedidosFinal()
         {
             InitializeComponent();
@@ -115,5 +118,41 @@ namespace MultimodeSales.Vistas
                     listaPedidosFinal.UpdatePedidoLlego2(rows.Cells[0].Value + "");
             }
         }
+
+        #region Barra Superior
+        private void panelBarras_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void lbPedidoFinal_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
     }
 }

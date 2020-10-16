@@ -19,7 +19,6 @@ namespace MultimodeSales
             panelImportExcel.Visible = false;
             panelMarca.Visible = false;
             panelPedidosFinal.Visible = false;
-            panelBuscar.Visible = false;
             panelModelos.Visible = false;
             panelColTall.Visible = false;
             panelPedido.Visible = false;
@@ -29,12 +28,11 @@ namespace MultimodeSales
             lbImportExcel.Visible = false;
             lbMarca.Visible = false;
             lbPedidosFinal.Visible = false;
-            lbBuscar.Visible = false;
             lbModelos.Visible = false;
             lbColTall.Visible = false;
             lbPedido.Visible = false;
             #endregion
-            
+
         }
         #region picCliente
         private void picCliente_Click(object sender, EventArgs e)
@@ -112,25 +110,6 @@ namespace MultimodeSales
             lbPedidosFinal.Visible = false;
         }
         #endregion
-        #region picBuscar
-        private void picBuscar_Click(object sender, EventArgs e)
-        {
-            BuscarPor buscar = new BuscarPor();
-            buscar.ShowDialog();
-        }
-
-        private void picBuscar_MouseEnter(object sender, EventArgs e)
-        {
-            panelBuscar.Visible = true;
-            lbBuscar.Visible = true;
-        }
-
-        private void picBuscar_MouseLeave(object sender, EventArgs e)
-        {
-            panelBuscar.Visible = false;
-            lbBuscar.Visible = false;
-        }
-        #endregion
         #region picModelos
         private void picModelos_Click(object sender, EventArgs e)
         {
@@ -187,7 +166,6 @@ namespace MultimodeSales
         }
         #endregion
 
-
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
         {
@@ -229,6 +207,7 @@ namespace MultimodeSales
                 Top = Top + (e.Y - MY);
             }
         }
+
 
 
         #endregion

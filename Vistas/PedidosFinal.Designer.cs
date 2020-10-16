@@ -32,16 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtNumeroMarca = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rbtnFecha = new System.Windows.Forms.RadioButton();
             this.rbtnNumPedido = new System.Windows.Forms.RadioButton();
             this.btnTerminar = new System.Windows.Forms.Button();
+            this.panelBarras = new System.Windows.Forms.Panel();
+            this.lbPedidoFinal = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelBarras.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPedidosFinal
@@ -66,7 +73,7 @@
             this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
             this.dgvPedidosFinal.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedidosFinal.Location = new System.Drawing.Point(12, 114);
+            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 375);
             this.dgvPedidosFinal.Name = "dgvPedidosFinal";
             this.dgvPedidosFinal.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -87,43 +94,18 @@
             this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 532);
+            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 371);
             this.dgvPedidosFinal.TabIndex = 7;
             this.dgvPedidosFinal.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvPedidosFinal_EditingControlShowing);
             this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel1.Controls.Add(this.txtNumeroMarca);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.rbtnFecha);
-            this.panel1.Controls.Add(this.rbtnNumPedido);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(673, 96);
-            this.panel1.TabIndex = 24;
-            // 
             // txtNumeroMarca
             // 
             this.txtNumeroMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroMarca.Location = new System.Drawing.Point(200, 25);
+            this.txtNumeroMarca.Location = new System.Drawing.Point(201, 54);
             this.txtNumeroMarca.Name = "txtNumeroMarca";
             this.txtNumeroMarca.Size = new System.Drawing.Size(268, 31);
             this.txtNumeroMarca.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Buscar Por:";
             // 
             // dateTimePicker1
             // 
@@ -131,7 +113,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(200, 63);
+            this.dateTimePicker1.Location = new System.Drawing.Point(201, 92);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(142, 26);
             this.dateTimePicker1.TabIndex = 23;
@@ -142,7 +124,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnBuscar.Location = new System.Drawing.Point(506, 30);
+            this.btnBuscar.Location = new System.Drawing.Point(400, 102);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(153, 36);
             this.btnBuscar.TabIndex = 26;
@@ -155,7 +137,7 @@
             this.rbtnFecha.AutoSize = true;
             this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnFecha.Location = new System.Drawing.Point(19, 60);
+            this.rbtnFecha.Location = new System.Drawing.Point(20, 89);
             this.rbtnFecha.Name = "rbtnFecha";
             this.rbtnFecha.Size = new System.Drawing.Size(72, 24);
             this.rbtnFecha.TabIndex = 12;
@@ -168,7 +150,7 @@
             this.rbtnNumPedido.AutoSize = true;
             this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnNumPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnNumPedido.Location = new System.Drawing.Point(19, 30);
+            this.rbtnNumPedido.Location = new System.Drawing.Point(20, 59);
             this.rbtnNumPedido.Name = "rbtnNumPedido";
             this.rbtnNumPedido.Size = new System.Drawing.Size(158, 24);
             this.rbtnNumPedido.TabIndex = 10;
@@ -182,7 +164,7 @@
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(954, 53);
+            this.btnTerminar.Location = new System.Drawing.Point(945, 186);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(251, 48);
             this.btnTerminar.TabIndex = 25;
@@ -190,23 +172,110 @@
             this.btnTerminar.UseVisualStyleBackColor = false;
             this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
             // 
+            // panelBarras
+            // 
+            this.panelBarras.BackColor = System.Drawing.Color.Purple;
+            this.panelBarras.BackgroundImage = global::MultimodeSales.Properties.Resources.background5;
+            this.panelBarras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelBarras.Controls.Add(this.lbPedidoFinal);
+            this.panelBarras.Controls.Add(this.picClose);
+            this.panelBarras.Controls.Add(this.picMinimize);
+            this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarras.Location = new System.Drawing.Point(0, 0);
+            this.panelBarras.Name = "panelBarras";
+            this.panelBarras.Size = new System.Drawing.Size(1271, 46);
+            this.panelBarras.TabIndex = 32;
+            this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
+            // 
+            // lbPedidoFinal
+            // 
+            this.lbPedidoFinal.AutoSize = true;
+            this.lbPedidoFinal.BackColor = System.Drawing.Color.Transparent;
+            this.lbPedidoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPedidoFinal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbPedidoFinal.Location = new System.Drawing.Point(6, 9);
+            this.lbPedidoFinal.Name = "lbPedidoFinal";
+            this.lbPedidoFinal.Size = new System.Drawing.Size(162, 29);
+            this.lbPedidoFinal.TabIndex = 36;
+            this.lbPedidoFinal.Text = "Pedidos Final";
+            this.lbPedidoFinal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbPedidoFinal_MouseMove);
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
+            this.picClose.Location = new System.Drawing.Point(1211, 0);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(48, 48);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picClose.TabIndex = 24;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // picMinimize
+            // 
+            this.picMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
+            this.picMinimize.Location = new System.Drawing.Point(1161, 0);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(48, 48);
+            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMinimize.TabIndex = 23;
+            this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnNumPedido);
+            this.groupBox1.Controls.Add(this.rbtnFecha);
+            this.groupBox1.Controls.Add(this.txtNumeroMarca);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 60);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(613, 193);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SlateBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(945, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(251, 48);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Terminar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1271, 675);
+            this.ClientSize = new System.Drawing.Size(1271, 769);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panelBarras);
             this.Controls.Add(this.btnTerminar);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPedidosFinal);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "PedidosFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelBarras.ResumeLayout(false);
+            this.panelBarras.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -214,13 +283,17 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPedidosFinal;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton rbtnFecha;
         private System.Windows.Forms.RadioButton rbtnNumPedido;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNumeroMarca;
         private System.Windows.Forms.Button btnTerminar;
+        private System.Windows.Forms.Panel panelBarras;
+        private System.Windows.Forms.Label lbPedidoFinal;
+        private System.Windows.Forms.PictureBox picClose;
+        private System.Windows.Forms.PictureBox picMinimize;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
