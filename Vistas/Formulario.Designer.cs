@@ -131,7 +131,7 @@
             // 
             this.lbPedidosFinal.AutoSize = true;
             this.lbPedidosFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedidosFinal.Location = new System.Drawing.Point(922, 508);
+            this.lbPedidosFinal.Location = new System.Drawing.Point(464, 508);
             this.lbPedidosFinal.Name = "lbPedidosFinal";
             this.lbPedidosFinal.Size = new System.Drawing.Size(138, 24);
             this.lbPedidosFinal.TabIndex = 14;
@@ -140,7 +140,7 @@
             // panelPedidosFinal
             // 
             this.panelPedidosFinal.BackColor = System.Drawing.Color.Purple;
-            this.panelPedidosFinal.Location = new System.Drawing.Point(908, 495);
+            this.panelPedidosFinal.Location = new System.Drawing.Point(450, 495);
             this.panelPedidosFinal.Name = "panelPedidosFinal";
             this.panelPedidosFinal.Size = new System.Drawing.Size(171, 10);
             this.panelPedidosFinal.TabIndex = 12;
@@ -250,7 +250,7 @@
             // 
             this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
-            this.picPedidosFinal.Location = new System.Drawing.Point(908, 344);
+            this.picPedidosFinal.Location = new System.Drawing.Point(450, 344);
             this.picPedidosFinal.Name = "picPedidosFinal";
             this.picPedidosFinal.Size = new System.Drawing.Size(169, 161);
             this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

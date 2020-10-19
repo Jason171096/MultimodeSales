@@ -32,23 +32,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
-            this.txtNumeroMarca = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.rbtnFecha = new System.Windows.Forms.RadioButton();
-            this.rbtnNumPedido = new System.Windows.Forms.RadioButton();
             this.btnTerminar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.rbtnNumPedido = new System.Windows.Forms.RadioButton();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbPedidoFinal = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPedidosFinal
@@ -73,7 +74,7 @@
             this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
             this.dgvPedidosFinal.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 375);
+            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 197);
             this.dgvPedidosFinal.Name = "dgvPedidosFinal";
             this.dgvPedidosFinal.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -94,69 +95,23 @@
             this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 371);
+            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 473);
             this.dgvPedidosFinal.TabIndex = 7;
             this.dgvPedidosFinal.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvPedidosFinal_EditingControlShowing);
             this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
-            // txtNumeroMarca
-            // 
-            this.txtNumeroMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroMarca.Location = new System.Drawing.Point(201, 54);
-            this.txtNumeroMarca.Name = "txtNumeroMarca";
-            this.txtNumeroMarca.Size = new System.Drawing.Size(268, 31);
-            this.txtNumeroMarca.TabIndex = 28;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 92);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(142, 26);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnBuscar.Location = new System.Drawing.Point(400, 102);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(153, 36);
-            this.btnBuscar.TabIndex = 26;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
             // rbtnFecha
             // 
             this.rbtnFecha.AutoSize = true;
-            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnFecha.Location = new System.Drawing.Point(20, 89);
+            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rbtnFecha.Location = new System.Drawing.Point(6, 79);
             this.rbtnFecha.Name = "rbtnFecha";
-            this.rbtnFecha.Size = new System.Drawing.Size(72, 24);
+            this.rbtnFecha.Size = new System.Drawing.Size(104, 33);
             this.rbtnFecha.TabIndex = 12;
             this.rbtnFecha.TabStop = true;
-            this.rbtnFecha.Text = "Fecha";
+            this.rbtnFecha.Text = "Fecha:";
             this.rbtnFecha.UseVisualStyleBackColor = true;
-            // 
-            // rbtnNumPedido
-            // 
-            this.rbtnNumPedido.AutoSize = true;
-            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNumPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbtnNumPedido.Location = new System.Drawing.Point(20, 59);
-            this.rbtnNumPedido.Name = "rbtnNumPedido";
-            this.rbtnNumPedido.Size = new System.Drawing.Size(158, 24);
-            this.rbtnNumPedido.TabIndex = 10;
-            this.rbtnNumPedido.TabStop = true;
-            this.rbtnNumPedido.Text = "Numero de Pedido";
-            this.rbtnNumPedido.UseVisualStyleBackColor = true;
             // 
             // btnTerminar
             // 
@@ -164,13 +119,106 @@
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(945, 186);
+            this.btnTerminar.Location = new System.Drawing.Point(1051, 676);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(251, 48);
+            this.btnTerminar.Size = new System.Drawing.Size(207, 48);
             this.btnTerminar.TabIndex = 25;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = false;
             this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.txtBuscar);
+            this.groupBox1.Controls.Add(this.rbtnNumPedido);
+            this.groupBox1.Controls.Add(this.rbtnFecha);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.groupBox1.Location = new System.Drawing.Point(12, 60);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(529, 131);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.dtpFecha.Enabled = false;
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(110, 79);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(142, 35);
+            this.dtpFecha.TabIndex = 42;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(248, 31);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(268, 35);
+            this.txtBuscar.TabIndex = 41;
+            // 
+            // rbtnNumPedido
+            // 
+            this.rbtnNumPedido.AutoSize = true;
+            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnNumPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rbtnNumPedido.Location = new System.Drawing.Point(6, 31);
+            this.rbtnNumPedido.Name = "rbtnNumPedido";
+            this.rbtnNumPedido.Size = new System.Drawing.Size(242, 33);
+            this.rbtnNumPedido.TabIndex = 10;
+            this.rbtnNumPedido.TabStop = true;
+            this.rbtnNumPedido.Text = "Numero de Pedido:";
+            this.rbtnNumPedido.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBuscar.Image = global::MultimodeSales.Properties.Resources.search24;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.Location = new System.Drawing.Point(396, 79);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(120, 41);
+            this.btnBuscar.TabIndex = 26;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.Location = new System.Drawing.Point(11, 676);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(207, 48);
+            this.btnCancelar.TabIndex = 34;
+            this.btnCancelar.Text = "Cancelar(Esc)";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
+            this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExportExcel.Location = new System.Drawing.Point(828, 676);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(217, 48);
+            this.btnExportExcel.TabIndex = 35;
+            this.btnExportExcel.Text = "Exportar a Excel";
+            this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportExcel.UseVisualStyleBackColor = false;
             // 
             // panelBarras
             // 
@@ -226,40 +274,14 @@
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbtnNumPedido);
-            this.groupBox1.Controls.Add(this.rbtnFecha);
-            this.groupBox1.Controls.Add(this.txtNumeroMarca);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 60);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 193);
-            this.groupBox1.TabIndex = 33;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(945, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 48);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Terminar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1271, 769);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1271, 733);
+            this.Controls.Add(this.btnExportExcel);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelBarras);
             this.Controls.Add(this.btnTerminar);
@@ -270,12 +292,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidosFinal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panelBarras.ResumeLayout(false);
             this.panelBarras.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -283,17 +305,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPedidosFinal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.RadioButton rbtnFecha;
-        private System.Windows.Forms.RadioButton rbtnNumPedido;
-        private System.Windows.Forms.TextBox txtNumeroMarca;
         private System.Windows.Forms.Button btnTerminar;
         private System.Windows.Forms.Panel panelBarras;
         private System.Windows.Forms.Label lbPedidoFinal;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.RadioButton rbtnNumPedido;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }

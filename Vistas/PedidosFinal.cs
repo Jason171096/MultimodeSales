@@ -36,15 +36,14 @@ namespace MultimodeSales.Vistas
             RadioButton rb = sender as RadioButton;
             if(rb.Checked && rb.TabIndex == 10)
             {
-                dateTimePicker1.Enabled = false;
+                dtpFecha.Enabled = false;
                 Buscar = 1;
             }
             else if(rb.Checked && rb.TabIndex == 12)
             {
-                dateTimePicker1.Enabled = true;
+                dtpFecha.Enabled = true;
                 Buscar = 2;
             }
-
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
@@ -62,20 +61,25 @@ namespace MultimodeSales.Vistas
         private void CargarLista()
         {
             dgvPedidosFinal.DataSource = null;
-            DataTable dt;
-            dt = listaPedidosFinal.ObtenerListaPedidosFinal();
+            DataTable dt = listaPedidosFinal.ObtenerListaPedidosFinal();
             dgvPedidosFinal.DataSource = dt;
             DarFormatoTabla();
         }
 
         private void DarFormatoTabla()
         {
-            dgvPedidosFinal.Columns[0].Width = 100;
-            dgvPedidosFinal.Columns[1].Width = 200;
-            dgvPedidosFinal.Columns[2].Width = 200;
-            dgvPedidosFinal.Columns[3].Width = 200;
-            dgvPedidosFinal.Columns[4].Width = 300;
-            dgvPedidosFinal.Columns[5].Width = 200;
+            dgvPedidosFinal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvPedidosFinal.Columns[1].Width = 100;//IDCliente
+            dgvPedidosFinal.Columns[1].HeaderText = "ID Cliente";
+            dgvPedidosFinal.Columns[2].Width = 350;//NombreCliente
+            dgvPedidosFinal.Columns[2].HeaderText = "Nombre Cliente";
+            dgvPedidosFinal.Columns[3].Width = 200;//IDModelo
+            dgvPedidosFinal.Columns[3].HeaderText = "ID Modelo";
+            dgvPedidosFinal.Columns[4].Width = 200;//Color
+            dgvPedidosFinal.Columns[5].Width = 200;//Talla
+            dgvPedidosFinal.Columns[6].Width = 200;//PrecioCliente
+            dgvPedidosFinal.Columns[6].HeaderText = "Precio Cliente";
+            dgvPedidosFinal.Columns[7].Width = 350;//Fecha
         }
 
         private void dgvPedidosFinal_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)

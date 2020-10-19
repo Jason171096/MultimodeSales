@@ -183,6 +183,16 @@ namespace MultimodeSales.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap excel24 {
+            get {
+                object obj = ResourceManager.GetObject("excel24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize48px {
             get {
                 object obj = ResourceManager.GetObject("minimize48px", resourceCulture);
@@ -226,6 +236,16 @@ namespace MultimodeSales.Properties {
         internal static System.Drawing.Bitmap search128px {
             get {
                 object obj = ResourceManager.GetObject("search128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search24 {
+            get {
+                object obj = ResourceManager.GetObject("search24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

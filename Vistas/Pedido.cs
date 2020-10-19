@@ -81,19 +81,82 @@ namespace MultimodeSales.Vistas
         }
         private void btnTerminar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow rows in dgvPedido.Rows)
+            int index = cboxCliente.Items.Count - 1;
+            if (index != cboxCliente.SelectedIndex)
             {
-                if (cboxCliente.SelectedIndex == 0)
+                foreach (DataGridViewRow rows in dgvPedido.Rows)
                 {
+                
                     if (rows.Cells[1].Value + "" != "")
                     {
-                        pedido.AgregarPedido(rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
-                    }
-                    MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
+                    }                 
                 }
-                else
-                    MessageBox.Show("Seleccione Cliente", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else
+                MessageBox.Show("Seleccione Cliente", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        
+        private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        { 
+            if (e.ColumnIndex == 1)
+            {
+                if (CellValueChange)
+                {
+                    string value = dgvPedido.Rows[e.RowIndex].Cells[1].Value + "";
+                    string marca = "";
+                    foreach (DataRow rows in DataModels.Rows)
+                    {
+                        if (value == rows[0] + "")
+                        {
+                            marca = rows[2] + "";
+                            break;
+                        }
+                    }
+                    dgvPedido.Rows[e.RowIndex].Cells[2].Value = marca;
+                }
+                CellValueChange = true;
+            }
+        }
+        private void dgvPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 5)
+                {
+                    if (!dgvPedido.Rows[e.RowIndex].Cells[0].Value.Equals(""))
+                        pedido.EliminarPedido(dgvPedido.Rows[e.RowIndex].Cells[0].Value + "");
+                    dgvPedido.Rows.Remove(dgvPedido.Rows[e.RowIndex]);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No se puede eliminar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        private void dgvPedido_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dgvPedido.Rows[e.RowIndex].Cells[5].Value = Properties.Resources.basura24px;
+        }
+        private void cboxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectIndexChange)
+            {
+                dgvPedido.Rows.Clear();
+                DataTable dt = pedido.CargarPedido(cboxCliente.SelectedValue + "");
+                int i = 0;
+                foreach (DataRow rows in dt.Rows)
+                {
+                    dgvPedido.Rows.Add();
+                    dgvPedido.Rows[i].Cells[0].Value = rows[0];
+                    dgvPedido.Rows[i].Cells[1].Value = rows[1];
+                    dgvPedido.Rows[i].Cells[3].Value = rows[2];
+                    dgvPedido.Rows[i].Cells[4].Value = rows[3];
+                    i++;
+                }
+            }
+            SelectIndexChange = true;
         }
 
         #region Panel Barra
@@ -126,70 +189,10 @@ namespace MultimodeSales.Vistas
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("¿Seguro que desea cerrar?", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+                Close();
         }
-
-
         #endregion
-
-        private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        { 
-            if (e.ColumnIndex == 1)
-            {
-                if (CellValueChange)
-                {
-                    string value = dgvPedido.Rows[e.RowIndex].Cells[1].Value + "";
-                    string marca = "";
-                    foreach (DataRow rows in DataModels.Rows)
-                    {
-                        if (value == rows[1] + "")
-                            marca = rows[3] + "";
-                    }
-                    dgvPedido.Rows[e.RowIndex].Cells[1].Value = marca;
-                }
-                CellValueChange = true;
-            }
-        }
-
-        private void dgvPedido_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.ColumnIndex == 5)
-                {
-                    dgvPedido.Rows.Remove(dgvPedido.Rows[e.RowIndex]);
-                    pedido.EliminarPedido(dgvPedido.Rows[e.RowIndex].Cells[0].Value + "");
-                }
-                else
-                {
-                    dgvPedido.Rows[e.RowIndex].Cells[5].Value = Properties.Resources.basura24px;
-                    dgvPedido.Refresh();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("No se puede eliminar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-        }
-
-        private void cboxCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (SelectIndexChange)
-            {
-                DataTable dt = pedido.CargarPedido(cboxCliente.SelectedValue + "");
-                int i = 0;
-                foreach (DataRow rows in dt.Rows)
-                {
-                    dgvPedido.Rows.Add();
-                    dgvPedido.Rows[i].Cells[0].Value = rows[0];
-                    dgvPedido.Rows[i].Cells[1].Value = rows[1];
-                    dgvPedido.Rows[i].Cells[3].Value = rows[2];
-                    dgvPedido.Rows[i].Cells[4].Value = rows[3];
-                    i++;
-                }
-            }
-            SelectIndexChange = true;
-        }
     }
 }

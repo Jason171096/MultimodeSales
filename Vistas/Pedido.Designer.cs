@@ -110,6 +110,7 @@
             this.dgvPedido.TabIndex = 32;
             this.dgvPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellClick);
             this.dgvPedido.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellValueChanged);
+            this.dgvPedido.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvPedido_RowsAdded);
             // 
             // btnAgregarModelo
             // 

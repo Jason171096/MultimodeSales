@@ -13,11 +13,12 @@ namespace MultimodeSales.Programacion
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();
         DataTable dt = new DataTable();
-        public void AgregarPedido(string idmodelo, string idcliente, string color, string talla)
+        public void AgregarPedido(string idpedido, string idmodelo, string idcliente, string color, string talla)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("AgregarPedido", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idpedido", idpedido));
             cmd.Parameters.Add(new MySqlParameter("idmodelo", idmodelo));
             cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
             cmd.Parameters.Add(new MySqlParameter("color", color));

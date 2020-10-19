@@ -24,6 +24,9 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             cDataGrid.FormattingDataGridView(dgvModelos);
+            rbtnNumPedido.Checked = true;
+            rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
+            rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             dtpFecha.MinDate = DateTime.Parse("01/01/2020");
             dtpFecha.MaxDate = DateTime.Now;
             Data.Columns.Add("IDModelo");
@@ -35,40 +38,107 @@ namespace MultimodeSales.Vistas
             Data.Columns.Add("Fecha");
             CargarModelos();
         }
-
+        private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked && rb.TabIndex == 10)
+            {//RadioButtonBuscar
+                dtpFecha.Value = dtpFecha.MaxDate;
+                dtpFecha.Enabled = false;
+                txtBuscarModelo.Enabled = true;
+                opcion = 1;
+                //CargarModelos();
+            }
+            else if (rb.Checked && rb.TabIndex == 12)
+            {//RadioButtonFecha
+                txtBuscarModelo.Text = "";
+                txtBuscarModelo.Enabled = false;
+                dtpFecha.Enabled = true;
+                opcion = 2;
+                //CargarModelos();
+            }
+        }
         private void CargarModelos()
         {
-            dt = modelos.ObtenerModelos(count, opcion, txtBuscar.Text, dtpFecha.Value);
+            dt = modelos.ObtenerModelos(count, opcion, txtBuscarModelo.Text, dtpFecha.Value);
             AsignarTable();
             dgvModelos.DataSource = Data;
             DarFormatoTabla();
         }
         private void DarFormatoTabla()
         {
-            dgvModelos.Columns[1].Visible = false;
-            dgvModelos.Columns[0].Width = 100;
-            //dgvModelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvModelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dgvModelos.Columns[1].Visible = false;//IDMarca
+            dgvModelos.Columns[0].Width = 200;//IDModelo
+            dgvModelos.Columns[0].HeaderText = "ID Modelo";//IDModelo
+            dgvModelos.Columns[2].Width = 200;//NombreMarca
+            dgvModelos.Columns[2].HeaderText = "Nombre Marca";//NombreMarca
+            dgvModelos.Columns[3].Width = 200;//Color
+            dgvModelos.Columns[4].Width = 200;//Talla
+            dgvModelos.Columns[5].Width = 200;//PrecioCliente
+            dgvModelos.Columns[5].HeaderText = "Precio Cliente";//PrecioCliente
+            dgvModelos.Columns[6].Width = 350;//Fecha
+            
         }
-        private void btnCambiar_Click(object sender, EventArgs e)
+        private void btnAgregarModelo_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Enabled)
-            {
-                txtBuscar.Text = "";
-                txtBuscar.Enabled = false;
-                dtpFecha.Enabled = true;
-                btnCambiar.Text = "Modelo";
-                opcion = 1;
+            new EditModelo(true, "", "", "", "", "").ShowDialog();
+            BorrarTable();
+            CargarModelos();
+        }
+        private void btnEditarModelo_Click(object sender, EventArgs e)
+        {
+            string idmodelo = dgvModelos.CurrentRow.Cells[0].Value + "";
+            string idmarca = dgvModelos.CurrentRow.Cells[1].Value + "";
+            string color = dgvModelos.CurrentRow.Cells[3].Value + "";
+            string talla = dgvModelos.CurrentRow.Cells[4].Value + "";
+            string precioCliente = dgvModelos.CurrentRow.Cells[5].Value + "";
+                 
+            new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
+            BorrarTable();
+            CargarModelos();
+        }
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            count = 0;
+            BorrarTable();
+            CargarModelos();
+        }
+        private void dgvModelos_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (dgvModelos.DisplayedRowCount(false) + dgvModelos.FirstDisplayedScrollingRowIndex >= dgvModelos.Rows.Count && stop == false)
+            {   
+                count += 100;
+                stop = true;
+                CargarModelos();
             }
             else
+                stop = false;
+        }
+        private void AsignarTable()
+        {
+            if (dt.Rows.Count != 0)
             {
-                dtpFecha.Value = DateTime.Now;
-                dtpFecha.Enabled = false;
-                txtBuscar.Enabled = true;
-                btnCambiar.Text = "Fecha";
-                opcion = 2;
+                foreach (DataRow rows in dt.Rows)
+                {
+                    Data.ImportRow(rows);
+                }
             }
         }
-
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            if (datePickerChangeValue)
+            {
+                BorrarTable();
+                CargarModelos();
+            }
+            datePickerChangeValue = true;
+        }
+        private void BorrarTable()
+        {
+            dgvModelos.DataSource = null;
+            Data.Clear();
+        }
         #region Panel Barras
         private void panelBarras_MouseMove(object sender, MouseEventArgs e)
         {
@@ -104,66 +174,5 @@ namespace MultimodeSales.Vistas
         }
 
         #endregion
-
-        private void btnAgregarModelo_Click(object sender, EventArgs e)
-        {
-            new EditModelo(true, "", "", "", "", "").ShowDialog();
-            CargarModelos();
-        }
-        private void btnEditarModelo_Click(object sender, EventArgs e)
-        {
-            string idmodelo = dgvModelos.CurrentRow.Cells[0].Value + "";
-            string idmarca = dgvModelos.CurrentRow.Cells[1].Value + "";
-            string color = dgvModelos.CurrentRow.Cells[3].Value + "";
-            string talla = dgvModelos.CurrentRow.Cells[4].Value + "";
-            string precioCliente = dgvModelos.CurrentRow.Cells[5].Value + "";
-                 
-            new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
-            CargarModelos();
-        }
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            count = 0;
-            BorrarTable();
-            CargarModelos();
-        }
-
-        private void dgvModelos_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (dgvModelos.DisplayedRowCount(false) + dgvModelos.FirstDisplayedScrollingRowIndex >= dgvModelos.Rows.Count && stop == false)
-            {   
-                count += 100;
-                stop = true;
-                CargarModelos();
-            }
-            else
-                stop = false;
-        }
-        private void AsignarTable()
-        {
-            if (dt.Rows.Count != 0)
-            {
-                foreach (DataRow rows in dt.Rows)
-                {
-                    Data.ImportRow(rows);
-                }
-            }
-        }
-
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-            //if (datePickerChangeValue)
-            //{
-                BorrarTable();
-                CargarModelos();
-            //}
-            //datePickerChangeValue = true;
-        }
-
-        private void BorrarTable()
-        {
-            dgvModelos.DataSource = null;
-            Data.Clear();
-        }
     }
 }
