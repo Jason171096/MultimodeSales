@@ -44,6 +44,9 @@
             this.panelColTall = new System.Windows.Forms.Panel();
             this.lbPedido = new System.Windows.Forms.Label();
             this.panelPedido = new System.Windows.Forms.Panel();
+            this.lbVenta = new System.Windows.Forms.Label();
+            this.panelVenta = new System.Windows.Forms.Panel();
+            this.picVenta = new System.Windows.Forms.PictureBox();
             this.picPedido = new System.Windows.Forms.PictureBox();
             this.picColTall = new System.Windows.Forms.PictureBox();
             this.picModelos = new System.Windows.Forms.PictureBox();
@@ -59,6 +62,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
@@ -84,7 +89,7 @@
             // panelImportExcel
             // 
             this.panelImportExcel.BackColor = System.Drawing.Color.Purple;
-            this.panelImportExcel.Location = new System.Drawing.Point(231, 252);
+            this.panelImportExcel.Location = new System.Drawing.Point(233, 252);
             this.panelImportExcel.Name = "panelImportExcel";
             this.panelImportExcel.Size = new System.Drawing.Size(171, 10);
             this.panelImportExcel.TabIndex = 4;
@@ -103,7 +108,7 @@
             // 
             this.lbImportExcel.AutoSize = true;
             this.lbImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportExcel.Location = new System.Drawing.Point(245, 265);
+            this.lbImportExcel.Location = new System.Drawing.Point(247, 265);
             this.lbImportExcel.Name = "lbImportExcel";
             this.lbImportExcel.Size = new System.Drawing.Size(145, 24);
             this.lbImportExcel.TabIndex = 8;
@@ -204,6 +209,38 @@
             this.panelPedido.Size = new System.Drawing.Size(171, 10);
             this.panelPedido.TabIndex = 24;
             // 
+            // lbVenta
+            // 
+            this.lbVenta.AutoSize = true;
+            this.lbVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVenta.Location = new System.Drawing.Point(735, 508);
+            this.lbVenta.Name = "lbVenta";
+            this.lbVenta.Size = new System.Drawing.Size(64, 24);
+            this.lbVenta.TabIndex = 29;
+            this.lbVenta.Text = "Venta";
+            // 
+            // panelVenta
+            // 
+            this.panelVenta.BackColor = System.Drawing.Color.Purple;
+            this.panelVenta.Location = new System.Drawing.Point(678, 495);
+            this.panelVenta.Name = "panelVenta";
+            this.panelVenta.Size = new System.Drawing.Size(171, 10);
+            this.panelVenta.TabIndex = 27;
+            // 
+            // picVenta
+            // 
+            this.picVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picVenta.Image = global::MultimodeSales.Properties.Resources.sales128px;
+            this.picVenta.Location = new System.Drawing.Point(678, 344);
+            this.picVenta.Name = "picVenta";
+            this.picVenta.Size = new System.Drawing.Size(169, 161);
+            this.picVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picVenta.TabIndex = 28;
+            this.picVenta.TabStop = false;
+            this.picVenta.Click += new System.EventHandler(this.picVenta_Click);
+            this.picVenta.MouseEnter += new System.EventHandler(this.picVenta_MouseEnter);
+            this.picVenta.MouseLeave += new System.EventHandler(this.picVenta_MouseLeave);
+            // 
             // picPedido
             // 
             this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -278,7 +315,7 @@
             // 
             this.picImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picImportExcel.Image = global::MultimodeSales.Properties.Resources.csv128px;
-            this.picImportExcel.Location = new System.Drawing.Point(231, 101);
+            this.picImportExcel.Location = new System.Drawing.Point(233, 101);
             this.picImportExcel.Name = "picImportExcel";
             this.picImportExcel.Size = new System.Drawing.Size(169, 161);
             this.picImportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -403,12 +440,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(201, 49);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1129, 565);
+            this.flowLayoutPanel1.TabIndex = 31;
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1330, 614);
+            this.Controls.Add(this.lbVenta);
+            this.Controls.Add(this.panelVenta);
+            this.Controls.Add(this.picVenta);
             this.Controls.Add(this.lbPedido);
             this.Controls.Add(this.panelPedido);
             this.Controls.Add(this.picPedido);
@@ -430,6 +478,7 @@
             this.Controls.Add(this.picImportExcel);
             this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.picCliente);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -437,6 +486,7 @@
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picModelos)).EndInit();
@@ -488,6 +538,10 @@
         private System.Windows.Forms.Label lbPedido;
         private System.Windows.Forms.Panel panelPedido;
         private System.Windows.Forms.PictureBox picPedido;
+        private System.Windows.Forms.Label lbVenta;
+        private System.Windows.Forms.Panel panelVenta;
+        private System.Windows.Forms.PictureBox picVenta;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

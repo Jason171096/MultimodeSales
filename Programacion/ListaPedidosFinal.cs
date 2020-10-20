@@ -21,22 +21,12 @@ namespace MultimodeSales.Programacion
             conexion.CloseConnection();
             return dt;
         }
-        //Problems with Stored Procedure
-        public void UpdatePedidoLlego(string idcliente, string idmodelo)
+        public void UpdatePedidoLlego(string idpedido)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("ActualizarPedidoFinal", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("idmodelo", idmodelo));
-            cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
-        }
-        //
-        public void UpdatePedidoLlego2(string idpedido)
-        {
-            conexion.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conexion.GetConnection();
-            cmd.CommandText = $"UPDATE pedidos SET Llego = 1 WHERE IDPedido = {idpedido}";
+            cmd.Parameters.Add(new MySqlParameter("idpedido", idpedido));
             cmd.ExecuteNonQuery();
             conexion.CloseConnection();
         }

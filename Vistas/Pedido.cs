@@ -77,7 +77,9 @@ namespace MultimodeSales.Vistas
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("¿Seguro que desea cerrar?", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+                Close();
         }
         private void btnTerminar_Click(object sender, EventArgs e)
         {

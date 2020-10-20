@@ -34,12 +34,12 @@ namespace MultimodeSales.Vistas
         private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
-            if(rb.Checked && rb.TabIndex == 10)
+            if (rb.Checked && rb.TabIndex == 10)
             {
                 dtpFecha.Enabled = false;
                 Buscar = 1;
             }
-            else if(rb.Checked && rb.TabIndex == 12)
+            else if (rb.Checked && rb.TabIndex == 12)
             {
                 dtpFecha.Enabled = true;
                 Buscar = 2;
@@ -91,7 +91,7 @@ namespace MultimodeSales.Vistas
 
         private void dgvEditCell_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == 's')
+            if (e.KeyChar == 's')
             {
                 dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
             }
@@ -119,7 +119,48 @@ namespace MultimodeSales.Vistas
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
                 if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
-                    listaPedidosFinal.UpdatePedidoLlego2(rows.Cells[0].Value + "");
+                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value + "");
+            }
+        }
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            excel._Application app = new excel.Application();
+            excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            excel._Worksheet worksheet = null;
+            app.Visible = true;
+            worksheet = workbook.Sheets[1];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Rows.Font.Size = 14;
+            try
+            {
+                for (int i = 0; i < dgvPedidosFinal.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1] = dgvPedidosFinal.Columns[i].HeaderText;
+                }
+                for (int i = 0; i < dgvPedidosFinal.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgvPedidosFinal.Columns.Count; j++)
+                    {
+                        if (dgvPedidosFinal.Rows[i].Cells[j].Value != null)
+                        {
+                            worksheet.Cells[i + 2, j + 1] = dgvPedidosFinal.Rows[i].Cells[j].Value.ToString();
+                        }
+                        else
+                        {
+                            worksheet.Cells[i + 2, j + 1] = "";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                app.Quit();
+                workbook = null;
+                worksheet = null;
             }
         }
 
@@ -157,6 +198,8 @@ namespace MultimodeSales.Vistas
         {
             Close();
         }
-        #endregion
+        #endregion  
     }
 }
+
+
