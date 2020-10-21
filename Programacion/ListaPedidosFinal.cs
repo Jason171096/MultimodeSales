@@ -30,5 +30,16 @@ namespace MultimodeSales.Programacion
             cmd.ExecuteNonQuery();
             conexion.CloseConnection();
         }
+        public DataTable ObtenerPedidoFinalLlego(string idcliente)
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("VerClientesPedidoLlego", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            conexion.CloseConnection();
+            return dt;
+        }
     }
 }

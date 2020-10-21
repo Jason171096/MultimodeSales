@@ -81,22 +81,6 @@ namespace MultimodeSales.Vistas
             dgvPedidosFinal.Columns[6].HeaderText = "Precio Cliente";
             dgvPedidosFinal.Columns[7].Width = 350;//Fecha
         }
-
-        private void dgvPedidosFinal_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            DataGridViewTextBoxEditingControl tb = (DataGridViewTextBoxEditingControl)e.Control;
-            tb.KeyPress += new KeyPressEventHandler(dgvEditCell_KeyPress);
-            e.Control.KeyPress += new KeyPressEventHandler(dgvEditCell_KeyPress);
-        }
-
-        private void dgvEditCell_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 's')
-            {
-                dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-            }
-        }
-
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -109,7 +93,7 @@ namespace MultimodeSales.Vistas
                 else
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.Black;
+                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
                 }
             }
         }

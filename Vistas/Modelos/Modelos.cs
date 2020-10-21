@@ -19,7 +19,6 @@ namespace MultimodeSales.Vistas
         private int MY;
         private int count = 0, opcion = 1;
         private bool stop = false, datePickerChangeValue = false;
-
         public Modeloss()
         {
             InitializeComponent();
@@ -77,8 +76,7 @@ namespace MultimodeSales.Vistas
             dgvModelos.Columns[4].Width = 200;//Talla
             dgvModelos.Columns[5].Width = 200;//PrecioCliente
             dgvModelos.Columns[5].HeaderText = "Precio Cliente";//PrecioCliente
-            dgvModelos.Columns[6].Width = 350;//Fecha
-            
+            dgvModelos.Columns[6].Width = 350;//Fecha  
         }
         private void btnAgregarModelo_Click(object sender, EventArgs e)
         {
@@ -161,6 +159,11 @@ namespace MultimodeSales.Vistas
                 Left = Left + (e.X - MX);
                 Top = Top + (e.Y - MY);
             }
+        }
+
+        private void dgvModelos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
         }
 
         private void picMinimize_Click(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Buscar;
 using MultimodeSales.Vistas.Excel;
 using MultimodeSales.Programacion;
+using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales
 {
@@ -182,7 +183,8 @@ namespace MultimodeSales
 
         private void picVenta_Click(object sender, EventArgs e)
         {
-
+            Venta venta = new Venta();
+            venta.ShowDialog();
         }
         #endregion
 
