@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 20-10-2020 a las 18:39:45
+-- Tiempo de generación: 22-10-2020 a las 17:08:23
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -130,11 +130,16 @@ BEGIN
 	SELECT p.IDPedido, p.IDModelo, p.Color, p.Talla FROM pedidos p WHERE p.IDCliente = idcliente;
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `VerClientesPedidoLlego` (IN `idcliente` BIGINT)  NO SQL
+BEGIN
+	SELECT p.IDPedido, p.IDModelo, m.Nombre, p.Color, p.Talla, mo.PrecioCliente FROM pedidos AS p INNER JOIN modelos AS mo USING(IDModelo) INNER JOIN marca AS m USING(IDMarca) WHERE p.IDCliente = idcliente AND p.Llego = 1;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerColores` ()  READS SQL DATA
 SELECT color.IDColor, color.Nombre FROM color$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerListaPedidoFinal` ()  READS SQL DATA
-SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, p.Color, p.Talla, m.PrecioCliente, p.Fecha FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo ORDER BY c.IDCliente ASC$$
+SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, p.Color, p.Talla, CONCAT('$', FORMAT(m.PrecioCliente, 2)) AS 'PrecioCliente', p.Fecha FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo ORDER BY c.IDCliente ASC$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerMarcas` ()  BEGIN
 	SELECT IDMarca, Nombre FROM marca;
@@ -148,9 +153,9 @@ END$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerModelosLimit` (IN `inicio` INT, IN `opcion` INT, IN `buscar` VARCHAR(50), IN `fecha` DATE)  READS SQL DATA
 BEGIN
 	IF opcion = 1 THEN
-		SELECT IDModelo, m.IDMarca, m.Nombre, mo.Color, mo.Talla, mo.PrecioCliente, mo.Fecha FROM modelos mo INNER JOIN marca m ON m.IDMarca = mo.IDMarca WHERE mo.IDModelo LIKE CONCAT ('%', buscar, '%') LIMIT inicio, 100;
+		SELECT IDModelo, m.IDMarca, m.Nombre, mo.Color, mo.Talla, CONCAT('$', FORMAT(mo.PrecioCliente, 2)) AS 'PrecioCliente', mo.Fecha FROM modelos mo INNER JOIN marca m ON m.IDMarca = mo.IDMarca WHERE mo.IDModelo LIKE CONCAT ('%', buscar, '%') LIMIT inicio, 100;
     ELSE
-    	SELECT IDModelo, m.IDMarca, m.Nombre, mo.Color, mo.Talla, mo.PrecioCliente, mo.Fecha FROM modelos mo INNER JOIN marca m ON m.IDMarca = mo.IDMarca WHERE CAST(mo.Fecha AS DATE) = fecha LIMIT inicio, 100;
+    	SELECT IDModelo, m.IDMarca, m.Nombre, mo.Color, mo.Talla, CONCAT('$', FORMAT(mo.PrecioCliente, 2)) AS 'PrecioCliente', mo.Fecha FROM modelos mo INNER JOIN marca m ON m.IDMarca = mo.IDMarca WHERE CAST(mo.Fecha AS DATE) = fecha LIMIT inicio, 100;
     END IF;
 END$$
 
@@ -665,18 +670,18 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `Fecha`, `Llego`) VALUES
-(1, '112', 1, 'MORADO', 'G', '2020-10-19 17:13:56', b'0'),
+(1, '112', 1, 'MORADO', 'G', '2020-10-19 17:13:56', b'1'),
 (2, '115', 1, 'VERDE', '18', '2020-10-19 17:13:56', b'0'),
 (3, '346', 1, 'TURQUESA', 'CH', '2020-10-19 17:13:56', b'0'),
-(4, '2', 1, 'ROJO', 'XG', '2020-10-19 17:13:56', b'0'),
+(4, '2', 1, 'ROJO', 'XG', '2020-10-19 17:13:56', b'1'),
 (8, '111', 101, 'MORADO', 'XG', '2020-10-19 10:56:59', b'0'),
 (9, '132', 101, 'AMARILLLO', 'M', '2020-10-19 10:56:59', b'0'),
-(10, '2', 101, 'TURQUESA', 'XG', '2020-10-19 10:56:59', b'0'),
+(10, '2', 101, 'TURQUESA', 'XG', '2020-10-19 10:56:59', b'1'),
 (12, '2', 31, 'AMARILLLO', '17', '2020-10-19 10:57:49', b'0'),
-(13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'0'),
+(13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'1'),
 (14, '10001', 31, 'ROJO', '17', '2020-10-19 10:57:49', b'0'),
-(15, '35', 31, 'TURQUESA', 'CH', '2020-10-19 10:57:49', b'0'),
-(16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'0');
+(15, '35', 31, 'TURQUESA', 'CH', '2020-10-19 10:57:49', b'1'),
+(16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'1');
 
 -- --------------------------------------------------------
 
