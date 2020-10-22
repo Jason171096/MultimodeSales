@@ -19,6 +19,7 @@ namespace MultimodeSales.Vistas.Ventas
         ListaPedidosFinal pedidosFinal = new ListaPedidosFinal();
         CDataGridView cDataGrid = new CDataGridView();
         ClienteDB cliente = new ClienteDB();
+        FormatoPrecio formatoPrecio = new FormatoPrecio();
         private bool SelectIndexChange = false;
 
         public Venta()
@@ -92,27 +93,42 @@ namespace MultimodeSales.Vistas.Ventas
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
             string precioCliente;
-            string lbprecio = lbTotal.Text;
+            string lbprecioTotal = lbTotal.Text.Trim('$');
+            string cantidad = lbCantidad.Text;
             if (e.KeyCode == Keys.Enter)
             {
                 if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
-                    precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value + "";
-                    int suma = Convert.ToInt32(lbprecio) + Convert.ToInt32(precioCliente);
-                    //lbTotal.Text = string.Format("{0:C}", suma + "");
+                    ActualizarLabels(1, lbprecioTotal, cantidad);
                 }
                 else
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.Black;
-                    precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value + "";
-                    int resta = Convert.ToInt32(lbprecio) - Convert.ToInt32(precioCliente);
-                    //lbTotal.Text = string.Format("{0:C}", resta + "");
+                    ActualizarLabels(2, lbprecioTotal, cantidad);
                 }
                 
             }
+        }
+        private void ActualizarLabels(int sumaoresta, string lbprecio, string cantidad)
+        {
+            int totalCantidad = int.Parse(cantidad);
+            float precioCliente = float.Parse(dgvPedidosFinal.CurrentRow.Cells[5].Value + "".Trim('$'));
+            float totalPrecio;
+            if(sumaoresta == 1)
+            {
+                totalPrecio = float.Parse(lbprecio) - precioCliente;
+                totalCantidad--;
+            }
+            else
+            {    
+                totalPrecio = float.Parse(lbprecio) + precioCliente;
+                totalCantidad++;
+            }
+            lbTotal.Text = totalPrecio + "";
+            lbCantidad.Text = totalCantidad + "";
         }
     }
 }
