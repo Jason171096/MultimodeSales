@@ -31,10 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelVentas = new System.Windows.Forms.Panel();
-            this.lbVentas = new System.Windows.Forms.Label();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.picMinimize = new System.Windows.Forms.PictureBox();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,70 +38,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbCantidad = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.lbCantidad = new System.Windows.Forms.Label();
             this.btnTerminar = new System.Windows.Forms.Button();
-            this.panelVentas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            this.panelVentas = new System.Windows.Forms.Panel();
+            this.lbVentas = new System.Windows.Forms.Label();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panelVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelVentas
-            // 
-            this.panelVentas.BackColor = System.Drawing.Color.Purple;
-            this.panelVentas.BackgroundImage = global::MultimodeSales.Properties.Resources.background5;
-            this.panelVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelVentas.Controls.Add(this.lbVentas);
-            this.panelVentas.Controls.Add(this.picClose);
-            this.panelVentas.Controls.Add(this.picMinimize);
-            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVentas.Location = new System.Drawing.Point(0, 0);
-            this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(966, 46);
-            this.panelVentas.TabIndex = 30;
-            this.panelVentas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelVentas_MouseMove);
-            // 
-            // lbVentas
-            // 
-            this.lbVentas.AutoSize = true;
-            this.lbVentas.BackColor = System.Drawing.Color.Transparent;
-            this.lbVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbVentas.Location = new System.Drawing.Point(6, 9);
-            this.lbVentas.Name = "lbVentas";
-            this.lbVentas.Size = new System.Drawing.Size(86, 29);
-            this.lbVentas.TabIndex = 36;
-            this.lbVentas.Text = "Ventas";
-            this.lbVentas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbVentas_MouseMove);
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.Transparent;
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(906, 0);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(48, 48);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picClose.TabIndex = 24;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(856, 0);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.Size = new System.Drawing.Size(48, 48);
-            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picMinimize.TabIndex = 23;
-            this.picMinimize.TabStop = false;
-            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
             // dgvPedidosFinal
             // 
@@ -221,16 +167,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Venta";
             // 
-            // lbCantidad
-            // 
-            this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantidad.Location = new System.Drawing.Point(184, 41);
-            this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(26, 29);
-            this.lbCantidad.TabIndex = 59;
-            this.lbCantidad.Text = "0";
-            // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
@@ -240,6 +176,16 @@
             this.lbTotal.Size = new System.Drawing.Size(58, 29);
             this.lbTotal.TabIndex = 60;
             this.lbTotal.Text = "$0.0";
+            // 
+            // lbCantidad
+            // 
+            this.lbCantidad.AutoSize = true;
+            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidad.Location = new System.Drawing.Point(184, 41);
+            this.lbCantidad.Name = "lbCantidad";
+            this.lbCantidad.Size = new System.Drawing.Size(26, 29);
+            this.lbCantidad.TabIndex = 59;
+            this.lbCantidad.Text = "0";
             // 
             // btnTerminar
             // 
@@ -255,12 +201,66 @@
             this.btnTerminar.Text = "Vender";
             this.btnTerminar.UseVisualStyleBackColor = false;
             // 
+            // panelVentas
+            // 
+            this.panelVentas.BackColor = System.Drawing.Color.Purple;
+            this.panelVentas.BackgroundImage = global::MultimodeSales.Properties.Resources.background5;
+            this.panelVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelVentas.Controls.Add(this.lbVentas);
+            this.panelVentas.Controls.Add(this.picClose);
+            this.panelVentas.Controls.Add(this.picMinimize);
+            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelVentas.Location = new System.Drawing.Point(0, 0);
+            this.panelVentas.Name = "panelVentas";
+            this.panelVentas.Size = new System.Drawing.Size(966, 46);
+            this.panelVentas.TabIndex = 30;
+            this.panelVentas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelVentas_MouseMove);
+            // 
+            // lbVentas
+            // 
+            this.lbVentas.AutoSize = true;
+            this.lbVentas.BackColor = System.Drawing.Color.Transparent;
+            this.lbVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbVentas.Location = new System.Drawing.Point(6, 9);
+            this.lbVentas.Name = "lbVentas";
+            this.lbVentas.Size = new System.Drawing.Size(86, 29);
+            this.lbVentas.TabIndex = 36;
+            this.lbVentas.Text = "Ventas";
+            this.lbVentas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbVentas_MouseMove);
+            // 
+            // picClose
+            // 
+            this.picClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
+            this.picClose.Location = new System.Drawing.Point(906, 0);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(48, 48);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picClose.TabIndex = 24;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // picMinimize
+            // 
+            this.picMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
+            this.picMinimize.Location = new System.Drawing.Point(856, 0);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(48, 48);
+            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMinimize.TabIndex = 23;
+            this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(966, 708);
+            this.ClientSize = new System.Drawing.Size(966, 654);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -270,15 +270,15 @@
             this.Name = "Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
-            this.panelVentas.ResumeLayout(false);
-            this.panelVentas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelVentas.ResumeLayout(false);
+            this.panelVentas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }

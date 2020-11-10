@@ -46,6 +46,9 @@
             this.panelPedido = new System.Windows.Forms.Panel();
             this.lbVenta = new System.Windows.Forms.Label();
             this.panelVenta = new System.Windows.Forms.Panel();
+            this.lbDevolucion = new System.Windows.Forms.Label();
+            this.panelDevolucion = new System.Windows.Forms.Panel();
+            this.picDevolucion = new System.Windows.Forms.PictureBox();
             this.picVenta = new System.Windows.Forms.PictureBox();
             this.picPedido = new System.Windows.Forms.PictureBox();
             this.picColTall = new System.Windows.Forms.PictureBox();
@@ -62,7 +65,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).BeginInit();
@@ -226,6 +229,37 @@
             this.panelVenta.Name = "panelVenta";
             this.panelVenta.Size = new System.Drawing.Size(171, 10);
             this.panelVenta.TabIndex = 27;
+            // 
+            // lbDevolucion
+            // 
+            this.lbDevolucion.AutoSize = true;
+            this.lbDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDevolucion.Location = new System.Drawing.Point(939, 508);
+            this.lbDevolucion.Name = "lbDevolucion";
+            this.lbDevolucion.Size = new System.Drawing.Size(115, 24);
+            this.lbDevolucion.TabIndex = 32;
+            this.lbDevolucion.Text = "Devolucion";
+            // 
+            // panelDevolucion
+            // 
+            this.panelDevolucion.BackColor = System.Drawing.Color.Purple;
+            this.panelDevolucion.Location = new System.Drawing.Point(906, 495);
+            this.panelDevolucion.Name = "panelDevolucion";
+            this.panelDevolucion.Size = new System.Drawing.Size(171, 10);
+            this.panelDevolucion.TabIndex = 30;
+            // 
+            // picDevolucion
+            // 
+            this.picDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDevolucion.Image = global::MultimodeSales.Properties.Resources.return128px;
+            this.picDevolucion.Location = new System.Drawing.Point(906, 344);
+            this.picDevolucion.Name = "picDevolucion";
+            this.picDevolucion.Size = new System.Drawing.Size(169, 161);
+            this.picDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picDevolucion.TabIndex = 31;
+            this.picDevolucion.TabStop = false;
+            this.picDevolucion.MouseEnter += new System.EventHandler(this.picDevolucion_MouseEnter);
+            this.picDevolucion.MouseLeave += new System.EventHandler(this.picDevolucion_MouseLeave);
             // 
             // picVenta
             // 
@@ -440,20 +474,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(201, 49);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1129, 565);
-            this.flowLayoutPanel1.TabIndex = 31;
-            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1330, 614);
+            this.Controls.Add(this.lbDevolucion);
+            this.Controls.Add(this.panelDevolucion);
+            this.Controls.Add(this.picDevolucion);
             this.Controls.Add(this.lbVenta);
             this.Controls.Add(this.panelVenta);
             this.Controls.Add(this.picVenta);
@@ -478,7 +507,6 @@
             this.Controls.Add(this.picImportExcel);
             this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.picCliente);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -486,6 +514,7 @@
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picColTall)).EndInit();
@@ -541,7 +570,9 @@
         private System.Windows.Forms.Label lbVenta;
         private System.Windows.Forms.Panel panelVenta;
         private System.Windows.Forms.PictureBox picVenta;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lbDevolucion;
+        private System.Windows.Forms.Panel panelDevolucion;
+        private System.Windows.Forms.PictureBox picDevolucion;
     }
 }
 
