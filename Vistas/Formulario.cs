@@ -24,6 +24,8 @@ namespace MultimodeSales
             panelColTall.Visible = false;
             panelPedido.Visible = false;
             panelVenta.Visible = false;
+            panelDevolucion.Visible = false;
+            lbDevolucion.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
@@ -34,6 +36,7 @@ namespace MultimodeSales
             lbColTall.Visible = false;
             lbPedido.Visible = false;
             lbVenta.Visible = false;
+            lbDevolucion.Visible = false;
             #endregion
 
         }
@@ -187,6 +190,19 @@ namespace MultimodeSales
             venta.ShowDialog();
         }
         #endregion
+        #region picDevolucion
+        private void picDevolucion_MouseEnter(object sender, EventArgs e)
+        {
+            panelDevolucion.Visible = true;
+            lbDevolucion.Visible = true;
+        }
+
+        private void picDevolucion_MouseLeave(object sender, EventArgs e)
+        {
+            panelDevolucion.Visible = false;
+            lbDevolucion.Visible = false;
+        }
+        #endregion
 
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
@@ -233,8 +249,9 @@ namespace MultimodeSales
 
 
 
+
         #endregion
 
-        
+
     }
 }
