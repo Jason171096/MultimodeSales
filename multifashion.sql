@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 22-10-2020 a las 17:08:23
+-- Tiempo de generación: 16-11-2020 a las 04:47:54
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -139,7 +139,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `VerColores` ()  READS SQL DATA
 SELECT color.IDColor, color.Nombre FROM color$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerListaPedidoFinal` ()  READS SQL DATA
-SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, p.Color, p.Talla, CONCAT('$', FORMAT(m.PrecioCliente, 2)) AS 'PrecioCliente', p.Fecha FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo ORDER BY c.IDCliente ASC$$
+SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, p.Color, p.Talla, CONCAT('$', FORMAT(m.PrecioCliente, 2)) AS 'PrecioCliente', p.Fecha, p.Llego FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo ORDER BY c.IDCliente ASC$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerMarcas` ()  BEGIN
 	SELECT IDMarca, Nombre FROM marca;
@@ -333,6 +333,7 @@ CREATE TABLE `modelos` (
 
 INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`, `PrecioPublico`, `Fecha`) VALUES
 ('1', 2, 'MENGUATE', '26', '100.00', NULL, '2020-10-15 11:03:09'),
+('10', 1, 'MOSTAZA', '15 AL 56', '0.00', NULL, '2020-10-28 07:20:45'),
 ('100', 7, 'AZUL', '22', '500.00', NULL, '2020-10-13 23:35:14'),
 ('10001', 7, 'MERLOT', '22 AL 26', '459.50', NULL, '2020-10-04 18:19:49'),
 ('10002', 7, 'AZUL', '25', '460.50', NULL, '2020-10-04 18:19:51'),
@@ -640,13 +641,14 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('397', 7, 'AMARILLO', '23', '5415.35', NULL, '2020-10-13 23:35:32'),
 ('398', 7, 'NEGRO', '24', '5431.90', NULL, '2020-10-13 23:35:32'),
 ('4', 2, 'VERDE', '43', '100.00', NULL, '2020-10-15 11:04:00'),
-('6', 6, 'MAGENTA', '35 AL 25', '0.00', NULL, '2020-10-19 15:04:05'),
+('6', 6, 'MAGENTA', '35 AL 27', '0.00', NULL, '2020-10-19 15:04:05'),
 ('6762', 7, 'NEGRO', '22 AL 27  ENTEROS', '459.50', NULL, '2020-10-04 18:19:49'),
 ('7', 6, 'CELESTE', '34', '0.00', NULL, '2020-10-19 14:31:38'),
 ('8', 6, 'ROSA', '22 AL 28', '0.00', NULL, '2020-10-19 15:05:43'),
 ('801', 7, 'LADRILLO', '22 AL 26', '45.00', NULL, '2020-10-04 18:19:48'),
 ('8049', 7, 'NEGRO', '23 AL 26', '505.50', NULL, '2020-10-04 18:19:49'),
 ('8050', 7, 'NUTRIA', '23 AL 26', '574.50', NULL, '2020-10-04 18:19:49'),
+('9', 6, 'ROSA', 'M', '0.00', NULL, '2020-10-28 07:20:00'),
 ('95184', 7, 'NEGRO', '23 AL 26', '896.50', NULL, '2020-10-04 18:19:49');
 
 -- --------------------------------------------------------
@@ -834,7 +836,7 @@ ALTER TABLE `color`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `talla`
