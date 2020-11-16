@@ -250,8 +250,32 @@ namespace MultimodeSales
 
 
 
+
         #endregion
 
+        private void panelMarca_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void panelColTall_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelModelos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDevolucion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelVenta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

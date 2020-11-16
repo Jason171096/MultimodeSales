@@ -65,6 +65,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.content1 = new System.Windows.Forms.Panel();
+            this.content2 = new System.Windows.Forms.Panel();
+            this.content3 = new System.Windows.Forms.Panel();
+            this.content4 = new System.Windows.Forms.Panel();
+            this.content5 = new System.Windows.Forms.Panel();
+            this.content6 = new System.Windows.Forms.Panel();
+            this.content7 = new System.Windows.Forms.Panel();
+            this.content8 = new System.Windows.Forms.Panel();
+            this.content9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
@@ -79,78 +89,89 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.content1.SuspendLayout();
+            this.content2.SuspendLayout();
+            this.content3.SuspendLayout();
+            this.content4.SuspendLayout();
+            this.content5.SuspendLayout();
+            this.content6.SuspendLayout();
+            this.content7.SuspendLayout();
+            this.content8.SuspendLayout();
+            this.content9.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCliente
             // 
             this.panelCliente.BackColor = System.Drawing.Color.Purple;
-            this.panelCliente.Location = new System.Drawing.Point(448, 252);
+            this.panelCliente.Location = new System.Drawing.Point(35, 145);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(171, 10);
+            this.panelCliente.Size = new System.Drawing.Size(150, 10);
             this.panelCliente.TabIndex = 3;
             // 
             // panelImportExcel
             // 
             this.panelImportExcel.BackColor = System.Drawing.Color.Purple;
-            this.panelImportExcel.Location = new System.Drawing.Point(233, 252);
+            this.panelImportExcel.Location = new System.Drawing.Point(35, 145);
             this.panelImportExcel.Name = "panelImportExcel";
-            this.panelImportExcel.Size = new System.Drawing.Size(171, 10);
+            this.panelImportExcel.Size = new System.Drawing.Size(150, 10);
             this.panelImportExcel.TabIndex = 4;
             // 
             // lbCliente
             // 
             this.lbCliente.AutoSize = true;
-            this.lbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCliente.Location = new System.Drawing.Point(496, 265);
+            this.lbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbCliente.Location = new System.Drawing.Point(74, 158);
             this.lbCliente.Name = "lbCliente";
-            this.lbCliente.Size = new System.Drawing.Size(75, 24);
+            this.lbCliente.Size = new System.Drawing.Size(65, 20);
             this.lbCliente.TabIndex = 7;
             this.lbCliente.Text = "Cliente";
             // 
             // lbImportExcel
             // 
             this.lbImportExcel.AutoSize = true;
-            this.lbImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportExcel.Location = new System.Drawing.Point(247, 265);
+            this.lbImportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbImportExcel.Location = new System.Drawing.Point(48, 157);
             this.lbImportExcel.Name = "lbImportExcel";
-            this.lbImportExcel.Size = new System.Drawing.Size(145, 24);
+            this.lbImportExcel.Size = new System.Drawing.Size(125, 20);
             this.lbImportExcel.TabIndex = 8;
             this.lbImportExcel.Text = "Importar Excel";
             // 
             // lbMarca
             // 
             this.lbMarca.AutoSize = true;
-            this.lbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarca.Location = new System.Drawing.Point(732, 265);
+            this.lbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbMarca.Location = new System.Drawing.Point(83, 159);
             this.lbMarca.Name = "lbMarca";
-            this.lbMarca.Size = new System.Drawing.Size(67, 24);
+            this.lbMarca.Size = new System.Drawing.Size(58, 20);
             this.lbMarca.TabIndex = 11;
             this.lbMarca.Text = "Marca";
             // 
             // panelMarca
             // 
             this.panelMarca.BackColor = System.Drawing.Color.Purple;
-            this.panelMarca.Location = new System.Drawing.Point(678, 252);
+            this.panelMarca.Location = new System.Drawing.Point(35, 145);
             this.panelMarca.Name = "panelMarca";
-            this.panelMarca.Size = new System.Drawing.Size(171, 10);
+            this.panelMarca.Size = new System.Drawing.Size(150, 10);
             this.panelMarca.TabIndex = 9;
+            this.panelMarca.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMarca_Paint);
             // 
             // lbPedidosFinal
             // 
             this.lbPedidosFinal.AutoSize = true;
-            this.lbPedidosFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedidosFinal.Location = new System.Drawing.Point(464, 508);
+            this.lbPedidosFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPedidosFinal.Location = new System.Drawing.Point(51, 158);
             this.lbPedidosFinal.Name = "lbPedidosFinal";
-            this.lbPedidosFinal.Size = new System.Drawing.Size(138, 24);
+            this.lbPedidosFinal.Size = new System.Drawing.Size(117, 20);
             this.lbPedidosFinal.TabIndex = 14;
             this.lbPedidosFinal.Text = "Pedidos Final";
             // 
             // panelPedidosFinal
             // 
             this.panelPedidosFinal.BackColor = System.Drawing.Color.Purple;
-            this.panelPedidosFinal.Location = new System.Drawing.Point(450, 495);
+            this.panelPedidosFinal.Location = new System.Drawing.Point(35, 145);
             this.panelPedidosFinal.Name = "panelPedidosFinal";
-            this.panelPedidosFinal.Size = new System.Drawing.Size(171, 10);
+            this.panelPedidosFinal.Size = new System.Drawing.Size(150, 10);
             this.panelPedidosFinal.TabIndex = 12;
             // 
             // timerHora
@@ -161,100 +182,104 @@
             // lbModelos
             // 
             this.lbModelos.AutoSize = true;
-            this.lbModelos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbModelos.Location = new System.Drawing.Point(1165, 265);
+            this.lbModelos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbModelos.Location = new System.Drawing.Point(75, 158);
             this.lbModelos.Name = "lbModelos";
-            this.lbModelos.Size = new System.Drawing.Size(90, 24);
+            this.lbModelos.Size = new System.Drawing.Size(76, 20);
             this.lbModelos.TabIndex = 20;
             this.lbModelos.Text = "Modelos";
             // 
             // panelModelos
             // 
             this.panelModelos.BackColor = System.Drawing.Color.Purple;
-            this.panelModelos.Location = new System.Drawing.Point(1123, 252);
+            this.panelModelos.Location = new System.Drawing.Point(35, 145);
             this.panelModelos.Name = "panelModelos";
-            this.panelModelos.Size = new System.Drawing.Size(171, 10);
+            this.panelModelos.Size = new System.Drawing.Size(150, 10);
             this.panelModelos.TabIndex = 18;
+            this.panelModelos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelModelos_Paint);
             // 
             // lbColTall
             // 
             this.lbColTall.AutoSize = true;
-            this.lbColTall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbColTall.Location = new System.Drawing.Point(911, 265);
+            this.lbColTall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbColTall.Location = new System.Drawing.Point(44, 158);
             this.lbColTall.Name = "lbColTall";
-            this.lbColTall.Size = new System.Drawing.Size(159, 24);
+            this.lbColTall.Size = new System.Drawing.Size(135, 20);
             this.lbColTall.TabIndex = 23;
             this.lbColTall.Text = "Tallas y Colores";
             // 
             // panelColTall
             // 
             this.panelColTall.BackColor = System.Drawing.Color.Purple;
-            this.panelColTall.Location = new System.Drawing.Point(906, 252);
+            this.panelColTall.Location = new System.Drawing.Point(35, 145);
             this.panelColTall.Name = "panelColTall";
-            this.panelColTall.Size = new System.Drawing.Size(171, 10);
+            this.panelColTall.Size = new System.Drawing.Size(150, 10);
             this.panelColTall.TabIndex = 21;
+            this.panelColTall.Paint += new System.Windows.Forms.PaintEventHandler(this.panelColTall_Paint);
             // 
             // lbPedido
             // 
             this.lbPedido.AutoSize = true;
-            this.lbPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPedido.Location = new System.Drawing.Point(275, 508);
+            this.lbPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPedido.Location = new System.Drawing.Point(74, 157);
             this.lbPedido.Name = "lbPedido";
-            this.lbPedido.Size = new System.Drawing.Size(76, 24);
+            this.lbPedido.Size = new System.Drawing.Size(64, 20);
             this.lbPedido.TabIndex = 26;
             this.lbPedido.Text = "Pedido";
             // 
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.Purple;
-            this.panelPedido.Location = new System.Drawing.Point(231, 495);
+            this.panelPedido.Location = new System.Drawing.Point(35, 145);
             this.panelPedido.Name = "panelPedido";
-            this.panelPedido.Size = new System.Drawing.Size(171, 10);
+            this.panelPedido.Size = new System.Drawing.Size(150, 10);
             this.panelPedido.TabIndex = 24;
             // 
             // lbVenta
             // 
             this.lbVenta.AutoSize = true;
-            this.lbVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVenta.Location = new System.Drawing.Point(735, 508);
+            this.lbVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbVenta.Location = new System.Drawing.Point(87, 158);
             this.lbVenta.Name = "lbVenta";
-            this.lbVenta.Size = new System.Drawing.Size(64, 24);
+            this.lbVenta.Size = new System.Drawing.Size(57, 20);
             this.lbVenta.TabIndex = 29;
             this.lbVenta.Text = "Venta";
             // 
             // panelVenta
             // 
             this.panelVenta.BackColor = System.Drawing.Color.Purple;
-            this.panelVenta.Location = new System.Drawing.Point(678, 495);
+            this.panelVenta.Location = new System.Drawing.Point(35, 145);
             this.panelVenta.Name = "panelVenta";
-            this.panelVenta.Size = new System.Drawing.Size(171, 10);
+            this.panelVenta.Size = new System.Drawing.Size(150, 10);
             this.panelVenta.TabIndex = 27;
+            this.panelVenta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVenta_Paint);
             // 
             // lbDevolucion
             // 
             this.lbDevolucion.AutoSize = true;
-            this.lbDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDevolucion.Location = new System.Drawing.Point(939, 508);
+            this.lbDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbDevolucion.Location = new System.Drawing.Point(65, 158);
             this.lbDevolucion.Name = "lbDevolucion";
-            this.lbDevolucion.Size = new System.Drawing.Size(115, 24);
+            this.lbDevolucion.Size = new System.Drawing.Size(97, 20);
             this.lbDevolucion.TabIndex = 32;
             this.lbDevolucion.Text = "Devolucion";
             // 
             // panelDevolucion
             // 
             this.panelDevolucion.BackColor = System.Drawing.Color.Purple;
-            this.panelDevolucion.Location = new System.Drawing.Point(906, 495);
+            this.panelDevolucion.Location = new System.Drawing.Point(35, 145);
             this.panelDevolucion.Name = "panelDevolucion";
-            this.panelDevolucion.Size = new System.Drawing.Size(171, 10);
+            this.panelDevolucion.Size = new System.Drawing.Size(150, 10);
             this.panelDevolucion.TabIndex = 30;
+            this.panelDevolucion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDevolucion_Paint);
             // 
             // picDevolucion
             // 
             this.picDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDevolucion.Image = global::MultimodeSales.Properties.Resources.return128px;
-            this.picDevolucion.Location = new System.Drawing.Point(906, 344);
+            this.picDevolucion.Location = new System.Drawing.Point(35, 0);
             this.picDevolucion.Name = "picDevolucion";
-            this.picDevolucion.Size = new System.Drawing.Size(169, 161);
+            this.picDevolucion.Size = new System.Drawing.Size(150, 155);
             this.picDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picDevolucion.TabIndex = 31;
             this.picDevolucion.TabStop = false;
@@ -265,9 +290,9 @@
             // 
             this.picVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picVenta.Image = global::MultimodeSales.Properties.Resources.sales128px;
-            this.picVenta.Location = new System.Drawing.Point(678, 344);
+            this.picVenta.Location = new System.Drawing.Point(35, 0);
             this.picVenta.Name = "picVenta";
-            this.picVenta.Size = new System.Drawing.Size(169, 161);
+            this.picVenta.Size = new System.Drawing.Size(150, 155);
             this.picVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picVenta.TabIndex = 28;
             this.picVenta.TabStop = false;
@@ -279,9 +304,9 @@
             // 
             this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedido.Image = global::MultimodeSales.Properties.Resources.order128px;
-            this.picPedido.Location = new System.Drawing.Point(231, 344);
+            this.picPedido.Location = new System.Drawing.Point(35, 0);
             this.picPedido.Name = "picPedido";
-            this.picPedido.Size = new System.Drawing.Size(169, 161);
+            this.picPedido.Size = new System.Drawing.Size(150, 155);
             this.picPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picPedido.TabIndex = 25;
             this.picPedido.TabStop = false;
@@ -293,9 +318,9 @@
             // 
             this.picColTall.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picColTall.Image = global::MultimodeSales.Properties.Resources.size_color;
-            this.picColTall.Location = new System.Drawing.Point(908, 101);
+            this.picColTall.Location = new System.Drawing.Point(35, 0);
             this.picColTall.Name = "picColTall";
-            this.picColTall.Size = new System.Drawing.Size(169, 161);
+            this.picColTall.Size = new System.Drawing.Size(150, 155);
             this.picColTall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picColTall.TabIndex = 22;
             this.picColTall.TabStop = false;
@@ -307,9 +332,9 @@
             // 
             this.picModelos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picModelos.Image = global::MultimodeSales.Properties.Resources.shoes128px;
-            this.picModelos.Location = new System.Drawing.Point(1125, 101);
+            this.picModelos.Location = new System.Drawing.Point(35, 0);
             this.picModelos.Name = "picModelos";
-            this.picModelos.Size = new System.Drawing.Size(169, 161);
+            this.picModelos.Size = new System.Drawing.Size(150, 155);
             this.picModelos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picModelos.TabIndex = 19;
             this.picModelos.TabStop = false;
@@ -321,9 +346,9 @@
             // 
             this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
-            this.picPedidosFinal.Location = new System.Drawing.Point(450, 344);
+            this.picPedidosFinal.Location = new System.Drawing.Point(35, 0);
             this.picPedidosFinal.Name = "picPedidosFinal";
-            this.picPedidosFinal.Size = new System.Drawing.Size(169, 161);
+            this.picPedidosFinal.Size = new System.Drawing.Size(150, 155);
             this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picPedidosFinal.TabIndex = 13;
             this.picPedidosFinal.TabStop = false;
@@ -335,9 +360,9 @@
             // 
             this.picMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMarca.Image = global::MultimodeSales.Properties.Resources.catalog128px;
-            this.picMarca.Location = new System.Drawing.Point(678, 101);
+            this.picMarca.Location = new System.Drawing.Point(35, 0);
             this.picMarca.Name = "picMarca";
-            this.picMarca.Size = new System.Drawing.Size(169, 161);
+            this.picMarca.Size = new System.Drawing.Size(150, 155);
             this.picMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picMarca.TabIndex = 10;
             this.picMarca.TabStop = false;
@@ -349,9 +374,9 @@
             // 
             this.picImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picImportExcel.Image = global::MultimodeSales.Properties.Resources.csv128px;
-            this.picImportExcel.Location = new System.Drawing.Point(233, 101);
+            this.picImportExcel.Location = new System.Drawing.Point(35, 0);
             this.picImportExcel.Name = "picImportExcel";
-            this.picImportExcel.Size = new System.Drawing.Size(169, 161);
+            this.picImportExcel.Size = new System.Drawing.Size(150, 155);
             this.picImportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picImportExcel.TabIndex = 6;
             this.picImportExcel.TabStop = false;
@@ -363,9 +388,9 @@
             // 
             this.picCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCliente.Image = global::MultimodeSales.Properties.Resources.client128px;
-            this.picCliente.Location = new System.Drawing.Point(448, 101);
+            this.picCliente.Location = new System.Drawing.Point(35, 0);
             this.picCliente.Name = "picCliente";
-            this.picCliente.Size = new System.Drawing.Size(171, 161);
+            this.picCliente.Size = new System.Drawing.Size(150, 155);
             this.picCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picCliente.TabIndex = 4;
             this.picCliente.TabStop = false;
@@ -474,39 +499,138 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // content1
+            // 
+            this.content1.Controls.Add(this.panelImportExcel);
+            this.content1.Controls.Add(this.picImportExcel);
+            this.content1.Controls.Add(this.lbImportExcel);
+            this.content1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content1.Location = new System.Drawing.Point(3, 3);
+            this.content1.Name = "content1";
+            this.content1.Size = new System.Drawing.Size(219, 181);
+            this.content1.TabIndex = 33;
+            // 
+            // content2
+            // 
+            this.content2.Controls.Add(this.panelCliente);
+            this.content2.Controls.Add(this.picCliente);
+            this.content2.Controls.Add(this.lbCliente);
+            this.content2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content2.Location = new System.Drawing.Point(228, 3);
+            this.content2.Name = "content2";
+            this.content2.Size = new System.Drawing.Size(219, 181);
+            this.content2.TabIndex = 34;
+            // 
+            // content3
+            // 
+            this.content3.Controls.Add(this.panelMarca);
+            this.content3.Controls.Add(this.picMarca);
+            this.content3.Controls.Add(this.lbMarca);
+            this.content3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content3.Location = new System.Drawing.Point(453, 3);
+            this.content3.Name = "content3";
+            this.content3.Size = new System.Drawing.Size(219, 181);
+            this.content3.TabIndex = 35;
+            // 
+            // content4
+            // 
+            this.content4.Controls.Add(this.panelColTall);
+            this.content4.Controls.Add(this.picColTall);
+            this.content4.Controls.Add(this.lbColTall);
+            this.content4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content4.Location = new System.Drawing.Point(678, 3);
+            this.content4.Name = "content4";
+            this.content4.Size = new System.Drawing.Size(219, 181);
+            this.content4.TabIndex = 36;
+            // 
+            // content5
+            // 
+            this.content5.Controls.Add(this.panelModelos);
+            this.content5.Controls.Add(this.picModelos);
+            this.content5.Controls.Add(this.lbModelos);
+            this.content5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content5.Location = new System.Drawing.Point(903, 3);
+            this.content5.Name = "content5";
+            this.content5.Size = new System.Drawing.Size(220, 181);
+            this.content5.TabIndex = 37;
+            // 
+            // content6
+            // 
+            this.content6.Controls.Add(this.panelPedido);
+            this.content6.Controls.Add(this.picPedido);
+            this.content6.Controls.Add(this.lbPedido);
+            this.content6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content6.Location = new System.Drawing.Point(3, 190);
+            this.content6.Name = "content6";
+            this.content6.Size = new System.Drawing.Size(219, 181);
+            this.content6.TabIndex = 38;
+            // 
+            // content7
+            // 
+            this.content7.Controls.Add(this.panelPedidosFinal);
+            this.content7.Controls.Add(this.picPedidosFinal);
+            this.content7.Controls.Add(this.lbPedidosFinal);
+            this.content7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content7.Location = new System.Drawing.Point(228, 190);
+            this.content7.Name = "content7";
+            this.content7.Size = new System.Drawing.Size(219, 181);
+            this.content7.TabIndex = 39;
+            // 
+            // content8
+            // 
+            this.content8.Controls.Add(this.panelVenta);
+            this.content8.Controls.Add(this.picVenta);
+            this.content8.Controls.Add(this.lbVenta);
+            this.content8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content8.Location = new System.Drawing.Point(453, 190);
+            this.content8.Name = "content8";
+            this.content8.Size = new System.Drawing.Size(219, 181);
+            this.content8.TabIndex = 40;
+            // 
+            // content9
+            // 
+            this.content9.Controls.Add(this.panelDevolucion);
+            this.content9.Controls.Add(this.picDevolucion);
+            this.content9.Controls.Add(this.lbDevolucion);
+            this.content9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content9.Location = new System.Drawing.Point(678, 190);
+            this.content9.Name = "content9";
+            this.content9.Size = new System.Drawing.Size(219, 181);
+            this.content9.TabIndex = 42;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.content1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content5, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content7, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content8, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content9, 3, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(203, 51);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1126, 561);
+            this.tableLayoutPanel1.TabIndex = 43;
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1330, 614);
-            this.Controls.Add(this.lbDevolucion);
-            this.Controls.Add(this.panelDevolucion);
-            this.Controls.Add(this.picDevolucion);
-            this.Controls.Add(this.lbVenta);
-            this.Controls.Add(this.panelVenta);
-            this.Controls.Add(this.picVenta);
-            this.Controls.Add(this.lbPedido);
-            this.Controls.Add(this.panelPedido);
-            this.Controls.Add(this.picPedido);
-            this.Controls.Add(this.lbColTall);
-            this.Controls.Add(this.panelColTall);
-            this.Controls.Add(this.picColTall);
-            this.Controls.Add(this.lbModelos);
-            this.Controls.Add(this.panelModelos);
-            this.Controls.Add(this.picModelos);
-            this.Controls.Add(this.lbPedidosFinal);
-            this.Controls.Add(this.panelPedidosFinal);
-            this.Controls.Add(this.picPedidosFinal);
-            this.Controls.Add(this.lbMarca);
-            this.Controls.Add(this.panelMarca);
-            this.Controls.Add(this.picMarca);
-            this.Controls.Add(this.lbImportExcel);
-            this.Controls.Add(this.lbCliente);
-            this.Controls.Add(this.panelImportExcel);
-            this.Controls.Add(this.picImportExcel);
-            this.Controls.Add(this.panelCliente);
-            this.Controls.Add(this.picCliente);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -530,8 +654,26 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.content1.ResumeLayout(false);
+            this.content1.PerformLayout();
+            this.content2.ResumeLayout(false);
+            this.content2.PerformLayout();
+            this.content3.ResumeLayout(false);
+            this.content3.PerformLayout();
+            this.content4.ResumeLayout(false);
+            this.content4.PerformLayout();
+            this.content5.ResumeLayout(false);
+            this.content5.PerformLayout();
+            this.content6.ResumeLayout(false);
+            this.content6.PerformLayout();
+            this.content7.ResumeLayout(false);
+            this.content7.PerformLayout();
+            this.content8.ResumeLayout(false);
+            this.content8.PerformLayout();
+            this.content9.ResumeLayout(false);
+            this.content9.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -573,6 +715,16 @@
         private System.Windows.Forms.Label lbDevolucion;
         private System.Windows.Forms.Panel panelDevolucion;
         private System.Windows.Forms.PictureBox picDevolucion;
+        private System.Windows.Forms.Panel content1;
+        private System.Windows.Forms.Panel content2;
+        private System.Windows.Forms.Panel content3;
+        private System.Windows.Forms.Panel content4;
+        private System.Windows.Forms.Panel content5;
+        private System.Windows.Forms.Panel content6;
+        private System.Windows.Forms.Panel content7;
+        private System.Windows.Forms.Panel content8;
+        private System.Windows.Forms.Panel content9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
