@@ -42,8 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbCantidad = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.lbCantidad = new System.Windows.Forms.Label();
             this.btnTerminar = new System.Windows.Forms.Button();
             this.panelVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -178,6 +178,7 @@
             // 
             // cboxCliente
             // 
+            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.cboxCliente.FormattingEnabled = true;
@@ -221,16 +222,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Venta";
             // 
-            // lbCantidad
-            // 
-            this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantidad.Location = new System.Drawing.Point(184, 41);
-            this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(26, 29);
-            this.lbCantidad.TabIndex = 59;
-            this.lbCantidad.Text = "0";
-            // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
@@ -240,6 +231,16 @@
             this.lbTotal.Size = new System.Drawing.Size(58, 29);
             this.lbTotal.TabIndex = 60;
             this.lbTotal.Text = "$0.0";
+            // 
+            // lbCantidad
+            // 
+            this.lbCantidad.AutoSize = true;
+            this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidad.Location = new System.Drawing.Point(184, 41);
+            this.lbCantidad.Name = "lbCantidad";
+            this.lbCantidad.Size = new System.Drawing.Size(26, 29);
+            this.lbCantidad.TabIndex = 59;
+            this.lbCantidad.Text = "0";
             // 
             // btnTerminar
             // 

@@ -165,7 +165,7 @@ namespace MultimodeSales
         private void picPedido_Click(object sender, EventArgs e)
         {
             Pedido pedido = new Pedido();
-            pedido.ShowDialog();
+            pedido.Show();
         }
         #endregion
         #region picVenta

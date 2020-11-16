@@ -227,6 +227,7 @@
             // 
             // cboxCliente
             // 
+            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.cboxCliente.FormattingEnabled = true;
