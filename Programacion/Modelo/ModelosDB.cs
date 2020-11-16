@@ -55,6 +55,7 @@ namespace MultimodeSales.Programacion.Modelo
                 cmd.Parameters.Add(new MySqlParameter("preciocliente", preciocliente));
                 cmd.ExecuteNonQuery();
                 conexion.CloseConnection();
+                MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -77,10 +78,15 @@ namespace MultimodeSales.Programacion.Modelo
                 cmd.Parameters.Add(new MySqlParameter("preciocliente", preciocliente));
                 cmd.ExecuteNonQuery();
                 conexion.CloseConnection();
+                MessageBox.Show("Modelo editado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
                 MessageBox.Show($"Error en subir el modelo {idmodelo} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+
             }
         }
 

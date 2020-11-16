@@ -86,15 +86,20 @@ namespace MultimodeSales.Vistas
         }
         private void btnEditarModelo_Click(object sender, EventArgs e)
         {
-            string idmodelo = dgvModelos.CurrentRow.Cells[0].Value + "";
-            string idmarca = dgvModelos.CurrentRow.Cells[1].Value + "";
-            string color = dgvModelos.CurrentRow.Cells[3].Value + "";
-            string talla = dgvModelos.CurrentRow.Cells[4].Value + "";
-            string precioCliente = dgvModelos.CurrentRow.Cells[5].Value + "";
-                 
-            new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
-            BorrarTable();
-            CargarModelos();
+            if (dgvModelos.SelectedRows.Count > 0)
+            {
+                string idmodelo = dgvModelos.CurrentRow.Cells[0].Value + "";
+                string idmarca = dgvModelos.CurrentRow.Cells[1].Value + "";
+                string color = dgvModelos.CurrentRow.Cells[3].Value + "";
+                string talla = dgvModelos.CurrentRow.Cells[4].Value + "";
+                string precioCliente = dgvModelos.CurrentRow.Cells[5].Value + "";
+
+                new EditModelo(false, idmodelo, idmarca, color, talla, precioCliente).ShowDialog();
+                BorrarTable();
+                CargarModelos();
+            }
+            else
+                MessageBox.Show("Ninguna modelo fue seleccionado para editar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
@@ -125,12 +130,12 @@ namespace MultimodeSales.Vistas
         }
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
-            if (datePickerChangeValue)
-            {
+            //if (datePickerChangeValue)
+            //{
                 BorrarTable();
                 CargarModelos();
-            }
-            datePickerChangeValue = true;
+            //}
+            //datePickerChangeValue = true;
         }
         private void BorrarTable()
         {

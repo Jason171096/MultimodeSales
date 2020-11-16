@@ -59,14 +59,12 @@ namespace MultimodeSales.Vistas.Modelos
                 if (cobxMarca.SelectedIndex != 0)
                     if (Bandera)
                     {
-                        modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
-                        MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text); 
                         BorrarDatos();
                     }
                     else
                     {
                         modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text);
-                        MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         BorrarDatos();
                     }
                 else
