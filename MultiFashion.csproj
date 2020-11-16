@@ -176,12 +176,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Buscar\BuscarPor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Buscar\BuscarPor.Designer.cs">
-      <DependentUpon>BuscarPor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,9 +250,6 @@
     <Compile Include="Vistas\Ventas\Venta.Designer.cs">
       <DependentUpon>Venta.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Buscar\BuscarPor.resx">
-      <DependentUpon>BuscarPor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>

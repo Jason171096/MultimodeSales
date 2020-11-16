@@ -14,6 +14,7 @@ namespace MultimodeSales.Vistas
     public partial class TallasyColores : Form
     {
         CColoresyTallas colorytallas = new CColoresyTallas();
+        CDataGridView cDataGrid = new CDataGridView();
         private int MX;
         private int MY;
 
@@ -22,6 +23,8 @@ namespace MultimodeSales.Vistas
             InitializeComponent();
             CargarColores();
             CargarTallas();
+            cDataGrid.FormattingDataGridView(dgvColores);
+            cDataGrid.FormattingDataGridView(dgvTallas);
         }
 
         public void CargarColores()

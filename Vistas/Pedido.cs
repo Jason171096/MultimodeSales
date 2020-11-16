@@ -188,7 +188,6 @@ namespace MultimodeSales.Vistas
         {
             WindowState = FormWindowState.Minimized;
         }
-
         private void picClose_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Seguro que desea cerrar?", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

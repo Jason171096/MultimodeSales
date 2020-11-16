@@ -18,7 +18,7 @@ namespace MultimodeSales.Vistas
         private int MX;
         private int MY;
         private int count = 0, opcion = 1;
-        private bool stop = false, datePickerChangeValue = false;
+        private bool stop = false;
         public Modeloss()
         {
             InitializeComponent();
@@ -68,15 +68,15 @@ namespace MultimodeSales.Vistas
         {
             dgvModelos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvModelos.Columns[1].Visible = false;//IDMarca
-            dgvModelos.Columns[0].Width = 200;//IDModelo
+            dgvModelos.Columns[0].Width = 175;//IDModelo
             dgvModelos.Columns[0].HeaderText = "ID Modelo";//IDModelo
-            dgvModelos.Columns[2].Width = 200;//NombreMarca
+            dgvModelos.Columns[2].Width = 175;//NombreMarca
             dgvModelos.Columns[2].HeaderText = "Nombre Marca";//NombreMarca
-            dgvModelos.Columns[3].Width = 200;//Color
-            dgvModelos.Columns[4].Width = 200;//Talla
-            dgvModelos.Columns[5].Width = 200;//PrecioCliente
+            dgvModelos.Columns[3].Width = 175;//Color
+            dgvModelos.Columns[4].Width = 175;//Talla
+            dgvModelos.Columns[5].Width = 175;//PrecioCliente
             dgvModelos.Columns[5].HeaderText = "Precio Cliente";//PrecioCliente
-            dgvModelos.Columns[6].Width = 350;//Fecha  
+            dgvModelos.Columns[6].Width = 300;//Fecha  
         }
         private void btnAgregarModelo_Click(object sender, EventArgs e)
         {

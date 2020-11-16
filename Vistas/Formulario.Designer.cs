@@ -104,17 +104,17 @@
             // panelCliente
             // 
             this.panelCliente.BackColor = System.Drawing.Color.Purple;
-            this.panelCliente.Location = new System.Drawing.Point(35, 145);
+            this.panelCliente.Location = new System.Drawing.Point(35, 147);
             this.panelCliente.Name = "panelCliente";
-            this.panelCliente.Size = new System.Drawing.Size(150, 10);
+            this.panelCliente.Size = new System.Drawing.Size(150, 7);
             this.panelCliente.TabIndex = 3;
             // 
             // panelImportExcel
             // 
             this.panelImportExcel.BackColor = System.Drawing.Color.Purple;
-            this.panelImportExcel.Location = new System.Drawing.Point(35, 145);
+            this.panelImportExcel.Location = new System.Drawing.Point(35, 147);
             this.panelImportExcel.Name = "panelImportExcel";
-            this.panelImportExcel.Size = new System.Drawing.Size(150, 10);
+            this.panelImportExcel.Size = new System.Drawing.Size(150, 7);
             this.panelImportExcel.TabIndex = 4;
             // 
             // lbCliente
@@ -150,9 +150,9 @@
             // panelMarca
             // 
             this.panelMarca.BackColor = System.Drawing.Color.Purple;
-            this.panelMarca.Location = new System.Drawing.Point(35, 145);
+            this.panelMarca.Location = new System.Drawing.Point(35, 147);
             this.panelMarca.Name = "panelMarca";
-            this.panelMarca.Size = new System.Drawing.Size(150, 10);
+            this.panelMarca.Size = new System.Drawing.Size(150, 7);
             this.panelMarca.TabIndex = 9;
             this.panelMarca.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMarca_Paint);
             // 
@@ -169,9 +169,9 @@
             // panelPedidosFinal
             // 
             this.panelPedidosFinal.BackColor = System.Drawing.Color.Purple;
-            this.panelPedidosFinal.Location = new System.Drawing.Point(35, 145);
+            this.panelPedidosFinal.Location = new System.Drawing.Point(35, 147);
             this.panelPedidosFinal.Name = "panelPedidosFinal";
-            this.panelPedidosFinal.Size = new System.Drawing.Size(150, 10);
+            this.panelPedidosFinal.Size = new System.Drawing.Size(150, 7);
             this.panelPedidosFinal.TabIndex = 12;
             // 
             // timerHora
@@ -192,9 +192,9 @@
             // panelModelos
             // 
             this.panelModelos.BackColor = System.Drawing.Color.Purple;
-            this.panelModelos.Location = new System.Drawing.Point(35, 145);
+            this.panelModelos.Location = new System.Drawing.Point(35, 147);
             this.panelModelos.Name = "panelModelos";
-            this.panelModelos.Size = new System.Drawing.Size(150, 10);
+            this.panelModelos.Size = new System.Drawing.Size(150, 7);
             this.panelModelos.TabIndex = 18;
             this.panelModelos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelModelos_Paint);
             // 
@@ -211,9 +211,9 @@
             // panelColTall
             // 
             this.panelColTall.BackColor = System.Drawing.Color.Purple;
-            this.panelColTall.Location = new System.Drawing.Point(35, 145);
+            this.panelColTall.Location = new System.Drawing.Point(35, 147);
             this.panelColTall.Name = "panelColTall";
-            this.panelColTall.Size = new System.Drawing.Size(150, 10);
+            this.panelColTall.Size = new System.Drawing.Size(150, 7);
             this.panelColTall.TabIndex = 21;
             this.panelColTall.Paint += new System.Windows.Forms.PaintEventHandler(this.panelColTall_Paint);
             // 
@@ -230,9 +230,9 @@
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.Purple;
-            this.panelPedido.Location = new System.Drawing.Point(35, 145);
+            this.panelPedido.Location = new System.Drawing.Point(35, 147);
             this.panelPedido.Name = "panelPedido";
-            this.panelPedido.Size = new System.Drawing.Size(150, 10);
+            this.panelPedido.Size = new System.Drawing.Size(150, 7);
             this.panelPedido.TabIndex = 24;
             // 
             // lbVenta
@@ -248,9 +248,9 @@
             // panelVenta
             // 
             this.panelVenta.BackColor = System.Drawing.Color.Purple;
-            this.panelVenta.Location = new System.Drawing.Point(35, 145);
+            this.panelVenta.Location = new System.Drawing.Point(35, 147);
             this.panelVenta.Name = "panelVenta";
-            this.panelVenta.Size = new System.Drawing.Size(150, 10);
+            this.panelVenta.Size = new System.Drawing.Size(150, 7);
             this.panelVenta.TabIndex = 27;
             this.panelVenta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVenta_Paint);
             // 
@@ -267,9 +267,9 @@
             // panelDevolucion
             // 
             this.panelDevolucion.BackColor = System.Drawing.Color.Purple;
-            this.panelDevolucion.Location = new System.Drawing.Point(35, 145);
+            this.panelDevolucion.Location = new System.Drawing.Point(35, 147);
             this.panelDevolucion.Name = "panelDevolucion";
-            this.panelDevolucion.Size = new System.Drawing.Size(150, 10);
+            this.panelDevolucion.Size = new System.Drawing.Size(150, 7);
             this.panelDevolucion.TabIndex = 30;
             this.panelDevolucion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDevolucion_Paint);
             // 
@@ -430,11 +430,11 @@
             // 
             this.lbHora.AutoSize = true;
             this.lbHora.BackColor = System.Drawing.Color.Transparent;
-            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.lbHora.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lbHora.Location = new System.Drawing.Point(828, 9);
             this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(93, 29);
+            this.lbHora.Size = new System.Drawing.Size(84, 26);
             this.lbHora.TabIndex = 1;
             this.lbHora.Text = "tiempo";
             this.lbHora.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHora_MouseMove);
@@ -455,11 +455,11 @@
             // 
             this.lbFecha.AutoSize = true;
             this.lbFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.lbFecha.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbFecha.Location = new System.Drawing.Point(6, 13);
+            this.lbFecha.Location = new System.Drawing.Point(18, 9);
             this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(93, 29);
+            this.lbFecha.Size = new System.Drawing.Size(84, 26);
             this.lbFecha.TabIndex = 0;
             this.lbFecha.Text = "tiempo";
             this.lbFecha.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbFecha_MouseMove);

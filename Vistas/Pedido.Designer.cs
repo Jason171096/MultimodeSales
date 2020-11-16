@@ -69,7 +69,7 @@
             this.dgvPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -161,7 +161,7 @@
             // 
             this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarModelo.Location = new System.Drawing.Point(25, 31);
             this.btnAgregarModelo.Name = "btnAgregarModelo";
@@ -188,10 +188,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 43);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label4.Location = new System.Drawing.Point(22, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 29);
+            this.label4.Size = new System.Drawing.Size(73, 24);
             this.label4.TabIndex = 41;
             this.label4.Text = "Cliente:";
             // 
@@ -200,7 +200,7 @@
             this.btnTerminar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnTerminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnTerminar.Location = new System.Drawing.Point(810, 601);
             this.btnTerminar.Name = "btnTerminar";
@@ -215,7 +215,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelar.Location = new System.Drawing.Point(11, 601);
             this.btnCancelar.Name = "btnCancelar";
@@ -229,11 +229,11 @@
             // 
             this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(123, 40);
+            this.cboxCliente.Location = new System.Drawing.Point(101, 46);
             this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(513, 37);
+            this.cboxCliente.Size = new System.Drawing.Size(513, 32);
             this.cboxCliente.TabIndex = 53;
             this.cboxCliente.SelectedIndexChanged += new System.EventHandler(this.cboxCliente_SelectedIndexChanged);
             // 

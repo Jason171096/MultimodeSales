@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using MultimodeSales.Vistas;
-using MultimodeSales.Vistas.Buscar;
 using MultimodeSales.Vistas.Excel;
 using MultimodeSales.Programacion;
 using MultimodeSales.Vistas.Ventas;

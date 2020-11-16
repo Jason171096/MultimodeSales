@@ -78,7 +78,7 @@
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMarcas.EnableHeadersVisualStyles = false;
             this.dgvMarcas.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvMarcas.Location = new System.Drawing.Point(61, 318);
+            this.dgvMarcas.Location = new System.Drawing.Point(46, 294);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -99,45 +99,45 @@
             this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMarcas.RowTemplate.Height = 30;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(867, 335);
+            this.dgvMarcas.Size = new System.Drawing.Size(797, 269);
             this.dgvMarcas.TabIndex = 7;
             this.dgvMarcas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellDoubleClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 92);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.Location = new System.Drawing.Point(32, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 29);
+            this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre:";
             // 
             // txtNombreMarca
             // 
             this.txtNombreMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreMarca.Location = new System.Drawing.Point(145, 92);
+            this.txtNombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtNombreMarca.Location = new System.Drawing.Point(127, 85);
             this.txtNombreMarca.Name = "txtNombreMarca";
-            this.txtNombreMarca.Size = new System.Drawing.Size(268, 35);
+            this.txtNombreMarca.Size = new System.Drawing.Size(268, 29);
             this.txtNombreMarca.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.Location = new System.Drawing.Point(25, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 29);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID Marca:";
             // 
             // txtIDMarca
             // 
-            this.txtIDMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMarca.Location = new System.Drawing.Point(145, 41);
+            this.txtIDMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtIDMarca.Location = new System.Drawing.Point(127, 41);
             this.txtIDMarca.Name = "txtIDMarca";
-            this.txtIDMarca.Size = new System.Drawing.Size(268, 35);
+            this.txtIDMarca.Size = new System.Drawing.Size(268, 29);
             this.txtIDMarca.TabIndex = 8;
             this.txtIDMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroMarca_KeyPress);
             // 
@@ -150,7 +150,7 @@
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 665);
+            this.panel1.Size = new System.Drawing.Size(35, 575);
             this.panel1.TabIndex = 17;
             // 
             // panelBarras
@@ -162,9 +162,9 @@
             this.panelBarras.Controls.Add(this.picClose);
             this.panelBarras.Controls.Add(this.picMinimize);
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarras.Location = new System.Drawing.Point(50, 0);
+            this.panelBarras.Location = new System.Drawing.Point(35, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(890, 49);
+            this.panelBarras.Size = new System.Drawing.Size(820, 49);
             this.panelBarras.TabIndex = 18;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -185,7 +185,7 @@
             // 
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(835, 0);
+            this.picClose.Location = new System.Drawing.Point(759, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -197,7 +197,7 @@
             // 
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(785, 0);
+            this.picMinimize.Location = new System.Drawing.Point(709, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -209,9 +209,9 @@
             // 
             this.btnAgregarMarca.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(37, 161);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(20, 132);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(190, 45);
             this.btnAgregarMarca.TabIndex = 21;
@@ -224,9 +224,9 @@
             this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarMarca.Enabled = false;
             this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(242, 161);
+            this.btnEditarMarca.Location = new System.Drawing.Point(225, 132);
             this.btnEditarMarca.Name = "btnEditarMarca";
             this.btnEditarMarca.Size = new System.Drawing.Size(180, 45);
             this.btnEditarMarca.TabIndex = 22;
@@ -237,10 +237,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(542, 147);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.Location = new System.Drawing.Point(483, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 87);
+            this.label3.Size = new System.Drawing.Size(155, 72);
             this.label3.TabIndex = 23;
             this.label3.Text = "Haga doble click \r\nen la Marca \r\nque quiera editar";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,9 +255,9 @@
             this.groupBox1.Controls.Add(this.btnAgregarMarca);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(56, 55);
+            this.groupBox1.Location = new System.Drawing.Point(41, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 257);
+            this.groupBox1.Size = new System.Drawing.Size(420, 233);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Marca";
@@ -266,9 +266,9 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(242, 212);
+            this.btnCancelar.Location = new System.Drawing.Point(225, 183);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(180, 32);
             this.btnCancelar.TabIndex = 23;
@@ -280,10 +280,10 @@
             // txtBuscar
             // 
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(641, 277);
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtBuscar.Location = new System.Drawing.Point(556, 252);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(268, 35);
+            this.txtBuscar.Size = new System.Drawing.Size(268, 29);
             this.txtBuscar.TabIndex = 36;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
@@ -291,10 +291,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(542, 280);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label4.Location = new System.Drawing.Point(471, 255);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 29);
+            this.label4.Size = new System.Drawing.Size(73, 24);
             this.label4.TabIndex = 37;
             this.label4.Text = "Buscar:";
             // 
@@ -303,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(940, 665);
+            this.ClientSize = new System.Drawing.Size(855, 575);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);

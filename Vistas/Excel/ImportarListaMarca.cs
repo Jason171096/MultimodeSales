@@ -84,10 +84,10 @@ namespace MultimodeSales.Vistas
         }
         private void FormatoTabla()
         {
-            dgvExcel.Columns[0].Width = 120;
-            dgvExcel.Columns[1].Width = 300;
-            dgvExcel.Columns[2].Width = 400;
-            dgvExcel.Columns[3].Width = 150;
+            dgvExcel.Columns[0].Width = 200;
+            dgvExcel.Columns[1].Width = 200;
+            dgvExcel.Columns[2].Width = 250;
+            dgvExcel.Columns[3].Width = 175;
             dgvExcel.Columns[0].HeaderText = "MODELO";
             dgvExcel.Columns[1].HeaderText = "COLOR";
             dgvExcel.Columns[2].HeaderText = "TALLA";

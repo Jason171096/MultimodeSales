@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
             this.rbtnFecha = new System.Windows.Forms.RadioButton();
             this.btnTerminar = new System.Windows.Forms.Button();
@@ -46,11 +46,11 @@
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelBarras.SuspendLayout();
@@ -69,51 +69,51 @@
             this.dgvPedidosFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedidosFinal.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedidosFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPedidosFinal.ColumnHeadersHeight = 50;
             this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
             this.dgvPedidosFinal.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 189);
+            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 180);
             this.dgvPedidosFinal.Name = "dgvPedidosFinal";
             this.dgvPedidosFinal.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidosFinal.RowHeadersVisible = false;
             this.dgvPedidosFinal.RowHeadersWidth = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 481);
+            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 408);
             this.dgvPedidosFinal.TabIndex = 7;
             this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
             // rbtnFecha
             // 
             this.rbtnFecha.AutoSize = true;
-            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.rbtnFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rbtnFecha.Location = new System.Drawing.Point(6, 79);
+            this.rbtnFecha.Location = new System.Drawing.Point(6, 74);
             this.rbtnFecha.Name = "rbtnFecha";
-            this.rbtnFecha.Size = new System.Drawing.Size(104, 33);
+            this.rbtnFecha.Size = new System.Drawing.Size(87, 28);
             this.rbtnFecha.TabIndex = 12;
             this.rbtnFecha.TabStop = true;
             this.rbtnFecha.Text = "Fecha:";
@@ -123,11 +123,11 @@
             // 
             this.btnTerminar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(1051, 676);
+            this.btnTerminar.Location = new System.Drawing.Point(1084, 594);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(207, 48);
+            this.btnTerminar.Size = new System.Drawing.Size(174, 48);
             this.btnTerminar.TabIndex = 25;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(12, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 131);
+            this.groupBox1.Size = new System.Drawing.Size(529, 122);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
@@ -152,29 +152,29 @@
             // 
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.dtpFecha.Enabled = false;
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(110, 79);
+            this.dtpFecha.Location = new System.Drawing.Point(110, 74);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(142, 35);
+            this.dtpFecha.Size = new System.Drawing.Size(142, 29);
             this.dtpFecha.TabIndex = 42;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(248, 31);
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtBuscar.Location = new System.Drawing.Point(206, 31);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(268, 35);
+            this.txtBuscar.Size = new System.Drawing.Size(268, 29);
             this.txtBuscar.TabIndex = 41;
             // 
             // rbtnNumPedido
             // 
             this.rbtnNumPedido.AutoSize = true;
-            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.rbtnNumPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbtnNumPedido.Location = new System.Drawing.Point(6, 31);
             this.rbtnNumPedido.Name = "rbtnNumPedido";
-            this.rbtnNumPedido.Size = new System.Drawing.Size(242, 33);
+            this.rbtnNumPedido.Size = new System.Drawing.Size(194, 28);
             this.rbtnNumPedido.TabIndex = 10;
             this.rbtnNumPedido.TabStop = true;
             this.rbtnNumPedido.Text = "Numero de Pedido:";
@@ -184,11 +184,11 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnBuscar.Image = global::MultimodeSales.Properties.Resources.search24;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(396, 79);
+            this.btnBuscar.Location = new System.Drawing.Point(396, 69);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(120, 41);
             this.btnBuscar.TabIndex = 26;
@@ -201,9 +201,9 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(11, 676);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 594);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(207, 48);
             this.btnCancelar.TabIndex = 34;
@@ -214,13 +214,13 @@
             // 
             this.btnExportExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportExcel.Location = new System.Drawing.Point(828, 676);
+            this.btnExportExcel.Location = new System.Drawing.Point(873, 594);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(217, 48);
+            this.btnExportExcel.Size = new System.Drawing.Size(205, 48);
             this.btnExportExcel.TabIndex = 35;
             this.btnExportExcel.Text = "Exportar a Excel";
             this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,82 +290,82 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(547, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(711, 131);
+            this.groupBox2.Size = new System.Drawing.Size(711, 122);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenar";
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radioButton4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButton4.Location = new System.Drawing.Point(24, 79);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(82, 28);
+            this.radioButton4.TabIndex = 14;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Todos";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radioButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButton3.Location = new System.Drawing.Point(24, 42);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(132, 28);
+            this.radioButton3.TabIndex = 13;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "No Llegaron";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButton2.Location = new System.Drawing.Point(326, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(100, 28);
+            this.radioButton2.TabIndex = 12;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Vendido";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.radioButton1.Location = new System.Drawing.Point(194, 42);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(102, 28);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Llegaron";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SlateBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(615, 676);
+            this.button1.Location = new System.Drawing.Point(615, 594);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 48);
             this.button1.TabIndex = 37;
             this.button1.Text = "Terminar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton1.Location = new System.Drawing.Point(194, 42);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 33);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Llegaron";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton2.Location = new System.Drawing.Point(326, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(121, 33);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Vendido";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton3.Location = new System.Drawing.Point(24, 42);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(164, 33);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No Llegaron";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.radioButton4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton4.Location = new System.Drawing.Point(24, 79);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 33);
-            this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Todos";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1271, 733);
+            this.ClientSize = new System.Drawing.Size(1271, 653);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExportExcel);

@@ -148,8 +148,7 @@ namespace MultimodeSales.Vistas
                 Top = Top + (e.Y - MY);
             }
         }
-        #endregion
 
-        
+        #endregion
     }
 }

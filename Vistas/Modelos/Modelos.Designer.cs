@@ -107,7 +107,7 @@
             this.dgvModelos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvModelos.RowTemplate.Height = 30;
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModelos.Size = new System.Drawing.Size(1093, 404);
+            this.dgvModelos.Size = new System.Drawing.Size(1002, 404);
             this.dgvModelos.TabIndex = 7;
             this.dgvModelos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModelos_CellFormatting);
             this.dgvModelos.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvModelos_Scroll);
@@ -121,7 +121,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(9, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(457, 147);
+            this.groupBox1.Size = new System.Drawing.Size(422, 147);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
@@ -129,11 +129,11 @@
             // rbtnNumPedido
             // 
             this.rbtnNumPedido.AutoSize = true;
-            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnNumPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.rbtnNumPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbtnNumPedido.Location = new System.Drawing.Point(22, 39);
             this.rbtnNumPedido.Name = "rbtnNumPedido";
-            this.rbtnNumPedido.Size = new System.Drawing.Size(119, 33);
+            this.rbtnNumPedido.Size = new System.Drawing.Size(97, 28);
             this.rbtnNumPedido.TabIndex = 10;
             this.rbtnNumPedido.TabStop = true;
             this.rbtnNumPedido.Text = "Modelo:";
@@ -142,11 +142,11 @@
             // rbtnFecha
             // 
             this.rbtnFecha.AutoSize = true;
-            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.rbtnFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.rbtnFecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbtnFecha.Location = new System.Drawing.Point(37, 86);
             this.rbtnFecha.Name = "rbtnFecha";
-            this.rbtnFecha.Size = new System.Drawing.Size(104, 33);
+            this.rbtnFecha.Size = new System.Drawing.Size(87, 28);
             this.rbtnFecha.TabIndex = 12;
             this.rbtnFecha.TabStop = true;
             this.rbtnFecha.Text = "Fecha:";
@@ -156,20 +156,20 @@
             // 
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.dtpFecha.Enabled = false;
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(147, 84);
+            this.dtpFecha.Location = new System.Drawing.Point(130, 87);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(142, 35);
+            this.dtpFecha.Size = new System.Drawing.Size(142, 29);
             this.dtpFecha.TabIndex = 38;
             this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // txtBuscarModelo
             // 
-            this.txtBuscarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarModelo.Location = new System.Drawing.Point(147, 39);
+            this.txtBuscarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtBuscarModelo.Location = new System.Drawing.Point(130, 39);
             this.txtBuscarModelo.Name = "txtBuscarModelo";
-            this.txtBuscarModelo.Size = new System.Drawing.Size(268, 35);
+            this.txtBuscarModelo.Size = new System.Drawing.Size(268, 29);
             this.txtBuscarModelo.TabIndex = 37;
             this.txtBuscarModelo.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -177,7 +177,7 @@
             // 
             this.btnEditarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnEditarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEditarModelo.Location = new System.Drawing.Point(316, 86);
             this.btnEditarModelo.Name = "btnEditarModelo";
@@ -191,7 +191,7 @@
             // 
             this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarModelo.Location = new System.Drawing.Point(316, 27);
             this.btnAgregarModelo.Name = "btnAgregarModelo";
@@ -207,7 +207,7 @@
             this.groupBox2.Controls.Add(this.btnAgregarModelo);
             this.groupBox2.Controls.Add(this.btnEditarModelo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(472, 55);
+            this.groupBox2.Location = new System.Drawing.Point(437, 55);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(527, 147);
             this.groupBox2.TabIndex = 25;
@@ -217,10 +217,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.Location = new System.Drawing.Point(20, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(268, 87);
+            this.label3.Size = new System.Drawing.Size(212, 72);
             this.label3.TabIndex = 25;
             this.label3.Text = "Seleccione el Modelo, \r\nluego de en el boton de\r\nEditar Modelo";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +236,7 @@
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(1117, 49);
+            this.panelBarras.Size = new System.Drawing.Size(1026, 49);
             this.panelBarras.TabIndex = 26;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -257,7 +257,7 @@
             // 
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(1061, 0);
+            this.picClose.Location = new System.Drawing.Point(974, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -269,7 +269,7 @@
             // 
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(1011, 0);
+            this.picMinimize.Location = new System.Drawing.Point(924, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -282,7 +282,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1117, 624);
+            this.ClientSize = new System.Drawing.Size(1026, 624);
             this.Controls.Add(this.panelBarras);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
