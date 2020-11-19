@@ -130,12 +130,8 @@ namespace MultimodeSales.Vistas
         }
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
-            //if (datePickerChangeValue)
-            //{
-                BorrarTable();
-                CargarModelos();
-            //}
-            //datePickerChangeValue = true;
+            BorrarTable();
+            CargarModelos();
         }
         private void BorrarTable()
         {

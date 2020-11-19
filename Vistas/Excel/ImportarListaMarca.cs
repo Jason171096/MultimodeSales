@@ -5,8 +5,6 @@ using System.Data.OleDb;
 using excel = Microsoft.Office.Interop.Excel;
 using MultimodeSales.Programacion.Marca;
 using System.Collections.Generic;
-using System.Linq;
-using MultimodeSales.Programacion.Excel;
 using System.Diagnostics;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;

@@ -46,10 +46,10 @@
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbtnTodos = new System.Windows.Forms.RadioButton();
+            this.rbtnNoLlegaron = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtnLlegaron = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -102,7 +102,7 @@
             this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidosFinal.Size = new System.Drawing.Size(1247, 408);
+            this.dgvPedidosFinal.Size = new System.Drawing.Size(1209, 408);
             this.dgvPedidosFinal.TabIndex = 7;
             this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
@@ -125,9 +125,9 @@
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(1084, 594);
+            this.btnTerminar.Location = new System.Drawing.Point(1099, 594);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(174, 48);
+            this.btnTerminar.Size = new System.Drawing.Size(115, 48);
             this.btnTerminar.TabIndex = 25;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(12, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 122);
+            this.groupBox1.Size = new System.Drawing.Size(498, 122);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
@@ -188,7 +188,7 @@
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnBuscar.Image = global::MultimodeSales.Properties.Resources.search24;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(396, 69);
+            this.btnBuscar.Location = new System.Drawing.Point(354, 70);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(120, 41);
             this.btnBuscar.TabIndex = 26;
@@ -203,9 +203,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 594);
+            this.btnCancelar.Location = new System.Drawing.Point(11, 606);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(207, 48);
+            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar(Esc)";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -218,9 +218,9 @@
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportExcel.Location = new System.Drawing.Point(873, 594);
+            this.btnExportExcel.Location = new System.Drawing.Point(896, 594);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(205, 48);
+            this.btnExportExcel.Size = new System.Drawing.Size(197, 48);
             this.btnExportExcel.TabIndex = 35;
             this.btnExportExcel.Text = "Exportar a Excel";
             this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,7 +238,7 @@
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(1271, 46);
+            this.panelBarras.Size = new System.Drawing.Size(1232, 46);
             this.panelBarras.TabIndex = 32;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -260,7 +260,7 @@
             this.picClose.BackColor = System.Drawing.Color.Transparent;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(1211, 0);
+            this.picClose.Location = new System.Drawing.Point(1166, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -273,7 +273,7 @@
             this.picMinimize.BackColor = System.Drawing.Color.Transparent;
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(1161, 0);
+            this.picMinimize.Location = new System.Drawing.Point(1116, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -283,50 +283,50 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.rbtnTodos);
+            this.groupBox2.Controls.Add(this.rbtnNoLlegaron);
             this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rbtnLlegaron);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(547, 52);
+            this.groupBox2.Location = new System.Drawing.Point(516, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(711, 122);
+            this.groupBox2.Size = new System.Drawing.Size(704, 122);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenar";
             // 
-            // radioButton4
+            // rbtnTodos
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton4.Location = new System.Drawing.Point(24, 79);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(82, 28);
-            this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Todos";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtnTodos.AutoSize = true;
+            this.rbtnTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.rbtnTodos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rbtnTodos.Location = new System.Drawing.Point(18, 32);
+            this.rbtnTodos.Name = "rbtnTodos";
+            this.rbtnTodos.Size = new System.Drawing.Size(82, 28);
+            this.rbtnTodos.TabIndex = 20;
+            this.rbtnTodos.TabStop = true;
+            this.rbtnTodos.Text = "Todos";
+            this.rbtnTodos.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtnNoLlegaron
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton3.Location = new System.Drawing.Point(24, 42);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(132, 28);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "No Llegaron";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtnNoLlegaron.AutoSize = true;
+            this.rbtnNoLlegaron.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.rbtnNoLlegaron.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rbtnNoLlegaron.Location = new System.Drawing.Point(219, 32);
+            this.rbtnNoLlegaron.Name = "rbtnNoLlegaron";
+            this.rbtnNoLlegaron.Size = new System.Drawing.Size(132, 28);
+            this.rbtnNoLlegaron.TabIndex = 30;
+            this.rbtnNoLlegaron.TabStop = true;
+            this.rbtnNoLlegaron.Text = "No Llegaron";
+            this.rbtnNoLlegaron.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton2.Location = new System.Drawing.Point(326, 42);
+            this.radioButton2.Location = new System.Drawing.Point(357, 31);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(100, 28);
             this.radioButton2.TabIndex = 12;
@@ -334,18 +334,18 @@
             this.radioButton2.Text = "Vendido";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtnLlegaron
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButton1.Location = new System.Drawing.Point(194, 42);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(102, 28);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Llegaron";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnLlegaron.AutoSize = true;
+            this.rbtnLlegaron.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.rbtnLlegaron.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rbtnLlegaron.Location = new System.Drawing.Point(106, 32);
+            this.rbtnLlegaron.Name = "rbtnLlegaron";
+            this.rbtnLlegaron.Size = new System.Drawing.Size(102, 28);
+            this.rbtnLlegaron.TabIndex = 25;
+            this.rbtnLlegaron.TabStop = true;
+            this.rbtnLlegaron.Text = "Llegaron";
+            this.rbtnLlegaron.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -353,7 +353,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(615, 594);
+            this.button1.Location = new System.Drawing.Point(571, 594);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 48);
             this.button1.TabIndex = 37;
@@ -365,7 +365,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1271, 653);
+            this.ClientSize = new System.Drawing.Size(1232, 653);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExportExcel);
@@ -379,6 +379,7 @@
             this.Name = "PedidosFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidosFinal";
+            this.Load += new System.EventHandler(this.PedidosFinal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -410,9 +411,9 @@
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtnLlegaron;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbtnTodos;
+        private System.Windows.Forms.RadioButton rbtnNoLlegaron;
     }
 }

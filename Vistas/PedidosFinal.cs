@@ -20,17 +20,26 @@ namespace MultimodeSales.Vistas
         CDataGridView CDataGrid = new CDataGridView();
         private int MX;
         private int MY;
+        DataTable dt;
+        DataView dv;
 
         public PedidosFinal()
         {
             InitializeComponent();
             CDataGrid.FormattingDataGridView(dgvPedidosFinal);
+            rbtnNumPedido.Checked = true;
+            rbtnTodos.Checked = true;
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
-            CargarLista();
-            dgvPedidosFinal.Columns[0].Visible = false;
+            rbtnTodos.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
+            rbtnLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
+            rbtnNoLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
         }
-
+        private void PedidosFinal_Load(object sender, EventArgs e)
+        {
+            CargarLista();
+            dv = new DataView(dt);
+        }
         private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
@@ -43,6 +52,27 @@ namespace MultimodeSales.Vistas
             {
                 dtpFecha.Enabled = true;
                 Buscar = 2;
+            }
+        }
+        private void radioButtonOrdenar_CheckedChanged(object sender, EventArgs e)
+        {
+            Borrar();
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked && rb.TabIndex == 20)
+            {//RadioButtonTodos
+                CargarLista();
+            }
+            else if (rb.Checked && rb.TabIndex == 25)
+            {//RadioButtonLlegaron
+                dv.RowFilter = "Llego = 1";
+                dgvPedidosFinal.DataSource = dv;
+                DarFormatoTabla();
+            }
+            else if (rb.Checked && rb.TabIndex == 30)
+            {//RadioButtonNoLlegaron
+                dv.RowFilter = "Llego = 0";
+                dgvPedidosFinal.DataSource = dv;
+                DarFormatoTabla();
             }
         }
 
@@ -61,25 +91,37 @@ namespace MultimodeSales.Vistas
         private void CargarLista()
         {
             dgvPedidosFinal.DataSource = null;
-            DataTable dt = listaPedidosFinal.ObtenerListaPedidosFinal();
+            dt = listaPedidosFinal.ObtenerListaPedidosFinal();
             dgvPedidosFinal.DataSource = dt;
+            
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            {
+                if(rows.Cells[8].Value.ToString() == "1")
+                {
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.BackColor = Color.YellowGreen;
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                }
+            }
             DarFormatoTabla();
+            dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
         }
 
         private void DarFormatoTabla()
         {
             dgvPedidosFinal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dgvPedidosFinal.Columns[1].Width = 100;//IDCliente
+            dgvPedidosFinal.Columns[1].Width = 115;//IDCliente
             dgvPedidosFinal.Columns[1].HeaderText = "ID Cliente";
-            dgvPedidosFinal.Columns[2].Width = 350;//NombreCliente
+            dgvPedidosFinal.Columns[2].Width = 300;//NombreCliente
             dgvPedidosFinal.Columns[2].HeaderText = "Nombre Cliente";
-            dgvPedidosFinal.Columns[3].Width = 200;//IDModelo
+            dgvPedidosFinal.Columns[3].Width = 150;//IDModelo
             dgvPedidosFinal.Columns[3].HeaderText = "ID Modelo";
-            dgvPedidosFinal.Columns[4].Width = 200;//Color
-            dgvPedidosFinal.Columns[5].Width = 200;//Talla
-            dgvPedidosFinal.Columns[6].Width = 200;//PrecioCliente
+            dgvPedidosFinal.Columns[4].Width = 150;//Color
+            dgvPedidosFinal.Columns[5].Width = 150;//Talla
+            dgvPedidosFinal.Columns[6].Width = 170;//PrecioCliente
             dgvPedidosFinal.Columns[6].HeaderText = "Precio Cliente";
-            dgvPedidosFinal.Columns[7].Width = 350;//Fecha
+            dgvPedidosFinal.Columns[7].Width = 250;//Fecha
+            dgvPedidosFinal.Columns[0].Visible = false;
+            dgvPedidosFinal.Columns[8].Visible = false;
         }
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
@@ -147,7 +189,10 @@ namespace MultimodeSales.Vistas
                 worksheet = null;
             }
         }
-
+        private void Borrar()
+        {
+            dgvPedidosFinal.DataSource = null;
+        }
         #region Barra Superior
         private void panelBarras_MouseMove(object sender, MouseEventArgs e)
         {
@@ -182,7 +227,7 @@ namespace MultimodeSales.Vistas
         {
             Close();
         }
-        #endregion  
+        #endregion
     }
 }
 
