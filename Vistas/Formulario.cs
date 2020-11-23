@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Excel;
-using MultimodeSales.Programacion;
 using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales
@@ -186,7 +185,7 @@ namespace MultimodeSales
         private void picVenta_Click(object sender, EventArgs e)
         {
             Venta venta = new Venta();
-            venta.ShowDialog();
+            venta.Show();
         }
         #endregion
         #region picDevolucion
@@ -251,30 +250,5 @@ namespace MultimodeSales
 
 
         #endregion
-
-        private void panelMarca_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelColTall_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelModelos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelDevolucion_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelVenta_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

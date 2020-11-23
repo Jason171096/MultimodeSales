@@ -125,7 +125,7 @@
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(1099, 594);
+            this.btnTerminar.Location = new System.Drawing.Point(1105, 594);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(115, 48);
             this.btnTerminar.TabIndex = 25;
@@ -218,7 +218,7 @@
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportExcel.Location = new System.Drawing.Point(896, 594);
+            this.btnExportExcel.Location = new System.Drawing.Point(902, 594);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(197, 48);
             this.btnExportExcel.TabIndex = 35;
