@@ -404,9 +404,9 @@
             this.panelBarra.Controls.Add(this.picMinimize);
             this.panelBarra.Controls.Add(this.lbFecha);
             this.panelBarra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarra.Location = new System.Drawing.Point(201, 0);
+            this.panelBarra.Location = new System.Drawing.Point(230, 0);
             this.panelBarra.Name = "panelBarra";
-            this.panelBarra.Size = new System.Drawing.Size(1129, 49);
+            this.panelBarra.Size = new System.Drawing.Size(1118, 49);
             this.panelBarra.TabIndex = 2;
             this.panelBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarra_MouseMove);
             // 
@@ -414,7 +414,7 @@
             // 
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(1076, 0);
+            this.picClose.Location = new System.Drawing.Point(1067, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -428,7 +428,7 @@
             this.lbHora.BackColor = System.Drawing.Color.Transparent;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.lbHora.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbHora.Location = new System.Drawing.Point(828, 9);
+            this.lbHora.Location = new System.Drawing.Point(833, 9);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(84, 26);
             this.lbHora.TabIndex = 1;
@@ -439,7 +439,7 @@
             // 
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(1026, 0);
+            this.picMinimize.Location = new System.Drawing.Point(1017, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -472,7 +472,7 @@
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 614);
+            this.panel1.Size = new System.Drawing.Size(230, 614);
             this.panel1.TabIndex = 1;
             // 
             // lbAdmin
@@ -480,7 +480,7 @@
             this.lbAdmin.AutoSize = true;
             this.lbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbAdmin.Location = new System.Drawing.Point(39, 150);
+            this.lbAdmin.Location = new System.Drawing.Point(64, 150);
             this.lbAdmin.Name = "lbAdmin";
             this.lbAdmin.Size = new System.Drawing.Size(115, 24);
             this.lbAdmin.TabIndex = 9;
@@ -491,7 +491,7 @@
             this.pictureBox1.Image = global::MultimodeSales.Properties.Resources.admin128px;
             this.pictureBox1.Location = new System.Drawing.Point(3, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -504,7 +504,7 @@
             this.content1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content1.Location = new System.Drawing.Point(3, 3);
             this.content1.Name = "content1";
-            this.content1.Size = new System.Drawing.Size(219, 181);
+            this.content1.Size = new System.Drawing.Size(217, 181);
             this.content1.TabIndex = 33;
             // 
             // content2
@@ -513,9 +513,9 @@
             this.content2.Controls.Add(this.picCliente);
             this.content2.Controls.Add(this.lbCliente);
             this.content2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content2.Location = new System.Drawing.Point(228, 3);
+            this.content2.Location = new System.Drawing.Point(226, 3);
             this.content2.Name = "content2";
-            this.content2.Size = new System.Drawing.Size(219, 181);
+            this.content2.Size = new System.Drawing.Size(217, 181);
             this.content2.TabIndex = 34;
             // 
             // content3
@@ -524,9 +524,9 @@
             this.content3.Controls.Add(this.picMarca);
             this.content3.Controls.Add(this.lbMarca);
             this.content3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content3.Location = new System.Drawing.Point(453, 3);
+            this.content3.Location = new System.Drawing.Point(449, 3);
             this.content3.Name = "content3";
-            this.content3.Size = new System.Drawing.Size(219, 181);
+            this.content3.Size = new System.Drawing.Size(217, 181);
             this.content3.TabIndex = 35;
             // 
             // content4
@@ -535,9 +535,9 @@
             this.content4.Controls.Add(this.picColTall);
             this.content4.Controls.Add(this.lbColTall);
             this.content4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content4.Location = new System.Drawing.Point(678, 3);
+            this.content4.Location = new System.Drawing.Point(672, 3);
             this.content4.Name = "content4";
-            this.content4.Size = new System.Drawing.Size(219, 181);
+            this.content4.Size = new System.Drawing.Size(217, 181);
             this.content4.TabIndex = 36;
             // 
             // content5
@@ -546,9 +546,9 @@
             this.content5.Controls.Add(this.picModelos);
             this.content5.Controls.Add(this.lbModelos);
             this.content5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content5.Location = new System.Drawing.Point(903, 3);
+            this.content5.Location = new System.Drawing.Point(895, 3);
             this.content5.Name = "content5";
-            this.content5.Size = new System.Drawing.Size(220, 181);
+            this.content5.Size = new System.Drawing.Size(217, 181);
             this.content5.TabIndex = 37;
             // 
             // content6
@@ -559,7 +559,7 @@
             this.content6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content6.Location = new System.Drawing.Point(3, 190);
             this.content6.Name = "content6";
-            this.content6.Size = new System.Drawing.Size(219, 181);
+            this.content6.Size = new System.Drawing.Size(217, 181);
             this.content6.TabIndex = 38;
             // 
             // content7
@@ -568,9 +568,9 @@
             this.content7.Controls.Add(this.picPedidosFinal);
             this.content7.Controls.Add(this.lbPedidosFinal);
             this.content7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content7.Location = new System.Drawing.Point(228, 190);
+            this.content7.Location = new System.Drawing.Point(226, 190);
             this.content7.Name = "content7";
-            this.content7.Size = new System.Drawing.Size(219, 181);
+            this.content7.Size = new System.Drawing.Size(217, 181);
             this.content7.TabIndex = 39;
             // 
             // content8
@@ -579,9 +579,9 @@
             this.content8.Controls.Add(this.picVenta);
             this.content8.Controls.Add(this.lbVenta);
             this.content8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content8.Location = new System.Drawing.Point(453, 190);
+            this.content8.Location = new System.Drawing.Point(449, 190);
             this.content8.Name = "content8";
-            this.content8.Size = new System.Drawing.Size(219, 181);
+            this.content8.Size = new System.Drawing.Size(217, 181);
             this.content8.TabIndex = 40;
             // 
             // content9
@@ -590,9 +590,9 @@
             this.content9.Controls.Add(this.picDevolucion);
             this.content9.Controls.Add(this.lbDevolucion);
             this.content9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content9.Location = new System.Drawing.Point(678, 190);
+            this.content9.Location = new System.Drawing.Point(672, 190);
             this.content9.Name = "content9";
-            this.content9.Size = new System.Drawing.Size(219, 181);
+            this.content9.Size = new System.Drawing.Size(217, 181);
             this.content9.TabIndex = 42;
             // 
             // tableLayoutPanel1
@@ -612,13 +612,13 @@
             this.tableLayoutPanel1.Controls.Add(this.content7, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.content8, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.content9, 3, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(203, 51);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(233, 51);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1126, 561);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
             // monthCalendar1
@@ -630,14 +630,14 @@
             this.monthCalendar1.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.monthCalendar1.Header.TextColor = System.Drawing.Color.White;
             this.monthCalendar1.ImageList = null;
-            this.monthCalendar1.Location = new System.Drawing.Point(3, 177);
+            this.monthCalendar1.Location = new System.Drawing.Point(3, 213);
             this.monthCalendar1.MaxDate = new System.DateTime(2030, 11, 23, 10, 52, 19, 687);
             this.monthCalendar1.MinDate = new System.DateTime(2010, 11, 23, 10, 52, 19, 687);
             this.monthCalendar1.Month.BackgroundImage = null;
             this.monthCalendar1.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.monthCalendar1.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.Size = new System.Drawing.Size(194, 425);
+            this.monthCalendar1.Size = new System.Drawing.Size(224, 389);
             this.monthCalendar1.TabIndex = 10;
             this.monthCalendar1.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.monthCalendar1.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -647,7 +647,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1330, 614);
+            this.ClientSize = new System.Drawing.Size(1348, 614);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.panel1);
