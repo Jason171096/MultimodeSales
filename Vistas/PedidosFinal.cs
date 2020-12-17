@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using excel = Microsoft.Office.Interop.Excel;
 using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales.Vistas
 {
@@ -222,6 +224,17 @@ namespace MultimodeSales.Vistas
             Close();
         }
         #endregion
+
+        private void dgvPedidosFinal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Modelo modelo;
+            modelo = new Modelo(dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[6].Value.ToString());
+            
+            Venta venta = new Venta();
+            venta.ModeloAgregar(modelo);
+            Close();
+        }
     }
 }
 

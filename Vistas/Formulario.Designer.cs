@@ -63,6 +63,7 @@
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.lbFecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.monthCalendarForm = new Pabo.Calendar.MonthCalendar();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content1 = new System.Windows.Forms.Panel();
@@ -75,7 +76,6 @@
             this.content8 = new System.Windows.Forms.Panel();
             this.content9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.monthCalendar1 = new Pabo.Calendar.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
@@ -465,7 +465,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.monthCalendar1);
+            this.panel1.Controls.Add(this.monthCalendarForm);
             this.panel1.Controls.Add(this.lbAdmin);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -474,6 +474,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 614);
             this.panel1.TabIndex = 1;
+            // 
+            // monthCalendarForm
+            // 
+            this.monthCalendarForm.ActiveMonth.Month = 11;
+            this.monthCalendarForm.ActiveMonth.Year = 2020;
+            this.monthCalendarForm.Culture = new System.Globalization.CultureInfo("es-MX");
+            this.monthCalendarForm.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.monthCalendarForm.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.monthCalendarForm.Header.TextColor = System.Drawing.Color.White;
+            this.monthCalendarForm.ImageList = null;
+            this.monthCalendarForm.Location = new System.Drawing.Point(3, 213);
+            this.monthCalendarForm.MaxDate = new System.DateTime(2030, 11, 23, 10, 52, 19, 687);
+            this.monthCalendarForm.MinDate = new System.DateTime(2010, 11, 23, 10, 52, 19, 687);
+            this.monthCalendarForm.Month.BackgroundImage = null;
+            this.monthCalendarForm.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Name = "monthCalendarForm";
+            this.monthCalendarForm.Size = new System.Drawing.Size(224, 389);
+            this.monthCalendarForm.TabIndex = 10;
+            this.monthCalendarForm.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             // 
             // lbAdmin
             // 
@@ -621,27 +642,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.ActiveMonth.Month = 11;
-            this.monthCalendar1.ActiveMonth.Year = 2020;
-            this.monthCalendar1.Culture = new System.Globalization.CultureInfo("es-MX");
-            this.monthCalendar1.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.monthCalendar1.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.monthCalendar1.Header.TextColor = System.Drawing.Color.White;
-            this.monthCalendar1.ImageList = null;
-            this.monthCalendar1.Location = new System.Drawing.Point(3, 213);
-            this.monthCalendar1.MaxDate = new System.DateTime(2030, 11, 23, 10, 52, 19, 687);
-            this.monthCalendar1.MinDate = new System.DateTime(2010, 11, 23, 10, 52, 19, 687);
-            this.monthCalendar1.Month.BackgroundImage = null;
-            this.monthCalendar1.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendar1.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.Size = new System.Drawing.Size(224, 389);
-            this.monthCalendar1.TabIndex = 10;
-            this.monthCalendar1.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendar1.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,7 +743,7 @@
         private System.Windows.Forms.Panel content8;
         private System.Windows.Forms.Panel content9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Pabo.Calendar.MonthCalendar monthCalendar1;
+        private Pabo.Calendar.MonthCalendar monthCalendarForm;
     }
 }
 

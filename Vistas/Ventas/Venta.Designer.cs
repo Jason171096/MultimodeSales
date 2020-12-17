@@ -45,6 +45,8 @@
             this.lbVentas = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -107,7 +109,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(11, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(565, 88);
+            this.groupBox2.Size = new System.Drawing.Size(468, 88);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clientes";
@@ -116,7 +118,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(22, 45);
+            this.label4.Location = new System.Drawing.Point(14, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 24);
             this.label4.TabIndex = 41;
@@ -128,9 +130,9 @@
             this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(115, 38);
+            this.cboxCliente.Location = new System.Drawing.Point(92, 44);
             this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(422, 32);
+            this.cboxCliente.Size = new System.Drawing.Size(364, 32);
             this.cboxCliente.TabIndex = 53;
             this.cboxCliente.SelectedIndexChanged += new System.EventHandler(this.cboxCliente_SelectedIndexChanged);
             // 
@@ -257,12 +259,39 @@
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregar.Location = new System.Drawing.Point(459, 549);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(179, 38);
+            this.btnAgregar.TabIndex = 61;
+            this.btnAgregar.Text = "Agregar pedido";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.Location = new System.Drawing.Point(498, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 24);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Folio:";
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(821, 603);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -282,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -301,5 +331,7 @@
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label lbCantidad;
         private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label3;
     }
 }

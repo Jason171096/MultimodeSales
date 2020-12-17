@@ -1,5 +1,6 @@
 ﻿using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Cliente;
+using MultimodeSales.Programacion.Modelo;
 using System;
 using System.Data;
 using System.Drawing;
@@ -15,6 +16,7 @@ namespace MultimodeSales.Vistas.Ventas
         CDataGridView cDataGrid = new CDataGridView();
         ClienteDB cliente = new ClienteDB();
         private bool SelectIndexChange = false;
+        Modelo modelo;
 
         public Venta()
         {
@@ -129,5 +131,17 @@ namespace MultimodeSales.Vistas.Ventas
             Close();
         }
         #endregion
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            PedidosFinal final = new PedidosFinal();
+            final.ShowDialog();
+            dgvPedidosFinal.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
+        }
+
+        public void ModeloAgregar(Modelo pModelo)
+        {
+            modelo = pModelo;
+        }
     }
 }

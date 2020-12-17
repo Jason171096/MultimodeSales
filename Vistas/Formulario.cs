@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Excel;
@@ -36,6 +37,9 @@ namespace MultimodeSales
             lbVenta.Visible = false;
             lbDevolucion.Visible = false;
             #endregion
+            monthCalendarForm.TodayColor = Color.Red;
+            monthCalendarForm.ActiveMonth.Month = DateTime.Now.Month;
+            monthCalendarForm.ActiveMonth.Year = DateTime.Now.Year;
 
         }
         #region picCliente

@@ -35,13 +35,13 @@ namespace MultimodeSales.Vistas.Ventas
             this.lbTotal = new System.Windows.Forms.Label();
             this.tbLayout = new System.Windows.Forms.TableLayoutPanel();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.tbLayoutTotal = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbLayoutCambio = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbLayoutTotal = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbLayout.SuspendLayout();
-            this.tbLayoutTotal.SuspendLayout();
             this.tbLayoutCambio.SuspendLayout();
+            this.tbLayoutTotal.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVender
@@ -131,34 +131,6 @@ namespace MultimodeSales.Vistas.Ventas
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             this.txtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyUp);
             // 
-            // tbLayoutTotal
-            // 
-            this.tbLayoutTotal.ColumnCount = 2;
-            this.tbLayoutTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tbLayoutTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tbLayoutTotal.Controls.Add(this.lbTotal, 1, 0);
-            this.tbLayoutTotal.Controls.Add(this.label1, 0, 0);
-            this.tbLayoutTotal.Location = new System.Drawing.Point(3, 3);
-            this.tbLayoutTotal.Name = "tbLayoutTotal";
-            this.tbLayoutTotal.RowCount = 1;
-            this.tbLayoutTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbLayoutTotal.Size = new System.Drawing.Size(445, 72);
-            this.tbLayoutTotal.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 72);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Total:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tbLayoutCambio
             // 
             this.tbLayoutCambio.ColumnCount = 2;
@@ -187,6 +159,34 @@ namespace MultimodeSales.Vistas.Ventas
             this.label2.Text = "Cambio:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tbLayoutTotal
+            // 
+            this.tbLayoutTotal.ColumnCount = 2;
+            this.tbLayoutTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tbLayoutTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tbLayoutTotal.Controls.Add(this.lbTotal, 1, 0);
+            this.tbLayoutTotal.Controls.Add(this.label1, 0, 0);
+            this.tbLayoutTotal.Location = new System.Drawing.Point(3, 3);
+            this.tbLayoutTotal.Name = "tbLayoutTotal";
+            this.tbLayoutTotal.RowCount = 1;
+            this.tbLayoutTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbLayoutTotal.Size = new System.Drawing.Size(445, 72);
+            this.tbLayoutTotal.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 72);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Total:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DialogVenta
             // 
             this.AcceptButton = this.btnVender;
@@ -208,10 +208,10 @@ namespace MultimodeSales.Vistas.Ventas
             this.Load += new System.EventHandler(this.DialogVenta_Load);
             this.tbLayout.ResumeLayout(false);
             this.tbLayout.PerformLayout();
-            this.tbLayoutTotal.ResumeLayout(false);
-            this.tbLayoutTotal.PerformLayout();
             this.tbLayoutCambio.ResumeLayout(false);
             this.tbLayoutCambio.PerformLayout();
+            this.tbLayoutTotal.ResumeLayout(false);
+            this.tbLayoutTotal.PerformLayout();
             this.ResumeLayout(false);
 
         }
