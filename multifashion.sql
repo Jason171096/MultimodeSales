@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 16-11-2020 a las 04:47:54
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 06-01-2021 a las 05:30:18
+-- Versión del servidor: 10.1.32-MariaDB
+-- Versión de PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -132,14 +133,14 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerClientesPedidoLlego` (IN `idcliente` BIGINT)  NO SQL
 BEGIN
-	SELECT p.IDPedido, p.IDModelo, m.Nombre, p.Color, p.Talla, mo.PrecioCliente FROM pedidos AS p INNER JOIN modelos AS mo USING(IDModelo) INNER JOIN marca AS m USING(IDMarca) WHERE p.IDCliente = idcliente AND p.Llego = 1;
+	SELECT p.IDModelo AS 'ID Modelo', m.Nombre, p.Color, p.Talla, CONCAT('$', FORMAT(mo.PrecioCliente, 2)) AS 'Precio Cliente' FROM pedidos AS p INNER JOIN modelos AS mo USING(IDModelo) INNER JOIN marca AS m USING(IDMarca) WHERE p.IDCliente = idcliente AND p.Llego = 1;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerColores` ()  READS SQL DATA
 SELECT color.IDColor, color.Nombre FROM color$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerListaPedidoFinal` ()  READS SQL DATA
-SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, p.Color, p.Talla, CONCAT('$', FORMAT(m.PrecioCliente, 2)) AS 'PrecioCliente', p.Fecha, p.Llego FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo ORDER BY c.IDCliente ASC$$
+SELECT p.IDPedido, c.IDCliente, c.Nombre, m.IDModelo, ma.Nombre as 'Marca', p.Color, p.Talla, CONCAT('$', FORMAT(m.PrecioCliente, 2)) AS 'Precio Cliente', p.Fecha, p.Llego FROM pedidos p INNER JOIN clientes c ON p.IDCliente = c.IDCliente INNER JOIN modelos m ON m.IDModelo = p.IDModelo INNER JOIN marca ma ON ma.IDMarca = m.IDMarca ORDER BY c.IDCliente ASC$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerMarcas` ()  BEGIN
 	SELECT IDMarca, Nombre FROM marca;
@@ -333,7 +334,6 @@ CREATE TABLE `modelos` (
 
 INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`, `PrecioPublico`, `Fecha`) VALUES
 ('1', 2, 'MENGUATE', '26', '100.00', NULL, '2020-10-15 11:03:09'),
-('10', 1, 'MOSTAZA', '15 AL 56', '0.00', NULL, '2020-10-28 07:20:45'),
 ('100', 7, 'AZUL', '22', '500.00', NULL, '2020-10-13 23:35:14'),
 ('10001', 7, 'MERLOT', '22 AL 26', '459.50', NULL, '2020-10-04 18:19:49'),
 ('10002', 7, 'AZUL', '25', '460.50', NULL, '2020-10-04 18:19:51'),
@@ -355,7 +355,7 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('115', 7, 'VIOLETA', 'XG', '748.25', NULL, '2020-10-13 23:35:15'),
 ('116', 7, 'AZUL', '22', '764.80', NULL, '2020-10-13 23:35:15'),
 ('117', 7, 'AMARILLO', '23', '781.35', NULL, '2020-10-13 23:35:15'),
-('118', 7, 'NEGRO', '24', '797.90', NULL, '2020-10-13 23:35:15'),
+('118', 3, 'NEGRO', '24', '0.00', NULL, '2020-10-13 23:35:15'),
 ('119', 7, 'VIOLETA', '25', '814.45', NULL, '2020-10-13 23:35:15'),
 ('120', 7, 'AZUL', 'M', '831.00', NULL, '2020-10-13 23:35:15'),
 ('121', 7, 'AMARILLO', 'CH', '847.55', NULL, '2020-10-13 23:35:16'),
@@ -529,8 +529,8 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('287', 7, 'VIOLETA', '25', '3594.85', NULL, '2020-10-13 23:35:27'),
 ('288', 7, 'AZUL', 'M', '3611.40', NULL, '2020-10-13 23:35:27'),
 ('289', 7, 'AMARILLO', 'CH', '3627.95', NULL, '2020-10-13 23:35:27'),
-('290', 7, 'NEGRO', 'T', '3644.50', NULL, '2020-10-13 23:35:27'),
-('291', 7, 'VIOLETA', 'XG', '3661.05', NULL, '2020-10-13 23:35:27'),
+('290', 6, 'NEGRO', 'T', '0.00', NULL, '2020-10-13 23:35:27'),
+('291', 3, 'VIOLETA', 'XG', '0.00', NULL, '2020-10-13 23:35:27'),
 ('292', 7, 'AZUL', '22', '3677.60', NULL, '2020-10-13 23:35:27'),
 ('293', 7, 'AMARILLO', '23', '3694.15', NULL, '2020-10-13 23:35:27'),
 ('294', 7, 'NEGRO', '24', '3710.70', NULL, '2020-10-13 23:35:28'),
@@ -641,14 +641,13 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('397', 7, 'AMARILLO', '23', '5415.35', NULL, '2020-10-13 23:35:32'),
 ('398', 7, 'NEGRO', '24', '5431.90', NULL, '2020-10-13 23:35:32'),
 ('4', 2, 'VERDE', '43', '100.00', NULL, '2020-10-15 11:04:00'),
-('6', 6, 'MAGENTA', '35 AL 27', '0.00', NULL, '2020-10-19 15:04:05'),
+('6', 6, 'MAGENTA', '35 AL 25', '0.00', NULL, '2020-10-19 15:04:05'),
 ('6762', 7, 'NEGRO', '22 AL 27  ENTEROS', '459.50', NULL, '2020-10-04 18:19:49'),
 ('7', 6, 'CELESTE', '34', '0.00', NULL, '2020-10-19 14:31:38'),
 ('8', 6, 'ROSA', '22 AL 28', '0.00', NULL, '2020-10-19 15:05:43'),
 ('801', 7, 'LADRILLO', '22 AL 26', '45.00', NULL, '2020-10-04 18:19:48'),
 ('8049', 7, 'NEGRO', '23 AL 26', '505.50', NULL, '2020-10-04 18:19:49'),
 ('8050', 7, 'NUTRIA', '23 AL 26', '574.50', NULL, '2020-10-04 18:19:49'),
-('9', 6, 'ROSA', 'M', '0.00', NULL, '2020-10-28 07:20:00'),
 ('95184', 7, 'NEGRO', '23 AL 26', '896.50', NULL, '2020-10-04 18:19:49');
 
 -- --------------------------------------------------------
@@ -676,26 +675,14 @@ INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `F
 (2, '115', 1, 'VERDE', '18', '2020-10-19 17:13:56', b'0'),
 (3, '346', 1, 'TURQUESA', 'CH', '2020-10-19 17:13:56', b'0'),
 (4, '2', 1, 'ROJO', 'XG', '2020-10-19 17:13:56', b'1'),
-(8, '111', 101, 'MORADO', 'XG', '2020-10-19 10:56:59', b'0'),
-(9, '132', 101, 'AMARILLLO', 'M', '2020-10-19 10:56:59', b'0'),
-(10, '2', 101, 'TURQUESA', 'XG', '2020-10-19 10:56:59', b'1'),
+(8, '111', 101, 'MORADO', 'XG', '2020-11-10 09:34:21', b'0'),
+(9, '132', 101, 'AMARILLLO', 'M', '2020-11-10 09:34:21', b'0'),
 (12, '2', 31, 'AMARILLLO', '17', '2020-10-19 10:57:49', b'0'),
 (13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'1'),
 (14, '10001', 31, 'ROJO', '17', '2020-10-19 10:57:49', b'0'),
 (15, '35', 31, 'TURQUESA', 'CH', '2020-10-19 10:57:49', b'1'),
-(16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'1');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pedido_venta`
---
-
-CREATE TABLE `pedido_venta` (
-  `IDVentaPedido` bigint(20) NOT NULL,
-  `IDVenta` bigint(20) NOT NULL,
-  `IDPedido` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'1'),
+(17, '150', 101, 'AZUL', '18', '2020-11-10 09:34:21', b'0');
 
 -- --------------------------------------------------------
 
@@ -753,6 +740,18 @@ CREATE TABLE `venta` (
   `Total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `venta_pedidos`
+--
+
+CREATE TABLE `venta_pedidos` (
+  `IDVentaPedido` bigint(20) NOT NULL,
+  `IDVenta` bigint(20) NOT NULL,
+  `IDPedido` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -791,14 +790,6 @@ ALTER TABLE `pedidos`
   ADD KEY `IDCliente` (`IDCliente`);
 
 --
--- Indices de la tabla `pedido_venta`
---
-ALTER TABLE `pedido_venta`
-  ADD PRIMARY KEY (`IDVentaPedido`),
-  ADD KEY `IDVenta` (`IDVenta`),
-  ADD KEY `IDPedido` (`IDPedido`);
-
---
 -- Indices de la tabla `talla`
 --
 ALTER TABLE `talla`
@@ -824,13 +815,13 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `IDCliente` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
+  MODIFY `IDCliente` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT de la tabla `color`
 --
 ALTER TABLE `color`
-  MODIFY `IDColor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `IDColor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -851,6 +842,12 @@ ALTER TABLE `usuario`
   MODIFY `IDUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `venta`
+--
+ALTER TABLE `venta`
+  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -866,13 +863,6 @@ ALTER TABLE `modelos`
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`IDModelo`) REFERENCES `modelos` (`IDModelo`),
   ADD CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`IDCliente`) REFERENCES `clientes` (`IDCliente`);
-
---
--- Filtros para la tabla `pedido_venta`
---
-ALTER TABLE `pedido_venta`
-  ADD CONSTRAINT `pedido_venta_ibfk_1` FOREIGN KEY (`IDVenta`) REFERENCES `venta` (`IDVenta`),
-  ADD CONSTRAINT `pedido_venta_ibfk_2` FOREIGN KEY (`IDPedido`) REFERENCES `pedidos` (`IDPedido`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

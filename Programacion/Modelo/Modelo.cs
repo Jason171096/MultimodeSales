@@ -8,19 +8,21 @@ namespace MultimodeSales.Programacion.Modelo
 {
     public class Modelo
     {
-        public string IDModelo;
+        private string iDModelo;
         public string IDMarca;
         public string Color;
         public string Talla;
         public string PrecioCliente;
 
-        public Modelo(string pIDModelo, string pIDMarca, string pColor, string pTalla, string pPrecioCliente)
-        {
-            IDModelo = pIDModelo;
-            IDMarca = pIDMarca;
-            Color = pColor;
-            Talla = pTalla;
-            PrecioCliente = pPrecioCliente;
-        }
+        public string IDModelo { get => iDModelo; set => iDModelo = value; }
+
+        //public Modelo(string pIDModelo, string pIDMarca, string pColor, string pTalla, string pPrecioCliente)
+        //{
+        //    IDModelo = pIDModelo;
+        //    IDMarca = pIDMarca;
+        //    Color = pColor;
+        //    Talla = pTalla;
+        //    PrecioCliente = pPrecioCliente;
+        //}
     }
 }

@@ -16,7 +16,7 @@ namespace MultimodeSales.Vistas.Ventas
         CDataGridView cDataGrid = new CDataGridView();
         ClienteDB cliente = new ClienteDB();
         private bool SelectIndexChange = false;
-        Modelo modelo;
+        Modelo modelo = new Modelo();
 
         public Venta()
         {
@@ -136,12 +136,9 @@ namespace MultimodeSales.Vistas.Ventas
         {
             PedidosFinal final = new PedidosFinal();
             final.ShowDialog();
+            //modelo.IDModelo = "150";
+            MessageBox.Show(modelo.IDModelo);
             dgvPedidosFinal.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
-        }
-
-        public void ModeloAgregar(Modelo pModelo)
-        {
-            modelo = pModelo;
         }
     }
 }

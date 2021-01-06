@@ -18,6 +18,7 @@ namespace MultimodeSales.Vistas
         private int MY;
         DataTable dt;
         DataView dv;
+        Modelo modelo = new Modelo();
 
         public PedidosFinal()
         {
@@ -227,13 +228,13 @@ namespace MultimodeSales.Vistas
 
         private void dgvPedidosFinal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Modelo modelo;
-            modelo = new Modelo(dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(),
-                dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[6].Value.ToString());
-            
-            Venta venta = new Venta();
-            venta.ModeloAgregar(modelo);
+           
+            modelo.IDModelo = "1555";
+            //modelo = new Modelo(dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(),
+            //    dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[6].Value.ToString());
+
             Close();
+            
         }
     }
 }
