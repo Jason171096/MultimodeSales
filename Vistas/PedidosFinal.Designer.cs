@@ -124,7 +124,7 @@
             // 
             this.btnTerminar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnTerminar.Location = new System.Drawing.Point(1105, 594);
             this.btnTerminar.Name = "btnTerminar";
@@ -185,13 +185,13 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnBuscar.Image = global::MultimodeSales.Properties.Resources.search24;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(354, 70);
+            this.btnBuscar.Location = new System.Drawing.Point(369, 70);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(120, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(105, 41);
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,11 +202,11 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelar.Location = new System.Drawing.Point(11, 606);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(156, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(180, 36);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar(Esc)";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -215,13 +215,13 @@
             // 
             this.btnExportExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportExcel.Location = new System.Drawing.Point(902, 594);
+            this.btnExportExcel.Location = new System.Drawing.Point(922, 594);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(197, 48);
+            this.btnExportExcel.Size = new System.Drawing.Size(177, 48);
             this.btnExportExcel.TabIndex = 35;
             this.btnExportExcel.Text = "Exportar a Excel";
             this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,7 +352,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SlateBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(571, 594);
             this.button1.Name = "button1";

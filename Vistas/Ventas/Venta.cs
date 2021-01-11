@@ -17,6 +17,7 @@ namespace MultimodeSales.Vistas.Ventas
         ClienteDB cliente = new ClienteDB();
         private bool SelectIndexChange = false;
         Modelo modelo = new Modelo();
+        DataTable dtPedidos;
 
         public Venta()
         {
@@ -46,8 +47,8 @@ namespace MultimodeSales.Vistas.Ventas
         private void CargarPedidos(string idcliente)
         {
             dgvPedidosFinal.DataSource = null;
-            DataTable dt = pedidosFinal.ObtenerPedidoFinalLlego(idcliente);
-            dgvPedidosFinal.DataSource = dt;
+            dtPedidos = pedidosFinal.ObtenerPedidoFinalLlego(idcliente);
+            dgvPedidosFinal.DataSource = dtPedidos;
         }
 
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
@@ -74,7 +75,7 @@ namespace MultimodeSales.Vistas.Ventas
         private void ActualizarLabels(int sumaoresta, string lbprecio, string cantidad)
         {
             int totalCantidad = int.Parse(cantidad);
-            float precioCliente = float.Parse(dgvPedidosFinal.CurrentRow.Cells[5].Value + "".Trim('$'));
+            float precioCliente = float.Parse(dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString().Trim('$'));
             float totalPrecio;
             if(sumaoresta == 1)
             {
@@ -134,11 +135,28 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            PedidosFinal final = new PedidosFinal();
+            PedidosFinal final = new PedidosFinal(true);
             final.ShowDialog();
-            //modelo.IDModelo = "150";
-            MessageBox.Show(modelo.IDModelo);
-            dgvPedidosFinal.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
+            modelo = final.returnModelo();
+            if (modelo.IDModelo != null)
+            {
+                dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
+                dgvPedidosFinal.DataSource = null;
+                dgvPedidosFinal.DataSource = dtPedidos;
+            }
+        }
+
+        private void btnAgregarModelo_Click(object sender, EventArgs e)
+        {
+            Modeloss modelos = new Modeloss(true);
+            modelos.ShowDialog();
+            modelo = modelos.returnModelo();
+            if (modelo.IDModelo != null)
+            {
+                dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
+                dgvPedidosFinal.DataSource = null;
+                dgvPedidosFinal.DataSource = dtPedidos;
+            }
         }
     }
 }

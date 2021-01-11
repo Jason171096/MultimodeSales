@@ -19,8 +19,9 @@ namespace MultimodeSales.Vistas
         DataTable dt;
         DataView dv;
         Modelo modelo = new Modelo();
+        bool activeCellClick = false;
 
-        public PedidosFinal()
+        public PedidosFinal(bool pactiveCellClick)
         {
             InitializeComponent();
             CDataGrid.FormattingDataGridView(dgvPedidosFinal);
@@ -31,6 +32,7 @@ namespace MultimodeSales.Vistas
             rbtnTodos.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             rbtnLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             rbtnNoLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
+            activeCellClick = pactiveCellClick;
         }
         private void PedidosFinal_Load(object sender, EventArgs e)
         {
@@ -228,13 +230,19 @@ namespace MultimodeSales.Vistas
 
         private void dgvPedidosFinal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-            modelo.IDModelo = "1555";
-            //modelo = new Modelo(dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString(),
-            //    dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString(), dgvPedidosFinal.Rows[e.RowIndex].Cells[6].Value.ToString());
-
-            Close();
-            
+            if (activeCellClick)
+            {
+                modelo.IDModelo = dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString();
+                modelo.IDMarca = dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString();
+                modelo.Color = dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString();
+                modelo.Talla = dgvPedidosFinal.Rows[e.RowIndex].Cells[6].Value.ToString();
+                modelo.PrecioCliente = dgvPedidosFinal.Rows[e.RowIndex].Cells[7].Value.ToString();
+                Close();
+            } 
+        }
+        public Modelo returnModelo()
+        {
+            return modelo;
         }
     }
 }

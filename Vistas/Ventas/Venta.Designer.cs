@@ -45,8 +45,11 @@
             this.lbVentas = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAgregarPedido = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnAgregarModelo = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSelTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,7 +70,7 @@
             this.dgvPedidosFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -165,7 +168,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(12, 489);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(262, 109);
+            this.groupBox1.Size = new System.Drawing.Size(262, 102);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Venta";
@@ -192,14 +195,14 @@
             // 
             // btnVender
             // 
-            this.btnVender.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnVender.BackColor = System.Drawing.Color.MediumBlue;
             this.btnVender.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnVender.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnVender.Location = new System.Drawing.Point(644, 549);
+            this.btnVender.Location = new System.Drawing.Point(694, 553);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(163, 38);
+            this.btnVender.Size = new System.Drawing.Size(115, 38);
             this.btnVender.TabIndex = 60;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = false;
@@ -259,20 +262,20 @@
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
-            // btnAgregar
+            // btnAgregarPedido
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregar.Location = new System.Drawing.Point(459, 549);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(179, 38);
-            this.btnAgregar.TabIndex = 61;
-            this.btnAgregar.Text = "Agregar pedido";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregarPedido.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAgregarPedido.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAgregarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarPedido.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregarPedido.Location = new System.Drawing.Point(537, 553);
+            this.btnAgregarPedido.Name = "btnAgregarPedido";
+            this.btnAgregarPedido.Size = new System.Drawing.Size(151, 38);
+            this.btnAgregarPedido.TabIndex = 61;
+            this.btnAgregarPedido.Text = "Agregar pedido";
+            this.btnAgregarPedido.UseVisualStyleBackColor = false;
+            this.btnAgregarPedido.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -284,14 +287,54 @@
             this.label3.TabIndex = 54;
             this.label3.Text = "Folio:";
             // 
+            // btnAgregarModelo
+            // 
+            this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAgregarModelo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregarModelo.Location = new System.Drawing.Point(380, 553);
+            this.btnAgregarModelo.Name = "btnAgregarModelo";
+            this.btnAgregarModelo.Size = new System.Drawing.Size(151, 38);
+            this.btnAgregarModelo.TabIndex = 62;
+            this.btnAgregarModelo.Text = "Agregar modelo";
+            this.btnAgregarModelo.UseVisualStyleBackColor = false;
+            this.btnAgregarModelo.Click += new System.EventHandler(this.btnAgregarModelo_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBox1.Location = new System.Drawing.Point(561, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(248, 29);
+            this.textBox1.TabIndex = 63;
+            // 
+            // btnSelTodo
+            // 
+            this.btnSelTodo.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnSelTodo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSelTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSelTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSelTodo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSelTodo.Location = new System.Drawing.Point(694, 489);
+            this.btnSelTodo.Name = "btnSelTodo";
+            this.btnSelTodo.Size = new System.Drawing.Size(115, 34);
+            this.btnSelTodo.TabIndex = 64;
+            this.btnSelTodo.Text = "Sel. Todo";
+            this.btnSelTodo.UseVisualStyleBackColor = false;
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(821, 603);
+            this.ClientSize = new System.Drawing.Size(821, 596);
+            this.Controls.Add(this.btnSelTodo);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAgregarModelo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnAgregarPedido);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -331,7 +374,10 @@
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label lbCantidad;
         private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnAgregarPedido;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAgregarModelo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSelTodo;
     }
 }

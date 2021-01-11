@@ -186,7 +186,7 @@
             // 
             this.btnCancelarTalla.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelarTalla.Location = new System.Drawing.Point(188, 156);
             this.btnCancelarTalla.Name = "btnCancelarTalla";
@@ -210,7 +210,7 @@
             // 
             this.btnEliminarTalla.BackColor = System.Drawing.Color.Crimson;
             this.btnEliminarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEliminarTalla.Location = new System.Drawing.Point(25, 156);
             this.btnEliminarTalla.Name = "btnEliminarTalla";
@@ -225,7 +225,7 @@
             this.btnEditarTalla.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarTalla.Enabled = false;
             this.btnEditarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEditarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEditarTalla.Location = new System.Drawing.Point(188, 113);
             this.btnEditarTalla.Name = "btnEditarTalla";
@@ -249,7 +249,7 @@
             // 
             this.btnAgregarTalla.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarTalla.Location = new System.Drawing.Point(25, 113);
             this.btnAgregarTalla.Name = "btnAgregarTalla";
@@ -280,7 +280,7 @@
             // 
             this.btnCancelarColor.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelarColor.Location = new System.Drawing.Point(197, 153);
             this.btnCancelarColor.Name = "btnCancelarColor";
@@ -295,7 +295,7 @@
             // 
             this.btnEliminarColor.BackColor = System.Drawing.Color.Crimson;
             this.btnEliminarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEliminarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEliminarColor.Location = new System.Drawing.Point(34, 153);
             this.btnEliminarColor.Name = "btnEliminarColor";
@@ -310,7 +310,7 @@
             this.btnEditarColor.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarColor.Enabled = false;
             this.btnEditarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEditarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEditarColor.Location = new System.Drawing.Point(197, 110);
             this.btnEditarColor.Name = "btnEditarColor";
@@ -324,7 +324,7 @@
             // 
             this.btnAgregarColor.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarColor.Location = new System.Drawing.Point(34, 110);
             this.btnAgregarColor.Name = "btnAgregarColor";

@@ -161,7 +161,7 @@
             // 
             this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarModelo.Location = new System.Drawing.Point(25, 31);
             this.btnAgregarModelo.Name = "btnAgregarModelo";
@@ -175,7 +175,7 @@
             // 
             this.btnAgregarColorTalla.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarColorTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarColorTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarColorTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarColorTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregarColorTalla.Location = new System.Drawing.Point(191, 31);
             this.btnAgregarColorTalla.Name = "btnAgregarColorTalla";
@@ -200,11 +200,11 @@
             this.btnTerminar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnTerminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(810, 601);
+            this.btnTerminar.Location = new System.Drawing.Point(845, 601);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(229, 45);
+            this.btnTerminar.Size = new System.Drawing.Size(194, 45);
             this.btnTerminar.TabIndex = 42;
             this.btnTerminar.Text = "Finalizar Pedido";
             this.btnTerminar.UseVisualStyleBackColor = false;
@@ -215,11 +215,11 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelar.Location = new System.Drawing.Point(11, 601);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(190, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(162, 45);
             this.btnCancelar.TabIndex = 52;
             this.btnCancelar.Text = "Cancelar(Esc)";
             this.btnCancelar.UseVisualStyleBackColor = false;

@@ -60,11 +60,11 @@
             this.btnEditarCliente.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarCliente.Enabled = false;
             this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarCliente.Location = new System.Drawing.Point(244, 143);
+            this.btnEditarCliente.Location = new System.Drawing.Point(211, 143);
             this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(180, 45);
+            this.btnEditarCliente.Size = new System.Drawing.Size(150, 45);
             this.btnEditarCliente.TabIndex = 31;
             this.btnEditarCliente.Text = "Editar Cliente";
             this.btnEditarCliente.UseVisualStyleBackColor = false;
@@ -74,11 +74,11 @@
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(31, 143);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(46, 143);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(190, 45);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(149, 45);
             this.btnAgregarCliente.TabIndex = 30;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(35, 91);
+            this.label3.Location = new System.Drawing.Point(17, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 27;
@@ -164,7 +164,7 @@
             // 
             this.txtNombreCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtNombreCliente.Location = new System.Drawing.Point(134, 91);
+            this.txtNombreCliente.Location = new System.Drawing.Point(116, 91);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(268, 29);
             this.txtNombreCliente.TabIndex = 26;
@@ -173,7 +173,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(24, 50);
+            this.label4.Location = new System.Drawing.Point(6, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 25;
@@ -182,7 +182,7 @@
             // txtIDCliente
             // 
             this.txtIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtIDCliente.Location = new System.Drawing.Point(135, 50);
+            this.txtIDCliente.Location = new System.Drawing.Point(117, 50);
             this.txtIDCliente.Name = "txtIDCliente";
             this.txtIDCliente.Size = new System.Drawing.Size(268, 29);
             this.txtIDCliente.TabIndex = 24;
@@ -248,7 +248,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(41, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 247);
+            this.groupBox1.Size = new System.Drawing.Size(406, 247);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
@@ -257,11 +257,11 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(244, 194);
+            this.btnCancelar.Location = new System.Drawing.Point(211, 194);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(180, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(150, 43);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -272,9 +272,9 @@
             // 
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtBuscar.Location = new System.Drawing.Point(574, 265);
+            this.txtBuscar.Location = new System.Drawing.Point(532, 265);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(268, 29);
+            this.txtBuscar.Size = new System.Drawing.Size(311, 29);
             this.txtBuscar.TabIndex = 34;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
@@ -283,7 +283,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(495, 265);
+            this.label1.Location = new System.Drawing.Point(453, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 24);
             this.label1.TabIndex = 35;
@@ -293,7 +293,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(495, 168);
+            this.label2.Location = new System.Drawing.Point(453, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 72);
             this.label2.TabIndex = 36;

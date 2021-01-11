@@ -66,7 +66,7 @@
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(533, 49);
+            this.panelBarras.Size = new System.Drawing.Size(513, 49);
             this.panelBarras.TabIndex = 19;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -86,7 +86,7 @@
             // 
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(474, 1);
+            this.picClose.Location = new System.Drawing.Point(450, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -98,7 +98,7 @@
             // 
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(420, 1);
+            this.picMinimize.Location = new System.Drawing.Point(396, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -110,7 +110,7 @@
             // 
             this.txtIDModelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtIDModelo.Location = new System.Drawing.Point(195, 118);
+            this.txtIDModelo.Location = new System.Drawing.Point(179, 118);
             this.txtIDModelo.Name = "txtIDModelo";
             this.txtIDModelo.Size = new System.Drawing.Size(268, 29);
             this.txtIDModelo.TabIndex = 38;
@@ -119,7 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(71, 118);
+            this.label4.Location = new System.Drawing.Point(55, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 24);
             this.label4.TabIndex = 39;
@@ -129,7 +129,7 @@
             // 
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtColor.Location = new System.Drawing.Point(195, 154);
+            this.txtColor.Location = new System.Drawing.Point(179, 154);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(268, 29);
             this.txtColor.TabIndex = 40;
@@ -138,7 +138,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(111, 158);
+            this.label1.Location = new System.Drawing.Point(95, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 24);
             this.label1.TabIndex = 41;
@@ -148,7 +148,7 @@
             // 
             this.txtTalla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtTalla.Location = new System.Drawing.Point(195, 191);
+            this.txtTalla.Location = new System.Drawing.Point(179, 191);
             this.txtTalla.Name = "txtTalla";
             this.txtTalla.Size = new System.Drawing.Size(268, 29);
             this.txtTalla.TabIndex = 42;
@@ -157,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(116, 194);
+            this.label2.Location = new System.Drawing.Point(100, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 43;
@@ -167,7 +167,7 @@
             // 
             this.txtPrecioCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtPrecioCliente.Location = new System.Drawing.Point(195, 230);
+            this.txtPrecioCliente.Location = new System.Drawing.Point(179, 230);
             this.txtPrecioCliente.Name = "txtPrecioCliente";
             this.txtPrecioCliente.Size = new System.Drawing.Size(268, 29);
             this.txtPrecioCliente.TabIndex = 44;
@@ -177,7 +177,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(39, 231);
+            this.label3.Location = new System.Drawing.Point(23, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 24);
             this.label3.TabIndex = 45;
@@ -187,7 +187,7 @@
             // 
             this.txtPrecioPublico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioPublico.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtPrecioPublico.Location = new System.Drawing.Point(195, 270);
+            this.txtPrecioPublico.Location = new System.Drawing.Point(179, 270);
             this.txtPrecioPublico.Name = "txtPrecioPublico";
             this.txtPrecioPublico.Size = new System.Drawing.Size(268, 29);
             this.txtPrecioPublico.TabIndex = 46;
@@ -197,7 +197,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(34, 272);
+            this.label5.Location = new System.Drawing.Point(18, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 24);
             this.label5.TabIndex = 47;
@@ -208,7 +208,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cobxMarca);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(137, 31);
+            this.groupBox1.Location = new System.Drawing.Point(121, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 76);
             this.groupBox1.TabIndex = 48;
@@ -253,7 +253,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(5, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(516, 341);
+            this.groupBox2.Size = new System.Drawing.Size(493, 341);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Modelo";
@@ -262,11 +262,11 @@
             // 
             this.btnModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnModelo.Location = new System.Drawing.Point(320, 428);
+            this.btnModelo.Location = new System.Drawing.Point(324, 404);
             this.btnModelo.Name = "btnModelo";
-            this.btnModelo.Size = new System.Drawing.Size(190, 45);
+            this.btnModelo.Size = new System.Drawing.Size(174, 45);
             this.btnModelo.TabIndex = 50;
             this.btnModelo.Text = "Agregar Modelo";
             this.btnModelo.UseVisualStyleBackColor = false;
@@ -277,11 +277,11 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 428);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 404);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(190, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(174, 45);
             this.btnCancelar.TabIndex = 51;
             this.btnCancelar.Text = "Cancelar(Esc)";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -293,7 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(533, 485);
+            this.ClientSize = new System.Drawing.Size(513, 464);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModelo);
             this.Controls.Add(this.groupBox2);

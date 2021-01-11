@@ -49,7 +49,7 @@ namespace MultimodeSales.Vistas.Ventas
             this.btnVender.BackColor = System.Drawing.Color.SlateBlue;
             this.btnVender.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnVender.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnVender.Location = new System.Drawing.Point(341, 307);
             this.btnVender.Name = "btnVender";
@@ -63,7 +63,7 @@ namespace MultimodeSales.Vistas.Ventas
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelar.Location = new System.Drawing.Point(12, 307);
             this.btnCancelar.Name = "btnCancelar";

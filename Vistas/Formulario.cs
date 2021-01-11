@@ -102,7 +102,7 @@ namespace MultimodeSales
         #region picPedidos Final
         private void picPedidosFinal_Click(object sender, EventArgs e)
         {
-            PedidosFinal pedidosFinal = new PedidosFinal();
+            PedidosFinal pedidosFinal = new PedidosFinal(false);
             pedidosFinal.Show();
         }
 
@@ -121,7 +121,7 @@ namespace MultimodeSales
         #region picModelos
         private void picModelos_Click(object sender, EventArgs e)
         {
-            Modeloss modelos = new Modeloss();
+            Modeloss modelos = new Modeloss(false);
             modelos.ShowDialog();
         }
         private void picModelos_MouseEnter(object sender, EventArgs e)

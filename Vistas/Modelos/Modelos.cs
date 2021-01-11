@@ -18,8 +18,9 @@ namespace MultimodeSales.Vistas
         private int MX;
         private int MY;
         private int count = 0, opcion = 1;
-        private bool stop = false;
-        public Modeloss()
+        private bool stop = false, activateCellClick = false;
+        Modelo modelo = new Modelo();
+        public Modeloss(bool pactiveCellClick)
         {
             InitializeComponent();
             cDataGrid.FormattingDataGridView(dgvModelos);
@@ -36,6 +37,7 @@ namespace MultimodeSales.Vistas
             Data.Columns.Add("PrecioCliente");
             Data.Columns.Add("Fecha");
             CargarModelos();
+            activateCellClick = pactiveCellClick;
         }
         private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
         {
@@ -137,6 +139,23 @@ namespace MultimodeSales.Vistas
         {
             dgvModelos.DataSource = null;
             Data.Clear();
+        }
+
+        private void dgvModelos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(activateCellClick)
+            {
+                modelo.IDModelo = dgvModelos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                modelo.IDMarca = dgvModelos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                modelo.Color = dgvModelos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                modelo.Talla = dgvModelos.Rows[e.RowIndex].Cells[4].Value.ToString();
+                modelo.PrecioCliente = dgvModelos.Rows[e.RowIndex].Cells[5].Value.ToString();
+                Close();
+            }
+        }
+        public Modelo returnModelo()
+        {
+            return modelo;
         }
         #region Panel Barras
         private void panelBarras_MouseMove(object sender, MouseEventArgs e)

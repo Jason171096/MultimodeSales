@@ -139,11 +139,11 @@
             // 
             this.btnCargar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCargar.Location = new System.Drawing.Point(185, 33);
+            this.btnCargar.Location = new System.Drawing.Point(168, 36);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(202, 34);
+            this.btnCargar.Size = new System.Drawing.Size(174, 34);
             this.btnCargar.TabIndex = 24;
             this.btnCargar.Text = "Cargar Lista";
             this.btnCargar.UseVisualStyleBackColor = false;
@@ -153,11 +153,11 @@
             // 
             this.btnImportar.BackColor = System.Drawing.Color.SlateBlue;
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnImportar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImportar.Location = new System.Drawing.Point(231, 29);
+            this.btnImportar.Location = new System.Drawing.Point(226, 29);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(182, 41);
+            this.btnImportar.Size = new System.Drawing.Size(157, 41);
             this.btnImportar.TabIndex = 25;
             this.btnImportar.Text = "Importar";
             this.btnImportar.UseVisualStyleBackColor = false;
@@ -232,9 +232,9 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(17, 595);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 616);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(205, 46);
             this.btnCancelar.TabIndex = 28;
@@ -247,9 +247,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnCargar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox2.Location = new System.Drawing.Point(407, 55);
+            this.groupBox2.Location = new System.Drawing.Point(472, 55);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(429, 90);
+            this.groupBox2.Size = new System.Drawing.Size(364, 90);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista";
@@ -259,7 +259,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(74, 28);
+            this.label3.Location = new System.Drawing.Point(41, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 48);
             this.label3.TabIndex = 25;
@@ -271,9 +271,9 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btnImportar);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox3.Location = new System.Drawing.Point(389, 571);
+            this.groupBox3.Location = new System.Drawing.Point(431, 571);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 91);
+            this.groupBox3.Size = new System.Drawing.Size(405, 91);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Importar";

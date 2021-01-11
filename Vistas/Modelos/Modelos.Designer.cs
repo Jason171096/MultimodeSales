@@ -109,6 +109,7 @@
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModelos.Size = new System.Drawing.Size(1002, 404);
             this.dgvModelos.TabIndex = 7;
+            this.dgvModelos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModelos_CellDoubleClick);
             this.dgvModelos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModelos_CellFormatting);
             this.dgvModelos.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvModelos_Scroll);
             // 
@@ -177,11 +178,11 @@
             // 
             this.btnEditarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnEditarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarModelo.Location = new System.Drawing.Point(316, 86);
+            this.btnEditarModelo.Location = new System.Drawing.Point(331, 86);
             this.btnEditarModelo.Name = "btnEditarModelo";
-            this.btnEditarModelo.Size = new System.Drawing.Size(190, 45);
+            this.btnEditarModelo.Size = new System.Drawing.Size(175, 45);
             this.btnEditarModelo.TabIndex = 23;
             this.btnEditarModelo.Text = "Editar Modelo";
             this.btnEditarModelo.UseVisualStyleBackColor = false;
@@ -191,11 +192,11 @@
             // 
             this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
             this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarModelo.Location = new System.Drawing.Point(316, 27);
+            this.btnAgregarModelo.Location = new System.Drawing.Point(331, 27);
             this.btnAgregarModelo.Name = "btnAgregarModelo";
-            this.btnAgregarModelo.Size = new System.Drawing.Size(190, 45);
+            this.btnAgregarModelo.Size = new System.Drawing.Size(175, 45);
             this.btnAgregarModelo.TabIndex = 24;
             this.btnAgregarModelo.Text = "Agregar Modelo";
             this.btnAgregarModelo.UseVisualStyleBackColor = false;
