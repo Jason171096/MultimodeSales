@@ -76,6 +76,10 @@
             this.content8 = new System.Windows.Forms.Panel();
             this.content9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.picStock = new System.Windows.Forms.PictureBox();
+            this.btnStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
@@ -100,6 +104,8 @@
             this.content8.SuspendLayout();
             this.content9.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCliente
@@ -624,6 +630,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.content1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.content2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.content3, 2, 0);
@@ -641,6 +648,47 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
             this.tableLayoutPanel1.TabIndex = 43;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.picStock);
+            this.panel2.Controls.Add(this.btnStock);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 377);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(217, 181);
+            this.panel2.TabIndex = 43;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Purple;
+            this.panel3.Location = new System.Drawing.Point(35, 147);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(150, 7);
+            this.panel3.TabIndex = 30;
+            // 
+            // picStock
+            // 
+            this.picStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picStock.Image = global::MultimodeSales.Properties.Resources.packages_128px;
+            this.picStock.Location = new System.Drawing.Point(35, 0);
+            this.picStock.Name = "picStock";
+            this.picStock.Size = new System.Drawing.Size(150, 155);
+            this.picStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picStock.TabIndex = 31;
+            this.picStock.TabStop = false;
+            this.picStock.Click += new System.EventHandler(this.picStock_Click);
+            // 
+            // btnStock
+            // 
+            this.btnStock.AutoSize = true;
+            this.btnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnStock.Location = new System.Drawing.Point(83, 158);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(55, 20);
+            this.btnStock.TabIndex = 32;
+            this.btnStock.Text = "Stock";
             // 
             // Formulario
             // 
@@ -691,6 +739,9 @@
             this.content9.ResumeLayout(false);
             this.content9.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -744,6 +795,10 @@
         private System.Windows.Forms.Panel content9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Pabo.Calendar.MonthCalendar monthCalendarForm;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox picStock;
+        private System.Windows.Forms.Label btnStock;
     }
 }
 

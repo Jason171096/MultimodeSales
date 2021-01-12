@@ -254,5 +254,10 @@ namespace MultimodeSales
 
 
         #endregion
+
+        private void picStock_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

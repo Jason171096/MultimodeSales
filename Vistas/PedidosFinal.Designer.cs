@@ -105,6 +105,7 @@
             this.dgvPedidosFinal.Size = new System.Drawing.Size(1209, 408);
             this.dgvPedidosFinal.TabIndex = 7;
             this.dgvPedidosFinal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidosFinal_CellDoubleClick);
+            this.dgvPedidosFinal.Sorted += new System.EventHandler(this.dgvPedidosFinal_Sorted);
             this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
             // rbtnFecha

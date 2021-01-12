@@ -253,6 +253,12 @@
     <Compile Include="Vistas\TallasyColores.Designer.cs">
       <DependentUpon>TallasyColores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Ventas\Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ventas\Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Ventas\Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TallasyColores.resx">
       <DependentUpon>TallasyColores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ventas\Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Ventas\Venta.resx">
       <DependentUpon>Venta.cs</DependentUpon>
@@ -394,6 +403,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\return128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packages_128px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

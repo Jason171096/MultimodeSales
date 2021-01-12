@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using excel = Microsoft.Office.Interop.Excel;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;
-using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales.Vistas
 {
@@ -92,15 +91,7 @@ namespace MultimodeSales.Vistas
             dgvPedidosFinal.DataSource = null;
             dt = listaPedidosFinal.ObtenerListaPedidosFinal();
             dgvPedidosFinal.DataSource = dt;
-            
-            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
-            {
-                if(rows.Cells[8].Value.ToString() == "1")
-                {
-                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.BackColor = Color.YellowGreen;
-                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                }
-            }
+            paintRows();
             DarFormatoTabla();
             dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
         }
@@ -114,13 +105,13 @@ namespace MultimodeSales.Vistas
             dgvPedidosFinal.Columns[2].HeaderText = "Nombre Cliente";
             dgvPedidosFinal.Columns[3].Width = 150;//IDModelo
             dgvPedidosFinal.Columns[3].HeaderText = "ID Modelo";
-            dgvPedidosFinal.Columns[4].Width = 150;//Color
-            dgvPedidosFinal.Columns[5].Width = 150;//Talla
-            dgvPedidosFinal.Columns[6].Width = 170;//PrecioCliente
-            dgvPedidosFinal.Columns[6].HeaderText = "Precio Cliente";
-            dgvPedidosFinal.Columns[7].Width = 250;//Fecha
-            dgvPedidosFinal.Columns[0].Visible = false;
-            dgvPedidosFinal.Columns[8].Visible = false;
+            dgvPedidosFinal.Columns[4].Width = 150;//Marca
+            dgvPedidosFinal.Columns[5].Width = 150;//Color
+            dgvPedidosFinal.Columns[6].Width = 150;//Talla
+            dgvPedidosFinal.Columns[7].Width = 170;//PrecioCliente
+            dgvPedidosFinal.Columns[8].Width = 250;//Fecha
+            dgvPedidosFinal.Columns[0].Visible = false;//IDPedido
+            dgvPedidosFinal.Columns[9].Visible = false;//Llego
         }
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
@@ -144,8 +135,11 @@ namespace MultimodeSales.Vistas
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
                 if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
-                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value + "");
+                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value.ToString(), "1");
+                else
+                    listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value.ToString(), "0");
             }
+            MessageBox.Show("¡EXITO!", "¡Pedido actualizado con exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
@@ -179,7 +173,7 @@ namespace MultimodeSales.Vistas
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error al abrir Excel" + ex.Message);
             }
             finally
             {
@@ -227,7 +221,11 @@ namespace MultimodeSales.Vistas
             Close();
         }
         #endregion
-
+        private void dgvPedidosFinal_Sorted(object sender, EventArgs e)
+        {
+            if (rbtnTodos.Checked)
+                paintRows();
+        }
         private void dgvPedidosFinal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (activeCellClick)
@@ -240,10 +238,24 @@ namespace MultimodeSales.Vistas
                 Close();
             } 
         }
+
+        private void paintRows()
+        {
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            {
+                if (rows.Cells[9].Value.ToString() == "1")
+                {
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.BackColor = Color.YellowGreen;
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                }
+            }
+        }
         public Modelo returnModelo()
         {
             return modelo;
         }
+
+       
     }
 }
 

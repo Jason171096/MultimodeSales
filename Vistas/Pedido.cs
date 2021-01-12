@@ -94,7 +94,7 @@ namespace MultimodeSales.Vistas
                         pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
                     }                 
                 }
-                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
                 MessageBox.Show("Seleccione Cliente", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -127,7 +127,7 @@ namespace MultimodeSales.Vistas
             {
                 if (e.ColumnIndex == 5)
                 {
-                    if (!dgvPedido.Rows[e.RowIndex].Cells[0].Value.Equals(""))
+                    if (dgvPedido.Rows[e.RowIndex].Cells[0].Value != null)
                         pedido.EliminarPedido(dgvPedido.Rows[e.RowIndex].Cells[0].Value + "");
                     dgvPedido.Rows.Remove(dgvPedido.Rows[e.RowIndex]);
                 }

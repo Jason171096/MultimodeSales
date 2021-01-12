@@ -323,6 +323,7 @@
             this.btnSelTodo.TabIndex = 64;
             this.btnSelTodo.Text = "Sel. Todo";
             this.btnSelTodo.UseVisualStyleBackColor = false;
+            this.btnSelTodo.Click += new System.EventHandler(this.btnSelTodo_Click);
             // 
             // Venta
             // 

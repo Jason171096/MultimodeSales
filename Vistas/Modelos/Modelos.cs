@@ -48,7 +48,7 @@ namespace MultimodeSales.Vistas
                 dtpFecha.Enabled = false;
                 txtBuscarModelo.Enabled = true;
                 opcion = 1;
-                //CargarModelos();
+                CargarModelos();
             }
             else if (rb.Checked && rb.TabIndex == 12)
             {//RadioButtonFecha
@@ -56,7 +56,7 @@ namespace MultimodeSales.Vistas
                 txtBuscarModelo.Enabled = false;
                 dtpFecha.Enabled = true;
                 opcion = 2;
-                //CargarModelos();
+                CargarModelos();
             }
         }
         private void CargarModelos()

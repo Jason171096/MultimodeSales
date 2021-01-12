@@ -43,6 +43,7 @@ namespace MultimodeSales.Vistas.Ventas
                 CargarPedidos(idcliente);
             }
             SelectIndexChange = true;
+            borrarLabels();
         }
         private void CargarPedidos(string idcliente)
         {
@@ -55,36 +56,37 @@ namespace MultimodeSales.Vistas.Ventas
         {
             string lbprecioTotal = lbTotal.Text.Trim('$');
             string cantidad = lbCantidad.Text;
+            string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
             if (e.KeyCode == Keys.Enter)
             {
                 if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
-                    ActualizarLabels(1, lbprecioTotal, cantidad);
+                    ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
                 }
                 else
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                    ActualizarLabels(2, lbprecioTotal, cantidad);
+                    ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
                 }
                 
             }
         }
-        private void ActualizarLabels(int sumaoresta, string lbprecio, string cantidad)
+        private void ActualizarLabels(int pSumaoResta, string plbPrecio, string pCantidad, string pPrecioCliente)
         {
-            int totalCantidad = int.Parse(cantidad);
-            float precioCliente = float.Parse(dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString().Trim('$'));
+            int totalCantidad = int.Parse(pCantidad);
+            float precioCliente = float.Parse(pPrecioCliente.Trim('$'));
             float totalPrecio;
-            if(sumaoresta == 1)
+            if(pSumaoResta == 1)
             {
-                totalPrecio = float.Parse(lbprecio) - precioCliente;
+                totalPrecio = float.Parse(plbPrecio) - precioCliente;
                 totalCantidad--;
             }
             else
             {    
-                totalPrecio = float.Parse(lbprecio) + precioCliente;
+                totalPrecio = float.Parse(plbPrecio) + precioCliente;
                 totalCantidad++;
             }
             lbTotal.Text = string.Format("{0:C}", totalPrecio);
@@ -157,6 +159,25 @@ namespace MultimodeSales.Vistas.Ventas
                 dgvPedidosFinal.DataSource = null;
                 dgvPedidosFinal.DataSource = dtPedidos;
             }
+        }
+
+        private void btnSelTodo_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            {
+                if (rows.DefaultCellStyle.BackColor != Color.YellowGreen)
+                {
+                    rows.DefaultCellStyle.BackColor = Color.YellowGreen;
+                    rows.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                    ActualizarLabels(2, lbTotal.Text.ToString().Trim('$'), lbCantidad.Text, rows.Cells[4].Value.ToString());
+                }
+            }
+        }
+
+        private void borrarLabels()
+        {
+            lbCantidad.Text = "0";
+            lbTotal.Text = "$0.00";
         }
     }
 }
