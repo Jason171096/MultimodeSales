@@ -48,7 +48,7 @@
             this.btnAgregarPedido = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAgregarModelo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFolio = new System.Windows.Forms.TextBox();
             this.btnSelTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -302,13 +302,13 @@
             this.btnAgregarModelo.UseVisualStyleBackColor = false;
             this.btnAgregarModelo.Click += new System.EventHandler(this.btnAgregarModelo_Click);
             // 
-            // textBox1
+            // txtFolio
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(561, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 29);
-            this.textBox1.TabIndex = 63;
+            this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.txtFolio.Location = new System.Drawing.Point(561, 96);
+            this.txtFolio.Name = "txtFolio";
+            this.txtFolio.Size = new System.Drawing.Size(248, 29);
+            this.txtFolio.TabIndex = 63;
             // 
             // btnSelTodo
             // 
@@ -332,7 +332,7 @@
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(821, 596);
             this.Controls.Add(this.btnSelTodo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.btnAgregarModelo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAgregarPedido);
@@ -378,7 +378,7 @@
         private System.Windows.Forms.Button btnAgregarPedido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregarModelo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Button btnSelTodo;
     }
 }

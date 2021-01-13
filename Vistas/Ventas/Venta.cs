@@ -54,11 +54,11 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
-            string lbprecioTotal = lbTotal.Text.Trim('$');
-            string cantidad = lbCantidad.Text;
-            string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
             if (e.KeyCode == Keys.Enter)
             {
+                string lbprecioTotal = lbTotal.Text.Trim('$');
+                string cantidad = lbCantidad.Text;
+                string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
                 if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
                 {
                     dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
@@ -95,46 +95,30 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            DialogVenta dialog = new DialogVenta(lbTotal.Text);
-            dialog.ShowDialog();
-        }
-
-        #region Panel Barras
-        private void lbVentas_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMove(sender, e);
-        }
-
-        private void panelVentas_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMove(sender, e);
-        }
-
-        private new void MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
+            int cont = 0;
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
-                MX = e.X;
-                MY = e.Y;
+                if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
+                    cont++;
+            }
+            if(cboxCliente.SelectedIndex != cboxCliente.Items.Count - 1)
+            {
+                if(txtFolio.Text != "")
+                {
+                    if(cont >= 1)
+                    {
+                        DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
+                        dialog.ShowDialog();
+                    }
+                    else
+                        MessageBox.Show("Seleccionar un articulo", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    MessageBox.Show("No dejar el folio vacio", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {
-                Left = Left + (e.X - MX);
-                Top = Top + (e.Y - MY);
-            }
+                MessageBox.Show("Seleccionar un cliente", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        private void picMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        #endregion
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             PedidosFinal final = new PedidosFinal(true);
@@ -179,5 +163,43 @@ namespace MultimodeSales.Vistas.Ventas
             lbCantidad.Text = "0";
             lbTotal.Text = "$0.00";
         }
+
+        #region Panel Barras
+        private void lbVentas_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void panelVentas_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+       
     }
 }

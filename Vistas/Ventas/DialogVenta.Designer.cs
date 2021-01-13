@@ -61,6 +61,7 @@ namespace MultimodeSales.Vistas.Ventas
             this.btnVender.TabIndex = 61;
             this.btnVender.Text = "Vender(Enter)";
             this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // btnCancelar
             // 

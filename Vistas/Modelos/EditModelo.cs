@@ -64,7 +64,7 @@ namespace MultimodeSales.Vistas.Modelos
                     }
                     else
                     {
-                        modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text);
+                        modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text.Trim('$'));
                         BorrarDatos();
                     }
                 else

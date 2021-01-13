@@ -14,13 +14,15 @@ namespace MultimodeSales.Vistas.Ventas
 {
     public partial class DialogVenta : Form
     {
+        CVenta venta = new CVenta();
         Validaciones validaciones = new Validaciones();
         
-        string total;
-        public DialogVenta(string pTotal)
+        string total, idfolio;
+        public DialogVenta(string pTotal, string pIDFolio)
         {
             InitializeComponent();
             total = pTotal;
+            idfolio = pIDFolio;
         }
 
         private void DialogVenta_Load(object sender, EventArgs e)
@@ -64,6 +66,11 @@ namespace MultimodeSales.Vistas.Ventas
                     lbCambio.Text = "$0.00";
                 }
             }
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            venta.ventaPedido(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
         }
     }
 }
