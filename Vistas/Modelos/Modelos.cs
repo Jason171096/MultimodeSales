@@ -101,7 +101,7 @@ namespace MultimodeSales.Vistas
                 CargarModelos();
             }
             else
-                MessageBox.Show("Ninguna modelo fue seleccionado para editar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ningun modelo fue seleccionado para editar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {

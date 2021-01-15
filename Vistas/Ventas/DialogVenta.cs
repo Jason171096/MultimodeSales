@@ -49,6 +49,24 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
         {
+            calcularCambio();
+        }
+
+        private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            calcularCambio();
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            if (lbCambio.ForeColor != Color.Red)
+                venta.ventaPedido(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
+            else
+                MessageBox.Show("Ingrese una cantidad", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void calcularCambio()
+        {
             if (!String.IsNullOrWhiteSpace(txtCantidad.Text))
             {
                 double doubleTotal = Double.Parse(total.Replace("$", ""));
@@ -66,11 +84,6 @@ namespace MultimodeSales.Vistas.Ventas
                     lbCambio.Text = "$0.00";
                 }
             }
-        }
-
-        private void btnVender_Click(object sender, EventArgs e)
-        {
-            venta.ventaPedido(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
         }
     }
 }

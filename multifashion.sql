@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-01-2021 a las 05:30:18
--- Versión del servidor: 10.1.32-MariaDB
--- Versión de PHP: 7.2.5
+-- Tiempo de generación: 15-01-2021 a las 23:11:19
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -26,9 +25,9 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarPedidoFinal` (IN `idpedido` INT)  NO SQL
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarPedidoFinal` (IN `idpedido` INT, IN `llego` INT)  NO SQL
 BEGIN
-	UPDATE pedidos SET Llego = 1 WHERE pedidos.IDPedido = idpedido;
+	UPDATE pedidos SET Llego = llego WHERE pedidos.IDPedido = idpedido;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarCliente` (IN `idcliente` BIGINT, IN `nombre` VARCHAR(50))  NO SQL
@@ -121,6 +120,22 @@ BEGIN
 	DELETE FROM pedidos WHERE pedidos.IDPedido = idpedido;
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `FolioExistente` (IN `idfolio` BIGINT)  NO SQL
+BEGIN
+	SET @var := (SELECT * FROM folio WHERE folio.IDFolio = idfolio);
+    IF(@var = idfolio) THEN
+    	SELECT 1;
+    ELSE
+    	SELECT 0;
+    END IF;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `VentaPedido` (IN `idfolio` BIGINT, IN `fecha` DATETIME, IN `total` DECIMAL(10,2))  NO SQL
+BEGIN
+	INSERT INTO folio(folio.IDFolio) VALUES (idfolio);
+	INSERT INTO venta(venta.IDFolio, venta.Fecha, venta.Total) VALUES (idfolio, fecha, total);
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerClientes` ()  READS SQL DATA
 BEGIN
 	SELECT IDCliente, Nombre FROM clientes;
@@ -133,7 +148,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerClientesPedidoLlego` (IN `idcliente` BIGINT)  NO SQL
 BEGIN
-	SELECT p.IDModelo AS 'ID Modelo', m.Nombre, p.Color, p.Talla, CONCAT('$', FORMAT(mo.PrecioCliente, 2)) AS 'Precio Cliente' FROM pedidos AS p INNER JOIN modelos AS mo USING(IDModelo) INNER JOIN marca AS m USING(IDMarca) WHERE p.IDCliente = idcliente AND p.Llego = 1;
+	SELECT p.IDModelo AS 'ID Modelo', m.Nombre AS 'Marca', p.Color, p.Talla, CONCAT('$', FORMAT(mo.PrecioCliente, 2)) AS 'Precio Cliente' FROM pedidos AS p INNER JOIN modelos AS mo USING(IDModelo) INNER JOIN marca AS m USING(IDMarca) WHERE p.IDCliente = idcliente AND p.Llego = 1;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VerColores` ()  READS SQL DATA
@@ -293,6 +308,27 @@ INSERT INTO `color` (`IDColor`, `Nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `folio`
+--
+
+CREATE TABLE `folio` (
+  `IDFolio` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `folio`
+--
+
+INSERT INTO `folio` (`IDFolio`) VALUES
+(1),
+(12),
+(13),
+(14),
+(500);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `marca`
 --
 
@@ -355,8 +391,9 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('115', 7, 'VIOLETA', 'XG', '748.25', NULL, '2020-10-13 23:35:15'),
 ('116', 7, 'AZUL', '22', '764.80', NULL, '2020-10-13 23:35:15'),
 ('117', 7, 'AMARILLO', '23', '781.35', NULL, '2020-10-13 23:35:15'),
-('118', 3, 'NEGRO', '24', '0.00', NULL, '2020-10-13 23:35:15'),
+('118', 3, 'NEGRO', '24', '4000.00', NULL, '2020-10-13 23:35:15'),
 ('119', 7, 'VIOLETA', '25', '814.45', NULL, '2020-10-13 23:35:15'),
+('12', 6, '', '', '0.00', NULL, '2021-01-15 10:25:17'),
 ('120', 7, 'AZUL', 'M', '831.00', NULL, '2020-10-13 23:35:15'),
 ('121', 7, 'AMARILLO', 'CH', '847.55', NULL, '2020-10-13 23:35:16'),
 ('122', 7, 'NEGRO', 'T', '864.10', NULL, '2020-10-13 23:35:16'),
@@ -539,7 +576,7 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('297', 7, 'AMARILLO', 'CH', '3760.35', NULL, '2020-10-13 23:35:28'),
 ('298', 7, 'NEGRO', 'T', '3776.90', NULL, '2020-10-13 23:35:28'),
 ('299', 7, 'VIOLETA', 'XG', '3793.45', NULL, '2020-10-13 23:35:28'),
-('3', 3, 'MARINO', '22', '0.00', NULL, '2020-10-13 23:04:43'),
+('3', 3, 'MARINO', '22', '392.50', NULL, '2020-10-13 23:04:43'),
 ('300', 7, 'AZUL', '22', '3810.00', NULL, '2020-10-13 23:35:28'),
 ('301', 7, 'AMARILLO', '23', '3826.55', NULL, '2020-10-13 23:35:28'),
 ('302', 7, 'NEGRO', '24', '3843.10', NULL, '2020-10-13 23:35:28'),
@@ -590,7 +627,7 @@ INSERT INTO `modelos` (`IDModelo`, `IDMarca`, `Color`, `Talla`, `PrecioCliente`,
 ('347', 7, 'VIOLETA', 'XG', '4587.85', NULL, '2020-10-13 23:35:30'),
 ('348', 7, 'AZUL', '22', '4604.40', NULL, '2020-10-13 23:35:30'),
 ('349', 7, 'AMARILLO', '23', '4620.95', NULL, '2020-10-13 23:35:30'),
-('35', 3, 'MARINO', '25', '0.00', NULL, '2020-10-13 23:19:05'),
+('35', 3, 'MARINO', '25', '200.00', NULL, '2020-10-13 23:19:05'),
 ('350', 7, 'NEGRO', '24', '4637.50', NULL, '2020-10-13 23:35:30'),
 ('351', 7, 'VIOLETA', '25', '4654.05', NULL, '2020-10-13 23:35:30'),
 ('352', 7, 'AZUL', 'M', '4670.60', NULL, '2020-10-13 23:35:30'),
@@ -673,16 +710,42 @@ CREATE TABLE `pedidos` (
 INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `Fecha`, `Llego`) VALUES
 (1, '112', 1, 'MORADO', 'G', '2020-10-19 17:13:56', b'1'),
 (2, '115', 1, 'VERDE', '18', '2020-10-19 17:13:56', b'0'),
-(3, '346', 1, 'TURQUESA', 'CH', '2020-10-19 17:13:56', b'0'),
+(3, '346', 1, 'TURQUESA', 'CH', '2020-10-19 17:13:56', b'1'),
 (4, '2', 1, 'ROJO', 'XG', '2020-10-19 17:13:56', b'1'),
-(8, '111', 101, 'MORADO', 'XG', '2020-11-10 09:34:21', b'0'),
-(9, '132', 101, 'AMARILLLO', 'M', '2020-11-10 09:34:21', b'0'),
+(8, '111', 101, 'MORADO', 'XG', '2021-01-15 10:29:53', b'1'),
+(9, '132', 101, 'AMARILLLO', 'M', '2021-01-15 10:29:53', b'1'),
 (12, '2', 31, 'AMARILLLO', '17', '2020-10-19 10:57:49', b'0'),
-(13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'1'),
-(14, '10001', 31, 'ROJO', '17', '2020-10-19 10:57:49', b'0'),
+(13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'0'),
+(14, '10001', 31, 'ROJO', '17', '2020-10-19 10:57:49', b'1'),
 (15, '35', 31, 'TURQUESA', 'CH', '2020-10-19 10:57:49', b'1'),
 (16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'1'),
-(17, '150', 101, 'AZUL', '18', '2020-11-10 09:34:21', b'0');
+(17, '150', 101, 'AZUL', '18', '2021-01-15 10:29:53', b'1'),
+(18, '135', 100, 'AMARILLLO', 'XG', '2021-01-12 16:46:20', b'0'),
+(20, '109', 100, 'NEGRO', 'M', '2021-01-12 16:46:20', b'0'),
+(21, '200', 100, 'VERDE', '18', '2021-01-12 16:46:20', b'0'),
+(22, '109', 100, 'AMARILLLO', 'XG', '2021-01-12 16:46:20', b'0'),
+(23, '135', 93, 'MORADO', '18', '2021-01-12 16:47:09', b'0'),
+(24, '159', 93, 'AMARILLLO', '22', '2021-01-12 16:47:09', b'0'),
+(25, '214', 93, 'AZUL', 'M', '2021-01-12 16:47:09', b'0'),
+(26, '241', 93, 'VERDE', 'G', '2021-01-12 16:47:09', b'0'),
+(27, '332', 93, 'VERDE', 'G', '2021-01-12 16:47:09', b'0'),
+(28, '353', 87, 'NEGRO', 'XG', '2021-01-12 16:47:57', b'0'),
+(29, '376', 87, 'NEGRO', '22', '2021-01-12 16:47:57', b'0'),
+(30, '95184', 87, 'AZUL', '22', '2021-01-12 16:47:57', b'0'),
+(31, '4', 67, 'AMARILLLO', '17', '2021-01-12 16:49:00', b'0'),
+(32, '3', 67, 'AZUL', '18', '2021-01-12 16:49:00', b'0'),
+(33, '8', 67, 'AMARILLLO', '22', '2021-01-12 16:49:00', b'0'),
+(34, '95184', 67, 'VERDE', '17', '2021-01-12 16:49:00', b'0'),
+(35, '4', 67, 'VERDE', '17', '2021-01-12 16:49:00', b'0'),
+(36, '291', 67, 'ROJO', '18', '2021-01-12 16:49:00', b'0'),
+(37, '111', 32, 'MORADO', 'CH', '2021-01-12 16:50:09', b'0'),
+(38, '132', 32, 'ROJO', 'CH', '2021-01-12 16:50:09', b'0'),
+(39, '152', 32, 'ROJO', 'CH', '2021-01-12 16:50:09', b'0'),
+(40, '211', 32, 'TURQUESA', 'CH', '2021-01-12 16:50:09', b'0'),
+(41, '182', 32, 'VERDE', 'CH', '2021-01-12 16:50:09', b'0'),
+(42, '256', 101, 'AMARILLLO', '', '2021-01-15 10:29:53', b'0'),
+(43, '377', 101, '', '', '2021-01-15 10:29:53', b'0'),
+(44, '12', 101, '', '', '2021-01-15 10:29:53', b'0');
 
 -- --------------------------------------------------------
 
@@ -736,9 +799,21 @@ INSERT INTO `usuario` (`IDUsuario`, `Nombre`, `Contrasena`, `EsAdmin`) VALUES
 
 CREATE TABLE `venta` (
   `IDVenta` bigint(20) NOT NULL,
+  `IDFolio` bigint(11) NOT NULL,
   `Fecha` datetime NOT NULL,
   `Total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`IDVenta`, `IDFolio`, `Fecha`, `Total`) VALUES
+(12, 12, '2021-01-14 09:30:12', '3039.15'),
+(13, 500, '2021-01-14 16:32:32', '3039.15'),
+(14, 1, '2021-01-14 17:12:46', '3039.15'),
+(15, 13, '2021-01-14 17:13:59', '3039.15'),
+(16, 14, '2021-01-14 17:14:47', '3039.15');
 
 -- --------------------------------------------------------
 
@@ -767,6 +842,12 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `color`
   ADD PRIMARY KEY (`IDColor`);
+
+--
+-- Indices de la tabla `folio`
+--
+ALTER TABLE `folio`
+  ADD PRIMARY KEY (`IDFolio`);
 
 --
 -- Indices de la tabla `marca`
@@ -805,7 +886,15 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `venta`
 --
 ALTER TABLE `venta`
-  ADD PRIMARY KEY (`IDVenta`);
+  ADD PRIMARY KEY (`IDVenta`),
+  ADD KEY `IDFolio` (`IDFolio`);
+
+--
+-- Indices de la tabla `venta_pedidos`
+--
+ALTER TABLE `venta_pedidos`
+  ADD KEY `IDPedido` (`IDPedido`),
+  ADD KEY `IDVenta` (`IDVenta`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -827,7 +916,7 @@ ALTER TABLE `color`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `talla`
@@ -845,7 +934,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
@@ -863,6 +952,19 @@ ALTER TABLE `modelos`
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`IDModelo`) REFERENCES `modelos` (`IDModelo`),
   ADD CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`IDCliente`) REFERENCES `clientes` (`IDCliente`);
+
+--
+-- Filtros para la tabla `venta`
+--
+ALTER TABLE `venta`
+  ADD CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`IDFolio`) REFERENCES `folio` (`IDFolio`);
+
+--
+-- Filtros para la tabla `venta_pedidos`
+--
+ALTER TABLE `venta_pedidos`
+  ADD CONSTRAINT `venta_pedidos_ibfk_1` FOREIGN KEY (`IDPedido`) REFERENCES `pedidos` (`IDPedido`),
+  ADD CONSTRAINT `venta_pedidos_ibfk_2` FOREIGN KEY (`IDVenta`) REFERENCES `venta` (`IDVenta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

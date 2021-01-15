@@ -54,24 +54,30 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                string lbprecioTotal = lbTotal.Text.Trim('$');
-                string cantidad = lbCantidad.Text;
-                string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
-                if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
-                    ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
+                    string lbprecioTotal = lbTotal.Text.Trim('$');
+                    string cantidad = lbCantidad.Text;
+                    string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
+                    if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                    {
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
+                        ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
+                    }
+                    else
+                    {
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                        ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
+                    }
                 }
-                else
-                {
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                    ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
-                }
-                
+            }
+            catch
+            {
+                MessageBox.Show("Error al seleccionar un modelo", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void ActualizarLabels(int pSumaoResta, string plbPrecio, string pCantidad, string pPrecioCliente)
@@ -95,6 +101,7 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void btnVender_Click(object sender, EventArgs e)
         {
+            CVenta venta = new CVenta();
             int cont = 0;
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
@@ -107,8 +114,14 @@ namespace MultimodeSales.Vistas.Ventas
                 {
                     if(cont >= 1)
                     {
-                        DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
-                        dialog.ShowDialog();
+                        int idfolio = venta.verificarFolioExistente(txtFolio.Text);
+                        if (idfolio == 1)
+                            MessageBox.Show("Folio existente", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        else 
+                        {
+                            DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
+                            dialog.ShowDialog();
+                        }   
                     }
                     else
                         MessageBox.Show("Seleccionar un articulo", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);

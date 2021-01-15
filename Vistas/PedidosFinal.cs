@@ -139,7 +139,7 @@ namespace MultimodeSales.Vistas
                 else
                     listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value.ToString(), "0");
             }
-            MessageBox.Show("¡EXITO!", "¡Pedido actualizado con exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("¡Pedido actualizado con exito!","¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnExportExcel_Click(object sender, EventArgs e)
         {

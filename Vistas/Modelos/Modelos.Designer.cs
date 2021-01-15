@@ -86,7 +86,7 @@
             this.dgvModelos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvModelos.EnableHeadersVisualStyles = false;
             this.dgvModelos.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvModelos.Location = new System.Drawing.Point(12, 208);
+            this.dgvModelos.Location = new System.Drawing.Point(12, 192);
             this.dgvModelos.Name = "dgvModelos";
             this.dgvModelos.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -107,7 +107,7 @@
             this.dgvModelos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvModelos.RowTemplate.Height = 30;
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModelos.Size = new System.Drawing.Size(1002, 404);
+            this.dgvModelos.Size = new System.Drawing.Size(1002, 397);
             this.dgvModelos.TabIndex = 7;
             this.dgvModelos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModelos_CellDoubleClick);
             this.dgvModelos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModelos_CellFormatting);
@@ -122,7 +122,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(9, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 147);
+            this.groupBox1.Size = new System.Drawing.Size(422, 131);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
@@ -180,7 +180,7 @@
             this.btnEditarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarModelo.Location = new System.Drawing.Point(331, 86);
+            this.btnEditarModelo.Location = new System.Drawing.Point(331, 71);
             this.btnEditarModelo.Name = "btnEditarModelo";
             this.btnEditarModelo.Size = new System.Drawing.Size(175, 45);
             this.btnEditarModelo.TabIndex = 23;
@@ -194,7 +194,7 @@
             this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarModelo.Location = new System.Drawing.Point(331, 27);
+            this.btnAgregarModelo.Location = new System.Drawing.Point(331, 23);
             this.btnAgregarModelo.Name = "btnAgregarModelo";
             this.btnAgregarModelo.Size = new System.Drawing.Size(175, 45);
             this.btnAgregarModelo.TabIndex = 24;
@@ -210,7 +210,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(437, 55);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(527, 147);
+            this.groupBox2.Size = new System.Drawing.Size(527, 131);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar o Editar";
@@ -283,7 +283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1026, 624);
+            this.ClientSize = new System.Drawing.Size(1026, 601);
             this.Controls.Add(this.panelBarras);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

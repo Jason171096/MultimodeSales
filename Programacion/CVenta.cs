@@ -26,5 +26,18 @@ namespace MultimodeSales
             MessageBox.Show("Venta concluida", "¡Exito!", MessageBoxButton.OK, MessageBoxImage.Information);
             cmd.Connection.Close();
         }
+
+        public int verificarFolioExistente(string pIDFolio)
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("FolioExistente", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
+            object existeFolio = cmd.ExecuteScalar();
+            if (Convert.ToInt32(existeFolio) == 1)
+                return 1;
+            cmd.Connection.Close();
+            return 0;
+        }
     }
 }
