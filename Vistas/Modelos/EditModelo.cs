@@ -1,6 +1,7 @@
 ﻿using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Marca;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -65,13 +66,14 @@ namespace MultimodeSales.Vistas.Modelos
                     else
                     {
                         modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text.Trim('$'));
+                        CMsgBox.DisplayInfo("Modelo editado correctamente");
                         BorrarDatos();
                     }
                 else
-                    MessageBox.Show("Por favor de escoger la marca para el modelo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CMsgBox.DisplayWarning("Por favor de escoger la marca para el modelo");
             }
             else
-                MessageBox.Show("Por favor de rellenar los espacios", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("Por favor de rellenar los espacios");
         }
         private void BorrarDatos() 
         {

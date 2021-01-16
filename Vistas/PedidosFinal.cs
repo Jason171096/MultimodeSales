@@ -89,11 +89,12 @@ namespace MultimodeSales.Vistas
         private void CargarLista()
         {
             dgvPedidosFinal.DataSource = null;
-            dt = listaPedidosFinal.ObtenerListaPedidosFinal();
+            dt = listaPedidosFinal.ObtenerListaPedidosFinal(txtBuscar.Text);
             dgvPedidosFinal.DataSource = dt;
             paintRows();
             DarFormatoTabla();
-            dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
+           if(dgvPedidosFinal.RowCount >= 1)
+                dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
         }
 
         private void DarFormatoTabla()
@@ -173,7 +174,7 @@ namespace MultimodeSales.Vistas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al abrir Excel" + ex.Message);
+                MessageBox.Show("Error al abrir Excel \n Mensaje: \n" + ex.Message);
             }
             finally
             {
@@ -255,7 +256,10 @@ namespace MultimodeSales.Vistas
             return modelo;
         }
 
-       
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            CargarLista();
+        }
     }
 }
 

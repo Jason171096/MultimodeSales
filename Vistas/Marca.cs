@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using MultimodeSales.Programacion.Marca;
+using MultimodeSales.Programacion.Utilerias;
 
 namespace MultimodeSales.Vistas
 {
@@ -36,7 +37,7 @@ namespace MultimodeSales.Vistas
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtNombreMarca.Text) || String.IsNullOrWhiteSpace(txtIDMarca.Text))
-                MessageBox.Show("No pueden estar los campos vacios de ID de Marca o Nombre", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No pueden estar los campos vacios de ID de Marca o Nombre");
             else
             {
                 int cont = 0;
@@ -46,10 +47,11 @@ namespace MultimodeSales.Vistas
                         cont++;
                 }
                 if (cont >= 1)
-                    MessageBox.Show("No pueden existir dos ID's iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CMsgBox.DisplayWarning("No pueden existir dos ID's iguales, intente con otro ID");
                 else
                 {
                     marca.AgregarMarca(txtIDMarca.Text, txtNombreMarca.Text);
+                    CMsgBox.DisplayConfirmation("Se agrego nueva marca");
                     LlenarDataGridViewMarca();
                 }
             }
@@ -64,13 +66,14 @@ namespace MultimodeSales.Vistas
                         cont++;
             }
             if (cont >= 1)
-                MessageBox.Show("No pueden existir dos marcas con ID's Iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No pueden existir dos marcas con ID's Iguales, intente con otro ID");
             else
             {
                 btnAgregarMarca.Enabled = true;
                 btnEditarMarca.Enabled = false;
                 btnCancelar.Visible = false;
                 marca.EditarMarca(txtIDMarca.Tag + "", txtIDMarca.Text, txtNombreMarca.Text);
+                CMsgBox.DisplayInfo("Se edito la marca correctamente");
                 BorrarDatos();
                 LlenarDataGridViewMarca();
             }

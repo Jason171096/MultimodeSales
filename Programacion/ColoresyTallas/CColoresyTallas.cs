@@ -36,15 +36,15 @@ namespace MultimodeSales.Programacion
             conexion.CloseConnection();
             return dt;
         }
-        public void EditarColoresyTallas(int value, int opcion, int id, string number_name)
+        public void EditarColoresyTallas(int pValue, int pOpcion, int pID, string pNumber_name)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("ColoresyTallas", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new MySqlParameter("valor", value));
-            cmd.Parameters.Add(new MySqlParameter("opcion", opcion));
-            cmd.Parameters.Add(new MySqlParameter("id", id));
-            cmd.Parameters.Add(new MySqlParameter("nn", number_name));
+            cmd.Parameters.Add(new MySqlParameter("valor", pValue));
+            cmd.Parameters.Add(new MySqlParameter("opcion", pOpcion));
+            cmd.Parameters.Add(new MySqlParameter("id", pID));
+            cmd.Parameters.Add(new MySqlParameter("nn", pNumber_name));
             cmd.ExecuteNonQuery();
             conexion.CloseConnection();
         }

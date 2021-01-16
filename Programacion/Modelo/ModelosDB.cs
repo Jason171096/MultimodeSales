@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MultimodeSales.Programacion.Utilerias;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -41,67 +42,37 @@ namespace MultimodeSales.Programacion.Modelo
             conexion.CloseConnection();
             return dt;
         }
-        public void AgregarModelo(string idmodelo, string idmarca, string color, string talla, string preciocliente)
+        public void AgregarModelo(string pIDModelo, string pIDMarca, string pColor, string pTalla, string pPreciCliente)
         {
-            try
-            {
-                conexion.OpenConnection();
-                MySqlCommand cmd = new MySqlCommand("AgregarModelo", conexion.GetConnection());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new MySqlParameter("idmodelo", idmodelo));
-                cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
-                cmd.Parameters.Add(new MySqlParameter("color", color));
-                cmd.Parameters.Add(new MySqlParameter("talla", talla));
-                cmd.Parameters.Add(new MySqlParameter("preciocliente", preciocliente));
-                cmd.ExecuteNonQuery();
-                conexion.CloseConnection();
-                MessageBox.Show("Modelo agregado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show($"Error en subir el modelo {idmodelo} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("AgregarModelo", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idmodelo", pIDModelo));
+            cmd.Parameters.Add(new MySqlParameter("idmarca", pIDMarca));
+            cmd.Parameters.Add(new MySqlParameter("color", pColor));
+            cmd.Parameters.Add(new MySqlParameter("talla", pTalla));
+            cmd.Parameters.Add(new MySqlParameter("preciocliente", pPreciCliente));
+            object existeModelo = cmd.ExecuteScalar();
+            conexion.CloseConnection();
+            if (Convert.ToInt32(existeModelo) != 1)
+                CMsgBox.DisplayInfo("Modelo agregado correctamente");
+            else
+                CMsgBox.DisplayError($"Error en subir el modelo {pIDModelo} ya existe en la BASE de DATOS");
         }
 
-        public void EditarModelo(string idmodeloActual, string idmodelo, string idmarca, string color, string talla, string preciocliente)
+        public void EditarModelo(string pIDModeloActual, string pIDModelo, string pIDMarca, string pColor, string pTalla, string pPrecioCliente)
         {
-            try
-            {
                 conexion.OpenConnection();
                 MySqlCommand cmd = new MySqlCommand("EditarModelo", conexion.GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new MySqlParameter("idmodeloActual", idmodeloActual));
-                cmd.Parameters.Add(new MySqlParameter("idmodelo", idmodelo));
-                cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
-                cmd.Parameters.Add(new MySqlParameter("color", color));
-                cmd.Parameters.Add(new MySqlParameter("talla", talla));
-                cmd.Parameters.Add(new MySqlParameter("preciocliente", preciocliente));
+                cmd.Parameters.Add(new MySqlParameter("idmodeloActual", pIDModeloActual));
+                cmd.Parameters.Add(new MySqlParameter("idmodelo", pIDModelo));
+                cmd.Parameters.Add(new MySqlParameter("idmarca", pIDMarca));
+                cmd.Parameters.Add(new MySqlParameter("color", pColor));
+                cmd.Parameters.Add(new MySqlParameter("talla", pTalla));
+                cmd.Parameters.Add(new MySqlParameter("preciocliente", pPrecioCliente));
                 cmd.ExecuteNonQuery();
                 conexion.CloseConnection();
-                MessageBox.Show("Modelo editado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show($"Error en subir el modelo {idmodelo} ya existe en la BASE de DATOS", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-
-            }
         }
-
-        //public DataTable BuscarModelo(string idmodelo)
-        //{
-        //    conexion.OpenConnection();
-        //    DataTable dt = new DataTable();
-        //    MySqlCommand cmd = new MySqlCommand("BuscarModelo", conexion.GetConnection());
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    cmd.Parameters.Add(new MySqlParameter("buscar", "%"+idmodelo+"%"));
-        //    da.SelectCommand = cmd;
-        //    dt.Clear();
-        //    da.Fill(dt);
-        //    conexion.CloseConnection();
-        //    return dt;
-        //}
     }
 }

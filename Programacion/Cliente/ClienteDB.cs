@@ -47,7 +47,6 @@ namespace MultimodeSales.Programacion.Cliente
             cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
             cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se agrego el cliente correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             conexion.CloseConnection();
         }
         public void EditarCliente(string idclienteActual, string idcliente, string nombre)
@@ -59,7 +58,6 @@ namespace MultimodeSales.Programacion.Cliente
             cmd.Parameters.Add(new MySqlParameter("idcliente", idcliente));
             cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se edito el cliente correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             conexion.CloseConnection();
         }
     }

@@ -50,7 +50,6 @@ namespace MultimodeSales.Programacion.Marca
             cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
             cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se agrego nueva marca", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cmd.Connection.Close();
         }
 
@@ -62,8 +61,7 @@ namespace MultimodeSales.Programacion.Marca
             cmd.Parameters.Add(new MySqlParameter("idmarcaActual", idmarcaActual));
             cmd.Parameters.Add(new MySqlParameter("idmarca", idmarca));
             cmd.Parameters.Add(new MySqlParameter("nombre", nombre));
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Se edito la marca correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cmd.ExecuteNonQuery();         
             cmd.Connection.Close();
         }
         

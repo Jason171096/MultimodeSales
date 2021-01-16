@@ -1,5 +1,6 @@
 ﻿using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Cliente;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace MultimodeSales.Vistas
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtNombreCliente.Text) || String.IsNullOrWhiteSpace(txtIDCliente.Text))
-                MessageBox.Show("No pueden estar los campos vacios de ID de Cliente o Nombre", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No pueden estar los campos vacios de ID de Cliente o Nombre");
             else
             {
                 int cont = 0;
@@ -44,10 +45,11 @@ namespace MultimodeSales.Vistas
                         cont++;
                 }
                 if (cont >= 1)
-                    MessageBox.Show("No pueden existir dos ID's iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CMsgBox.DisplayWarning("No pueden existir dos ID's iguales, intente con otro ID");
                 else
                 {
                     cliente.AgregarCliente(txtIDCliente.Text, txtNombreCliente.Text);
+                    CMsgBox.DisplayInfo("Se agrego el cliente correctamente");
                     LlenarDataGridViewCliente();
                     BorrarDatos();
                 }
@@ -63,13 +65,14 @@ namespace MultimodeSales.Vistas
                         cont++;
             }
             if (cont >= 1)
-                MessageBox.Show("No pueden existir dos clientes con ID's iguales, intente con otro ID", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No pueden existir dos clientes con ID's iguales, intente con otro ID");
             else
             {
                 btnAgregarCliente.Enabled = true;
                 btnEditarCliente.Enabled = false;
                 btnCancelar.Visible = false;
                 cliente.EditarCliente(txtIDCliente.Tag + "", txtIDCliente.Text, txtNombreCliente.Text);
+                CMsgBox.DisplayInfo("Se edito el cliente correctamente");
                 BorrarDatos();
                 LlenarDataGridViewCliente();
             }

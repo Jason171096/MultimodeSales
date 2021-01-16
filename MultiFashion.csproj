@@ -173,6 +173,7 @@
     <Compile Include="Programacion\Cliente\ClienteDB.cs" />
     <Compile Include="Programacion\Conexion.cs" />
     <Compile Include="Programacion\Utilerias\CDataGridView.cs" />
+    <Compile Include="Programacion\Utilerias\CMsgBox.cs" />
     <Compile Include="Programacion\Utilerias\CPanelBarras.cs" />
     <Compile Include="Programacion\Excel\ExcelDB.cs" />
     <Compile Include="Programacion\Excel\CImportarCSVyExcel.cs" />
@@ -191,18 +192,6 @@
     </Compile>
     <Compile Include="Vistas\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Excel\ImportarPedidosFinal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Excel\ImportarPedidosFinal.Designer.cs">
-      <DependentUpon>ImportarPedidosFinal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Excel\ImportarPor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Excel\ImportarPor.Designer.cs">
-      <DependentUpon>ImportarPor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Formulario.cs">
       <SubType>Form</SubType>
@@ -274,12 +263,6 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Excel\ImportarPedidosFinal.resx">
-      <DependentUpon>ImportarPedidosFinal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Excel\ImportarPor.resx">
-      <DependentUpon>ImportarPor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>

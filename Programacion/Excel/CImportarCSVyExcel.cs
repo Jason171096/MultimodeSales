@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -75,9 +76,9 @@ namespace MultimodeSales.Programacion
                 }
                 return result;
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Archivo invalido o imposible de leer", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayError($"Archivo invalido o imposible de leer \n Mensaje: \n {ex}");
             }
             return result;
         }

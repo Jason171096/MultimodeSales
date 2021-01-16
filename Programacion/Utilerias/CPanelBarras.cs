@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion
 {
-    class CPanelBarras
+    public static class CPanelBarras
     {
         //private int MX = 0;
         //private int MY = 0;

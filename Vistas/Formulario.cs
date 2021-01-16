@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MultimodeSales.Vistas;
-using MultimodeSales.Vistas.Excel;
 using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales
@@ -64,7 +63,7 @@ namespace MultimodeSales
         #region picImportExcel
         private void picImportExcel_Click(object sender, EventArgs e)
         {
-            ImportarPor importarPor = new ImportarPor();
+            ImportarListaMarca importarPor = new ImportarListaMarca();
             importarPor.ShowDialog();         
         }
 
