@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace MultimodeSales.Programacion
 {
-    class CFormBorder
+    public static class CFormBorder
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern  IntPtr CreateRoundRectRgn
+        public static extern  IntPtr CreateRoundRectRgn
         (
             int nLeftRect,     // x-coordinate of upper-left corner
             int nTopRect,      // y-coordinate of upper-left corner
@@ -15,7 +16,5 @@ namespace MultimodeSales.Programacion
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
         );
-
-        //Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
     }
 }

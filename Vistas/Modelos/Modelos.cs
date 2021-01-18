@@ -5,7 +5,9 @@ using System.Data;
 using System.Windows.Forms;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 using MultimodeSales.Vistas.Modelos;
+using System.Drawing;
 
 namespace MultimodeSales.Vistas
 {
@@ -38,6 +40,7 @@ namespace MultimodeSales.Vistas
             Data.Columns.Add("Fecha");
             CargarModelos();
             activateCellClick = pactiveCellClick;
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void radioButtonBuscar_CheckedChanged(object sender, EventArgs e)
         {
@@ -101,7 +104,7 @@ namespace MultimodeSales.Vistas
                 CargarModelos();
             }
             else
-                MessageBox.Show("Ningun modelo fue seleccionado para editar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               CMsgBox.DisplayWarning("Ningun modelo fue seleccionado para editar");
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {

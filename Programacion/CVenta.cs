@@ -23,7 +23,6 @@ namespace MultimodeSales
             cmd.Parameters.Add(new MySqlParameter("fecha", pFecha));
             cmd.Parameters.Add(new MySqlParameter("total", pTotal));
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Venta concluida", "¡Exito!", MessageBoxButton.OK, MessageBoxImage.Information);
             cmd.Connection.Close();
         }
 
@@ -34,9 +33,9 @@ namespace MultimodeSales
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
             object existeFolio = cmd.ExecuteScalar();
+            cmd.Connection.Close();
             if (Convert.ToInt32(existeFolio) == 1)
                 return 1;
-            cmd.Connection.Close();
             return 0;
         }
     }

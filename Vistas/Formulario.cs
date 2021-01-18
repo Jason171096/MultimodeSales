@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using MultimodeSales.Programacion;
 using MultimodeSales.Vistas;
 using MultimodeSales.Vistas.Ventas;
 
@@ -8,6 +9,7 @@ namespace MultimodeSales
 {
     public partial class Formulario : Form
     {
+        
         private int MX = 0;
         private int MY = 0;
         public Formulario()
@@ -39,7 +41,7 @@ namespace MultimodeSales
             monthCalendarForm.TodayColor = Color.Red;
             monthCalendarForm.ActiveMonth.Month = DateTime.Now.Month;
             monthCalendarForm.ActiveMonth.Year = DateTime.Now.Year;
-
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         #region picCliente
         private void picCliente_Click(object sender, EventArgs e)
@@ -209,6 +211,7 @@ namespace MultimodeSales
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
         {
             MouseMove(sender, e);
+
         }
         private void timerHora_Tick(object sender, EventArgs e)
         {
@@ -258,5 +261,9 @@ namespace MultimodeSales
         {
 
         }
+
+        
+
+       
     }
 }

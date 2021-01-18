@@ -1,6 +1,7 @@
 ﻿using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Cliente;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Data;
 using System.Drawing;
@@ -24,6 +25,7 @@ namespace MultimodeSales.Vistas.Ventas
             InitializeComponent();
             cDataGrid.FormattingDataGridView(dgvPedidosFinal);
             Clientes();
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void Clientes()
         {
@@ -75,9 +77,9 @@ namespace MultimodeSales.Vistas.Ventas
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Error al seleccionar un modelo", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayError($"Error al seleccionar un modelo \n Mensaje: \n {ex.Message}");
             }
         }
         private void ActualizarLabels(int pSumaoResta, string plbPrecio, string pCantidad, string pPrecioCliente)
@@ -116,7 +118,7 @@ namespace MultimodeSales.Vistas.Ventas
                     {
                         int idfolio = venta.verificarFolioExistente(txtFolio.Text);
                         if (idfolio == 1)
-                            MessageBox.Show("Folio existente", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                             CMsgBox.DisplayWarning("Folio existente");
                         else 
                         {
                             DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
@@ -124,13 +126,13 @@ namespace MultimodeSales.Vistas.Ventas
                         }   
                     }
                     else
-                        MessageBox.Show("Seleccionar un articulo", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        CMsgBox.DisplayWarning("Seleccionar un articulo");
                 }
                 else
-                    MessageBox.Show("No dejar el folio vacio", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CMsgBox.DisplayWarning("No dejar el folio vacio");
             }
             else
-                MessageBox.Show("Seleccionar un cliente", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayWarning("Seleccionar un cliente");
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using excel = Microsoft.Office.Interop.Excel;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 
 namespace MultimodeSales.Vistas
 {
@@ -32,6 +33,7 @@ namespace MultimodeSales.Vistas
             rbtnLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             rbtnNoLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             activeCellClick = pactiveCellClick;
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void PedidosFinal_Load(object sender, EventArgs e)
         {
@@ -140,7 +142,7 @@ namespace MultimodeSales.Vistas
                 else
                     listaPedidosFinal.UpdatePedidoLlego(rows.Cells[0].Value.ToString(), "0");
             }
-            MessageBox.Show("¡Pedido actualizado con exito!","¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CMsgBox.DisplayInfo("¡Pedido actualizado con exito!");
         }
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
@@ -174,7 +176,7 @@ namespace MultimodeSales.Vistas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al abrir Excel \n Mensaje: \n" + ex.Message);
+                CMsgBox.DisplayError("Error al abrir Excel \n Mensaje: \n" + ex.Message);
             }
             finally
             {

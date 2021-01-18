@@ -5,6 +5,7 @@ using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MultimodeSales.Vistas.Modelos
 {
@@ -22,7 +23,8 @@ namespace MultimodeSales.Vistas.Modelos
             InitializeComponent();
             this.Bandera = agregar;
             LlenarComboBoxMarca();
-            if(agregar)
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            if (agregar)
             {
                 lb.Text = "Agregar Modelo";
                 btnModelo.Text = "Agregar Modelo";
@@ -68,6 +70,7 @@ namespace MultimodeSales.Vistas.Modelos
                         modelo.EditarModelo(txtIDModelo.Tag + "", txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioCliente.Text.Trim('$'));
                         CMsgBox.DisplayInfo("Modelo editado correctamente");
                         BorrarDatos();
+                        Close();
                     }
                 else
                     CMsgBox.DisplayWarning("Por favor de escoger la marca para el modelo");

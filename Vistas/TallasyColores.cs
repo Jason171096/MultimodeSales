@@ -1,12 +1,9 @@
 ﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Utilerias;
 using System;
-using System.Collections.Generic;
+using System.Drawing;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MultimodeSales.Vistas
@@ -25,6 +22,7 @@ namespace MultimodeSales.Vistas
             CargarTallas();
             cDataGrid.FormattingDataGridView(dgvColores);
             cDataGrid.FormattingDataGridView(dgvTallas);
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         public void CargarColores()
@@ -87,7 +85,7 @@ namespace MultimodeSales.Vistas
                 BorrarSelectColor();
             }
             else
-                MessageBox.Show("No se puede agregar un campo vacio", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No se puede agregar un campo vacio");
 
         }
 
@@ -106,11 +104,11 @@ namespace MultimodeSales.Vistas
                     BorrarSelectColor();
                 }
                 else
-                    MessageBox.Show("No se puede editar un campo vacio", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CMsgBox.DisplayWarning("No se puede editar un campo vacio");
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("No se puede editar sin seleccionar nada", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayError("No se puede editar sin seleccionar nada");
             }
         }
 
@@ -123,7 +121,7 @@ namespace MultimodeSales.Vistas
                 BorrarSelectColor();
             }
             else
-                MessageBox.Show("No se puede eliminar sin seleccionar nada", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayWarning("No se puede eliminar sin seleccionar nada");
         }
 
         private void btnCancelarColor_Click(object sender, EventArgs e)
@@ -154,7 +152,7 @@ namespace MultimodeSales.Vistas
                 BorrarSelectTalla();
             }
             else
-                MessageBox.Show("No se puede agregar un campo vacio", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("No se puede agregar un campo vacio");
         }
 
         private void btnEditarTalla_Click(object sender, EventArgs e)
@@ -172,11 +170,11 @@ namespace MultimodeSales.Vistas
                     BorrarSelectTalla();
                 }
                 else
-                    MessageBox.Show("No se puede editar un campo vacio", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CMsgBox.DisplayWarning("No se puede editar un campo vacio");
             }
             catch
             {
-                MessageBox.Show("No se puede editar sin seleccionar nada", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayWarning("No se puede editar sin seleccionar nada");
             }
         }
 
@@ -189,7 +187,7 @@ namespace MultimodeSales.Vistas
                 BorrarSelectTalla();
             }
             else
-                MessageBox.Show("No se puede eliminar sin seleccionar nada", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CMsgBox.DisplayWarning("No se puede eliminar sin seleccionar nada");
             
         }
 

@@ -6,8 +6,10 @@ using excel = Microsoft.Office.Interop.Excel;
 using MultimodeSales.Programacion.Marca;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 
 namespace MultimodeSales.Vistas
 {
@@ -22,6 +24,7 @@ namespace MultimodeSales.Vistas
             InitializeComponent();
             LlenarComboBoxMarca();
             cDataGrid.FormattingDataGridView(dgvExcel);
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private string modelo = "MODELO";
         private string color = "COLOR";
@@ -58,7 +61,7 @@ namespace MultimodeSales.Vistas
             {
                 modelos.AgregarModelo(row.Cells[0].Value.ToString(), idmarca, row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString());
             }
-            MessageBox.Show($"Importacion exitosa", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CMsgBox.DisplayInfo("Importacion exitosa");
         }
         private void CargarCSV()
         {
@@ -148,7 +151,7 @@ namespace MultimodeSales.Vistas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Los parametros recibidos no son validos, intente de nuevo", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayError($"Los parametros recibidos no son validos, intente de nuevo \n Mensaje: \n {ex.Message}");
             }
         }
         private void btnCancelar_Click(object sender, EventArgs e)

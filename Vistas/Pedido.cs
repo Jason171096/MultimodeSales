@@ -1,6 +1,7 @@
 ﻿using MultimodeSales.Programacion;
 using MultimodeSales.Programacion.Cliente;
 using MultimodeSales.Programacion.Modelo;
+using MultimodeSales.Programacion.Utilerias;
 using MultimodeSales.Vistas.Modelos;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,7 @@ namespace MultimodeSales.Vistas
             Tallas();
             IDMarca.ReadOnly = true;
             dgvPedido.Columns[0].Visible = false;
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void Clientes()
         {
@@ -77,7 +79,7 @@ namespace MultimodeSales.Vistas
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que desea cerrar?", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = CMsgBox.DisplayConfirmation("¿Seguro que desea cerrar?");
             if (result == DialogResult.Yes)
                 Close();
         }
@@ -94,10 +96,10 @@ namespace MultimodeSales.Vistas
                         pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
                     }                 
                 }
-                MessageBox.Show("Pedido ingresado correctamente", "¡EXITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CMsgBox.DisplayInfo("Pedido ingresado correctamente");
             }
             else
-                MessageBox.Show("Seleccione Cliente", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("Seleccione un cliente");
         }
         
         private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -134,7 +136,7 @@ namespace MultimodeSales.Vistas
             }
             catch
             {
-                MessageBox.Show("No se puede eliminar", "¡ADVERTENCIA!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CMsgBox.DisplayWarning("No se puede eliminar");
             }
         }
         private void dgvPedido_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

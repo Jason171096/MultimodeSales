@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using MultimodeSales.Programacion.Marca;
 using MultimodeSales.Programacion.Utilerias;
+using System.Drawing;
 
 namespace MultimodeSales.Vistas
 {
@@ -22,6 +23,7 @@ namespace MultimodeSales.Vistas
             InitializeComponent();
             CDataGrid.FormattingDataGridView(dgvMarcas);
             LlenarDataGridViewMarca();
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void LlenarDataGridViewMarca()

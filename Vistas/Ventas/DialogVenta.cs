@@ -1,14 +1,8 @@
 ﻿using MultimodeSales.Programacion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Globalization;
+using MultimodeSales.Programacion.Utilerias;
 
 namespace MultimodeSales.Vistas.Ventas
 {
@@ -23,6 +17,7 @@ namespace MultimodeSales.Vistas.Ventas
             InitializeComponent();
             total = pTotal;
             idfolio = pIDFolio;
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void DialogVenta_Load(object sender, EventArgs e)
@@ -60,9 +55,12 @@ namespace MultimodeSales.Vistas.Ventas
         private void btnVender_Click(object sender, EventArgs e)
         {
             if (lbCambio.ForeColor != Color.Red)
+            {
                 venta.ventaPedido(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
+                CMsgBox.DisplayInfo("Venta concluida");
+            }
             else
-                MessageBox.Show("Ingrese una cantidad", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMsgBox.DisplayWarning("Ingrese una cantidad");
         }
 
         private void calcularCambio()
