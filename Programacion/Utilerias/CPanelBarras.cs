@@ -7,42 +7,23 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion
 {
-    public static class CPanelBarras
+    public class CPanelBarras
     {
         //private int MX = 0;
         //private int MY = 0;
-        //private int Left;
-        //private int Top;
-        //private bool Verificar = true;
 
-        ////public void DesingPanelBarras(int MX, int MY, int Left, int Top)
-        ////{
-        ////    this.MX = MX;
-        ////    this.MY = MY;
-        ////    this.Left = Left;
-        ////    this.Top = Top;
-        ////}
-
-        //public void MouseMover(object sender, MouseEventArgs e, int MX, int MY, int Left, int Top)
-        //{
-        //    if(Verificar)
-        //    {
-        //        this.MX = MX;
-        //        this.MY = MY;
-        //    }
-        //    this.Left = Left;
-        //    this.Top = Top;
-        //    if (e.Button != MouseButtons.Left)
-        //    {
-        //        this.MX = e.X;
-        //        this.MY = e.Y;
-        //    }
-        //    else
-        //    {
-        //        this.Left = this.Left + (e.X - MX);
-        //        this.Top = this.Top + (e.Y - MY);
-        //    }
-        //    Verificar = false;
-        //}
+        public void MouseMove(object sender, MouseEventArgs e, int Left, int Top, int MX, int MY)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
     }
 }

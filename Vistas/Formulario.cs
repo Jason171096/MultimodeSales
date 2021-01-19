@@ -12,6 +12,7 @@ namespace MultimodeSales
         
         private int MX = 0;
         private int MY = 0;
+        CPanelBarras cPanel = new CPanelBarras();
         public Formulario()
         {
             InitializeComponent();
@@ -210,8 +211,9 @@ namespace MultimodeSales
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMove(sender, e);
-
+            //MouseMove(sender, e);
+            //CPanelBarras.MouseMove(sender, e, Left, Top, MX, MY);
+            cPanel.MouseMove(sender, e, Left, Top, MX, MY);
         }
         private void timerHora_Tick(object sender, EventArgs e)
         {
