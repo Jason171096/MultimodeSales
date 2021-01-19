@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-01-2021 a las 20:26:55
+-- Tiempo de generación: 19-01-2021 a las 01:03:02
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 
@@ -313,23 +313,34 @@ INSERT INTO `color` (`IDColor`, `Nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `folio`
+-- Estructura de tabla para la tabla `devolucion`
 --
 
-CREATE TABLE `folio` (
+CREATE TABLE `devolucion` (
+  `IDDevolucion` bigint(20) NOT NULL,
+  `IDPedido` bigint(20) NOT NULL,
+  `Fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `folio_devolucion`
+--
+
+CREATE TABLE `folio_devolucion` (
   `IDFolio` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Volcado de datos para la tabla `folio`
+-- Estructura de tabla para la tabla `folio_venta`
 --
 
-INSERT INTO `folio` (`IDFolio`) VALUES
-(1),
-(12),
-(13),
-(14),
-(500);
+CREATE TABLE `folio_venta` (
+  `IDFolio` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -810,17 +821,6 @@ CREATE TABLE `venta` (
   `Total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `venta`
---
-
-INSERT INTO `venta` (`IDVenta`, `IDFolio`, `Fecha`, `Total`) VALUES
-(12, 12, '2021-01-14 09:30:12', '3039.15'),
-(13, 500, '2021-01-14 16:32:32', '3039.15'),
-(14, 1, '2021-01-14 17:12:46', '3039.15'),
-(15, 13, '2021-01-14 17:13:59', '3039.15'),
-(16, 14, '2021-01-14 17:14:47', '3039.15');
-
 -- --------------------------------------------------------
 
 --
@@ -850,9 +850,22 @@ ALTER TABLE `color`
   ADD PRIMARY KEY (`IDColor`);
 
 --
--- Indices de la tabla `folio`
+-- Indices de la tabla `devolucion`
 --
-ALTER TABLE `folio`
+ALTER TABLE `devolucion`
+  ADD PRIMARY KEY (`IDDevolucion`),
+  ADD KEY `IDPedido` (`IDPedido`);
+
+--
+-- Indices de la tabla `folio_devolucion`
+--
+ALTER TABLE `folio_devolucion`
+  ADD PRIMARY KEY (`IDFolio`);
+
+--
+-- Indices de la tabla `folio_venta`
+--
+ALTER TABLE `folio_venta`
   ADD PRIMARY KEY (`IDFolio`);
 
 --
@@ -919,6 +932,18 @@ ALTER TABLE `color`
   MODIFY `IDColor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
+-- AUTO_INCREMENT de la tabla `devolucion`
+--
+ALTER TABLE `devolucion`
+  MODIFY `IDDevolucion` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `folio_devolucion`
+--
+ALTER TABLE `folio_devolucion`
+  MODIFY `IDFolio` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
@@ -947,6 +972,12 @@ ALTER TABLE `venta`
 --
 
 --
+-- Filtros para la tabla `devolucion`
+--
+ALTER TABLE `devolucion`
+  ADD CONSTRAINT `devolucion_ibfk_1` FOREIGN KEY (`IDPedido`) REFERENCES `pedidos` (`IDPedido`);
+
+--
 -- Filtros para la tabla `modelos`
 --
 ALTER TABLE `modelos`
@@ -963,7 +994,7 @@ ALTER TABLE `pedidos`
 -- Filtros para la tabla `venta`
 --
 ALTER TABLE `venta`
-  ADD CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`IDFolio`) REFERENCES `folio` (`IDFolio`);
+  ADD CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`IDFolio`) REFERENCES `folio_venta` (`IDFolio`);
 
 --
 -- Filtros para la tabla `venta_pedidos`

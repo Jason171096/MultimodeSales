@@ -192,7 +192,7 @@ namespace MultimodeSales.Vistas
         }
         private void picClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que desea cerrar?", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = CMsgBox.DisplayConfirmation("¿Seguro que desea cerrar?");
             if (result == DialogResult.Yes)
                 Close();
         }

@@ -23,11 +23,11 @@ namespace MultimodeSales.Programacion.Utilerias
         }
         public static DialogResult DisplayConfirmation(string pMessage)
         {
-            return MessageBox.Show(pMessage, "¡Confirmación!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(pMessage, "¡Confirmación!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
         }
         public static DialogResult DisplayRetry(string pMessage)
         {
-            return MessageBox.Show(pMessage, "¡Reintentar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(pMessage, "¡Reintentar!", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
         }
     }
 }
