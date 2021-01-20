@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.panelCliente = new System.Windows.Forms.Panel();
             this.panelImportExcel = new System.Windows.Forms.Panel();
             this.lbCliente = new System.Windows.Forms.Label();
@@ -48,64 +49,76 @@
             this.panelVenta = new System.Windows.Forms.Panel();
             this.lbDevolucion = new System.Windows.Forms.Label();
             this.panelDevolucion = new System.Windows.Forms.Panel();
-            this.picDevolucion = new System.Windows.Forms.PictureBox();
-            this.picVenta = new System.Windows.Forms.PictureBox();
-            this.picPedido = new System.Windows.Forms.PictureBox();
-            this.picColTall = new System.Windows.Forms.PictureBox();
-            this.picModelos = new System.Windows.Forms.PictureBox();
-            this.picPedidosFinal = new System.Windows.Forms.PictureBox();
-            this.picMarca = new System.Windows.Forms.PictureBox();
+            this.content1 = new System.Windows.Forms.Panel();
             this.picImportExcel = new System.Windows.Forms.PictureBox();
+            this.content2 = new System.Windows.Forms.Panel();
             this.picCliente = new System.Windows.Forms.PictureBox();
+            this.content3 = new System.Windows.Forms.Panel();
+            this.picMarca = new System.Windows.Forms.PictureBox();
+            this.content4 = new System.Windows.Forms.Panel();
+            this.picColTall = new System.Windows.Forms.PictureBox();
+            this.content5 = new System.Windows.Forms.Panel();
+            this.picModelos = new System.Windows.Forms.PictureBox();
+            this.content6 = new System.Windows.Forms.Panel();
+            this.picPedido = new System.Windows.Forms.PictureBox();
+            this.content7 = new System.Windows.Forms.Panel();
+            this.picPedidosFinal = new System.Windows.Forms.PictureBox();
+            this.content8 = new System.Windows.Forms.Panel();
+            this.picVenta = new System.Windows.Forms.PictureBox();
+            this.content9 = new System.Windows.Forms.Panel();
+            this.picDevolucion = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelGraph = new System.Windows.Forms.Panel();
+            this.picGraph = new System.Windows.Forms.PictureBox();
+            this.lbGraph = new System.Windows.Forms.Label();
+            this.content10 = new System.Windows.Forms.Panel();
+            this.panelFolio = new System.Windows.Forms.Panel();
+            this.picFolios = new System.Windows.Forms.PictureBox();
+            this.lbFolio = new System.Windows.Forms.Label();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.lbHora = new System.Windows.Forms.Label();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.lbFecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.monthCalendarForm = new Pabo.Calendar.MonthCalendar();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.content1 = new System.Windows.Forms.Panel();
-            this.content2 = new System.Windows.Forms.Panel();
-            this.content3 = new System.Windows.Forms.Panel();
-            this.content4 = new System.Windows.Forms.Panel();
-            this.content5 = new System.Windows.Forms.Panel();
-            this.content6 = new System.Windows.Forms.Panel();
-            this.content7 = new System.Windows.Forms.Panel();
-            this.content8 = new System.Windows.Forms.Panel();
-            this.content9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.picStock = new System.Windows.Forms.PictureBox();
-            this.btnStock = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picColTall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMarca)).BeginInit();
+            this.monthCalendarForm = new Pabo.Calendar.MonthCalendar();
+            this.content1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).BeginInit();
+            this.content2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).BeginInit();
+            this.content3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMarca)).BeginInit();
+            this.content4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picColTall)).BeginInit();
+            this.content5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picModelos)).BeginInit();
+            this.content6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPedido)).BeginInit();
+            this.content7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).BeginInit();
+            this.content8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).BeginInit();
+            this.content9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
+            this.content10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFolios)).BeginInit();
             this.panelBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.content1.SuspendLayout();
-            this.content2.SuspendLayout();
-            this.content3.SuspendLayout();
-            this.content4.SuspendLayout();
-            this.content5.SuspendLayout();
-            this.content6.SuspendLayout();
-            this.content7.SuspendLayout();
-            this.content8.SuspendLayout();
-            this.content9.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCliente
@@ -275,102 +288,16 @@
             this.panelDevolucion.Size = new System.Drawing.Size(150, 7);
             this.panelDevolucion.TabIndex = 30;
             // 
-            // picDevolucion
+            // content1
             // 
-            this.picDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDevolucion.Image = global::MultimodeSales.Properties.Resources.return128px;
-            this.picDevolucion.Location = new System.Drawing.Point(35, 0);
-            this.picDevolucion.Name = "picDevolucion";
-            this.picDevolucion.Size = new System.Drawing.Size(150, 155);
-            this.picDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picDevolucion.TabIndex = 31;
-            this.picDevolucion.TabStop = false;
-            this.picDevolucion.MouseEnter += new System.EventHandler(this.picDevolucion_MouseEnter);
-            this.picDevolucion.MouseLeave += new System.EventHandler(this.picDevolucion_MouseLeave);
-            // 
-            // picVenta
-            // 
-            this.picVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picVenta.Image = global::MultimodeSales.Properties.Resources.sales128px;
-            this.picVenta.Location = new System.Drawing.Point(35, 0);
-            this.picVenta.Name = "picVenta";
-            this.picVenta.Size = new System.Drawing.Size(150, 155);
-            this.picVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picVenta.TabIndex = 28;
-            this.picVenta.TabStop = false;
-            this.picVenta.Click += new System.EventHandler(this.picVenta_Click);
-            this.picVenta.MouseEnter += new System.EventHandler(this.picVenta_MouseEnter);
-            this.picVenta.MouseLeave += new System.EventHandler(this.picVenta_MouseLeave);
-            // 
-            // picPedido
-            // 
-            this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPedido.Image = global::MultimodeSales.Properties.Resources.order128px;
-            this.picPedido.Location = new System.Drawing.Point(35, 0);
-            this.picPedido.Name = "picPedido";
-            this.picPedido.Size = new System.Drawing.Size(150, 155);
-            this.picPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picPedido.TabIndex = 25;
-            this.picPedido.TabStop = false;
-            this.picPedido.Click += new System.EventHandler(this.picPedido_Click);
-            this.picPedido.MouseEnter += new System.EventHandler(this.picPedido_MouseEnter);
-            this.picPedido.MouseLeave += new System.EventHandler(this.picPedido_MouseLeave);
-            // 
-            // picColTall
-            // 
-            this.picColTall.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picColTall.Image = global::MultimodeSales.Properties.Resources.size_color;
-            this.picColTall.Location = new System.Drawing.Point(35, 0);
-            this.picColTall.Name = "picColTall";
-            this.picColTall.Size = new System.Drawing.Size(150, 155);
-            this.picColTall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picColTall.TabIndex = 22;
-            this.picColTall.TabStop = false;
-            this.picColTall.Click += new System.EventHandler(this.picColTall_Click);
-            this.picColTall.MouseEnter += new System.EventHandler(this.picColTall_MouseEnter);
-            this.picColTall.MouseLeave += new System.EventHandler(this.picColTall_MouseLeave);
-            // 
-            // picModelos
-            // 
-            this.picModelos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picModelos.Image = global::MultimodeSales.Properties.Resources.shoes128px;
-            this.picModelos.Location = new System.Drawing.Point(35, 0);
-            this.picModelos.Name = "picModelos";
-            this.picModelos.Size = new System.Drawing.Size(150, 155);
-            this.picModelos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picModelos.TabIndex = 19;
-            this.picModelos.TabStop = false;
-            this.picModelos.Click += new System.EventHandler(this.picModelos_Click);
-            this.picModelos.MouseEnter += new System.EventHandler(this.picModelos_MouseEnter);
-            this.picModelos.MouseLeave += new System.EventHandler(this.picModelos_MouseLeave);
-            // 
-            // picPedidosFinal
-            // 
-            this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
-            this.picPedidosFinal.Location = new System.Drawing.Point(35, 0);
-            this.picPedidosFinal.Name = "picPedidosFinal";
-            this.picPedidosFinal.Size = new System.Drawing.Size(150, 155);
-            this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picPedidosFinal.TabIndex = 13;
-            this.picPedidosFinal.TabStop = false;
-            this.picPedidosFinal.Click += new System.EventHandler(this.picPedidosFinal_Click);
-            this.picPedidosFinal.MouseEnter += new System.EventHandler(this.picPedidosFinal_MouseEnter);
-            this.picPedidosFinal.MouseLeave += new System.EventHandler(this.picPedidosFinal_MouseLeave);
-            // 
-            // picMarca
-            // 
-            this.picMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMarca.Image = global::MultimodeSales.Properties.Resources.catalog128px;
-            this.picMarca.Location = new System.Drawing.Point(35, 0);
-            this.picMarca.Name = "picMarca";
-            this.picMarca.Size = new System.Drawing.Size(150, 155);
-            this.picMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picMarca.TabIndex = 10;
-            this.picMarca.TabStop = false;
-            this.picMarca.Click += new System.EventHandler(this.picMarca_Click);
-            this.picMarca.MouseEnter += new System.EventHandler(this.picMarca_MouseEnter);
-            this.picMarca.MouseLeave += new System.EventHandler(this.picMarca_MouseLeave);
+            this.content1.Controls.Add(this.panelImportExcel);
+            this.content1.Controls.Add(this.picImportExcel);
+            this.content1.Controls.Add(this.lbImportExcel);
+            this.content1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content1.Location = new System.Drawing.Point(3, 3);
+            this.content1.Name = "content1";
+            this.content1.Size = new System.Drawing.Size(217, 181);
+            this.content1.TabIndex = 33;
             // 
             // picImportExcel
             // 
@@ -386,6 +313,17 @@
             this.picImportExcel.MouseEnter += new System.EventHandler(this.picImportExcel_MouseEnter);
             this.picImportExcel.MouseLeave += new System.EventHandler(this.picImportExcel_MouseLeave);
             // 
+            // content2
+            // 
+            this.content2.Controls.Add(this.panelCliente);
+            this.content2.Controls.Add(this.picCliente);
+            this.content2.Controls.Add(this.lbCliente);
+            this.content2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content2.Location = new System.Drawing.Point(226, 3);
+            this.content2.Name = "content2";
+            this.content2.Size = new System.Drawing.Size(217, 181);
+            this.content2.TabIndex = 34;
+            // 
             // picCliente
             // 
             this.picCliente.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -399,6 +337,335 @@
             this.picCliente.Click += new System.EventHandler(this.picCliente_Click);
             this.picCliente.MouseEnter += new System.EventHandler(this.picCliente_MouseEnter);
             this.picCliente.MouseLeave += new System.EventHandler(this.picCliente_MouseLeave);
+            // 
+            // content3
+            // 
+            this.content3.Controls.Add(this.panelMarca);
+            this.content3.Controls.Add(this.picMarca);
+            this.content3.Controls.Add(this.lbMarca);
+            this.content3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content3.Location = new System.Drawing.Point(449, 3);
+            this.content3.Name = "content3";
+            this.content3.Size = new System.Drawing.Size(217, 181);
+            this.content3.TabIndex = 35;
+            // 
+            // picMarca
+            // 
+            this.picMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMarca.Image = global::MultimodeSales.Properties.Resources.catalog128px;
+            this.picMarca.Location = new System.Drawing.Point(35, 0);
+            this.picMarca.Name = "picMarca";
+            this.picMarca.Size = new System.Drawing.Size(150, 155);
+            this.picMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picMarca.TabIndex = 10;
+            this.picMarca.TabStop = false;
+            this.picMarca.Click += new System.EventHandler(this.picMarca_Click);
+            this.picMarca.MouseEnter += new System.EventHandler(this.picMarca_MouseEnter);
+            this.picMarca.MouseLeave += new System.EventHandler(this.picMarca_MouseLeave);
+            // 
+            // content4
+            // 
+            this.content4.Controls.Add(this.panelColTall);
+            this.content4.Controls.Add(this.picColTall);
+            this.content4.Controls.Add(this.lbColTall);
+            this.content4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content4.Location = new System.Drawing.Point(672, 3);
+            this.content4.Name = "content4";
+            this.content4.Size = new System.Drawing.Size(217, 181);
+            this.content4.TabIndex = 36;
+            // 
+            // picColTall
+            // 
+            this.picColTall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picColTall.Image = global::MultimodeSales.Properties.Resources.size_color;
+            this.picColTall.Location = new System.Drawing.Point(35, 0);
+            this.picColTall.Name = "picColTall";
+            this.picColTall.Size = new System.Drawing.Size(150, 155);
+            this.picColTall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picColTall.TabIndex = 22;
+            this.picColTall.TabStop = false;
+            this.picColTall.Click += new System.EventHandler(this.picColTall_Click);
+            this.picColTall.MouseEnter += new System.EventHandler(this.picColTall_MouseEnter);
+            this.picColTall.MouseLeave += new System.EventHandler(this.picColTall_MouseLeave);
+            // 
+            // content5
+            // 
+            this.content5.Controls.Add(this.panelModelos);
+            this.content5.Controls.Add(this.picModelos);
+            this.content5.Controls.Add(this.lbModelos);
+            this.content5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content5.Location = new System.Drawing.Point(895, 3);
+            this.content5.Name = "content5";
+            this.content5.Size = new System.Drawing.Size(217, 181);
+            this.content5.TabIndex = 37;
+            // 
+            // picModelos
+            // 
+            this.picModelos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picModelos.Image = global::MultimodeSales.Properties.Resources.shoes128px;
+            this.picModelos.Location = new System.Drawing.Point(35, 0);
+            this.picModelos.Name = "picModelos";
+            this.picModelos.Size = new System.Drawing.Size(150, 155);
+            this.picModelos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picModelos.TabIndex = 19;
+            this.picModelos.TabStop = false;
+            this.picModelos.Click += new System.EventHandler(this.picModelos_Click);
+            this.picModelos.MouseEnter += new System.EventHandler(this.picModelos_MouseEnter);
+            this.picModelos.MouseLeave += new System.EventHandler(this.picModelos_MouseLeave);
+            // 
+            // content6
+            // 
+            this.content6.Controls.Add(this.panelPedido);
+            this.content6.Controls.Add(this.picPedido);
+            this.content6.Controls.Add(this.lbPedido);
+            this.content6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content6.Location = new System.Drawing.Point(3, 190);
+            this.content6.Name = "content6";
+            this.content6.Size = new System.Drawing.Size(217, 181);
+            this.content6.TabIndex = 38;
+            // 
+            // picPedido
+            // 
+            this.picPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPedido.Image = global::MultimodeSales.Properties.Resources.order128px;
+            this.picPedido.Location = new System.Drawing.Point(35, 0);
+            this.picPedido.Name = "picPedido";
+            this.picPedido.Size = new System.Drawing.Size(150, 155);
+            this.picPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picPedido.TabIndex = 25;
+            this.picPedido.TabStop = false;
+            this.picPedido.Click += new System.EventHandler(this.picPedido_Click);
+            this.picPedido.MouseEnter += new System.EventHandler(this.picPedido_MouseEnter);
+            this.picPedido.MouseLeave += new System.EventHandler(this.picPedido_MouseLeave);
+            // 
+            // content7
+            // 
+            this.content7.Controls.Add(this.panelPedidosFinal);
+            this.content7.Controls.Add(this.picPedidosFinal);
+            this.content7.Controls.Add(this.lbPedidosFinal);
+            this.content7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content7.Location = new System.Drawing.Point(226, 190);
+            this.content7.Name = "content7";
+            this.content7.Size = new System.Drawing.Size(217, 181);
+            this.content7.TabIndex = 39;
+            // 
+            // picPedidosFinal
+            // 
+            this.picPedidosFinal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPedidosFinal.Image = global::MultimodeSales.Properties.Resources.request128px;
+            this.picPedidosFinal.Location = new System.Drawing.Point(35, 0);
+            this.picPedidosFinal.Name = "picPedidosFinal";
+            this.picPedidosFinal.Size = new System.Drawing.Size(150, 155);
+            this.picPedidosFinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picPedidosFinal.TabIndex = 13;
+            this.picPedidosFinal.TabStop = false;
+            this.picPedidosFinal.Click += new System.EventHandler(this.picPedidosFinal_Click);
+            this.picPedidosFinal.MouseEnter += new System.EventHandler(this.picPedidosFinal_MouseEnter);
+            this.picPedidosFinal.MouseLeave += new System.EventHandler(this.picPedidosFinal_MouseLeave);
+            // 
+            // content8
+            // 
+            this.content8.Controls.Add(this.panelVenta);
+            this.content8.Controls.Add(this.picVenta);
+            this.content8.Controls.Add(this.lbVenta);
+            this.content8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content8.Location = new System.Drawing.Point(449, 190);
+            this.content8.Name = "content8";
+            this.content8.Size = new System.Drawing.Size(217, 181);
+            this.content8.TabIndex = 40;
+            // 
+            // picVenta
+            // 
+            this.picVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picVenta.Image = global::MultimodeSales.Properties.Resources.sales128px;
+            this.picVenta.Location = new System.Drawing.Point(35, 0);
+            this.picVenta.Name = "picVenta";
+            this.picVenta.Size = new System.Drawing.Size(150, 155);
+            this.picVenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picVenta.TabIndex = 28;
+            this.picVenta.TabStop = false;
+            this.picVenta.Click += new System.EventHandler(this.picVenta_Click);
+            this.picVenta.MouseEnter += new System.EventHandler(this.picVenta_MouseEnter);
+            this.picVenta.MouseLeave += new System.EventHandler(this.picVenta_MouseLeave);
+            // 
+            // content9
+            // 
+            this.content9.Controls.Add(this.panelDevolucion);
+            this.content9.Controls.Add(this.picDevolucion);
+            this.content9.Controls.Add(this.lbDevolucion);
+            this.content9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content9.Location = new System.Drawing.Point(672, 190);
+            this.content9.Name = "content9";
+            this.content9.Size = new System.Drawing.Size(217, 181);
+            this.content9.TabIndex = 42;
+            // 
+            // picDevolucion
+            // 
+            this.picDevolucion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDevolucion.Image = global::MultimodeSales.Properties.Resources.return128px;
+            this.picDevolucion.Location = new System.Drawing.Point(35, 0);
+            this.picDevolucion.Name = "picDevolucion";
+            this.picDevolucion.Size = new System.Drawing.Size(150, 155);
+            this.picDevolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picDevolucion.TabIndex = 31;
+            this.picDevolucion.TabStop = false;
+            this.picDevolucion.Click += new System.EventHandler(this.picDevolucion_Click);
+            this.picDevolucion.MouseEnter += new System.EventHandler(this.picDevolucion_MouseEnter);
+            this.picDevolucion.MouseLeave += new System.EventHandler(this.picDevolucion_MouseLeave);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.content1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content5, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.content6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content7, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content8, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content9, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.content10, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(233, 51);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
+            this.tableLayoutPanel1.TabIndex = 43;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(449, 377);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(217, 181);
+            this.panel6.TabIndex = 45;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Purple;
+            this.panel7.Location = new System.Drawing.Point(35, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(150, 7);
+            this.panel7.TabIndex = 30;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::MultimodeSales.Properties.Resources.packages_128px;
+            this.pictureBox3.Location = new System.Drawing.Point(35, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(150, 155);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(83, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Stock";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panelGraph);
+            this.panel2.Controls.Add(this.picGraph);
+            this.panel2.Controls.Add(this.lbGraph);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 377);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(217, 181);
+            this.panel2.TabIndex = 43;
+            // 
+            // panelGraph
+            // 
+            this.panelGraph.BackColor = System.Drawing.Color.Purple;
+            this.panelGraph.Location = new System.Drawing.Point(35, 147);
+            this.panelGraph.Name = "panelGraph";
+            this.panelGraph.Size = new System.Drawing.Size(150, 7);
+            this.panelGraph.TabIndex = 30;
+            // 
+            // picGraph
+            // 
+            this.picGraph.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picGraph.Image = global::MultimodeSales.Properties.Resources.diagram128px;
+            this.picGraph.Location = new System.Drawing.Point(35, 0);
+            this.picGraph.Name = "picGraph";
+            this.picGraph.Size = new System.Drawing.Size(150, 155);
+            this.picGraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picGraph.TabIndex = 31;
+            this.picGraph.TabStop = false;
+            this.picGraph.Click += new System.EventHandler(this.picGraph_Click);
+            this.picGraph.MouseEnter += new System.EventHandler(this.picGraph_MouseEnter);
+            this.picGraph.MouseLeave += new System.EventHandler(this.picGraph_MouseLeave);
+            // 
+            // lbGraph
+            // 
+            this.lbGraph.AutoSize = true;
+            this.lbGraph.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbGraph.Location = new System.Drawing.Point(31, 158);
+            this.lbGraph.Name = "lbGraph";
+            this.lbGraph.Size = new System.Drawing.Size(155, 20);
+            this.lbGraph.TabIndex = 32;
+            this.lbGraph.Text = "Grafica de Ventas";
+            // 
+            // content10
+            // 
+            this.content10.Controls.Add(this.panelFolio);
+            this.content10.Controls.Add(this.picFolios);
+            this.content10.Controls.Add(this.lbFolio);
+            this.content10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.content10.Location = new System.Drawing.Point(895, 190);
+            this.content10.Name = "content10";
+            this.content10.Size = new System.Drawing.Size(217, 181);
+            this.content10.TabIndex = 44;
+            // 
+            // panelFolio
+            // 
+            this.panelFolio.BackColor = System.Drawing.Color.Purple;
+            this.panelFolio.Location = new System.Drawing.Point(35, 147);
+            this.panelFolio.Name = "panelFolio";
+            this.panelFolio.Size = new System.Drawing.Size(150, 7);
+            this.panelFolio.TabIndex = 30;
+            // 
+            // picFolios
+            // 
+            this.picFolios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picFolios.Image = ((System.Drawing.Image)(resources.GetObject("picFolios.Image")));
+            this.picFolios.Location = new System.Drawing.Point(35, 0);
+            this.picFolios.Name = "picFolios";
+            this.picFolios.Size = new System.Drawing.Size(150, 155);
+            this.picFolios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picFolios.TabIndex = 31;
+            this.picFolios.TabStop = false;
+            this.picFolios.Click += new System.EventHandler(this.picFolios_Click);
+            this.picFolios.MouseEnter += new System.EventHandler(this.picFolios_MouseEnter);
+            this.picFolios.MouseLeave += new System.EventHandler(this.picFolios_MouseLeave);
+            // 
+            // lbFolio
+            // 
+            this.lbFolio.AutoSize = true;
+            this.lbFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbFolio.Location = new System.Drawing.Point(83, 158);
+            this.lbFolio.Name = "lbFolio";
+            this.lbFolio.Size = new System.Drawing.Size(57, 20);
+            this.lbFolio.TabIndex = 32;
+            this.lbFolio.Text = "Folios";
             // 
             // panelBarra
             // 
@@ -471,36 +738,15 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.monthCalendarForm);
             this.panel1.Controls.Add(this.lbAdmin);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.monthCalendarForm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 614);
             this.panel1.TabIndex = 1;
-            // 
-            // monthCalendarForm
-            // 
-            this.monthCalendarForm.ActiveMonth.Month = 11;
-            this.monthCalendarForm.ActiveMonth.Year = 2020;
-            this.monthCalendarForm.Culture = new System.Globalization.CultureInfo("es-MX");
-            this.monthCalendarForm.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.monthCalendarForm.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.monthCalendarForm.Header.TextColor = System.Drawing.Color.White;
-            this.monthCalendarForm.ImageList = null;
-            this.monthCalendarForm.Location = new System.Drawing.Point(3, 213);
-            this.monthCalendarForm.MaxDate = new System.DateTime(2030, 11, 23, 10, 52, 19, 687);
-            this.monthCalendarForm.MinDate = new System.DateTime(2010, 11, 23, 10, 52, 19, 687);
-            this.monthCalendarForm.Month.BackgroundImage = null;
-            this.monthCalendarForm.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendarForm.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendarForm.Name = "monthCalendarForm";
-            this.monthCalendarForm.Size = new System.Drawing.Size(224, 389);
-            this.monthCalendarForm.TabIndex = 10;
-            this.monthCalendarForm.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.monthCalendarForm.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             // 
             // lbAdmin
             // 
@@ -523,172 +769,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // content1
+            // monthCalendarForm
             // 
-            this.content1.Controls.Add(this.panelImportExcel);
-            this.content1.Controls.Add(this.picImportExcel);
-            this.content1.Controls.Add(this.lbImportExcel);
-            this.content1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content1.Location = new System.Drawing.Point(3, 3);
-            this.content1.Name = "content1";
-            this.content1.Size = new System.Drawing.Size(217, 181);
-            this.content1.TabIndex = 33;
-            // 
-            // content2
-            // 
-            this.content2.Controls.Add(this.panelCliente);
-            this.content2.Controls.Add(this.picCliente);
-            this.content2.Controls.Add(this.lbCliente);
-            this.content2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content2.Location = new System.Drawing.Point(226, 3);
-            this.content2.Name = "content2";
-            this.content2.Size = new System.Drawing.Size(217, 181);
-            this.content2.TabIndex = 34;
-            // 
-            // content3
-            // 
-            this.content3.Controls.Add(this.panelMarca);
-            this.content3.Controls.Add(this.picMarca);
-            this.content3.Controls.Add(this.lbMarca);
-            this.content3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content3.Location = new System.Drawing.Point(449, 3);
-            this.content3.Name = "content3";
-            this.content3.Size = new System.Drawing.Size(217, 181);
-            this.content3.TabIndex = 35;
-            // 
-            // content4
-            // 
-            this.content4.Controls.Add(this.panelColTall);
-            this.content4.Controls.Add(this.picColTall);
-            this.content4.Controls.Add(this.lbColTall);
-            this.content4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content4.Location = new System.Drawing.Point(672, 3);
-            this.content4.Name = "content4";
-            this.content4.Size = new System.Drawing.Size(217, 181);
-            this.content4.TabIndex = 36;
-            // 
-            // content5
-            // 
-            this.content5.Controls.Add(this.panelModelos);
-            this.content5.Controls.Add(this.picModelos);
-            this.content5.Controls.Add(this.lbModelos);
-            this.content5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content5.Location = new System.Drawing.Point(895, 3);
-            this.content5.Name = "content5";
-            this.content5.Size = new System.Drawing.Size(217, 181);
-            this.content5.TabIndex = 37;
-            // 
-            // content6
-            // 
-            this.content6.Controls.Add(this.panelPedido);
-            this.content6.Controls.Add(this.picPedido);
-            this.content6.Controls.Add(this.lbPedido);
-            this.content6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content6.Location = new System.Drawing.Point(3, 190);
-            this.content6.Name = "content6";
-            this.content6.Size = new System.Drawing.Size(217, 181);
-            this.content6.TabIndex = 38;
-            // 
-            // content7
-            // 
-            this.content7.Controls.Add(this.panelPedidosFinal);
-            this.content7.Controls.Add(this.picPedidosFinal);
-            this.content7.Controls.Add(this.lbPedidosFinal);
-            this.content7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content7.Location = new System.Drawing.Point(226, 190);
-            this.content7.Name = "content7";
-            this.content7.Size = new System.Drawing.Size(217, 181);
-            this.content7.TabIndex = 39;
-            // 
-            // content8
-            // 
-            this.content8.Controls.Add(this.panelVenta);
-            this.content8.Controls.Add(this.picVenta);
-            this.content8.Controls.Add(this.lbVenta);
-            this.content8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content8.Location = new System.Drawing.Point(449, 190);
-            this.content8.Name = "content8";
-            this.content8.Size = new System.Drawing.Size(217, 181);
-            this.content8.TabIndex = 40;
-            // 
-            // content9
-            // 
-            this.content9.Controls.Add(this.panelDevolucion);
-            this.content9.Controls.Add(this.picDevolucion);
-            this.content9.Controls.Add(this.lbDevolucion);
-            this.content9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content9.Location = new System.Drawing.Point(672, 190);
-            this.content9.Name = "content9";
-            this.content9.Size = new System.Drawing.Size(217, 181);
-            this.content9.TabIndex = 42;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.content1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.content2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.content3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.content4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.content5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.content6, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.content7, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.content8, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.content9, 3, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(233, 51);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
-            this.tableLayoutPanel1.TabIndex = 43;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.picStock);
-            this.panel2.Controls.Add(this.btnStock);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 377);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 181);
-            this.panel2.TabIndex = 43;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Purple;
-            this.panel3.Location = new System.Drawing.Point(35, 147);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(150, 7);
-            this.panel3.TabIndex = 30;
-            // 
-            // picStock
-            // 
-            this.picStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picStock.Image = global::MultimodeSales.Properties.Resources.packages_128px;
-            this.picStock.Location = new System.Drawing.Point(35, 0);
-            this.picStock.Name = "picStock";
-            this.picStock.Size = new System.Drawing.Size(150, 155);
-            this.picStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picStock.TabIndex = 31;
-            this.picStock.TabStop = false;
-            this.picStock.Click += new System.EventHandler(this.picStock_Click);
-            // 
-            // btnStock
-            // 
-            this.btnStock.AutoSize = true;
-            this.btnStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnStock.Location = new System.Drawing.Point(83, 158);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(55, 20);
-            this.btnStock.TabIndex = 32;
-            this.btnStock.Text = "Stock";
+            this.monthCalendarForm.ActiveMonth.Month = 11;
+            this.monthCalendarForm.ActiveMonth.Year = 2020;
+            this.monthCalendarForm.Culture = new System.Globalization.CultureInfo("es-MX");
+            this.monthCalendarForm.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.monthCalendarForm.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.monthCalendarForm.Header.TextColor = System.Drawing.Color.White;
+            this.monthCalendarForm.ImageList = null;
+            this.monthCalendarForm.Location = new System.Drawing.Point(3, 193);
+            this.monthCalendarForm.MaxDate = new System.DateTime(2030, 11, 23, 10, 52, 19, 687);
+            this.monthCalendarForm.MinDate = new System.DateTime(2010, 11, 23, 10, 52, 19, 687);
+            this.monthCalendarForm.Month.BackgroundImage = null;
+            this.monthCalendarForm.Month.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Month.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Name = "monthCalendarForm";
+            this.monthCalendarForm.Size = new System.Drawing.Size(224, 416);
+            this.monthCalendarForm.TabIndex = 10;
+            this.monthCalendarForm.Weekdays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.monthCalendarForm.Weeknumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             // 
             // Formulario
             // 
@@ -704,15 +804,43 @@
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPedido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picColTall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picModelos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMarca)).EndInit();
+            this.content1.ResumeLayout(false);
+            this.content1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImportExcel)).EndInit();
+            this.content2.ResumeLayout(false);
+            this.content2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCliente)).EndInit();
+            this.content3.ResumeLayout(false);
+            this.content3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMarca)).EndInit();
+            this.content4.ResumeLayout(false);
+            this.content4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picColTall)).EndInit();
+            this.content5.ResumeLayout(false);
+            this.content5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picModelos)).EndInit();
+            this.content6.ResumeLayout(false);
+            this.content6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPedido)).EndInit();
+            this.content7.ResumeLayout(false);
+            this.content7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPedidosFinal)).EndInit();
+            this.content8.ResumeLayout(false);
+            this.content8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVenta)).EndInit();
+            this.content9.ResumeLayout(false);
+            this.content9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
+            this.content10.ResumeLayout(false);
+            this.content10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFolios)).EndInit();
             this.panelBarra.ResumeLayout(false);
             this.panelBarra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
@@ -720,28 +848,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.content1.ResumeLayout(false);
-            this.content1.PerformLayout();
-            this.content2.ResumeLayout(false);
-            this.content2.PerformLayout();
-            this.content3.ResumeLayout(false);
-            this.content3.PerformLayout();
-            this.content4.ResumeLayout(false);
-            this.content4.PerformLayout();
-            this.content5.ResumeLayout(false);
-            this.content5.PerformLayout();
-            this.content6.ResumeLayout(false);
-            this.content6.PerformLayout();
-            this.content7.ResumeLayout(false);
-            this.content7.PerformLayout();
-            this.content8.ResumeLayout(false);
-            this.content8.PerformLayout();
-            this.content9.ResumeLayout(false);
-            this.content9.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -796,9 +902,17 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Pabo.Calendar.MonthCalendar monthCalendarForm;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox picStock;
-        private System.Windows.Forms.Label btnStock;
+        private System.Windows.Forms.Panel panelGraph;
+        private System.Windows.Forms.PictureBox picGraph;
+        private System.Windows.Forms.Label lbGraph;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel content10;
+        private System.Windows.Forms.Panel panelFolio;
+        private System.Windows.Forms.PictureBox picFolios;
+        private System.Windows.Forms.Label lbFolio;
     }
 }
 

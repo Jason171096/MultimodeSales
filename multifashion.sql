@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2021 a las 01:03:02
+-- Tiempo de generación: 20-01-2021 a las 19:42:50
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.0
 
@@ -127,7 +127,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `FolioExistente` (IN `idfolio` BIGINT)  NO SQL
 BEGIN
-	SET @var := (SELECT * FROM folio WHERE folio.IDFolio = idfolio);
+	SET @var := (SELECT * FROM folio_venta WHERE folio_venta.IDFolio = idfolio);
     IF(@var = idfolio) THEN
     	SELECT 1;
     ELSE
@@ -137,7 +137,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VentaPedido` (IN `idfolio` BIGINT, IN `fecha` DATETIME, IN `total` DECIMAL(10,2))  NO SQL
 BEGIN
-	INSERT INTO folio(folio.IDFolio) VALUES (idfolio);
+	INSERT INTO folio(folio_venta.IDFolio) VALUES (idfolio);
 	INSERT INTO venta(venta.IDFolio, venta.Fecha, venta.Total) VALUES (idfolio, fecha, total);
 END$$
 

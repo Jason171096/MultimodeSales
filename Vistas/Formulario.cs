@@ -12,7 +12,6 @@ namespace MultimodeSales
         
         private int MX = 0;
         private int MY = 0;
-        CPanelBarras cPanel = new CPanelBarras();
         public Formulario()
         {
             InitializeComponent();
@@ -26,7 +25,8 @@ namespace MultimodeSales
             panelPedido.Visible = false;
             panelVenta.Visible = false;
             panelDevolucion.Visible = false;
-            lbDevolucion.Visible = false;
+            panelFolio.Visible = false;
+            panelGraph.Visible = false;
             #endregion
             #region Labels Visible
             lbCliente.Visible = false;
@@ -38,6 +38,8 @@ namespace MultimodeSales
             lbPedido.Visible = false;
             lbVenta.Visible = false;
             lbDevolucion.Visible = false;
+            lbFolio.Visible = false;
+            lbGraph.Visible = false;
             #endregion
             monthCalendarForm.TodayColor = Color.Red;
             monthCalendarForm.ActiveMonth.Month = DateTime.Now.Month;
@@ -206,14 +208,55 @@ namespace MultimodeSales
             panelDevolucion.Visible = false;
             lbDevolucion.Visible = false;
         }
+        private void picDevolucion_Click(object sender, EventArgs e)
+        {
+            Devolucion devolucion = new Devolucion();
+            devolucion.ShowDialog();
+        }
+        #endregion
+        #region picFolios
+        private void picFolios_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void picFolios_MouseEnter(object sender, EventArgs e)
+        {
+            lbFolio.Visible = true;
+            panelFolio.Visible = true;
+        }
+
+        private void picFolios_MouseLeave(object sender, EventArgs e)
+        {
+            lbFolio.Visible = false;
+            panelFolio.Visible = false;
+        }
+        #endregion
+        #region picGraph
+        private void picGraph_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picGraph_MouseEnter(object sender, EventArgs e)
+        {
+            panelGraph.Visible = true;
+            lbGraph.Visible = true;
+        }
+
+        private void picGraph_MouseLeave(object sender, EventArgs e)
+        {
+            panelGraph.Visible = false;
+            lbGraph.Visible = false;
+        }
         #endregion
 
         #region Barra Superior
         private void panelBarra_MouseMove(object sender, MouseEventArgs e)
         {
-            //MouseMove(sender, e);
+            MouseMove(sender, e);
             //CPanelBarras.MouseMove(sender, e, Left, Top, MX, MY);
-            cPanel.MouseMove(sender, e, Left, Top, MX, MY);
+            //cPanel.MouseMove(sender, e, Left, Top, MX, MY);
         }
         private void timerHora_Tick(object sender, EventArgs e)
         {
@@ -259,13 +302,6 @@ namespace MultimodeSales
 
         #endregion
 
-        private void picStock_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
-
-       
     }
 }

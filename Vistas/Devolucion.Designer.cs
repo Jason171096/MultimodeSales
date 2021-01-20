@@ -36,7 +36,7 @@ namespace MultimodeSales.Vistas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBarras = new System.Windows.Forms.Panel();
-            this.lbCambio = new System.Windows.Forms.Label();
+            this.lbDevolucion = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@ namespace MultimodeSales.Vistas
             this.panelBarras.BackColor = System.Drawing.Color.Transparent;
             this.panelBarras.BackgroundImage = global::MultimodeSales.Properties.Resources.background5;
             this.panelBarras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelBarras.Controls.Add(this.lbCambio);
+            this.panelBarras.Controls.Add(this.lbDevolucion);
             this.panelBarras.Controls.Add(this.picClose);
             this.panelBarras.Controls.Add(this.picMinimize);
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
@@ -88,17 +88,17 @@ namespace MultimodeSales.Vistas
             this.panelBarras.Size = new System.Drawing.Size(875, 49);
             this.panelBarras.TabIndex = 19;
             // 
-            // lbCambio
+            // lbDevolucion
             // 
-            this.lbCambio.AutoSize = true;
-            this.lbCambio.BackColor = System.Drawing.Color.Transparent;
-            this.lbCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCambio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbCambio.Location = new System.Drawing.Point(6, 9);
-            this.lbCambio.Name = "lbCambio";
-            this.lbCambio.Size = new System.Drawing.Size(109, 29);
-            this.lbCambio.TabIndex = 37;
-            this.lbCambio.Text = "Cambios";
+            this.lbDevolucion.AutoSize = true;
+            this.lbDevolucion.BackColor = System.Drawing.Color.Transparent;
+            this.lbDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDevolucion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbDevolucion.Location = new System.Drawing.Point(6, 9);
+            this.lbDevolucion.Name = "lbDevolucion";
+            this.lbDevolucion.Size = new System.Drawing.Size(133, 29);
+            this.lbDevolucion.TabIndex = 37;
+            this.lbDevolucion.Text = "Devolución";
             // 
             // picClose
             // 
@@ -496,7 +496,7 @@ namespace MultimodeSales.Vistas
         #endregion
 
         private System.Windows.Forms.Panel panelBarras;
-        private System.Windows.Forms.Label lbCambio;
+        private System.Windows.Forms.Label lbDevolucion;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.Label label1;
