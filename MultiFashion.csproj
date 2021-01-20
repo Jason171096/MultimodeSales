@@ -192,10 +192,10 @@
     <Compile Include="Vistas\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Devolucion.cs">
+    <Compile Include="Vistas\Devolucion\Devolucion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Devolucion.Designer.cs">
+    <Compile Include="Vistas\Devolucion\Devolucion.Designer.cs">
       <DependentUpon>Devolucion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Formulario.cs">
@@ -230,16 +230,16 @@
     <Compile Include="Vistas\Modelos\Modelos.Designer.cs">
       <DependentUpon>Modelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Pedido.cs">
+    <Compile Include="Vistas\Pedidos\Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Pedido.Designer.cs">
+    <Compile Include="Vistas\Pedidos\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\PedidosFinal.cs">
+    <Compile Include="Vistas\Pedidos\PedidosFinal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\PedidosFinal.Designer.cs">
+    <Compile Include="Vistas\Pedidos\PedidosFinal.Designer.cs">
       <DependentUpon>PedidosFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\TallasyColores.cs">
@@ -269,7 +269,7 @@
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Devolucion.resx">
+    <EmbeddedResource Include="Vistas\Devolucion\Devolucion.resx">
       <DependentUpon>Devolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Formulario.resx">
@@ -292,10 +292,10 @@
     <EmbeddedResource Include="Vistas\Modelos\Modelos.resx">
       <DependentUpon>Modelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Pedido.resx">
+    <EmbeddedResource Include="Vistas\Pedidos\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\PedidosFinal.resx">
+    <EmbeddedResource Include="Vistas\Pedidos\PedidosFinal.resx">
       <DependentUpon>PedidosFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TallasyColores.resx">
