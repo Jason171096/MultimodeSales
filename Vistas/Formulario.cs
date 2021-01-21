@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using MultimodeSales.Programacion;
 using MultimodeSales.Vistas;
+using MultimodeSales.Vistas.Folios;
 using MultimodeSales.Vistas.Ventas;
 
 namespace MultimodeSales
@@ -217,8 +218,8 @@ namespace MultimodeSales
         #region picFolios
         private void picFolios_Click(object sender, EventArgs e)
         {
-            Folio folio = new Folio();
-            folio.Show();
+            TipoFolio tipoFolio = new TipoFolio();
+            tipoFolio.ShowDialog();
         }
 
         private void picFolios_MouseEnter(object sender, EventArgs e)

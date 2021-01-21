@@ -29,44 +29,35 @@ namespace MultimodeSales.Vistas.Ventas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.barraSuperior1 = new Barra.BarraSuperior();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
+            this.barraSuperior = new Barra.BarraSuperior();
             this.SuspendLayout();
             // 
-            // label1
+            // barraSuperior
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(329, 242);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PUTOS";
-            // 
-            // barraSuperior1
-            // 
-            this.barraSuperior1.Location = new System.Drawing.Point(248, 104);
-            this.barraSuperior1.Name = "barraSuperior1";
-            this.barraSuperior1.Size = new System.Drawing.Size(112, 49);
-            this.barraSuperior1.TabIndex = 1;
+            this.barraSuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("barraSuperior.BackgroundImage")));
+            this.barraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.barraSuperior.Name = "barraSuperior";
+            this.barraSuperior.Size = new System.Drawing.Size(1016, 48);
+            this.barraSuperior.TabIndex = 0;
+            this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 571);
-            this.Controls.Add(this.barraSuperior1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1016, 571);
+            this.Controls.Add(this.barraSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ticket";
             this.Text = "Ticket";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private Barra.BarraSuperior barraSuperior1;
+        private Barra.BarraSuperior barraSuperior;
     }
 }

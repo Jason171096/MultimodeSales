@@ -79,7 +79,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Barra">
+    <Reference Include="Barra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>Referencias\Barra.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -168,8 +169,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Programacion\CBarraSuperior.cs" />
     <Compile Include="Programacion\CVenta.cs" />
     <Compile Include="Programacion\ColoresyTallas\CColoresyTallas.cs" />
+    <Compile Include="Programacion\Folios\CFolio.cs" />
     <Compile Include="Programacion\Modelo\Modelo.cs" />
     <Compile Include="Programacion\Utilerias\CFormBorder.cs" />
     <Compile Include="Programacion\Cliente\ClienteDB.cs" />
@@ -201,11 +204,17 @@
     <Compile Include="Vistas\Devolucion\Devolucion.Designer.cs">
       <DependentUpon>Devolucion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Folio.cs">
+    <Compile Include="Vistas\Folios\Folio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Folio.Designer.cs">
+    <Compile Include="Vistas\Folios\Folio.Designer.cs">
       <DependentUpon>Folio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Folios\TipoFolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Folios\TipoFolio.Designer.cs">
+      <DependentUpon>TipoFolio.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Formulario.cs">
       <SubType>Form</SubType>
@@ -281,8 +290,11 @@
     <EmbeddedResource Include="Vistas\Devolucion\Devolucion.resx">
       <DependentUpon>Devolucion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Folio.resx">
+    <EmbeddedResource Include="Vistas\Folios\Folio.resx">
       <DependentUpon>Folio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Folios\TipoFolio.resx">
+      <DependentUpon>TipoFolio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>

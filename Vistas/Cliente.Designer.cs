@@ -37,7 +37,6 @@
             this.lbClientes = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,9 +92,9 @@
             this.panelBarras.Controls.Add(this.picClose);
             this.panelBarras.Controls.Add(this.picMinimize);
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarras.Location = new System.Drawing.Point(35, 0);
+            this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(820, 46);
+            this.panelBarras.Size = new System.Drawing.Size(822, 46);
             this.panelBarras.TabIndex = 29;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -137,18 +136,6 @@
             this.picMinimize.TabIndex = 23;
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Indigo;
-            this.panel1.BackgroundImage = global::MultimodeSales.Properties.Resources.background3;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(35, 575);
-            this.panel1.TabIndex = 28;
             // 
             // label3
             // 
@@ -211,7 +198,7 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvClientes.Location = new System.Drawing.Point(46, 305);
+            this.dgvClientes.Location = new System.Drawing.Point(11, 305);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -232,7 +219,7 @@
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.RowTemplate.Height = 30;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(797, 258);
+            this.dgvClientes.Size = new System.Drawing.Size(802, 258);
             this.dgvClientes.TabIndex = 32;
             this.dgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellDoubleClick);
             // 
@@ -246,7 +233,7 @@
             this.groupBox1.Controls.Add(this.btnAgregarCliente);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(41, 52);
+            this.groupBox1.Location = new System.Drawing.Point(11, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 247);
             this.groupBox1.TabIndex = 33;
@@ -272,7 +259,7 @@
             // 
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtBuscar.Location = new System.Drawing.Point(532, 265);
+            this.txtBuscar.Location = new System.Drawing.Point(502, 265);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(311, 29);
             this.txtBuscar.TabIndex = 34;
@@ -283,7 +270,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(453, 265);
+            this.label1.Location = new System.Drawing.Point(423, 265);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 24);
             this.label1.TabIndex = 35;
@@ -293,7 +280,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(453, 168);
+            this.label2.Location = new System.Drawing.Point(423, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 72);
             this.label2.TabIndex = 36;
@@ -305,14 +292,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(855, 575);
+            this.ClientSize = new System.Drawing.Size(822, 575);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.panelBarras);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Cliente";
@@ -334,7 +320,6 @@
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Panel panelBarras;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label4;

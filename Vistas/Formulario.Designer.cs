@@ -68,10 +68,6 @@
             this.content9 = new System.Windows.Forms.Panel();
             this.picDevolucion = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGraph = new System.Windows.Forms.Panel();
             this.picGraph = new System.Windows.Forms.PictureBox();
@@ -80,6 +76,10 @@
             this.panelFolio = new System.Windows.Forms.Panel();
             this.picFolios = new System.Windows.Forms.PictureBox();
             this.lbFolio = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.lbHora = new System.Windows.Forms.Label();
@@ -108,12 +108,12 @@
             this.content9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
             this.content10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFolios)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -278,7 +278,7 @@
             this.lbDevolucion.Name = "lbDevolucion";
             this.lbDevolucion.Size = new System.Drawing.Size(97, 20);
             this.lbDevolucion.TabIndex = 32;
-            this.lbDevolucion.Text = "Devolucion";
+            this.lbDevolucion.Text = "Devolución";
             // 
             // panelDevolucion
             // 
@@ -542,45 +542,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 561);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(449, 377);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(217, 181);
-            this.panel6.TabIndex = 45;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Purple;
-            this.panel7.Location = new System.Drawing.Point(35, 147);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 7);
-            this.panel7.TabIndex = 30;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::MultimodeSales.Properties.Resources.packages_128px;
-            this.pictureBox3.Location = new System.Drawing.Point(35, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 155);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(83, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Stock";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panelGraph);
@@ -666,6 +627,45 @@
             this.lbFolio.Size = new System.Drawing.Size(57, 20);
             this.lbFolio.TabIndex = 32;
             this.lbFolio.Text = "Folios";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(449, 377);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(217, 181);
+            this.panel6.TabIndex = 45;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Purple;
+            this.panel7.Location = new System.Drawing.Point(35, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(150, 7);
+            this.panel7.TabIndex = 30;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::MultimodeSales.Properties.Resources.packages_128px;
+            this.pictureBox3.Location = new System.Drawing.Point(35, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(150, 155);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(83, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Stock";
             // 
             // panelBarra
             // 
@@ -832,15 +832,15 @@
             this.content9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDevolucion)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
             this.content10.ResumeLayout(false);
             this.content10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFolios)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelBarra.ResumeLayout(false);
             this.panelBarra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();

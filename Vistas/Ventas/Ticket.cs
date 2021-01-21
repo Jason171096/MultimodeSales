@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MultimodeSales.Programacion;
+using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -15,6 +13,8 @@ namespace MultimodeSales.Vistas.Ventas
     {
         private Button printButton = new Button();
         private PrintDocument printDocument1 = new PrintDocument();
+        private int MX = 0;
+        private int MY = 0;
         public Ticket()
         {
             InitializeComponent();
@@ -22,6 +22,8 @@ namespace MultimodeSales.Vistas.Ventas
             printButton.Click += new EventHandler(printButton_Click);
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             this.Controls.Add(printButton);
+            barraSuperior.picMinimize.Click += new EventHandler(MinimizedClick);
+            barraSuperior.picClose.Click += new EventHandler(CloseClick);
         }
         
         void printButton_Click(object sender, EventArgs e)
@@ -46,6 +48,31 @@ namespace MultimodeSales.Vistas.Ventas
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
+        private void MinimizedClick(object sender, EventArgs e)
+        {
+            WindowState = CBarraSuperior.Minimized();
+        }
+        private void CloseClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
 
+        private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
     }
 }
