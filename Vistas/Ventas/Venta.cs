@@ -136,6 +136,7 @@ namespace MultimodeSales.Vistas.Ventas
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            borrarLabels();
             PedidosFinal final = new PedidosFinal(true);
             final.ShowDialog();
             modelo = final.returnModelo();
@@ -149,6 +150,7 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void btnAgregarModelo_Click(object sender, EventArgs e)
         {
+            borrarLabels();
             Modeloss modelos = new Modeloss(true);
             modelos.ShowDialog();
             modelo = modelos.returnModelo();

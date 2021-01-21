@@ -217,7 +217,8 @@ namespace MultimodeSales
         #region picFolios
         private void picFolios_Click(object sender, EventArgs e)
         {
-            
+            Folio folio = new Folio();
+            folio.Show();
         }
 
         private void picFolios_MouseEnter(object sender, EventArgs e)
