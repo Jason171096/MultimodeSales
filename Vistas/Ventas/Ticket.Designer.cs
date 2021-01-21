@@ -30,6 +30,7 @@ namespace MultimodeSales.Vistas.Ventas
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.barraSuperior1 = new Barra.BarraSuperior();
             this.SuspendLayout();
             // 
             // label1
@@ -42,11 +43,19 @@ namespace MultimodeSales.Vistas.Ventas
             this.label1.TabIndex = 0;
             this.label1.Text = "PUTOS";
             // 
+            // barraSuperior1
+            // 
+            this.barraSuperior1.Location = new System.Drawing.Point(248, 104);
+            this.barraSuperior1.Name = "barraSuperior1";
+            this.barraSuperior1.Size = new System.Drawing.Size(112, 49);
+            this.barraSuperior1.TabIndex = 1;
+            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 571);
+            this.ClientSize = new System.Drawing.Size(1185, 571);
+            this.Controls.Add(this.barraSuperior1);
             this.Controls.Add(this.label1);
             this.Name = "Ticket";
             this.Text = "Ticket";
@@ -58,5 +67,6 @@ namespace MultimodeSales.Vistas.Ventas
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private Barra.BarraSuperior barraSuperior1;
     }
 }
