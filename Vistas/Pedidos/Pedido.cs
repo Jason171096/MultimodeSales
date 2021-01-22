@@ -14,7 +14,6 @@ namespace MultimodeSales.Vistas
 {
     public partial class Pedido : Form
     {
-        CDataGridView cDataGrid = new CDataGridView();
         ClienteDB cliente = new ClienteDB();
         ModelosDB modelos = new ModelosDB();
         CPedido pedido = new CPedido();
@@ -27,7 +26,7 @@ namespace MultimodeSales.Vistas
         public Pedido()
         {
             InitializeComponent();
-            cDataGrid.FormattingDataGridView(dgvPedido);
+            CDataGridView.FormattedDataGridView(dgvPedido);
             Clientes();
             Modelos();
             Colores();

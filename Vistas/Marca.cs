@@ -12,7 +12,6 @@ namespace MultimodeSales.Vistas
     {
         MarcaBD marca = new MarcaBD();
         Validaciones validacion = new Validaciones();
-        CDataGridView CDataGrid = new CDataGridView();
         DataTable dt = new DataTable();
         private int MX = 0;
         private int MY = 0;
@@ -21,7 +20,7 @@ namespace MultimodeSales.Vistas
         public Marca()
         {
             InitializeComponent();
-            CDataGrid.FormattingDataGridView(dgvMarcas);
+            CDataGridView.FormattedDataGridView(dgvMarcas);
             LlenarDataGridViewMarca();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }

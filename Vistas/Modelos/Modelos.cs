@@ -14,7 +14,6 @@ namespace MultimodeSales.Vistas
     public partial class Modeloss : Form
     {
         ModelosDB modelos = new ModelosDB();
-        CDataGridView cDataGrid = new CDataGridView();
         DataTable dt = new DataTable();
         DataTable Data = new DataTable();
         private int MX;
@@ -25,7 +24,7 @@ namespace MultimodeSales.Vistas
         public Modeloss(bool pactiveCellClick)
         {
             InitializeComponent();
-            cDataGrid.FormattingDataGridView(dgvModelos);
+            CDataGridView.FormattedDataGridView(dgvModelos);
             rbtnNumPedido.Checked = true;
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);

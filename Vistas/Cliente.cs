@@ -11,7 +11,6 @@ namespace MultimodeSales.Vistas
     public partial class Cliente : Form
     {
         ClienteDB cliente = new ClienteDB();
-        CDataGridView CDataGrid = new CDataGridView();
         Validaciones validaciones = new Validaciones();
         DataTable dt = new DataTable();
         private int MX = 0;
@@ -20,7 +19,7 @@ namespace MultimodeSales.Vistas
         public Cliente()
         {
             InitializeComponent();
-            CDataGrid.FormattingDataGridView(dgvClientes);
+            CDataGridView.FormattedDataGridView(dgvClientes);
             LlenarDataGridViewCliente();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }

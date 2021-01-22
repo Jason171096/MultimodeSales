@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion
 {
-    class CDataGridView
+    public static class CDataGridView
     {
-        public void FormattingDataGridView(DataGridView dataGrid)
+        public static void FormattedDataGridView(DataGridView dataGrid)
         {
             dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGrid.GridColor = Color.DarkSlateBlue;

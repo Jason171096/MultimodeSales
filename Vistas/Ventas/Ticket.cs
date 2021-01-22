@@ -1,4 +1,5 @@
 ﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -73,6 +74,11 @@ namespace MultimodeSales.Vistas.Ventas
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             MouseMove(sender, e);
+        }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

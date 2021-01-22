@@ -18,12 +18,14 @@ namespace MultimodeSales.Vistas
         MarcaBD marca = new MarcaBD();
         CImportarCSVyExcel importarCSV = new CImportarCSVyExcel();
         ModelosDB modelos = new ModelosDB();
-        CDataGridView cDataGrid = new CDataGridView();
         public ImportarListaMarca()
         {
             InitializeComponent();
             LlenarComboBoxMarca();
-            cDataGrid.FormattingDataGridView(dgvExcel);
+            CDataGridView.FormattedDataGridView(dgvExcel);
+            CRoundButton.FormattedRoundButton(rbtnCargar);
+            CRoundButton.FormattedRoundButton(rbtnImportar);
+            CRoundButton.FormattedRoundButton(rbtnCancelar);
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private string modelo = "MODELO";
@@ -47,14 +49,12 @@ namespace MultimodeSales.Vistas
             cobxMarca.ValueMember = "Key";
 
         }
-
-        private void btnCargar_Click_1(object sender, EventArgs e)
+        private void rbtnCargar_Click(object sender, EventArgs e)
         {
             //CargarExcel();
             CargarCSV();
         }
-
-        private void btnImportar_Click_1(object sender, EventArgs e)
+        private void rbtnImportar_Click(object sender, EventArgs e)
         {
             string idmarca = cobxMarca.SelectedValue.ToString();
             foreach (DataGridViewRow row in dgvExcel.Rows)
@@ -154,7 +154,7 @@ namespace MultimodeSales.Vistas
                 CMsgBox.DisplayError($"Los parametros recibidos no son validos, intente de nuevo \n Mensaje: \n {ex.Message}");
             }
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void rbtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -191,6 +191,8 @@ namespace MultimodeSales.Vistas
                 Top = Top + (e.Y - MY);
             }
         }
+
+
         #endregion
     }
 }

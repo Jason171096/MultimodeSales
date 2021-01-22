@@ -219,7 +219,7 @@ namespace MultimodeSales
         private void picFolios_Click(object sender, EventArgs e)
         {
             TipoFolio tipoFolio = new TipoFolio();
-            tipoFolio.ShowDialog();
+            tipoFolio.Show();
         }
 
         private void picFolios_MouseEnter(object sender, EventArgs e)

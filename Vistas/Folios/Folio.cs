@@ -15,11 +15,10 @@ namespace MultimodeSales.Vistas
     public partial class Folio : Form
     {
         CFolio cFolio = new CFolio();
-        CDataGridView cDataGrid = new CDataGridView();
         public Folio(bool pFolio)
         {
             InitializeComponent();
-            cDataGrid.FormattingDataGridView(dgvFolio);
+            CDataGridView.FormattedDataGridView(dgvFolio);
             if(pFolio)
             {
                 lbFolio.Text = "Folios Ventas";

@@ -14,7 +14,6 @@ namespace MultimodeSales.Vistas.Ventas
         private int MX;
         private int MY;
         ListaPedidosFinal pedidosFinal = new ListaPedidosFinal();
-        CDataGridView cDataGrid = new CDataGridView();
         ClienteDB cliente = new ClienteDB();
         private bool SelectIndexChange = false;
         Modelo modelo = new Modelo();
@@ -23,7 +22,7 @@ namespace MultimodeSales.Vistas.Ventas
         public Venta()
         {
             InitializeComponent();
-            cDataGrid.FormattingDataGridView(dgvPedidosFinal);
+            CDataGridView.FormattedDataGridView(dgvPedidosFinal);
             Clientes();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }

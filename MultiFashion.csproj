@@ -117,6 +117,9 @@
     <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2020.0.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
+    <Reference Include="RoundButton">
+      <HintPath>Referencias\RoundButton.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -186,6 +189,7 @@
     <Compile Include="Programacion\Marca\MarcaBD.cs" />
     <Compile Include="Programacion\Modelo\ModelosDB.cs" />
     <Compile Include="Programacion\CPedido.cs" />
+    <Compile Include="Programacion\Utilerias\CRoundButton.cs" />
     <Compile Include="Programacion\Utilerias\Validaciones.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

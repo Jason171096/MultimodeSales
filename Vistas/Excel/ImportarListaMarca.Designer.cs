@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cobxMarca = new System.Windows.Forms.ComboBox();
             this.dgvExcel = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnImportar = new System.Windows.Forms.Button();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.lbListaMarcas = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtnCargar = new RoundButton.RoundButton();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbtnImportar = new RoundButton.RoundButton();
+            this.rbtnCancelar = new RoundButton.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExcel)).BeginInit();
             this.panelBarra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -75,14 +75,14 @@
             this.dgvExcel.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvExcel.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvExcel.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExcel.ColumnHeadersHeight = 50;
             this.dgvExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvExcel.EnableHeadersVisualStyles = false;
@@ -90,22 +90,22 @@
             this.dgvExcel.Location = new System.Drawing.Point(12, 151);
             this.dgvExcel.Name = "dgvExcel";
             this.dgvExcel.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExcel.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvExcel.RowHeadersVisible = false;
             this.dgvExcel.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvExcel.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvExcel.RowTemplate.Height = 30;
             this.dgvExcel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExcel.Size = new System.Drawing.Size(825, 414);
@@ -134,34 +134,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Importa la \r\nlista al Sistema";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCargar.Location = new System.Drawing.Point(168, 36);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(174, 34);
-            this.btnCargar.TabIndex = 24;
-            this.btnCargar.Text = "Cargar Lista";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click_1);
-            // 
-            // btnImportar
-            // 
-            this.btnImportar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnImportar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnImportar.Location = new System.Drawing.Point(226, 29);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(157, 41);
-            this.btnImportar.TabIndex = 25;
-            this.btnImportar.Text = "Importar";
-            this.btnImportar.UseVisualStyleBackColor = false;
-            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click_1);
             // 
             // panelBarra
             // 
@@ -227,25 +199,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marcas";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 616);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(205, 46);
-            this.btnCancelar.TabIndex = 28;
-            this.btnCancelar.Text = "Cancelar(Esc)";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rbtnCargar);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.btnCargar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(472, 55);
             this.groupBox2.Name = "groupBox2";
@@ -253,6 +210,22 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista";
+            // 
+            // rbtnCargar
+            // 
+            this.rbtnCargar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCargar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCargar.Location = new System.Drawing.Point(167, 36);
+            this.rbtnCargar.Name = "rbtnCargar";
+            this.rbtnCargar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCargar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCargar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCargar.Size = new System.Drawing.Size(174, 34);
+            this.rbtnCargar.TabIndex = 31;
+            this.rbtnCargar.Text = "Cargar Lista";
+            this.rbtnCargar.TextColor = System.Drawing.Color.White;
+            this.rbtnCargar.UseVisualStyleBackColor = true;
+            this.rbtnCargar.Click += new System.EventHandler(this.rbtnCargar_Click);
             // 
             // label3
             // 
@@ -268,8 +241,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rbtnImportar);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.btnImportar);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox3.Location = new System.Drawing.Point(431, 571);
             this.groupBox3.Name = "groupBox3";
@@ -278,16 +251,47 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Importar";
             // 
+            // rbtnImportar
+            // 
+            this.rbtnImportar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnImportar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnImportar.Location = new System.Drawing.Point(226, 29);
+            this.rbtnImportar.Name = "rbtnImportar";
+            this.rbtnImportar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnImportar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnImportar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnImportar.Size = new System.Drawing.Size(157, 41);
+            this.rbtnImportar.TabIndex = 32;
+            this.rbtnImportar.Text = "Importar";
+            this.rbtnImportar.TextColor = System.Drawing.Color.White;
+            this.rbtnImportar.UseVisualStyleBackColor = true;
+            this.rbtnImportar.Click += new System.EventHandler(this.rbtnImportar_Click);
+            // 
+            // rbtnCancelar
+            // 
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.Location = new System.Drawing.Point(12, 621);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(205, 41);
+            this.rbtnCancelar.TabIndex = 33;
+            this.rbtnCancelar.Text = "Cancelar(Esc)";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.Click += new System.EventHandler(this.rbtnCancelar_Click);
+            // 
             // ImportarListaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(848, 674);
+            this.Controls.Add(this.rbtnCancelar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.dgvExcel);
@@ -318,16 +322,16 @@
         private System.Windows.Forms.DataGridView dgvExcel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Button btnImportar;
         private System.Windows.Forms.Panel panelBarra;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.Label lbListaMarcas;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
+        private RoundButton.RoundButton rbtnCargar;
+        private RoundButton.RoundButton rbtnImportar;
+        private RoundButton.RoundButton rbtnCancelar;
     }
 }
