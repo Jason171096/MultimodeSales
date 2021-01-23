@@ -30,8 +30,6 @@ namespace MultimodeSales.Vistas.Ventas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogVenta));
-            this.btnVender = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.lbCambio = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
             this.tbLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -43,40 +41,12 @@ namespace MultimodeSales.Vistas.Ventas
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.rbtnVender = new RoundButton.RoundButton();
+            this.rbtnCancelar = new RoundButton.RoundButton();
             this.tbLayout.SuspendLayout();
             this.tbLayoutCambio.SuspendLayout();
             this.tbLayoutTotal.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnVender
-            // 
-            this.btnVender.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnVender.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVender.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnVender.Location = new System.Drawing.Point(341, 307);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(162, 36);
-            this.btnVender.TabIndex = 61;
-            this.btnVender.Text = "Vender(Enter)";
-            this.btnVender.UseVisualStyleBackColor = false;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 307);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(157, 36);
-            this.btnCancelar.TabIndex = 62;
-            this.btnCancelar.Text = "Cancelar(Esc)";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lbCambio
             // 
@@ -207,18 +177,51 @@ namespace MultimodeSales.Vistas.Ventas
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // rbtnVender
+            // 
+            this.rbtnVender.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnVender.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnVender.Location = new System.Drawing.Point(341, 307);
+            this.rbtnVender.Name = "rbtnVender";
+            this.rbtnVender.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnVender.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnVender.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnVender.Size = new System.Drawing.Size(162, 38);
+            this.rbtnVender.TabIndex = 65;
+            this.rbtnVender.Text = "Vender(Enter)";
+            this.rbtnVender.TextColor = System.Drawing.Color.White;
+            this.rbtnVender.UseVisualStyleBackColor = true;
+            this.rbtnVender.Click += new System.EventHandler(this.rbtnVender_Click);
+            // 
+            // rbtnCancelar
+            // 
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.rbtnCancelar.Location = new System.Drawing.Point(12, 307);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(162, 38);
+            this.rbtnCancelar.TabIndex = 66;
+            this.rbtnCancelar.Text = "Cancelar(Esc)";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.Click += new System.EventHandler(this.rbtnCancelar_Click);
+            // 
             // DialogVenta
             // 
-            this.AcceptButton = this.btnVender;
+            this.AcceptButton = this.rbtnVender;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Green;
-            this.CancelButton = this.btnCancelar;
+            this.CancelButton = this.rbtnCancelar;
             this.ClientSize = new System.Drawing.Size(515, 357);
+            this.Controls.Add(this.rbtnCancelar);
+            this.Controls.Add(this.rbtnVender);
             this.Controls.Add(this.tbLayout);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnVender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -237,8 +240,6 @@ namespace MultimodeSales.Vistas.Ventas
         }
 
         #endregion
-        private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lbCambio;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.TableLayoutPanel tbLayout;
@@ -250,5 +251,7 @@ namespace MultimodeSales.Vistas.Ventas
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private RoundButton.RoundButton rbtnVender;
+        private RoundButton.RoundButton rbtnCancelar;
     }
 }

@@ -24,6 +24,8 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvPedidosFinal);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnFinalizar);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             rbtnNumPedido.Checked = true;
             rbtnTodos.Checked = true;
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
@@ -131,8 +133,7 @@ namespace MultimodeSales.Vistas
                 }
             }
         }
-
-        private void btnTerminar_Click(object sender, EventArgs e)
+        private void rbtnFinalizar_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
@@ -143,6 +144,11 @@ namespace MultimodeSales.Vistas
             }
             CMsgBox.DisplayInfo("¡Pedido actualizado con exito!");
             CargarLista();
+        }
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
@@ -189,41 +195,7 @@ namespace MultimodeSales.Vistas
         {
             dgvPedidosFinal.DataSource = null;
         }
-        #region Barra Superior
-        private void panelBarras_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMove(sender, e);
-        }
-
-        private void lbPedidoFinal_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMove(sender, e);
-        }
-
-        private new void MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
-            {
-                MX = e.X;
-                MY = e.Y;
-            }
-            else
-            {
-                Left = Left + (e.X - MX);
-                Top = Top + (e.Y - MY);
-            }
-        }
-
-        private void picMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        #endregion
+        
         private void dgvPedidosFinal_Sorted(object sender, EventArgs e)
         {
             if (rbtnTodos.Checked)
@@ -262,6 +234,41 @@ namespace MultimodeSales.Vistas
         {
             CargarLista();
         }
+        #region Barra Superior
+        private void panelBarras_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void lbPedidoFinal_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
     }
 }
 

@@ -25,6 +25,8 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvModelos);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarModelo);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnEditarModelo);
             rbtnNumPedido.Checked = true;
             rbtnNumPedido.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
             rbtnFecha.CheckedChanged += new EventHandler(radioButtonBuscar_CheckedChanged);
@@ -82,13 +84,14 @@ namespace MultimodeSales.Vistas
             dgvModelos.Columns[5].HeaderText = "Precio Cliente";//PrecioCliente
             dgvModelos.Columns[6].Width = 300;//Fecha  
         }
-        private void btnAgregarModelo_Click(object sender, EventArgs e)
+        private void rbtnAgregarModelo_Click(object sender, EventArgs e)
         {
             new EditModelo(true, "", "", "", "", "").ShowDialog();
             BorrarTable();
             CargarModelos();
         }
-        private void btnEditarModelo_Click(object sender, EventArgs e)
+
+        private void rbtnEditarModelo_Click(object sender, EventArgs e)
         {
             if (dgvModelos.SelectedRows.Count > 0)
             {
@@ -103,7 +106,7 @@ namespace MultimodeSales.Vistas
                 CargarModelos();
             }
             else
-               CMsgBox.DisplayWarning("Ningun modelo fue seleccionado para editar");
+                CMsgBox.DisplayWarning("Ningun modelo fue seleccionado para editar");
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
@@ -181,11 +184,6 @@ namespace MultimodeSales.Vistas
                 Left = Left + (e.X - MX);
                 Top = Top + (e.Y - MY);
             }
-        }
-
-        private void dgvModelos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
         }
 
         private void picMinimize_Click(object sender, EventArgs e)

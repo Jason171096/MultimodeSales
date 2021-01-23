@@ -23,9 +23,9 @@ namespace MultimodeSales.Vistas
             InitializeComponent();
             LlenarComboBoxMarca();
             CDataGridView.FormattedDataGridView(dgvExcel);
-            CRoundButton.FormattedRoundButton(rbtnCargar);
-            CRoundButton.FormattedRoundButton(rbtnImportar);
-            CRoundButton.FormattedRoundButton(rbtnCancelar);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCargar);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnImportar);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnCancelar);
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private string modelo = "MODELO";

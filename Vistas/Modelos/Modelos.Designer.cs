@@ -38,9 +38,9 @@
             this.rbtnFecha = new System.Windows.Forms.RadioButton();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtBuscarModelo = new System.Windows.Forms.TextBox();
-            this.btnEditarModelo = new System.Windows.Forms.Button();
-            this.btnAgregarModelo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtnEditarModelo = new RoundButton.RoundButton();
+            this.rbtnAgregarModelo = new RoundButton.RoundButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbModelos = new System.Windows.Forms.Label();
@@ -110,7 +110,6 @@
             this.dgvModelos.Size = new System.Drawing.Size(1002, 397);
             this.dgvModelos.TabIndex = 7;
             this.dgvModelos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModelos_CellDoubleClick);
-            this.dgvModelos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvModelos_CellFormatting);
             this.dgvModelos.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dgvModelos_Scroll);
             // 
             // groupBox1
@@ -174,39 +173,11 @@
             this.txtBuscarModelo.TabIndex = 37;
             this.txtBuscarModelo.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // btnEditarModelo
-            // 
-            this.btnEditarModelo.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarModelo.Location = new System.Drawing.Point(331, 71);
-            this.btnEditarModelo.Name = "btnEditarModelo";
-            this.btnEditarModelo.Size = new System.Drawing.Size(175, 45);
-            this.btnEditarModelo.TabIndex = 23;
-            this.btnEditarModelo.Text = "Editar Modelo";
-            this.btnEditarModelo.UseVisualStyleBackColor = false;
-            this.btnEditarModelo.Click += new System.EventHandler(this.btnEditarModelo_Click);
-            // 
-            // btnAgregarModelo
-            // 
-            this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarModelo.Location = new System.Drawing.Point(331, 23);
-            this.btnAgregarModelo.Name = "btnAgregarModelo";
-            this.btnAgregarModelo.Size = new System.Drawing.Size(175, 45);
-            this.btnAgregarModelo.TabIndex = 24;
-            this.btnAgregarModelo.Text = "Agregar Modelo";
-            this.btnAgregarModelo.UseVisualStyleBackColor = false;
-            this.btnAgregarModelo.Click += new System.EventHandler(this.btnAgregarModelo_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rbtnEditarModelo);
+            this.groupBox2.Controls.Add(this.rbtnAgregarModelo);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.btnAgregarModelo);
-            this.groupBox2.Controls.Add(this.btnEditarModelo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(437, 55);
             this.groupBox2.Name = "groupBox2";
@@ -214,6 +185,38 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar o Editar";
+            // 
+            // rbtnEditarModelo
+            // 
+            this.rbtnEditarModelo.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEditarModelo.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEditarModelo.Location = new System.Drawing.Point(331, 71);
+            this.rbtnEditarModelo.Name = "rbtnEditarModelo";
+            this.rbtnEditarModelo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEditarModelo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEditarModelo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEditarModelo.Size = new System.Drawing.Size(175, 45);
+            this.rbtnEditarModelo.TabIndex = 27;
+            this.rbtnEditarModelo.Text = "Editar Modelo";
+            this.rbtnEditarModelo.TextColor = System.Drawing.Color.White;
+            this.rbtnEditarModelo.UseVisualStyleBackColor = true;
+            this.rbtnEditarModelo.Click += new System.EventHandler(this.rbtnEditarModelo_Click);
+            // 
+            // rbtnAgregarModelo
+            // 
+            this.rbtnAgregarModelo.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarModelo.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarModelo.Location = new System.Drawing.Point(331, 23);
+            this.rbtnAgregarModelo.Name = "rbtnAgregarModelo";
+            this.rbtnAgregarModelo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarModelo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.Size = new System.Drawing.Size(175, 45);
+            this.rbtnAgregarModelo.TabIndex = 26;
+            this.rbtnAgregarModelo.Text = "Agregar Modelo";
+            this.rbtnAgregarModelo.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarModelo.UseVisualStyleBackColor = true;
+            this.rbtnAgregarModelo.Click += new System.EventHandler(this.rbtnAgregarModelo_Click);
             // 
             // label3
             // 
@@ -311,8 +314,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtBuscarModelo;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.Button btnEditarModelo;
-        private System.Windows.Forms.Button btnAgregarModelo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panelBarras;
         private System.Windows.Forms.Label lbModelos;
@@ -321,5 +322,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbtnNumPedido;
         private System.Windows.Forms.RadioButton rbtnFecha;
+        private RoundButton.RoundButton rbtnEditarModelo;
+        private RoundButton.RoundButton rbtnAgregarModelo;
     }
 }

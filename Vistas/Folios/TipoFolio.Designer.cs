@@ -29,37 +29,41 @@ namespace MultimodeSales.Vistas.Folios
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFolioVenta = new System.Windows.Forms.Button();
-            this.btnFolioDevoluciones = new System.Windows.Forms.Button();
+            this.rbtnFolioVentas = new RoundButton.RoundButton();
+            this.rbtnFolioDevoluciones = new RoundButton.RoundButton();
             this.SuspendLayout();
             // 
-            // btnFolioVenta
+            // rbtnFolioVentas
             // 
-            this.btnFolioVenta.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnFolioVenta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFolioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.btnFolioVenta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFolioVenta.Location = new System.Drawing.Point(12, 77);
-            this.btnFolioVenta.Name = "btnFolioVenta";
-            this.btnFolioVenta.Size = new System.Drawing.Size(285, 111);
-            this.btnFolioVenta.TabIndex = 64;
-            this.btnFolioVenta.Text = "Folio Ventas";
-            this.btnFolioVenta.UseVisualStyleBackColor = false;
-            this.btnFolioVenta.Click += new System.EventHandler(this.btnFolioVenta_Click);
+            this.rbtnFolioVentas.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnFolioVentas.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnFolioVentas.Location = new System.Drawing.Point(12, 77);
+            this.rbtnFolioVentas.Name = "rbtnFolioVentas";
+            this.rbtnFolioVentas.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnFolioVentas.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnFolioVentas.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnFolioVentas.Size = new System.Drawing.Size(285, 111);
+            this.rbtnFolioVentas.TabIndex = 66;
+            this.rbtnFolioVentas.Text = "Folio Ventas";
+            this.rbtnFolioVentas.TextColor = System.Drawing.Color.White;
+            this.rbtnFolioVentas.UseVisualStyleBackColor = true;
+            this.rbtnFolioVentas.Click += new System.EventHandler(this.rbtnFolioVentas_Click);
             // 
-            // btnFolioDevoluciones
+            // rbtnFolioDevoluciones
             // 
-            this.btnFolioDevoluciones.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnFolioDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFolioDevoluciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.btnFolioDevoluciones.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnFolioDevoluciones.Location = new System.Drawing.Point(12, 194);
-            this.btnFolioDevoluciones.Name = "btnFolioDevoluciones";
-            this.btnFolioDevoluciones.Size = new System.Drawing.Size(285, 111);
-            this.btnFolioDevoluciones.TabIndex = 65;
-            this.btnFolioDevoluciones.Text = "Folio Devoluciones";
-            this.btnFolioDevoluciones.UseVisualStyleBackColor = false;
-            this.btnFolioDevoluciones.Click += new System.EventHandler(this.btnFolioDevoluciones_Click);
+            this.rbtnFolioDevoluciones.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnFolioDevoluciones.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnFolioDevoluciones.Location = new System.Drawing.Point(12, 194);
+            this.rbtnFolioDevoluciones.Name = "rbtnFolioDevoluciones";
+            this.rbtnFolioDevoluciones.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnFolioDevoluciones.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnFolioDevoluciones.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnFolioDevoluciones.Size = new System.Drawing.Size(285, 111);
+            this.rbtnFolioDevoluciones.TabIndex = 67;
+            this.rbtnFolioDevoluciones.Text = "Folio Devoluciones";
+            this.rbtnFolioDevoluciones.TextColor = System.Drawing.Color.White;
+            this.rbtnFolioDevoluciones.UseVisualStyleBackColor = true;
+            this.rbtnFolioDevoluciones.Click += new System.EventHandler(this.rbtnFolioDevoluciones_Click);
             // 
             // TipoFolio
             // 
@@ -69,8 +73,8 @@ namespace MultimodeSales.Vistas.Folios
             this.BackgroundImage = global::MultimodeSales.Properties.Resources.background4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(317, 326);
-            this.Controls.Add(this.btnFolioDevoluciones);
-            this.Controls.Add(this.btnFolioVenta);
+            this.Controls.Add(this.rbtnFolioDevoluciones);
+            this.Controls.Add(this.rbtnFolioVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TipoFolio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -81,7 +85,7 @@ namespace MultimodeSales.Vistas.Folios
 
         #endregion
 
-        private System.Windows.Forms.Button btnFolioVenta;
-        private System.Windows.Forms.Button btnFolioDevoluciones;
+        private RoundButton.RoundButton rbtnFolioVentas;
+        private RoundButton.RoundButton rbtnFolioDevoluciones;
     }
 }

@@ -15,6 +15,8 @@ namespace MultimodeSales.Vistas.Ventas
         public DialogVenta(string pTotal, string pIDFolio)
         {
             InitializeComponent();
+            CRoundButton.FormattedRoundButtonAceptar(rbtnVender);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             total = pTotal;
             idfolio = pIDFolio;
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -28,11 +30,6 @@ namespace MultimodeSales.Vistas.Ventas
             lbCambio.ForeColor = Color.Red;
             txtCantidad.Focus();
             txtCantidad.SelectAll();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
         //float floatCantidad = float.Parse(txtCantidad.Text.Replace("$", ""));
         //txtCantidad.Text = string.Format("{0:C}", floatCantidad);
@@ -52,7 +49,7 @@ namespace MultimodeSales.Vistas.Ventas
             calcularCambio();
         }
 
-        private void btnVender_Click(object sender, EventArgs e)
+        private void rbtnVender_Click(object sender, EventArgs e)
         {
             if (lbCambio.ForeColor != Color.Red)
             {
@@ -61,6 +58,11 @@ namespace MultimodeSales.Vistas.Ventas
             }
             else
                 CMsgBox.DisplayWarning("Ingrese una cantidad");
+        }
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void calcularCambio()
@@ -72,13 +74,13 @@ namespace MultimodeSales.Vistas.Ventas
                 if (doubleTotal <= doubleCantidad)
                 {
                     lbCambio.ForeColor = Color.Black;
-                    btnVender.Enabled = true;
+                    rbtnVender.Enabled = true;
                     lbCambio.Text = string.Format("{0:C}", doubleCantidad - doubleTotal);
                 }
                 else
                 {
                     lbCambio.ForeColor = Color.Red;
-                    btnVender.Enabled = false;
+                    rbtnVender.Enabled = false;
                     lbCambio.Text = "$0.00";
                 }
             }

@@ -21,6 +21,9 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvMarcas);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarMarca);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnEditarMarca);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             LlenarDataGridViewMarca();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
@@ -35,7 +38,7 @@ namespace MultimodeSales.Vistas
             dgvMarcas.Columns[0].Width = 200;
             dgvMarcas.Columns[1].Width = 650;
         }
-        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        private void rbtnAgregarMarca_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtNombreMarca.Text) || String.IsNullOrWhiteSpace(txtIDMarca.Text))
                 CMsgBox.DisplayWarning("No pueden estar los campos vacios de ID de Marca o Nombre");
@@ -57,7 +60,8 @@ namespace MultimodeSales.Vistas
                 }
             }
         }
-        private void btnEditarMarca_Click_1(object sender, EventArgs e)
+
+        private void rbtnEditarMarca_Click(object sender, EventArgs e)
         {
             int cont = 0;
             for (int i = 0; i < dgvMarcas.Rows.Count; i++)
@@ -70,23 +74,30 @@ namespace MultimodeSales.Vistas
                 CMsgBox.DisplayWarning("No pueden existir dos marcas con ID's Iguales, intente con otro ID");
             else
             {
-                btnAgregarMarca.Enabled = true;
-                btnEditarMarca.Enabled = false;
-                btnCancelar.Visible = false;
+                rbtnAgregarMarca.Enabled = true;
+                rbtnEditarMarca.Enabled = false;
+                rbtnCancelar.Visible = false;
                 marca.EditarMarca(txtIDMarca.Tag + "", txtIDMarca.Text, txtNombreMarca.Text);
                 CMsgBox.DisplayInfo("Se edito la marca correctamente");
                 BorrarDatos();
                 LlenarDataGridViewMarca();
             }
+        }
 
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            BorrarDatos();
+            rbtnAgregarMarca.Enabled = true;
+            rbtnEditarMarca.Enabled = false;
+            rbtnCancelar.Visible = false;
         }
         private void dgvMarcas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
-                btnAgregarMarca.Enabled = false;
-                btnEditarMarca.Enabled = true;
-                btnCancelar.Visible = true;
+                rbtnAgregarMarca.Enabled = false;
+                rbtnEditarMarca.Enabled = true;
+                rbtnCancelar.Visible = true;
                 txtIDMarca.Text = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
                 txtNombreMarca.Text = dgvMarcas.CurrentRow.Cells[1].Value.ToString();
                 txtIDMarca.Tag = dgvMarcas.CurrentRow.Cells[0].Value.ToString();
@@ -98,13 +109,6 @@ namespace MultimodeSales.Vistas
             DataView dv = new DataView(dt);
             dv.RowFilter = string.Format("Convert(IDMarca, 'System.String') LIKE '%{0}%' OR Nombre LIKE '%{0}%'", txtBuscar.Text);
             dgvMarcas.DataSource = dv;
-        }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            BorrarDatos();
-            btnAgregarMarca.Enabled = true;
-            btnEditarMarca.Enabled = false;
-            btnCancelar.Visible = false;
         }
         private void BorrarDatos()
         {
@@ -154,8 +158,9 @@ namespace MultimodeSales.Vistas
                 Top = Top + (e.Y - MY);
             }
         }
+
         #endregion
 
-       
+        
     }
 }

@@ -27,6 +27,10 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvPedido);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarModelo);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarColorTalla);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnFinalizarPedido);
             Clientes();
             Modelos();
             Colores();
@@ -63,44 +67,45 @@ namespace MultimodeSales.Vistas
             IDTalla.DisplayMember = "Numero";
             IDTalla.DataSource = dt;
         }
-        private void btnAgregarModelo_Click(object sender, EventArgs e)
+        private void rbtnAgregarModelo_Click(object sender, EventArgs e)
         {
             EditModelo modelo = new EditModelo(true, "", "", "", "", "");
             modelo.ShowDialog();
             Modelos();
         }
-        private void btnAgregarColorTalla_Click(object sender, EventArgs e)
+
+        private void rbtnAgTaCo_Click(object sender, EventArgs e)
         {
             TallasyColores tallasyColores = new TallasyColores();
             tallasyColores.ShowDialog();
             Colores();
             Tallas();
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            DialogResult result = CMsgBox.DisplayConfirmation("¿Seguro que desea cerrar?");
-            if (result == DialogResult.Yes)
-                Close();
-        }
-        private void btnTerminar_Click(object sender, EventArgs e)
+        private void rbtnFinalizarPedido_Click(object sender, EventArgs e)
         {
             int index = cboxCliente.Items.Count - 1;
             if (index != cboxCliente.SelectedIndex)
             {
                 foreach (DataGridViewRow rows in dgvPedido.Rows)
                 {
-                
+
                     if (rows.Cells[1].Value + "" != "")
                     {
                         pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
-                    }                 
+                    }
                 }
                 CMsgBox.DisplayInfo("Pedido ingresado correctamente");
             }
             else
                 CMsgBox.DisplayWarning("Seleccione un cliente");
         }
-        
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = CMsgBox.DisplayConfirmation("¿Seguro que desea cerrar?");
+            if (result == DialogResult.Yes)
+                Close();
+        }
         private void dgvPedido_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         { 
             if (e.ColumnIndex == 1)
@@ -189,6 +194,7 @@ namespace MultimodeSales.Vistas
         {
             WindowState = FormWindowState.Minimized;
         }
+
         private void picClose_Click(object sender, EventArgs e)
         {
             DialogResult result = CMsgBox.DisplayConfirmation("¿Seguro que desea cerrar?");

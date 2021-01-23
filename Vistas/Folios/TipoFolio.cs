@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MultimodeSales.Programacion.Utilerias;
+using System;
 using System.Windows.Forms;
 
 namespace MultimodeSales.Vistas.Folios
@@ -15,17 +9,18 @@ namespace MultimodeSales.Vistas.Folios
         public TipoFolio()
         {
             InitializeComponent();
+            CRoundButton.FormattedRoundButtonAceptar(rbtnFolioDevoluciones);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnFolioVentas);
         }
 
-        private void btnFolioVenta_Click(object sender, EventArgs e)
+        private void rbtnFolioVentas_Click(object sender, EventArgs e)
         {
             Folio folio = new Folio(true);
             Close();
             folio.Show();
-            
         }
 
-        private void btnFolioDevoluciones_Click(object sender, EventArgs e)
+        private void rbtnFolioDevoluciones_Click(object sender, EventArgs e)
         {
             Folio folio = new Folio(false);
             Close();

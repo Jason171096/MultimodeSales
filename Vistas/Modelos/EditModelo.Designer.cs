@@ -46,8 +46,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cobxMarca = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnModelo = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.rbtnAgregarModelo = new RoundButton.RoundButton();
+            this.rbtnCancelar = new RoundButton.RoundButton();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -66,7 +66,7 @@
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(513, 49);
+            this.panelBarras.Size = new System.Drawing.Size(494, 49);
             this.panelBarras.TabIndex = 19;
             this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
@@ -86,7 +86,7 @@
             // 
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(450, 0);
+            this.picClose.Location = new System.Drawing.Point(443, 0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -98,7 +98,7 @@
             // 
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(396, 0);
+            this.picMinimize.Location = new System.Drawing.Point(389, 0);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -110,7 +110,7 @@
             // 
             this.txtIDModelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtIDModelo.Location = new System.Drawing.Point(179, 118);
+            this.txtIDModelo.Location = new System.Drawing.Point(161, 118);
             this.txtIDModelo.Name = "txtIDModelo";
             this.txtIDModelo.Size = new System.Drawing.Size(268, 29);
             this.txtIDModelo.TabIndex = 38;
@@ -129,7 +129,7 @@
             // 
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtColor.Location = new System.Drawing.Point(179, 154);
+            this.txtColor.Location = new System.Drawing.Point(161, 154);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(268, 29);
             this.txtColor.TabIndex = 40;
@@ -148,7 +148,7 @@
             // 
             this.txtTalla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtTalla.Location = new System.Drawing.Point(179, 191);
+            this.txtTalla.Location = new System.Drawing.Point(161, 191);
             this.txtTalla.Name = "txtTalla";
             this.txtTalla.Size = new System.Drawing.Size(268, 29);
             this.txtTalla.TabIndex = 42;
@@ -167,7 +167,7 @@
             // 
             this.txtPrecioCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtPrecioCliente.Location = new System.Drawing.Point(179, 230);
+            this.txtPrecioCliente.Location = new System.Drawing.Point(161, 230);
             this.txtPrecioCliente.Name = "txtPrecioCliente";
             this.txtPrecioCliente.Size = new System.Drawing.Size(268, 29);
             this.txtPrecioCliente.TabIndex = 44;
@@ -187,7 +187,7 @@
             // 
             this.txtPrecioPublico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecioPublico.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtPrecioPublico.Location = new System.Drawing.Point(179, 270);
+            this.txtPrecioPublico.Location = new System.Drawing.Point(161, 270);
             this.txtPrecioPublico.Name = "txtPrecioPublico";
             this.txtPrecioPublico.Size = new System.Drawing.Size(268, 29);
             this.txtPrecioPublico.TabIndex = 46;
@@ -208,7 +208,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cobxMarca);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.groupBox1.Location = new System.Drawing.Point(121, 31);
+            this.groupBox1.Location = new System.Drawing.Point(104, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 76);
             this.groupBox1.TabIndex = 48;
@@ -253,49 +253,53 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(5, 57);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(493, 341);
+            this.groupBox2.Size = new System.Drawing.Size(472, 341);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Modelo";
             // 
-            // btnModelo
+            // rbtnAgregarModelo
             // 
-            this.btnModelo.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnModelo.Location = new System.Drawing.Point(324, 404);
-            this.btnModelo.Name = "btnModelo";
-            this.btnModelo.Size = new System.Drawing.Size(174, 45);
-            this.btnModelo.TabIndex = 50;
-            this.btnModelo.Text = "Agregar Modelo";
-            this.btnModelo.UseVisualStyleBackColor = false;
-            this.btnModelo.Click += new System.EventHandler(this.btnModelo_Click);
+            this.rbtnAgregarModelo.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarModelo.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarModelo.Location = new System.Drawing.Point(293, 407);
+            this.rbtnAgregarModelo.Name = "rbtnAgregarModelo";
+            this.rbtnAgregarModelo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarModelo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.Size = new System.Drawing.Size(174, 45);
+            this.rbtnAgregarModelo.TabIndex = 52;
+            this.rbtnAgregarModelo.Text = "Agregar Modelo";
+            this.rbtnAgregarModelo.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarModelo.UseVisualStyleBackColor = true;
+            this.rbtnAgregarModelo.Click += new System.EventHandler(this.rbtnAgregarModelo_Click);
             // 
-            // btnCancelar
+            // rbtnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 404);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(174, 45);
-            this.btnCancelar.TabIndex = 51;
-            this.btnCancelar.Text = "Cancelar(Esc)";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.rbtnCancelar.Location = new System.Drawing.Point(12, 404);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(174, 45);
+            this.rbtnCancelar.TabIndex = 53;
+            this.rbtnCancelar.Text = "Cancelar(Esc)";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.Click += new System.EventHandler(this.rbtnCancelar_Click);
             // 
             // EditModelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(513, 464);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModelo);
+            this.CancelButton = this.rbtnCancelar;
+            this.ClientSize = new System.Drawing.Size(494, 464);
+            this.Controls.Add(this.rbtnCancelar);
+            this.Controls.Add(this.rbtnAgregarModelo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panelBarras);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -334,7 +338,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cobxMarca;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnModelo;
-        private System.Windows.Forms.Button btnCancelar;
+        private RoundButton.RoundButton rbtnAgregarModelo;
+        private RoundButton.RoundButton rbtnCancelar;
     }
 }

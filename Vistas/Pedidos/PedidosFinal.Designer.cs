@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
             this.rbtnFecha = new System.Windows.Forms.RadioButton();
-            this.btnTerminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.rbtnNumPedido = new System.Windows.Forms.RadioButton();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbPedidoFinal = new System.Windows.Forms.Label();
@@ -49,7 +47,8 @@
             this.rbtnNoLlegaron = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rbtnLlegaron = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.rbtnCancelar = new RoundButton.RoundButton();
+            this.rbtnFinalizar = new RoundButton.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelBarras.SuspendLayout();
@@ -68,14 +67,14 @@
             this.dgvPedidosFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedidosFinal.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedidosFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPedidosFinal.ColumnHeadersHeight = 50;
             this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
@@ -83,22 +82,22 @@
             this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 180);
             this.dgvPedidosFinal.Name = "dgvPedidosFinal";
             this.dgvPedidosFinal.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPedidosFinal.RowHeadersVisible = false;
             this.dgvPedidosFinal.RowHeadersWidth = 30;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPedidosFinal.Size = new System.Drawing.Size(1209, 408);
@@ -119,20 +118,6 @@
             this.rbtnFecha.TabStop = true;
             this.rbtnFecha.Text = "Fecha:";
             this.rbtnFecha.UseVisualStyleBackColor = true;
-            // 
-            // btnTerminar
-            // 
-            this.btnTerminar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnTerminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTerminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTerminar.Location = new System.Drawing.Point(1105, 594);
-            this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(115, 48);
-            this.btnTerminar.TabIndex = 25;
-            this.btnTerminar.Text = "Finalizar Pedidos";
-            this.btnTerminar.UseVisualStyleBackColor = false;
-            this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
             // 
             // groupBox1
             // 
@@ -182,19 +167,6 @@
             this.rbtnNumPedido.Text = "Modelo:";
             this.rbtnNumPedido.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(11, 606);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(180, 36);
-            this.btnCancelar.TabIndex = 34;
-            this.btnCancelar.Text = "Cancelar(Esc)";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
             // btnExportExcel
             // 
             this.btnExportExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -203,7 +175,7 @@
             this.btnExportExcel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExportExcel.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportExcel.Location = new System.Drawing.Point(922, 594);
+            this.btnExportExcel.Location = new System.Drawing.Point(884, 598);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(177, 48);
             this.btnExportExcel.TabIndex = 35;
@@ -245,7 +217,7 @@
             this.picClose.BackColor = System.Drawing.Color.Transparent;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::MultimodeSales.Properties.Resources.close48;
-            this.picClose.Location = new System.Drawing.Point(1166, 0);
+            this.picClose.Location = new System.Drawing.Point(1172, -2);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(48, 48);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -258,7 +230,7 @@
             this.picMinimize.BackColor = System.Drawing.Color.Transparent;
             this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimize.Image = global::MultimodeSales.Properties.Resources.minimize48px;
-            this.picMinimize.Location = new System.Drawing.Point(1116, 0);
+            this.picMinimize.Location = new System.Drawing.Point(1122, -2);
             this.picMinimize.Name = "picMinimize";
             this.picMinimize.Size = new System.Drawing.Size(48, 48);
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -332,32 +304,52 @@
             this.rbtnLlegaron.Text = "Llegaron";
             this.rbtnLlegaron.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // rbtnCancelar
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(571, 594);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 48);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Terminar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.rbtnCancelar.Location = new System.Drawing.Point(12, 605);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(180, 41);
+            this.rbtnCancelar.TabIndex = 38;
+            this.rbtnCancelar.Text = "Cancelar(Esc)";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.Click += new System.EventHandler(this.rbtnCancelar_Click);
+            // 
+            // rbtnFinalizar
+            // 
+            this.rbtnFinalizar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnFinalizar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnFinalizar.Location = new System.Drawing.Point(1067, 594);
+            this.rbtnFinalizar.Name = "rbtnFinalizar";
+            this.rbtnFinalizar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnFinalizar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnFinalizar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnFinalizar.Size = new System.Drawing.Size(153, 52);
+            this.rbtnFinalizar.TabIndex = 39;
+            this.rbtnFinalizar.Text = "Finalizar \r\nPedido";
+            this.rbtnFinalizar.TextColor = System.Drawing.Color.White;
+            this.rbtnFinalizar.UseVisualStyleBackColor = true;
+            this.rbtnFinalizar.Click += new System.EventHandler(this.rbtnFinalizar_Click);
             // 
             // PedidosFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.CancelButton = this.rbtnCancelar;
             this.ClientSize = new System.Drawing.Size(1232, 653);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rbtnFinalizar);
+            this.Controls.Add(this.rbtnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExportExcel);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelBarras);
-            this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.dgvPedidosFinal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -382,13 +374,11 @@
 
         private System.Windows.Forms.DataGridView dgvPedidosFinal;
         private System.Windows.Forms.RadioButton rbtnFecha;
-        private System.Windows.Forms.Button btnTerminar;
         private System.Windows.Forms.Panel panelBarras;
         private System.Windows.Forms.Label lbPedidoFinal;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.RadioButton rbtnNumPedido;
@@ -396,8 +386,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton rbtnLlegaron;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton rbtnTodos;
         private System.Windows.Forms.RadioButton rbtnNoLlegaron;
+        private RoundButton.RoundButton rbtnCancelar;
+        private RoundButton.RoundButton rbtnFinalizar;
     }
 }

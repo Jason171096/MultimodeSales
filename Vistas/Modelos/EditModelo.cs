@@ -21,18 +21,20 @@ namespace MultimodeSales.Vistas.Modelos
         public EditModelo(bool agregar, string idmodelo, string idmarca, string color, string talla, string precioCliente)
         {
             InitializeComponent();
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarModelo);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             this.Bandera = agregar;
             LlenarComboBoxMarca();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             if (agregar)
             {
                 lb.Text = "Agregar Modelo";
-                btnModelo.Text = "Agregar Modelo";
+                rbtnAgregarModelo.Text = "Agregar Modelo";
             }
             else
             {
                 lb.Text = "Editar Modelo";
-                btnModelo.Text = "Editar Modelo";
+                rbtnAgregarModelo.Text = "Editar Modelo";
                 txtIDModelo.Tag = idmodelo;
                 txtIDModelo.Text = idmodelo;
                 cobxMarca.SelectedValue = idmarca;
@@ -54,15 +56,24 @@ namespace MultimodeSales.Vistas.Modelos
             cobxMarca.DisplayMember = "Value";
             cobxMarca.ValueMember = "Key";
         }
-        private void btnModelo_Click(object sender, EventArgs e)
+        private void BorrarDatos() 
+        {
+            txtIDModelo.Text = "";
+            txtColor.Text = "";
+            txtTalla.Text = "";
+            txtPrecioCliente.Text = "";
+            txtPrecioPublico.Text = "";
+            cobxMarca.SelectedIndex = 0;
+        }
+        private void rbtnAgregarModelo_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtIDModelo.Text) || !String.IsNullOrWhiteSpace(txtColor.Text)
-                || !String.IsNullOrWhiteSpace(txtTalla.Text) || !String.IsNullOrWhiteSpace(txtPrecioPublico.Text))
+               || !String.IsNullOrWhiteSpace(txtTalla.Text) || !String.IsNullOrWhiteSpace(txtPrecioPublico.Text))
             {
                 if (cobxMarca.SelectedIndex != 0)
                     if (Bandera)
                     {
-                        modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text); 
+                        modelo.AgregarModelo(txtIDModelo.Text, cobxMarca.SelectedValue + "", txtColor.Text, txtTalla.Text, txtPrecioPublico.Text);
                         BorrarDatos();
                     }
                     else
@@ -78,16 +89,8 @@ namespace MultimodeSales.Vistas.Modelos
             else
                 CMsgBox.DisplayWarning("Por favor de rellenar los espacios");
         }
-        private void BorrarDatos() 
-        {
-            txtIDModelo.Text = "";
-            txtColor.Text = "";
-            txtTalla.Text = "";
-            txtPrecioCliente.Text = "";
-            txtPrecioPublico.Text = "";
-            cobxMarca.SelectedIndex = 0;
-        }
-        private void btnCancelar_Click(object sender, EventArgs e)
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -134,6 +137,7 @@ namespace MultimodeSales.Vistas.Modelos
 
 
         #endregion
+
         
     }
 }

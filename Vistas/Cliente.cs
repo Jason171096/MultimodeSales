@@ -20,6 +20,9 @@ namespace MultimodeSales.Vistas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvClientes);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarCliente);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnEditarCliente);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             LlenarDataGridViewCliente();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
@@ -33,7 +36,7 @@ namespace MultimodeSales.Vistas
             dgvClientes.Columns[0].Width = 200;
             dgvClientes.Columns[1].Width = 650;
         }
-        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        private void rbtnAgregarCliente_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtNombreCliente.Text) || String.IsNullOrWhiteSpace(txtIDCliente.Text))
                 CMsgBox.DisplayWarning("No pueden estar los campos vacios de ID de Cliente o Nombre");
@@ -56,7 +59,8 @@ namespace MultimodeSales.Vistas
                 }
             }
         }
-        private void btnEditarCliente_Click(object sender, EventArgs e)
+
+        private void rbtnEditarCliente_Click(object sender, EventArgs e)
         {
             int cont = 0;
             for (int i = 0; i < dgvClientes.Rows.Count; i++)
@@ -69,22 +73,30 @@ namespace MultimodeSales.Vistas
                 CMsgBox.DisplayWarning("No pueden existir dos clientes con ID's iguales, intente con otro ID");
             else
             {
-                btnAgregarCliente.Enabled = true;
-                btnEditarCliente.Enabled = false;
-                btnCancelar.Visible = false;
+                rbtnAgregarCliente.Enabled = true;
+                rbtnEditarCliente.Enabled = false;
+                rbtnCancelar.Visible = false;
                 cliente.EditarCliente(txtIDCliente.Tag + "", txtIDCliente.Text, txtNombreCliente.Text);
                 CMsgBox.DisplayInfo("Se edito el cliente correctamente");
                 BorrarDatos();
                 LlenarDataGridViewCliente();
             }
         }
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            BorrarDatos();
+            rbtnAgregarCliente.Enabled = true;
+            rbtnEditarCliente.Enabled = false;
+            rbtnCancelar.Visible = false;
+        }
         private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
-                btnAgregarCliente.Enabled = false;
-                btnEditarCliente.Enabled = true;
-                btnCancelar.Visible = true;
+                rbtnAgregarCliente.Enabled = false;
+                rbtnEditarCliente.Enabled = true;
+                rbtnCancelar.Visible = true;
                 txtIDCliente.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
                 txtNombreCliente.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
                 txtIDCliente.Tag = dgvClientes.CurrentRow.Cells[0].Value.ToString();
@@ -96,13 +108,6 @@ namespace MultimodeSales.Vistas
             DataView dv = new DataView(dt);
             dv.RowFilter = string.Format("Convert(IDCliente, 'System.String') LIKE '%{0}%' OR Nombre LIKE '%{0}%'", txtBuscar.Text);
             dgvClientes.DataSource = dv;
-        }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            BorrarDatos();
-            btnAgregarCliente.Enabled = true;
-            btnEditarCliente.Enabled = false;
-            btnCancelar.Visible = false;
         }
         private void BorrarDatos()
         {
@@ -154,5 +159,7 @@ namespace MultimodeSales.Vistas
         }
 
         #endregion
+
+        
     }
 }

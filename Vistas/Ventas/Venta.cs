@@ -23,6 +23,10 @@ namespace MultimodeSales.Vistas.Ventas
         {
             InitializeComponent();
             CDataGridView.FormattedDataGridView(dgvPedidosFinal);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnSelTodo);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarModelo);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarPedido);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnVender);
             Clientes();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
@@ -99,8 +103,20 @@ namespace MultimodeSales.Vistas.Ventas
             lbTotal.Text = string.Format("{0:C}", totalPrecio);
             lbCantidad.Text = totalCantidad + "";
         }
+        private void rbtnSelTodo_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            {
+                if (rows.DefaultCellStyle.BackColor != Color.YellowGreen)
+                {
+                    rows.DefaultCellStyle.BackColor = Color.YellowGreen;
+                    rows.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                    ActualizarLabels(2, lbTotal.Text.ToString().Trim('$'), lbCantidad.Text, rows.Cells[4].Value.ToString());
+                }
+            }
+        }
 
-        private void btnVender_Click(object sender, EventArgs e)
+        private void rbtnVender_Click(object sender, EventArgs e)
         {
             CVenta venta = new CVenta();
             int cont = 0;
@@ -109,20 +125,20 @@ namespace MultimodeSales.Vistas.Ventas
                 if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
                     cont++;
             }
-            if(cboxCliente.SelectedIndex != cboxCliente.Items.Count - 1)
+            if (cboxCliente.SelectedIndex != cboxCliente.Items.Count - 1)
             {
-                if(txtFolio.Text != "")
+                if (txtFolio.Text != "")
                 {
-                    if(cont >= 1)
+                    if (cont >= 1)
                     {
                         int idfolio = venta.verificarFolioExistente(txtFolio.Text);
                         if (idfolio == 1)
-                             CMsgBox.DisplayWarning("Folio existente");
-                        else 
+                            CMsgBox.DisplayWarning("Folio existente");
+                        else
                         {
                             DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
                             dialog.ShowDialog();
-                        }   
+                        }
                     }
                     else
                         CMsgBox.DisplayWarning("Seleccionar un articulo");
@@ -133,7 +149,8 @@ namespace MultimodeSales.Vistas.Ventas
             else
                 CMsgBox.DisplayWarning("Seleccionar un cliente");
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
+
+        private void rbtnAgregarPedido_Click(object sender, EventArgs e)
         {
             borrarLabels();
             PedidosFinal final = new PedidosFinal(true);
@@ -147,7 +164,7 @@ namespace MultimodeSales.Vistas.Ventas
             }
         }
 
-        private void btnAgregarModelo_Click(object sender, EventArgs e)
+        private void rbtnAgregarModelo_Click(object sender, EventArgs e)
         {
             borrarLabels();
             Modeloss modelos = new Modeloss(true);
@@ -158,19 +175,6 @@ namespace MultimodeSales.Vistas.Ventas
                 dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
                 dgvPedidosFinal.DataSource = null;
                 dgvPedidosFinal.DataSource = dtPedidos;
-            }
-        }
-
-        private void btnSelTodo_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
-            {
-                if (rows.DefaultCellStyle.BackColor != Color.YellowGreen)
-                {
-                    rows.DefaultCellStyle.BackColor = Color.YellowGreen;
-                    rows.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                    ActualizarLabels(2, lbTotal.Text.ToString().Trim('$'), lbCantidad.Text, rows.Cells[4].Value.ToString());
-                }
             }
         }
 
@@ -214,8 +218,9 @@ namespace MultimodeSales.Vistas.Ventas
         {
             Close();
         }
+
         #endregion
 
-       
+        
     }
 }

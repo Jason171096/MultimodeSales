@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbColoresyTallas = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.dgvTallas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelarTalla = new System.Windows.Forms.Button();
+            this.rbtnEliminarTalla = new RoundButton.RoundButton();
+            this.rbtnCancelarTalla = new RoundButton.RoundButton();
             this.txtTalla = new System.Windows.Forms.TextBox();
-            this.btnEliminarTalla = new System.Windows.Forms.Button();
-            this.btnEditarTalla = new System.Windows.Forms.Button();
+            this.rbtnEditarTalla = new RoundButton.RoundButton();
+            this.rbtnAgregarTalla = new RoundButton.RoundButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAgregarTalla = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCancelarColor = new System.Windows.Forms.Button();
-            this.btnEliminarColor = new System.Windows.Forms.Button();
-            this.btnEditarColor = new System.Windows.Forms.Button();
-            this.btnAgregarColor = new System.Windows.Forms.Button();
+            this.rbtnEliminarColor = new RoundButton.RoundButton();
+            this.rbtnCancelarColor = new RoundButton.RoundButton();
+            this.rbtnEditarColor = new RoundButton.RoundButton();
+            this.rbtnAgregarColor = new RoundButton.RoundButton();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvColores = new System.Windows.Forms.DataGridView();
@@ -128,14 +128,14 @@
             this.dgvTallas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTallas.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvTallas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTallas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTallas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvTallas.ColumnHeadersHeight = 50;
             this.dgvTallas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTallas.EnableHeadersVisualStyles = false;
@@ -143,22 +143,22 @@
             this.dgvTallas.Location = new System.Drawing.Point(358, 22);
             this.dgvTallas.Name = "dgvTallas";
             this.dgvTallas.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTallas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTallas.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvTallas.RowHeadersVisible = false;
             this.dgvTallas.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvTallas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvTallas.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvTallas.RowTemplate.Height = 30;
             this.dgvTallas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTallas.Size = new System.Drawing.Size(362, 211);
@@ -167,13 +167,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnCancelarTalla);
+            this.groupBox1.Controls.Add(this.rbtnEliminarTalla);
+            this.groupBox1.Controls.Add(this.rbtnCancelarTalla);
             this.groupBox1.Controls.Add(this.txtTalla);
-            this.groupBox1.Controls.Add(this.btnEliminarTalla);
+            this.groupBox1.Controls.Add(this.rbtnEditarTalla);
+            this.groupBox1.Controls.Add(this.rbtnAgregarTalla);
             this.groupBox1.Controls.Add(this.dgvTallas);
-            this.groupBox1.Controls.Add(this.btnEditarTalla);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnAgregarTalla);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(11, 365);
             this.groupBox1.Name = "groupBox1";
@@ -182,20 +182,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tallas";
             // 
-            // btnCancelarTalla
+            // rbtnEliminarTalla
             // 
-            this.btnCancelarTalla.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelarTalla.Location = new System.Drawing.Point(188, 156);
-            this.btnCancelarTalla.Name = "btnCancelarTalla";
-            this.btnCancelarTalla.Size = new System.Drawing.Size(163, 37);
-            this.btnCancelarTalla.TabIndex = 47;
-            this.btnCancelarTalla.Text = "Cancelar";
-            this.btnCancelarTalla.UseVisualStyleBackColor = false;
-            this.btnCancelarTalla.Visible = false;
-            this.btnCancelarTalla.Click += new System.EventHandler(this.btnCancelarTalla_Click);
+            this.rbtnEliminarTalla.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEliminarTalla.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEliminarTalla.Location = new System.Drawing.Point(20, 156);
+            this.rbtnEliminarTalla.Name = "rbtnEliminarTalla";
+            this.rbtnEliminarTalla.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEliminarTalla.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEliminarTalla.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEliminarTalla.Size = new System.Drawing.Size(160, 37);
+            this.rbtnEliminarTalla.TabIndex = 51;
+            this.rbtnEliminarTalla.Text = "Eliminar";
+            this.rbtnEliminarTalla.TextColor = System.Drawing.Color.White;
+            this.rbtnEliminarTalla.UseVisualStyleBackColor = true;
+            this.rbtnEliminarTalla.Click += new System.EventHandler(this.rbtnEliminarTalla_Click);
+            // 
+            // rbtnCancelarTalla
+            // 
+            this.rbtnCancelarTalla.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelarTalla.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelarTalla.Location = new System.Drawing.Point(186, 156);
+            this.rbtnCancelarTalla.Name = "rbtnCancelarTalla";
+            this.rbtnCancelarTalla.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelarTalla.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelarTalla.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelarTalla.Size = new System.Drawing.Size(160, 37);
+            this.rbtnCancelarTalla.TabIndex = 50;
+            this.rbtnCancelarTalla.Text = "Cancelar";
+            this.rbtnCancelarTalla.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelarTalla.UseVisualStyleBackColor = true;
+            this.rbtnCancelarTalla.Click += new System.EventHandler(this.rbtnCancelarTalla_Click);
             // 
             // txtTalla
             // 
@@ -206,34 +223,37 @@
             this.txtTalla.Size = new System.Drawing.Size(216, 29);
             this.txtTalla.TabIndex = 42;
             // 
-            // btnEliminarTalla
+            // rbtnEditarTalla
             // 
-            this.btnEliminarTalla.BackColor = System.Drawing.Color.Crimson;
-            this.btnEliminarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminarTalla.Location = new System.Drawing.Point(25, 156);
-            this.btnEliminarTalla.Name = "btnEliminarTalla";
-            this.btnEliminarTalla.Size = new System.Drawing.Size(157, 37);
-            this.btnEliminarTalla.TabIndex = 46;
-            this.btnEliminarTalla.Text = "Eliminar";
-            this.btnEliminarTalla.UseVisualStyleBackColor = false;
-            this.btnEliminarTalla.Click += new System.EventHandler(this.btnEliminarTalla_Click);
+            this.rbtnEditarTalla.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEditarTalla.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEditarTalla.Location = new System.Drawing.Point(186, 113);
+            this.rbtnEditarTalla.Name = "rbtnEditarTalla";
+            this.rbtnEditarTalla.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEditarTalla.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEditarTalla.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEditarTalla.Size = new System.Drawing.Size(160, 37);
+            this.rbtnEditarTalla.TabIndex = 49;
+            this.rbtnEditarTalla.Text = "Editar";
+            this.rbtnEditarTalla.TextColor = System.Drawing.Color.White;
+            this.rbtnEditarTalla.UseVisualStyleBackColor = true;
+            this.rbtnEditarTalla.Click += new System.EventHandler(this.rbtnEditarTalla_Click);
             // 
-            // btnEditarTalla
+            // rbtnAgregarTalla
             // 
-            this.btnEditarTalla.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarTalla.Enabled = false;
-            this.btnEditarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarTalla.Location = new System.Drawing.Point(188, 113);
-            this.btnEditarTalla.Name = "btnEditarTalla";
-            this.btnEditarTalla.Size = new System.Drawing.Size(163, 37);
-            this.btnEditarTalla.TabIndex = 45;
-            this.btnEditarTalla.Text = "Editar";
-            this.btnEditarTalla.UseVisualStyleBackColor = false;
-            this.btnEditarTalla.Click += new System.EventHandler(this.btnEditarTalla_Click);
+            this.rbtnAgregarTalla.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarTalla.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarTalla.Location = new System.Drawing.Point(22, 113);
+            this.rbtnAgregarTalla.Name = "rbtnAgregarTalla";
+            this.rbtnAgregarTalla.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarTalla.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarTalla.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarTalla.Size = new System.Drawing.Size(160, 37);
+            this.rbtnAgregarTalla.TabIndex = 48;
+            this.rbtnAgregarTalla.Text = "Agregar";
+            this.rbtnAgregarTalla.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarTalla.UseVisualStyleBackColor = true;
+            this.rbtnAgregarTalla.Click += new System.EventHandler(this.rbtnAgregarTalla_Click);
             // 
             // label3
             // 
@@ -245,26 +265,12 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Número:";
             // 
-            // btnAgregarTalla
-            // 
-            this.btnAgregarTalla.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarTalla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarTalla.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarTalla.Location = new System.Drawing.Point(25, 113);
-            this.btnAgregarTalla.Name = "btnAgregarTalla";
-            this.btnAgregarTalla.Size = new System.Drawing.Size(157, 37);
-            this.btnAgregarTalla.TabIndex = 44;
-            this.btnAgregarTalla.Text = "Agregar";
-            this.btnAgregarTalla.UseVisualStyleBackColor = false;
-            this.btnAgregarTalla.Click += new System.EventHandler(this.btnAgregarTalla_Click);
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnCancelarColor);
-            this.groupBox2.Controls.Add(this.btnEliminarColor);
-            this.groupBox2.Controls.Add(this.btnEditarColor);
-            this.groupBox2.Controls.Add(this.btnAgregarColor);
+            this.groupBox2.Controls.Add(this.rbtnEliminarColor);
+            this.groupBox2.Controls.Add(this.rbtnCancelarColor);
+            this.groupBox2.Controls.Add(this.rbtnEditarColor);
+            this.groupBox2.Controls.Add(this.rbtnAgregarColor);
             this.groupBox2.Controls.Add(this.txtColor);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dgvColores);
@@ -276,63 +282,69 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Colores";
             // 
-            // btnCancelarColor
+            // rbtnEliminarColor
             // 
-            this.btnCancelarColor.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelarColor.Location = new System.Drawing.Point(197, 153);
-            this.btnCancelarColor.Name = "btnCancelarColor";
-            this.btnCancelarColor.Size = new System.Drawing.Size(156, 37);
-            this.btnCancelarColor.TabIndex = 43;
-            this.btnCancelarColor.Text = "Cancelar";
-            this.btnCancelarColor.UseVisualStyleBackColor = false;
-            this.btnCancelarColor.Visible = false;
-            this.btnCancelarColor.Click += new System.EventHandler(this.btnCancelarColor_Click);
+            this.rbtnEliminarColor.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEliminarColor.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEliminarColor.Location = new System.Drawing.Point(28, 173);
+            this.rbtnEliminarColor.Name = "rbtnEliminarColor";
+            this.rbtnEliminarColor.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEliminarColor.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEliminarColor.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEliminarColor.Size = new System.Drawing.Size(160, 37);
+            this.rbtnEliminarColor.TabIndex = 47;
+            this.rbtnEliminarColor.Text = "Eliminar";
+            this.rbtnEliminarColor.TextColor = System.Drawing.Color.White;
+            this.rbtnEliminarColor.UseVisualStyleBackColor = true;
+            this.rbtnEliminarColor.Click += new System.EventHandler(this.rbtnEliminarColor_Click);
             // 
-            // btnEliminarColor
+            // rbtnCancelarColor
             // 
-            this.btnEliminarColor.BackColor = System.Drawing.Color.Crimson;
-            this.btnEliminarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEliminarColor.Location = new System.Drawing.Point(34, 153);
-            this.btnEliminarColor.Name = "btnEliminarColor";
-            this.btnEliminarColor.Size = new System.Drawing.Size(157, 37);
-            this.btnEliminarColor.TabIndex = 42;
-            this.btnEliminarColor.Text = "Eliminar";
-            this.btnEliminarColor.UseVisualStyleBackColor = false;
-            this.btnEliminarColor.Click += new System.EventHandler(this.btnEliminarColor_Click);
+            this.rbtnCancelarColor.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelarColor.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelarColor.Location = new System.Drawing.Point(195, 173);
+            this.rbtnCancelarColor.Name = "rbtnCancelarColor";
+            this.rbtnCancelarColor.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelarColor.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelarColor.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelarColor.Size = new System.Drawing.Size(160, 37);
+            this.rbtnCancelarColor.TabIndex = 46;
+            this.rbtnCancelarColor.Text = "Cancelar";
+            this.rbtnCancelarColor.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelarColor.UseVisualStyleBackColor = true;
+            this.rbtnCancelarColor.Click += new System.EventHandler(this.rbtnCancelarColor_Click);
             // 
-            // btnEditarColor
+            // rbtnEditarColor
             // 
-            this.btnEditarColor.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarColor.Enabled = false;
-            this.btnEditarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarColor.Location = new System.Drawing.Point(197, 110);
-            this.btnEditarColor.Name = "btnEditarColor";
-            this.btnEditarColor.Size = new System.Drawing.Size(156, 37);
-            this.btnEditarColor.TabIndex = 41;
-            this.btnEditarColor.Text = "Editar";
-            this.btnEditarColor.UseVisualStyleBackColor = false;
-            this.btnEditarColor.Click += new System.EventHandler(this.btnEditarColor_Click);
+            this.rbtnEditarColor.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEditarColor.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEditarColor.Location = new System.Drawing.Point(195, 130);
+            this.rbtnEditarColor.Name = "rbtnEditarColor";
+            this.rbtnEditarColor.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEditarColor.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEditarColor.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEditarColor.Size = new System.Drawing.Size(160, 37);
+            this.rbtnEditarColor.TabIndex = 45;
+            this.rbtnEditarColor.Text = "Editar";
+            this.rbtnEditarColor.TextColor = System.Drawing.Color.White;
+            this.rbtnEditarColor.UseVisualStyleBackColor = true;
+            this.rbtnEditarColor.Click += new System.EventHandler(this.rbtnEditarColor_Click);
             // 
-            // btnAgregarColor
+            // rbtnAgregarColor
             // 
-            this.btnAgregarColor.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarColor.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarColor.Location = new System.Drawing.Point(34, 110);
-            this.btnAgregarColor.Name = "btnAgregarColor";
-            this.btnAgregarColor.Size = new System.Drawing.Size(157, 37);
-            this.btnAgregarColor.TabIndex = 40;
-            this.btnAgregarColor.Text = "Agregar";
-            this.btnAgregarColor.UseVisualStyleBackColor = false;
-            this.btnAgregarColor.Click += new System.EventHandler(this.btnAgregarColor_Click);
+            this.rbtnAgregarColor.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarColor.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarColor.Location = new System.Drawing.Point(29, 130);
+            this.rbtnAgregarColor.Name = "rbtnAgregarColor";
+            this.rbtnAgregarColor.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarColor.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarColor.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarColor.Size = new System.Drawing.Size(160, 37);
+            this.rbtnAgregarColor.TabIndex = 44;
+            this.rbtnAgregarColor.Text = "Agregar";
+            this.rbtnAgregarColor.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarColor.UseVisualStyleBackColor = true;
+            this.rbtnAgregarColor.Click += new System.EventHandler(this.rbtnAgregarColor_Click);
             // 
             // txtColor
             // 
@@ -364,14 +376,14 @@
             this.dgvColores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvColores.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvColores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvColores.ColumnHeadersHeight = 50;
             this.dgvColores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvColores.EnableHeadersVisualStyles = false;
@@ -379,22 +391,22 @@
             this.dgvColores.Location = new System.Drawing.Point(359, 22);
             this.dgvColores.Name = "dgvColores";
             this.dgvColores.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColores.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColores.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvColores.RowHeadersVisible = false;
             this.dgvColores.RowHeadersWidth = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvColores.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvColores.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvColores.RowTemplate.Height = 30;
             this.dgvColores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvColores.Size = new System.Drawing.Size(361, 277);
@@ -442,13 +454,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCancelarTalla;
-        private System.Windows.Forms.Button btnEliminarTalla;
-        private System.Windows.Forms.Button btnEditarTalla;
-        private System.Windows.Forms.Button btnAgregarTalla;
-        private System.Windows.Forms.Button btnCancelarColor;
-        private System.Windows.Forms.Button btnEliminarColor;
-        private System.Windows.Forms.Button btnEditarColor;
-        private System.Windows.Forms.Button btnAgregarColor;
+        private RoundButton.RoundButton rbtnAgregarColor;
+        private RoundButton.RoundButton rbtnEliminarColor;
+        private RoundButton.RoundButton rbtnCancelarColor;
+        private RoundButton.RoundButton rbtnEditarColor;
+        private RoundButton.RoundButton rbtnEliminarTalla;
+        private RoundButton.RoundButton rbtnCancelarTalla;
+        private RoundButton.RoundButton rbtnEditarTalla;
+        private RoundButton.RoundButton rbtnAgregarTalla;
     }
 }

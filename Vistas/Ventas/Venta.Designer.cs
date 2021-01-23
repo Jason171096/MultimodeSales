@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,16 +40,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbTotal = new System.Windows.Forms.Label();
             this.lbCantidad = new System.Windows.Forms.Label();
-            this.btnVender = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
             this.lbVentas = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.btnAgregarPedido = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAgregarModelo = new System.Windows.Forms.Button();
             this.txtFolio = new System.Windows.Forms.TextBox();
-            this.btnSelTodo = new System.Windows.Forms.Button();
+            this.rbtnSelTodo = new RoundButton.RoundButton();
+            this.rbtnVender = new RoundButton.RoundButton();
+            this.rbtnAgregarPedido = new RoundButton.RoundButton();
+            this.rbtnAgregarModelo = new RoundButton.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,14 +68,14 @@
             this.dgvPedidosFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedidosFinal.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedidosFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvPedidosFinal.ColumnHeadersHeight = 50;
             this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
@@ -83,22 +83,22 @@
             this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 146);
             this.dgvPedidosFinal.Name = "dgvPedidosFinal";
             this.dgvPedidosFinal.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPedidosFinal.RowHeadersVisible = false;
             this.dgvPedidosFinal.RowHeadersWidth = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvPedidosFinal.RowTemplate.Height = 30;
             this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPedidosFinal.Size = new System.Drawing.Size(798, 337);
@@ -193,21 +193,6 @@
             this.lbCantidad.TabIndex = 59;
             this.lbCantidad.Text = "0";
             // 
-            // btnVender
-            // 
-            this.btnVender.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnVender.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVender.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnVender.Location = new System.Drawing.Point(672, 553);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(137, 38);
-            this.btnVender.TabIndex = 60;
-            this.btnVender.Text = "Vender(Enter)";
-            this.btnVender.UseVisualStyleBackColor = false;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
-            // 
             // panelVentas
             // 
             this.panelVentas.BackColor = System.Drawing.Color.Purple;
@@ -262,21 +247,6 @@
             this.picMinimize.TabStop = false;
             this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
-            // btnAgregarPedido
-            // 
-            this.btnAgregarPedido.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarPedido.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAgregarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarPedido.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarPedido.Location = new System.Drawing.Point(515, 553);
-            this.btnAgregarPedido.Name = "btnAgregarPedido";
-            this.btnAgregarPedido.Size = new System.Drawing.Size(151, 38);
-            this.btnAgregarPedido.TabIndex = 61;
-            this.btnAgregarPedido.Text = "Agregar pedido";
-            this.btnAgregarPedido.UseVisualStyleBackColor = false;
-            this.btnAgregarPedido.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -287,21 +257,6 @@
             this.label3.TabIndex = 54;
             this.label3.Text = "Folio:";
             // 
-            // btnAgregarModelo
-            // 
-            this.btnAgregarModelo.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarModelo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAgregarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarModelo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarModelo.Location = new System.Drawing.Point(358, 553);
-            this.btnAgregarModelo.Name = "btnAgregarModelo";
-            this.btnAgregarModelo.Size = new System.Drawing.Size(151, 38);
-            this.btnAgregarModelo.TabIndex = 62;
-            this.btnAgregarModelo.Text = "Agregar modelo";
-            this.btnAgregarModelo.UseVisualStyleBackColor = false;
-            this.btnAgregarModelo.Click += new System.EventHandler(this.btnAgregarModelo_Click);
-            // 
             // txtFolio
             // 
             this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -310,34 +265,83 @@
             this.txtFolio.Size = new System.Drawing.Size(248, 29);
             this.txtFolio.TabIndex = 63;
             // 
-            // btnSelTodo
+            // rbtnSelTodo
             // 
-            this.btnSelTodo.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnSelTodo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSelTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSelTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSelTodo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSelTodo.Location = new System.Drawing.Point(694, 489);
-            this.btnSelTodo.Name = "btnSelTodo";
-            this.btnSelTodo.Size = new System.Drawing.Size(115, 34);
-            this.btnSelTodo.TabIndex = 64;
-            this.btnSelTodo.Text = "Sel. Todo";
-            this.btnSelTodo.UseVisualStyleBackColor = false;
-            this.btnSelTodo.Click += new System.EventHandler(this.btnSelTodo_Click);
+            this.rbtnSelTodo.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnSelTodo.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnSelTodo.Location = new System.Drawing.Point(672, 489);
+            this.rbtnSelTodo.Name = "rbtnSelTodo";
+            this.rbtnSelTodo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnSelTodo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnSelTodo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnSelTodo.Size = new System.Drawing.Size(137, 38);
+            this.rbtnSelTodo.TabIndex = 65;
+            this.rbtnSelTodo.Text = "Sel. Todo";
+            this.rbtnSelTodo.TextColor = System.Drawing.Color.White;
+            this.rbtnSelTodo.UseVisualStyleBackColor = true;
+            this.rbtnSelTodo.Click += new System.EventHandler(this.rbtnSelTodo_Click);
+            // 
+            // rbtnVender
+            // 
+            this.rbtnVender.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnVender.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnVender.Location = new System.Drawing.Point(672, 551);
+            this.rbtnVender.Name = "rbtnVender";
+            this.rbtnVender.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnVender.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnVender.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnVender.Size = new System.Drawing.Size(137, 39);
+            this.rbtnVender.TabIndex = 66;
+            this.rbtnVender.Text = "Vender(Enter)";
+            this.rbtnVender.TextColor = System.Drawing.Color.White;
+            this.rbtnVender.UseVisualStyleBackColor = true;
+            this.rbtnVender.Click += new System.EventHandler(this.rbtnVender_Click);
+            // 
+            // rbtnAgregarPedido
+            // 
+            this.rbtnAgregarPedido.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarPedido.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarPedido.Location = new System.Drawing.Point(515, 551);
+            this.rbtnAgregarPedido.Name = "rbtnAgregarPedido";
+            this.rbtnAgregarPedido.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarPedido.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarPedido.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarPedido.Size = new System.Drawing.Size(151, 39);
+            this.rbtnAgregarPedido.TabIndex = 67;
+            this.rbtnAgregarPedido.Text = "Agregar pedido";
+            this.rbtnAgregarPedido.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarPedido.UseVisualStyleBackColor = true;
+            this.rbtnAgregarPedido.Click += new System.EventHandler(this.rbtnAgregarPedido_Click);
+            // 
+            // rbtnAgregarModelo
+            // 
+            this.rbtnAgregarModelo.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarModelo.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarModelo.Location = new System.Drawing.Point(358, 551);
+            this.rbtnAgregarModelo.Name = "rbtnAgregarModelo";
+            this.rbtnAgregarModelo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarModelo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarModelo.Size = new System.Drawing.Size(151, 39);
+            this.rbtnAgregarModelo.TabIndex = 68;
+            this.rbtnAgregarModelo.Text = "Agregar modelo";
+            this.rbtnAgregarModelo.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarModelo.UseVisualStyleBackColor = true;
+            this.rbtnAgregarModelo.Click += new System.EventHandler(this.rbtnAgregarModelo_Click);
             // 
             // Venta
             // 
-            this.AcceptButton = this.btnVender;
+            this.AcceptButton = this.rbtnVender;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(821, 596);
-            this.Controls.Add(this.btnSelTodo);
+            this.Controls.Add(this.rbtnAgregarModelo);
+            this.Controls.Add(this.rbtnAgregarPedido);
+            this.Controls.Add(this.rbtnVender);
+            this.Controls.Add(this.rbtnSelTodo);
             this.Controls.Add(this.txtFolio);
-            this.Controls.Add(this.btnAgregarModelo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAgregarPedido);
-            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvPedidosFinal);
@@ -375,11 +379,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label lbCantidad;
-        private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.Button btnAgregarPedido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAgregarModelo;
         private System.Windows.Forms.TextBox txtFolio;
-        private System.Windows.Forms.Button btnSelTodo;
+        private RoundButton.RoundButton rbtnSelTodo;
+        private RoundButton.RoundButton rbtnVender;
+        private RoundButton.RoundButton rbtnAgregarPedido;
+        private RoundButton.RoundButton rbtnAgregarModelo;
     }
 }

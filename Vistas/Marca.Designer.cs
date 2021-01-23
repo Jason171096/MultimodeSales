@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreMarca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDMarca = new System.Windows.Forms.TextBox();
-            this.btnAgregarMarca = new System.Windows.Forms.Button();
-            this.btnEditarMarca = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.rbtnCancelar = new RoundButton.RoundButton();
+            this.rbtnEditarMarca = new RoundButton.RoundButton();
+            this.rbtnAgregarMarca = new RoundButton.RoundButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelBarras = new System.Windows.Forms.Panel();
@@ -65,14 +65,14 @@
             this.dgvMarcas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMarcas.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvMarcas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMarcas.ColumnHeadersHeight = 50;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMarcas.EnableHeadersVisualStyles = false;
@@ -80,22 +80,22 @@
             this.dgvMarcas.Location = new System.Drawing.Point(11, 294);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMarcas.RowHeadersVisible = false;
             this.dgvMarcas.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SlateGray;
-            this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SlateGray;
+            this.dgvMarcas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvMarcas.RowTemplate.Height = 30;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMarcas.Size = new System.Drawing.Size(792, 269);
@@ -140,35 +140,6 @@
             this.txtIDMarca.TabIndex = 8;
             this.txtIDMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroMarca_KeyPress);
             // 
-            // btnAgregarMarca
-            // 
-            this.btnAgregarMarca.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(27, 132);
-            this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(155, 45);
-            this.btnAgregarMarca.TabIndex = 21;
-            this.btnAgregarMarca.Text = "Agregar Marca";
-            this.btnAgregarMarca.UseVisualStyleBackColor = false;
-            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
-            // 
-            // btnEditarMarca
-            // 
-            this.btnEditarMarca.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnEditarMarca.Enabled = false;
-            this.btnEditarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEditarMarca.Location = new System.Drawing.Point(194, 132);
-            this.btnEditarMarca.Name = "btnEditarMarca";
-            this.btnEditarMarca.Size = new System.Drawing.Size(166, 45);
-            this.btnEditarMarca.TabIndex = 22;
-            this.btnEditarMarca.Text = "Editar Marca";
-            this.btnEditarMarca.UseVisualStyleBackColor = false;
-            this.btnEditarMarca.Click += new System.EventHandler(this.btnEditarMarca_Click_1);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -182,12 +153,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.rbtnCancelar);
+            this.groupBox1.Controls.Add(this.rbtnEditarMarca);
+            this.groupBox1.Controls.Add(this.rbtnAgregarMarca);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtIDMarca);
-            this.groupBox1.Controls.Add(this.btnEditarMarca);
             this.groupBox1.Controls.Add(this.txtNombreMarca);
-            this.groupBox1.Controls.Add(this.btnAgregarMarca);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox1.Location = new System.Drawing.Point(11, 55);
@@ -197,20 +168,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Marca";
             // 
-            // btnCancelar
+            // rbtnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(194, 183);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(166, 41);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Visible = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.Location = new System.Drawing.Point(194, 181);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(166, 45);
+            this.rbtnCancelar.TabIndex = 26;
+            this.rbtnCancelar.Text = "Cancelar";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.Visible = false;
+            this.rbtnCancelar.Click += new System.EventHandler(this.rbtnCancelar_Click);
+            // 
+            // rbtnEditarMarca
+            // 
+            this.rbtnEditarMarca.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnEditarMarca.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnEditarMarca.Location = new System.Drawing.Point(194, 130);
+            this.rbtnEditarMarca.Name = "rbtnEditarMarca";
+            this.rbtnEditarMarca.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnEditarMarca.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnEditarMarca.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnEditarMarca.Size = new System.Drawing.Size(166, 45);
+            this.rbtnEditarMarca.TabIndex = 25;
+            this.rbtnEditarMarca.Text = "Editar Marca";
+            this.rbtnEditarMarca.TextColor = System.Drawing.Color.White;
+            this.rbtnEditarMarca.UseVisualStyleBackColor = true;
+            this.rbtnEditarMarca.Click += new System.EventHandler(this.rbtnEditarMarca_Click);
+            // 
+            // rbtnAgregarMarca
+            // 
+            this.rbtnAgregarMarca.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAgregarMarca.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAgregarMarca.Location = new System.Drawing.Point(20, 130);
+            this.rbtnAgregarMarca.Name = "rbtnAgregarMarca";
+            this.rbtnAgregarMarca.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarMarca.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAgregarMarca.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAgregarMarca.Size = new System.Drawing.Size(162, 45);
+            this.rbtnAgregarMarca.TabIndex = 24;
+            this.rbtnAgregarMarca.Text = "Agregar Marca";
+            this.rbtnAgregarMarca.TextColor = System.Drawing.Color.White;
+            this.rbtnAgregarMarca.UseVisualStyleBackColor = true;
+            this.rbtnAgregarMarca.Click += new System.EventHandler(this.rbtnAgregarMarca_Click);
             // 
             // txtBuscar
             // 
@@ -322,8 +327,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDMarca;
         private System.Windows.Forms.Panel panelBarras;
-        private System.Windows.Forms.Button btnAgregarMarca;
-        private System.Windows.Forms.Button btnEditarMarca;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
@@ -331,6 +334,8 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbClientes;
-        private System.Windows.Forms.Button btnCancelar;
+        private RoundButton.RoundButton rbtnCancelar;
+        private RoundButton.RoundButton rbtnEditarMarca;
+        private RoundButton.RoundButton rbtnAgregarMarca;
     }
 }

@@ -21,6 +21,14 @@ namespace MultimodeSales.Vistas
             CargarTallas();
             CDataGridView.FormattedDataGridView(dgvColores);
             CDataGridView.FormattedDataGridView(dgvTallas);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarColor);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarTalla);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnEditarColor);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnEditarTalla);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelarColor);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelarTalla);
+            CRoundButton.FormattedRoundButtonEliminar(rbtnEliminarColor);
+            CRoundButton.FormattedRoundButtonEliminar(rbtnEliminarTalla);
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
@@ -75,7 +83,7 @@ namespace MultimodeSales.Vistas
         }
         #endregion
         #region Colores
-        private void btnAgregarColor_Click(object sender, EventArgs e)
+        private void rbtnAgregarColor_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtColor.Text))
             {
@@ -85,36 +93,35 @@ namespace MultimodeSales.Vistas
             }
             else
                 CMsgBox.DisplayWarning("No se puede agregar un campo vacio");
-
         }
 
-        private void btnEditarColor_Click(object sender, EventArgs e)
+        private void rbtnEditarColor_Click(object sender, EventArgs e)
         {
             try
             {
                 if (String.IsNullOrWhiteSpace(txtTalla.Text))
                 {
                     colorytallas.EditarColoresyTallas(1, 2, int.Parse(txtColor.Tag + ""), txtColor.Text);
-                    btnEditarColor.Enabled = false;
-                    btnAgregarColor.Enabled = true;
-                    btnEliminarColor.Enabled = true;
-                    btnCancelarColor.Visible = false;
+                    rbtnEditarColor.Enabled = false;
+                    rbtnAgregarColor.Enabled = true;
+                    rbtnEliminarColor.Enabled = true;
+                    rbtnCancelarColor.Visible = false;
                     CargarColores();
                     BorrarSelectColor();
                 }
                 else
                     CMsgBox.DisplayWarning("No se puede editar un campo vacio");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 CMsgBox.DisplayError("No se puede editar sin seleccionar nada");
             }
         }
 
-        private void btnEliminarColor_Click(object sender, EventArgs e)
+        private void rbtnEliminarColor_Click(object sender, EventArgs e)
         {
-            if(dgvColores.Rows.Count != 0)
-            { 
+            if (dgvColores.Rows.Count != 0)
+            {
                 colorytallas.EditarColoresyTallas(1, 3, int.Parse(dgvColores.CurrentRow.Cells[0].Value + ""), txtColor.Text);
                 CargarColores();
                 BorrarSelectColor();
@@ -123,28 +130,28 @@ namespace MultimodeSales.Vistas
                 CMsgBox.DisplayWarning("No se puede eliminar sin seleccionar nada");
         }
 
-        private void btnCancelarColor_Click(object sender, EventArgs e)
+        private void rbtnCancelarColor_Click(object sender, EventArgs e)
         {
-            btnAgregarColor.Enabled = true;
-            btnEliminarColor.Enabled = true;
-            btnEditarColor.Enabled = false;
-            btnCancelarColor.Visible = false;
+            rbtnAgregarColor.Enabled = true;
+            rbtnEliminarColor.Enabled = true;
+            rbtnEditarColor.Enabled = false;
+            rbtnCancelarColor.Visible = false;
             BorrarSelectColor();
         }
         private void dgvColores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtColor.Tag = dgvColores.CurrentRow.Cells[0].Value + "";
             txtColor.Text = dgvColores.CurrentRow.Cells[1].Value + "";
-            btnAgregarColor.Enabled = false;
-            btnEditarColor.Enabled = true;
-            btnEliminarColor.Enabled = false;
-            btnCancelarColor.Visible = true;
+            rbtnAgregarColor.Enabled = false;
+            rbtnEditarColor.Enabled = true;
+            rbtnEliminarColor.Enabled = false;
+            rbtnCancelarColor.Visible = true;
         }
         #endregion
         #region Tallas
-        private void btnAgregarTalla_Click(object sender, EventArgs e)
+        private void rbtnAgregarTalla_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrWhiteSpace(txtTalla.Text))
+            if (!String.IsNullOrWhiteSpace(txtTalla.Text))
             {
                 colorytallas.EditarColoresyTallas(2, 1, 0, txtTalla.Text);
                 CargarTallas();
@@ -154,17 +161,17 @@ namespace MultimodeSales.Vistas
                 CMsgBox.DisplayWarning("No se puede agregar un campo vacio");
         }
 
-        private void btnEditarTalla_Click(object sender, EventArgs e)
+        private void rbtnEditarTalla_Click(object sender, EventArgs e)
         {
             try
             {
                 if (!String.IsNullOrWhiteSpace(txtTalla.Text))
                 {
                     colorytallas.EditarColoresyTallas(2, 2, int.Parse(txtTalla.Tag + ""), txtTalla.Text);
-                    btnEditarTalla.Enabled = false;
-                    btnEliminarTalla.Enabled = true;
-                    btnAgregarTalla.Enabled = true;
-                    btnCancelarTalla.Visible = false;
+                    rbtnEditarTalla.Enabled = false;
+                    rbtnEliminarTalla.Enabled = true;
+                    rbtnAgregarTalla.Enabled = true;
+                    rbtnCancelarTalla.Visible = false;
                     CargarTallas();
                     BorrarSelectTalla();
                 }
@@ -177,9 +184,9 @@ namespace MultimodeSales.Vistas
             }
         }
 
-        private void btnEliminarTalla_Click(object sender, EventArgs e)
+        private void rbtnEliminarTalla_Click(object sender, EventArgs e)
         {
-            if(dgvTallas.Rows.Count != 0)
+            if (dgvTallas.Rows.Count != 0)
             {
                 colorytallas.EditarColoresyTallas(2, 3, int.Parse(dgvTallas.CurrentRow.Cells[0].Value + ""), txtTalla.Text);
                 CargarTallas();
@@ -187,15 +194,14 @@ namespace MultimodeSales.Vistas
             }
             else
                 CMsgBox.DisplayWarning("No se puede eliminar sin seleccionar nada");
-            
         }
 
-        private void btnCancelarTalla_Click(object sender, EventArgs e)
+        private void rbtnCancelarTalla_Click(object sender, EventArgs e)
         {
-            btnAgregarTalla.Enabled = true;
-            btnEliminarTalla.Enabled = true;
-            btnEditarTalla.Enabled = false;
-            btnCancelarTalla.Visible = false;
+            rbtnAgregarTalla.Enabled = true;
+            rbtnEliminarTalla.Enabled = true;
+            rbtnEditarTalla.Enabled = false;
+            rbtnCancelarTalla.Visible = false;
             BorrarSelectTalla();
         }
 
@@ -203,10 +209,10 @@ namespace MultimodeSales.Vistas
         {
             txtTalla.Tag = dgvTallas.CurrentRow.Cells[0].Value + "";
             txtTalla.Text = dgvTallas.CurrentRow.Cells[1].Value + "";
-            btnEliminarTalla.Enabled = false;
-            btnAgregarTalla.Enabled = false;
-            btnEditarTalla.Enabled = true;
-            btnCancelarTalla.Visible = true;
+            rbtnEliminarTalla.Enabled = false;
+            rbtnAgregarTalla.Enabled = false;
+            rbtnEditarTalla.Enabled = true;
+            rbtnCancelarTalla.Visible = true;
         }
         #endregion
 
