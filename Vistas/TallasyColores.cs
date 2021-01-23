@@ -112,7 +112,7 @@ namespace MultimodeSales.Vistas
                 else
                     CMsgBox.DisplayWarning("No se puede editar un campo vacio");
             }
-            catch (Exception ex)
+            catch
             {
                 CMsgBox.DisplayError("No se puede editar sin seleccionar nada");
             }
@@ -180,7 +180,7 @@ namespace MultimodeSales.Vistas
             }
             catch
             {
-                CMsgBox.DisplayWarning("No se puede editar sin seleccionar nada");
+                CMsgBox.DisplayError("No se puede editar sin seleccionar nada");
             }
         }
 
