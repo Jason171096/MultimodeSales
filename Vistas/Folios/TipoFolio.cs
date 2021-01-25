@@ -1,6 +1,8 @@
-﻿using MultimodeSales.Programacion.Utilerias;
+﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Utilerias;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MultimodeSales.Vistas.Folios
 {
@@ -11,6 +13,8 @@ namespace MultimodeSales.Vistas.Folios
             InitializeComponent();
             CRoundButton.FormattedRoundButtonAceptar(rbtnFolioDevoluciones);
             CRoundButton.FormattedRoundButtonAceptar(rbtnFolioVentas);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
+            Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void rbtnFolioVentas_Click(object sender, EventArgs e)
@@ -25,6 +29,11 @@ namespace MultimodeSales.Vistas.Folios
             Folio folio = new Folio(false);
             Close();
             folio.Show();
+        }
+
+        private void rbtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

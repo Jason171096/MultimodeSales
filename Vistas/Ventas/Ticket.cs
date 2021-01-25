@@ -25,6 +25,8 @@ namespace MultimodeSales.Vistas.Ventas
             this.Controls.Add(printButton);
             barraSuperior.picMinimize.Click += new EventHandler(MinimizedClick);
             barraSuperior.picClose.Click += new EventHandler(CloseClick);
+            barraSuperior.lbTitle.Text = "Estas son las purebas deque si";
+            barraSuperior.panelTitle.Width = barraSuperior.lbTitle.Width + 10;
         }
         
         void printButton_Click(object sender, EventArgs e)
@@ -74,11 +76,6 @@ namespace MultimodeSales.Vistas.Ventas
         private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             MouseMove(sender, e);
-        }
-
-        private void roundButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
