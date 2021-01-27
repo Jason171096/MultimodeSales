@@ -31,6 +31,7 @@ namespace MultimodeSales.Vistas.Ventas
             CRoundButton.FormattedRoundButtonCancelar(rbtnVender);
             Clientes();
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            dgvVentasPedido.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(dgvVentasPedido_ColumnHeaderMouseClick);
         }
         private void Clientes()
         {
@@ -57,36 +58,39 @@ namespace MultimodeSales.Vistas.Ventas
             dgvVentasPedido.DataSource = null;
             dtPedidos = pedidosFinal.ObtenerPedidoFinalLlego(idcliente);
             dgvVentasPedido.DataSource = dtPedidos;
-            dgvVentasPedido.Columns[0].Visible = false;
+            darformatoTabla();
         }
 
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (dgvVentasPedido.SelectedRows.Count >= 1)
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    string lbprecioTotal = lbTotal.Text.Trim('$');
-                    string cantidad = lbCantidad.Text;
-                    string precioCliente = dgvVentasPedido.CurrentRow.Cells[4].Value.ToString();
-                    if (dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                //try
+                //{
+                    if (e.KeyCode == Keys.Enter)
                     {
-                        dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
-                        dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
-                        ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
+                        string lbprecioTotal = lbTotal.Text.Trim('$');
+                        string cantidad = lbCantidad.Text;
+                        string precioCliente = dgvVentasPedido.CurrentRow.Cells[5].Value.ToString();
+                        if (dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                        {
+                            dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
+                            dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
+                            ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
+                        }
+                        else
+                        {
+                            dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+                            dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                            ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
+                        }
                     }
-                    else
-                    {
-                        dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-                        dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                        ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
-                    }
-                }
+                //}
             }
-            catch(Exception ex)
-            {
-                CMsgBox.DisplayError($"Error al seleccionar un modelo \n Mensaje: \n {ex.Message}");
-            }
+            //catch(Exception ex)
+            //{
+                //CMsgBox.DisplayError($"Error al seleccionar un modelo \n Mensaje: \n {ex.Message}");
+            //}
         }
         private void ActualizarLabels(int pSumaoResta, string plbPrecio, string pCantidad, string pPrecioCliente)
         {
@@ -148,6 +152,7 @@ namespace MultimodeSales.Vistas.Ventas
                                 {
                                     venta.ventaPedido(rows.Cells[0].Value.ToString());
                                 }
+                                txtFolio.Text = "";
                                 CargarPedidos(idcliente);
                             }
                         }
@@ -168,12 +173,7 @@ namespace MultimodeSales.Vistas.Ventas
             PedidosFinal final = new PedidosFinal(true);
             final.ShowDialog();
             modelo = final.returnModelo();
-            if (modelo.IDModelo != null)
-            {
-                dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
-                dgvVentasPedido.DataSource = null;
-                dgvVentasPedido.DataSource = dtPedidos;
-            }
+            agregarModelo();
         }
 
         private void rbtnAgregarModelo_Click(object sender, EventArgs e)
@@ -182,12 +182,7 @@ namespace MultimodeSales.Vistas.Ventas
             Modeloss modelos = new Modeloss(true);
             modelos.ShowDialog();
             modelo = modelos.returnModelo();
-            if (modelo.IDModelo != null)
-            {
-                dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
-                dgvVentasPedido.DataSource = null;
-                dgvVentasPedido.DataSource = dtPedidos;
-            }
+            agregarModelo();
         }
 
         private void borrarLabels()
@@ -195,7 +190,24 @@ namespace MultimodeSales.Vistas.Ventas
             lbCantidad.Text = "0";
             lbTotal.Text = "$0.00";
         }
-
+        private void dgvVentasPedido_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            borrarLabels();
+        }
+        private void darformatoTabla()
+        {
+            dgvVentasPedido.Columns[0].Visible = false;//IDPedido
+        }
+        private void agregarModelo()
+        {
+            if (modelo.IDModelo != null)
+            {
+                dtPedidos.Rows.Add(modelo.IDPedido, modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
+                dgvVentasPedido.DataSource = null;
+                dgvVentasPedido.DataSource = dtPedidos;
+                darformatoTabla();
+            }
+        }
         #region Panel Barras
         private void lbVentas_MouseMove(object sender, MouseEventArgs e)
         {
@@ -231,8 +243,7 @@ namespace MultimodeSales.Vistas.Ventas
             Close();
         }
 
-        #endregion
 
-        
+        #endregion 
     }
 }

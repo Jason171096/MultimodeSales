@@ -204,6 +204,7 @@ namespace MultimodeSales.Vistas
         {
             if (activeCellClick)
             {
+                modelo.IDPedido = dgvPedidosFinal.Rows[e.RowIndex].Cells[0].Value.ToString();
                 modelo.IDModelo = dgvPedidosFinal.Rows[e.RowIndex].Cells[3].Value.ToString();
                 modelo.IDMarca = dgvPedidosFinal.Rows[e.RowIndex].Cells[4].Value.ToString();
                 modelo.Color = dgvPedidosFinal.Rows[e.RowIndex].Cells[5].Value.ToString();
