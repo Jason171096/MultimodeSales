@@ -10,8 +10,8 @@ namespace MultimodeSales.Vistas.Ventas
     {
         CVenta venta = new CVenta();
         Validaciones validaciones = new Validaciones();
-        
-        string total, idfolio;
+        private bool ventaCompleta;
+        private string total, idfolio;
         public DialogVenta(string pTotal, string pIDFolio)
         {
             InitializeComponent();
@@ -53,11 +53,21 @@ namespace MultimodeSales.Vistas.Ventas
         {
             if (lbCambio.ForeColor != Color.Red)
             {
-                venta.ventaPedido(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
+                venta.ventaFolio(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
                 CMsgBox.DisplayInfo("Venta concluida");
+                Close();
+                ventaCompleta = true;
             }
             else
+            {
                 CMsgBox.DisplayWarning("Ingrese una cantidad");
+                ventaCompleta = false;
+            }
+        }
+
+        public bool ventaCompletada()
+        {
+            return ventaCompleta;
         }
 
         private void rbtnCancelar_Click(object sender, EventArgs e)

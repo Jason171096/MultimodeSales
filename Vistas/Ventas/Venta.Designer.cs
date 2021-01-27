@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvPedidosFinal = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvVentasPedido = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboxCliente = new System.Windows.Forms.ComboBox();
@@ -50,60 +50,72 @@
             this.rbtnVender = new RoundButton.RoundButton();
             this.rbtnAgregarPedido = new RoundButton.RoundButton();
             this.rbtnAgregarModelo = new RoundButton.RoundButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).BeginInit();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbLeyenda1 = new MaterialSkin.Controls.MaterialLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasPedido)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvPedidosFinal
+            // dgvVentasPedido
             // 
-            this.dgvPedidosFinal.AllowUserToAddRows = false;
-            this.dgvPedidosFinal.AllowUserToDeleteRows = false;
-            this.dgvPedidosFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvVentasPedido.AllowUserToAddRows = false;
+            this.dgvVentasPedido.AllowUserToDeleteRows = false;
+            this.dgvVentasPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPedidosFinal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPedidosFinal.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dgvPedidosFinal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            this.dgvPedidosFinal.ColumnHeadersHeight = 50;
-            this.dgvPedidosFinal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvPedidosFinal.EnableHeadersVisualStyles = false;
-            this.dgvPedidosFinal.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedidosFinal.Location = new System.Drawing.Point(11, 146);
-            this.dgvPedidosFinal.Name = "dgvPedidosFinal";
-            this.dgvPedidosFinal.ReadOnly = true;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidosFinal.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dgvPedidosFinal.RowHeadersVisible = false;
-            this.dgvPedidosFinal.RowHeadersWidth = 30;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedidosFinal.RowsDefaultCellStyle = dataGridViewCellStyle27;
-            this.dgvPedidosFinal.RowTemplate.Height = 30;
-            this.dgvPedidosFinal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPedidosFinal.Size = new System.Drawing.Size(798, 337);
-            this.dgvPedidosFinal.TabIndex = 31;
-            this.dgvPedidosFinal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
+            this.dgvVentasPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvVentasPedido.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvVentasPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVentasPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvVentasPedido.ColumnHeadersHeight = 50;
+            this.dgvVentasPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvVentasPedido.EnableHeadersVisualStyles = false;
+            this.dgvVentasPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dgvVentasPedido.Location = new System.Drawing.Point(11, 146);
+            this.dgvVentasPedido.Name = "dgvVentasPedido";
+            this.dgvVentasPedido.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVentasPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvVentasPedido.RowHeadersVisible = false;
+            this.dgvVentasPedido.RowHeadersWidth = 30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvVentasPedido.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvVentasPedido.RowTemplate.Height = 30;
+            this.dgvVentasPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVentasPedido.Size = new System.Drawing.Size(798, 337);
+            this.dgvVentasPedido.TabIndex = 31;
+            this.dgvVentasPedido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPedidosFinal_KeyDown);
             // 
             // groupBox2
             // 
@@ -329,6 +341,88 @@
             this.rbtnAgregarModelo.UseVisualStyleBackColor = true;
             this.rbtnAgregarModelo.Click += new System.EventHandler(this.rbtnAgregarModelo_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(280, 501);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 26);
+            this.tableLayoutPanel2.TabIndex = 71;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lbLeyenda1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(144, 20);
+            this.panel1.TabIndex = 41;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Indigo;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbLeyenda1
+            // 
+            this.lbLeyenda1.AutoSize = true;
+            this.lbLeyenda1.Depth = 0;
+            this.lbLeyenda1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbLeyenda1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbLeyenda1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbLeyenda1.Location = new System.Drawing.Point(20, 0);
+            this.lbLeyenda1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbLeyenda1.Name = "lbLeyenda1";
+            this.lbLeyenda1.Size = new System.Drawing.Size(124, 19);
+            this.lbLeyenda1.TabIndex = 39;
+            this.lbLeyenda1.Text = "No Seleccionado";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.materialLabel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(153, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(124, 20);
+            this.panel2.TabIndex = 42;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.YellowGreen;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(24, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(100, 19);
+            this.materialLabel1.TabIndex = 39;
+            this.materialLabel1.Text = "Seleccionado";
+            // 
             // Venta
             // 
             this.AcceptButton = this.rbtnVender;
@@ -336,6 +430,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(821, 596);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.rbtnAgregarModelo);
             this.Controls.Add(this.rbtnAgregarPedido);
             this.Controls.Add(this.rbtnVender);
@@ -344,13 +439,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvPedidosFinal);
+            this.Controls.Add(this.dgvVentasPedido);
             this.Controls.Add(this.panelVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidosFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasPedido)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -359,6 +454,13 @@
             this.panelVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +472,7 @@
         private System.Windows.Forms.Label lbVentas;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picMinimize;
-        private System.Windows.Forms.DataGridView dgvPedidosFinal;
+        private System.Windows.Forms.DataGridView dgvVentasPedido;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboxCliente;
@@ -385,5 +487,12 @@
         private RoundButton.RoundButton rbtnVender;
         private RoundButton.RoundButton rbtnAgregarPedido;
         private RoundButton.RoundButton rbtnAgregarModelo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialLabel lbLeyenda1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

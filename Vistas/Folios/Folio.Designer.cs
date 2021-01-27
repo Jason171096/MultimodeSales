@@ -143,6 +143,7 @@ namespace MultimodeSales.Vistas
             this.panelBarras.Name = "panelBarras";
             this.panelBarras.Size = new System.Drawing.Size(616, 46);
             this.panelBarras.TabIndex = 30;
+            this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
             // lbFolio
             // 
@@ -155,6 +156,7 @@ namespace MultimodeSales.Vistas
             this.lbFolio.Size = new System.Drawing.Size(68, 29);
             this.lbFolio.TabIndex = 36;
             this.lbFolio.Text = "Folio";
+            this.lbFolio.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbFolio_MouseMove);
             // 
             // picClose
             // 
@@ -167,6 +169,7 @@ namespace MultimodeSales.Vistas
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picClose.TabIndex = 24;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // picMinimize
             // 
@@ -179,6 +182,7 @@ namespace MultimodeSales.Vistas
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picMinimize.TabIndex = 23;
             this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
             // dgvFolio
             // 

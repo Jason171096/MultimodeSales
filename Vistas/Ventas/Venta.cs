@@ -18,11 +18,13 @@ namespace MultimodeSales.Vistas.Ventas
         private bool SelectIndexChange = false;
         Modelo modelo = new Modelo();
         DataTable dtPedidos;
+        private bool ventaCompleta;
+        private string idcliente;
 
         public Venta()
         {
             InitializeComponent();
-            CDataGridView.FormattedDataGridView(dgvPedidosFinal);
+            CDataGridView.FormattedDataGridView(dgvVentasPedido);
             CRoundButton.FormattedRoundButtonAceptar(rbtnSelTodo);
             CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarModelo);
             CRoundButton.FormattedRoundButtonAceptar(rbtnAgregarPedido);
@@ -44,7 +46,7 @@ namespace MultimodeSales.Vistas.Ventas
         {
             if (SelectIndexChange)
             {
-                string idcliente = cboxCliente.SelectedValue + "";
+                idcliente = cboxCliente.SelectedValue + "";
                 CargarPedidos(idcliente);
             }
             SelectIndexChange = true;
@@ -52,9 +54,10 @@ namespace MultimodeSales.Vistas.Ventas
         }
         private void CargarPedidos(string idcliente)
         {
-            dgvPedidosFinal.DataSource = null;
+            dgvVentasPedido.DataSource = null;
             dtPedidos = pedidosFinal.ObtenerPedidoFinalLlego(idcliente);
-            dgvPedidosFinal.DataSource = dtPedidos;
+            dgvVentasPedido.DataSource = dtPedidos;
+            dgvVentasPedido.Columns[0].Visible = false;
         }
 
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
@@ -65,17 +68,17 @@ namespace MultimodeSales.Vistas.Ventas
                 {
                     string lbprecioTotal = lbTotal.Text.Trim('$');
                     string cantidad = lbCantidad.Text;
-                    string precioCliente = dgvPedidosFinal.CurrentRow.Cells[4].Value.ToString();
-                    if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                    string precioCliente = dgvVentasPedido.CurrentRow.Cells[4].Value.ToString();
+                    if (dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
                     {
-                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
-                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
+                        dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
+                        dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
                         ActualizarLabels(1, lbprecioTotal, cantidad, precioCliente);
                     }
                     else
                     {
-                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                        dgvVentasPedido.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+                        dgvVentasPedido.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
                         ActualizarLabels(2, lbprecioTotal, cantidad, precioCliente);
                     }
                 }
@@ -105,13 +108,13 @@ namespace MultimodeSales.Vistas.Ventas
         }
         private void rbtnSelTodo_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            foreach (DataGridViewRow rows in dgvVentasPedido.Rows)
             {
                 if (rows.DefaultCellStyle.BackColor != Color.YellowGreen)
                 {
                     rows.DefaultCellStyle.BackColor = Color.YellowGreen;
                     rows.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-                    ActualizarLabels(2, lbTotal.Text.ToString().Trim('$'), lbCantidad.Text, rows.Cells[4].Value.ToString());
+                    ActualizarLabels(2, lbTotal.Text.ToString().Trim('$'), lbCantidad.Text, rows.Cells[5].Value.ToString());
                 }
             }
         }
@@ -120,7 +123,7 @@ namespace MultimodeSales.Vistas.Ventas
         {
             CVenta venta = new CVenta();
             int cont = 0;
-            foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
+            foreach (DataGridViewRow rows in dgvVentasPedido.Rows)
             {
                 if (rows.DefaultCellStyle.BackColor == Color.YellowGreen)
                     cont++;
@@ -138,6 +141,15 @@ namespace MultimodeSales.Vistas.Ventas
                         {
                             DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
                             dialog.ShowDialog();
+                            ventaCompleta = dialog.ventaCompletada();
+                            if(ventaCompleta)
+                            {
+                                foreach (DataGridViewRow rows in dgvVentasPedido.Rows)
+                                {
+                                    venta.ventaPedido(rows.Cells[0].Value.ToString());
+                                }
+                                CargarPedidos(idcliente);
+                            }
                         }
                     }
                     else
@@ -159,8 +171,8 @@ namespace MultimodeSales.Vistas.Ventas
             if (modelo.IDModelo != null)
             {
                 dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
-                dgvPedidosFinal.DataSource = null;
-                dgvPedidosFinal.DataSource = dtPedidos;
+                dgvVentasPedido.DataSource = null;
+                dgvVentasPedido.DataSource = dtPedidos;
             }
         }
 
@@ -173,8 +185,8 @@ namespace MultimodeSales.Vistas.Ventas
             if (modelo.IDModelo != null)
             {
                 dtPedidos.Rows.Add(modelo.IDModelo, modelo.IDMarca, modelo.Color, modelo.Talla, modelo.PrecioCliente);
-                dgvPedidosFinal.DataSource = null;
-                dgvPedidosFinal.DataSource = dtPedidos;
+                dgvVentasPedido.DataSource = null;
+                dgvVentasPedido.DataSource = dtPedidos;
             }
         }
 

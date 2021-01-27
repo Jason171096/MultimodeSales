@@ -33,6 +33,7 @@ namespace MultimodeSales.Vistas
             rbtnTodos.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             rbtnLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             rbtnNoLlegaron.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
+            rbtnVendido.CheckedChanged += new EventHandler(radioButtonOrdenar_CheckedChanged);
             activeCellClick = pactiveCellClick;
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
@@ -75,17 +76,11 @@ namespace MultimodeSales.Vistas
                 dgvPedidosFinal.DataSource = dv;
                 DarFormatoTabla();
             }
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            if (Buscar == 1)
-            {
-
-            }
-            else if (Buscar == 2)
-            {
-
+            else if(rb.Checked && rb.TabIndex == 35)
+            {//RadioButtonVendieron
+                dv.RowFilter = "Vendido = 1";
+                dgvPedidosFinal.DataSource = dv;
+                DarFormatoTabla();
             }
         }
 
@@ -96,8 +91,8 @@ namespace MultimodeSales.Vistas
             dgvPedidosFinal.DataSource = dt;
             paintRows();
             DarFormatoTabla();
-           if(dgvPedidosFinal.RowCount >= 1)
-                dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
+           //if(dgvPedidosFinal.RowCount >= 1)
+                //dgvPedidosFinal.Rows[0].DefaultCellStyle.BackColor = Color.YellowGreen;
         }
 
         private void DarFormatoTabla()
@@ -116,20 +111,24 @@ namespace MultimodeSales.Vistas
             dgvPedidosFinal.Columns[8].Width = 250;//Fecha
             dgvPedidosFinal.Columns[0].Visible = false;//IDPedido
             dgvPedidosFinal.Columns[9].Visible = false;//Llego
+            dgvPedidosFinal.Columns[10].Visible = false;//Vendido
         }
         private void dgvPedidosFinal_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor != Color.OrangeRed)
                 {
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
-                }
-                else
-                {
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
-                    dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                    if (dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor == Color.YellowGreen)
+                    {
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.Indigo;
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.MidnightBlue;
+                    }
+                    else
+                    {
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.BackColor = Color.YellowGreen;
+                        dgvPedidosFinal.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                    }
                 }
             }
         }
@@ -218,10 +217,15 @@ namespace MultimodeSales.Vistas
         {
             foreach (DataGridViewRow rows in dgvPedidosFinal.Rows)
             {
-                if (rows.Cells[9].Value.ToString() == "1")
+                if (rows.Cells[9].Value.ToString() == "1" && rows.Cells[10].Value.ToString() == "0")
                 {
                     dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.BackColor = Color.YellowGreen;
                     dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+                }
+                if(rows.Cells[10].Value.ToString() == "1")
+                {
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.BackColor = Color.OrangeRed;
+                    dgvPedidosFinal.Rows[rows.Index].DefaultCellStyle.SelectionBackColor = Color.DarkOrange;
                 }
             }
         }

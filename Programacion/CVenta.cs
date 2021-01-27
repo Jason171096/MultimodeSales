@@ -14,10 +14,10 @@ namespace MultimodeSales
     {
         Conexion conexion = new Conexion();
         
-        public void ventaPedido(string pIDFolio, DateTime pFecha, double pTotal)
+        public void ventaFolio(string pIDFolio, DateTime pFecha, double pTotal)
         {
             conexion.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand("VentaPedido", conexion.GetConnection());
+            MySqlCommand cmd = new MySqlCommand("VentaFolio", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
             cmd.Parameters.Add(new MySqlParameter("fecha", pFecha));
@@ -37,6 +37,16 @@ namespace MultimodeSales
             if (Convert.ToInt32(existeFolio) == 1)
                 return 1;
             return 0;
+        }
+
+        public void ventaPedido(string pIDPedido)
+        {
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("VentaPedido", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idpedido", pIDPedido));
+            cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
         }
     }
 }

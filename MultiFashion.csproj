@@ -214,6 +214,12 @@
     <Compile Include="Vistas\Folios\Folio.Designer.cs">
       <DependentUpon>Folio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Folios\FolioVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Folios\FolioVenta.Designer.cs">
+      <DependentUpon>FolioVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Folios\TipoFolio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Folios\Folio.resx">
       <DependentUpon>Folio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Folios\FolioVenta.resx">
+      <DependentUpon>FolioVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Folios\TipoFolio.resx">
       <DependentUpon>TipoFolio.cs</DependentUpon>
