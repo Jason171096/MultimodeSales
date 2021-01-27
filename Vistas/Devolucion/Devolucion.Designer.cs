@@ -42,14 +42,12 @@ namespace MultimodeSales.Vistas
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDMarca = new System.Windows.Forms.TextBox();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.mtDivider = new MaterialSkin.Controls.MaterialDivider();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboxCliente = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.checkCambioModelo = new MaterialSkin.Controls.MaterialCheckBox();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
@@ -59,7 +57,9 @@ namespace MultimodeSales.Vistas
             this.IDColor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.IDTalla = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.gBoxCambiar = new System.Windows.Forms.GroupBox();
+            this.gBoxCambio = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +71,9 @@ namespace MultimodeSales.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.gBoxCambiar.SuspendLayout();
+            this.gBoxCambio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarras
@@ -85,7 +87,7 @@ namespace MultimodeSales.Vistas
             this.panelBarras.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBarras.Location = new System.Drawing.Point(0, 0);
             this.panelBarras.Name = "panelBarras";
-            this.panelBarras.Size = new System.Drawing.Size(875, 49);
+            this.panelBarras.Size = new System.Drawing.Size(880, 49);
             this.panelBarras.TabIndex = 19;
             // 
             // lbDevolucion
@@ -146,49 +148,49 @@ namespace MultimodeSales.Vistas
             this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregarMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(342, 142);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(331, 19);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(179, 37);
             this.btnAgregarMarca.TabIndex = 22;
             this.btnAgregarMarca.Text = "Seleccionar Pedido";
             this.btnAgregarMarca.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnAceptar
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(707, 556);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 45);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAceptar.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAceptar.Location = new System.Drawing.Point(717, 650);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(155, 45);
+            this.btnAceptar.TabIndex = 23;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.BackColor = System.Drawing.Color.Indigo;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(11, 556);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 45);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Cancelar(Esc)";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.Location = new System.Drawing.Point(11, 650);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(155, 45);
+            this.btnCancelar.TabIndex = 24;
+            this.btnCancelar.Text = "Cancelar(Esc)";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // materialDivider1
+            // mtDivider
             // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(11, 336);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(850, 10);
-            this.materialDivider1.TabIndex = 25;
-            this.materialDivider1.Text = "materialDivider1";
+            this.mtDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mtDivider.Depth = 0;
+            this.mtDivider.Location = new System.Drawing.Point(17, 407);
+            this.mtDivider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mtDivider.Name = "mtDivider";
+            this.mtDivider.Size = new System.Drawing.Size(850, 10);
+            this.mtDivider.TabIndex = 25;
+            this.mtDivider.Text = "materialDivider1";
             // 
             // groupBox2
             // 
@@ -225,33 +227,13 @@ namespace MultimodeSales.Vistas
             this.cboxCliente.Size = new System.Drawing.Size(405, 32);
             this.cboxCliente.TabIndex = 53;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(12, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 24);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Modelos a cambiar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(12, 373);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 24);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Modelos por cambio";
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SlateBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(342, 360);
+            this.button3.Location = new System.Drawing.Point(325, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(179, 37);
             this.button3.TabIndex = 61;
@@ -273,6 +255,7 @@ namespace MultimodeSales.Vistas
             this.checkCambioModelo.TabIndex = 62;
             this.checkCambioModelo.Text = "Cambio por otro modelo";
             this.checkCambioModelo.UseVisualStyleBackColor = true;
+            this.checkCambioModelo.CheckedChanged += new System.EventHandler(this.checkCambioModelo_CheckedChanged);
             // 
             // dgvPedido
             // 
@@ -298,11 +281,11 @@ namespace MultimodeSales.Vistas
             this.Eliminar});
             this.dgvPedido.EnableHeadersVisualStyles = false;
             this.dgvPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedido.Location = new System.Drawing.Point(11, 180);
+            this.dgvPedido.Location = new System.Drawing.Point(8, 62);
             this.dgvPedido.Name = "dgvPedido";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -366,10 +349,35 @@ namespace MultimodeSales.Vistas
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // dataGridView2
+            // gBoxCambiar
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gBoxCambiar.Controls.Add(this.dgvPedido);
+            this.gBoxCambiar.Controls.Add(this.btnAgregarMarca);
+            this.gBoxCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.gBoxCambiar.Location = new System.Drawing.Point(11, 180);
+            this.gBoxCambiar.Name = "gBoxCambiar";
+            this.gBoxCambiar.Size = new System.Drawing.Size(861, 221);
+            this.gBoxCambiar.TabIndex = 65;
+            this.gBoxCambiar.TabStop = false;
+            this.gBoxCambiar.Text = "Modelos a cambiar";
+            // 
+            // gBoxCambio
+            // 
+            this.gBoxCambio.Controls.Add(this.dataGridView1);
+            this.gBoxCambio.Controls.Add(this.button3);
+            this.gBoxCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.gBoxCambio.Location = new System.Drawing.Point(11, 423);
+            this.gBoxCambio.Name = "gBoxCambio";
+            this.gBoxCambio.Size = new System.Drawing.Size(861, 221);
+            this.gBoxCambio.TabIndex = 66;
+            this.gBoxCambio.TabStop = false;
+            this.gBoxCambio.Text = "Modelo por cambio";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -377,40 +385,40 @@ namespace MultimodeSales.Vistas
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2.ColumnHeadersHeight = 50;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.ColumnHeadersHeight = 50;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewComboBoxColumn2,
             this.dataGridViewComboBoxColumn3,
             this.dataGridViewImageColumn1});
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(11, 400);
-            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(5, 62);
+            this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 30;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 30;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.RowTemplate.Height = 30;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(850, 150);
-            this.dataGridView2.TabIndex = 64;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(850, 150);
+            this.dataGridView1.TabIndex = 64;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -463,18 +471,14 @@ namespace MultimodeSales.Vistas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(875, 615);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dgvPedido);
+            this.ClientSize = new System.Drawing.Size(880, 705);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.gBoxCambio);
+            this.Controls.Add(this.gBoxCambiar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.checkCambioModelo);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.materialDivider1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAgregarMarca);
+            this.Controls.Add(this.mtDivider);
             this.Controls.Add(this.panelBarras);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Devolucion";
@@ -487,7 +491,9 @@ namespace MultimodeSales.Vistas
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.gBoxCambiar.ResumeLayout(false);
+            this.gBoxCambio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,14 +508,12 @@ namespace MultimodeSales.Vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDMarca;
         private System.Windows.Forms.Button btnAgregarMarca;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        private MaterialSkin.Controls.MaterialDivider mtDivider;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboxCliente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private MaterialSkin.Controls.MaterialCheckBox checkCambioModelo;
         private System.Windows.Forms.DataGridView dgvPedido;
@@ -519,7 +523,9 @@ namespace MultimodeSales.Vistas
         private System.Windows.Forms.DataGridViewComboBoxColumn IDColor;
         private System.Windows.Forms.DataGridViewComboBoxColumn IDTalla;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.GroupBox gBoxCambiar;
+        private System.Windows.Forms.GroupBox gBoxCambio;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
