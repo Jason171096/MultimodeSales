@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MultimodeSales.Vistas
 {
     public partial class Devolucion : Form
     {
-
+        private int MX;
+        private int MY;
         public Devolucion()
         {
             InitializeComponent();
@@ -42,5 +37,40 @@ namespace MultimodeSales.Vistas
                 gBoxCambio.Visible = false;
             }
         }
+
+        #region Panel Barras
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void panelBarras_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+
+        private void lbDevolucion_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMove(sender, e);
+        }
+        private new void MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                MX = e.X;
+                MY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - MX);
+                Top = Top + (e.Y - MY);
+            }
+        }
+        #endregion
     }
 }

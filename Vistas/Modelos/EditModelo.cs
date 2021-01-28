@@ -13,7 +13,6 @@ namespace MultimodeSales.Vistas.Modelos
     {
         MarcaBD marca = new MarcaBD();
         ModelosDB modelo = new ModelosDB();
-        Validaciones validaciones = new Validaciones();
         private readonly bool Bandera;
         private int MX;
         private int MY;
@@ -96,11 +95,11 @@ namespace MultimodeSales.Vistas.Modelos
         }
         private void txtPrecioCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.SoloDecimales(sender, e);
+            Validaciones.SoloDecimales(sender, e);
         }
         private void txtPrecioPublico_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.SoloDecimales(sender, e);
+            Validaciones.SoloDecimales(sender, e);
         }
         #region Panel Barras
         private void lb_MouseMove(object sender, MouseEventArgs e)

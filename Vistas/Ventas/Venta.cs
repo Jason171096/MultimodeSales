@@ -244,6 +244,11 @@ namespace MultimodeSales.Vistas.Ventas
         }
 
 
-        #endregion 
+        #endregion
+
+        private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
 }

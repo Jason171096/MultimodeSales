@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion
 {
-    class Validaciones
+    public class Validaciones
     {
-        public void SoloLetras(KeyPressEventArgs e)
+        public static void SoloLetras(KeyPressEventArgs e)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace MultimodeSales.Programacion
                 MessageBox.Show($"{ex}");
             }
         }
-        public void SoloNumeros(KeyPressEventArgs e)
+        public static void SoloNumeros(KeyPressEventArgs e)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace MultimodeSales.Programacion
             }
         }
 
-        public void SoloDecimales(object sender, KeyPressEventArgs e)
+        public static void SoloDecimales(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != '.')
             {
@@ -60,7 +60,7 @@ namespace MultimodeSales.Programacion
             }
         }
 
-        public void NumerosNegativoYPositivo(object sender, KeyPressEventArgs e)
+        public static void NumerosNegativoYPositivo(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != '-')
             {
@@ -74,7 +74,7 @@ namespace MultimodeSales.Programacion
             }
         }
 
-        public void SoloLetrasyNumeros(object sender, KeyPressEventArgs e)
+        public static void SoloLetrasyNumeros(object sender, KeyPressEventArgs e)
         {
             try
             {

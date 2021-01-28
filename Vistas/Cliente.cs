@@ -11,7 +11,6 @@ namespace MultimodeSales.Vistas
     public partial class Cliente : Form
     {
         ClienteDB cliente = new ClienteDB();
-        Validaciones validaciones = new Validaciones();
         DataTable dt = new DataTable();
         private int MX = 0;
         private int MY = 0;
@@ -117,11 +116,11 @@ namespace MultimodeSales.Vistas
         #region Validaciones
         private void txtIDCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.SoloNumeros(e);
+            Validaciones.SoloNumeros(e);
         }
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.SoloLetrasyNumeros(sender, e);
+            Validaciones.SoloLetrasyNumeros(sender, e);
         }
         #endregion
         #region Panel Barras

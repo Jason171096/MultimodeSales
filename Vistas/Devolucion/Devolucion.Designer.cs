@@ -29,12 +29,12 @@ namespace MultimodeSales.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbDevolucion = new System.Windows.Forms.Label();
             this.picClose = new System.Windows.Forms.PictureBox();
@@ -66,6 +66,11 @@ namespace MultimodeSales.Vistas
             this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.roundButton1 = new RoundButton.RoundButton();
+            this.roundButton2 = new RoundButton.RoundButton();
+            this.roundButton3 = new RoundButton.RoundButton();
+            this.roundButton4 = new RoundButton.RoundButton();
+            this.roundButton5 = new RoundButton.RoundButton();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -89,6 +94,7 @@ namespace MultimodeSales.Vistas
             this.panelBarras.Name = "panelBarras";
             this.panelBarras.Size = new System.Drawing.Size(880, 49);
             this.panelBarras.TabIndex = 19;
+            this.panelBarras.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarras_MouseMove);
             // 
             // lbDevolucion
             // 
@@ -101,6 +107,7 @@ namespace MultimodeSales.Vistas
             this.lbDevolucion.Size = new System.Drawing.Size(133, 29);
             this.lbDevolucion.TabIndex = 37;
             this.lbDevolucion.Text = "Devolución";
+            this.lbDevolucion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbDevolucion_MouseMove);
             // 
             // picClose
             // 
@@ -112,6 +119,7 @@ namespace MultimodeSales.Vistas
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picClose.TabIndex = 24;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // picMinimize
             // 
@@ -123,6 +131,7 @@ namespace MultimodeSales.Vistas
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picMinimize.TabIndex = 23;
             this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
             // label1
             // 
@@ -262,14 +271,14 @@ namespace MultimodeSales.Vistas
             this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedido.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvPedido.ColumnHeadersHeight = 50;
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -283,22 +292,22 @@ namespace MultimodeSales.Vistas
             this.dgvPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dgvPedido.Location = new System.Drawing.Point(8, 62);
             this.dgvPedido.Name = "dgvPedido";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPedido.RowHeadersVisible = false;
             this.dgvPedido.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvPedido.RowTemplate.Height = 30;
             this.dgvPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPedido.Size = new System.Drawing.Size(850, 150);
@@ -351,6 +360,7 @@ namespace MultimodeSales.Vistas
             // 
             // gBoxCambiar
             // 
+            this.gBoxCambiar.Controls.Add(this.roundButton1);
             this.gBoxCambiar.Controls.Add(this.dgvPedido);
             this.gBoxCambiar.Controls.Add(this.btnAgregarMarca);
             this.gBoxCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -363,6 +373,7 @@ namespace MultimodeSales.Vistas
             // 
             // gBoxCambio
             // 
+            this.gBoxCambio.Controls.Add(this.roundButton2);
             this.gBoxCambio.Controls.Add(this.dataGridView1);
             this.gBoxCambio.Controls.Add(this.button3);
             this.gBoxCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -378,14 +389,14 @@ namespace MultimodeSales.Vistas
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -399,22 +410,22 @@ namespace MultimodeSales.Vistas
             this.dataGridView1.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dataGridView1.Location = new System.Drawing.Point(5, 62);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(850, 150);
@@ -465,6 +476,81 @@ namespace MultimodeSales.Vistas
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // roundButton1
+            // 
+            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton1.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton1.Location = new System.Drawing.Point(233, 19);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton1.Size = new System.Drawing.Size(187, 37);
+            this.roundButton1.TabIndex = 64;
+            this.roundButton1.Text = "Seleccionar pedido";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = true;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton2.Location = new System.Drawing.Point(233, 19);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton2.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton2.Size = new System.Drawing.Size(187, 37);
+            this.roundButton2.TabIndex = 65;
+            this.roundButton2.Text = "Seleccionar pedido";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = true;
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton3.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton3.Location = new System.Drawing.Point(607, 650);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton3.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton3.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton3.Size = new System.Drawing.Size(139, 45);
+            this.roundButton3.TabIndex = 67;
+            this.roundButton3.Text = "Aceptar";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = true;
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton4.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton4.Location = new System.Drawing.Point(150, 651);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton4.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton4.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton4.Size = new System.Drawing.Size(139, 45);
+            this.roundButton4.TabIndex = 68;
+            this.roundButton4.Text = "Cancelar(Esc)";
+            this.roundButton4.TextColor = System.Drawing.Color.White;
+            this.roundButton4.UseVisualStyleBackColor = true;
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton5.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton5.Location = new System.Drawing.Point(482, 142);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton5.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton5.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton5.Size = new System.Drawing.Size(168, 37);
+            this.roundButton5.TabIndex = 65;
+            this.roundButton5.Text = "Buscar Folio";
+            this.roundButton5.TextColor = System.Drawing.Color.White;
+            this.roundButton5.UseVisualStyleBackColor = true;
+            // 
             // Devolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,6 +558,9 @@ namespace MultimodeSales.Vistas
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(880, 705);
+            this.Controls.Add(this.roundButton5);
+            this.Controls.Add(this.roundButton4);
+            this.Controls.Add(this.roundButton3);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.gBoxCambio);
             this.Controls.Add(this.gBoxCambiar);
@@ -532,5 +621,10 @@ namespace MultimodeSales.Vistas
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private RoundButton.RoundButton roundButton1;
+        private RoundButton.RoundButton roundButton2;
+        private RoundButton.RoundButton roundButton3;
+        private RoundButton.RoundButton roundButton4;
+        private RoundButton.RoundButton roundButton5;
     }
 }

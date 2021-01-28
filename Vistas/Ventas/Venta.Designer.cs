@@ -277,6 +277,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(248, 29);
             this.txtFolio.TabIndex = 63;
+            this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // rbtnSelTodo
             // 

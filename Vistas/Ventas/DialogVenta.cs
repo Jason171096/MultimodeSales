@@ -9,7 +9,6 @@ namespace MultimodeSales.Vistas.Ventas
     public partial class DialogVenta : Form
     {
         CVenta venta = new CVenta();
-        Validaciones validaciones = new Validaciones();
         private bool ventaCompleta;
         private string total, idfolio;
         public DialogVenta(string pTotal, string pIDFolio)
@@ -36,7 +35,7 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.SoloDecimales(sender, e);
+            Validaciones.SoloDecimales(sender, e);
         }
 
         private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
