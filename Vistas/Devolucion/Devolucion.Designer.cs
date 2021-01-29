@@ -42,8 +42,6 @@ namespace MultimodeSales.Vistas
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDMarca = new System.Windows.Forms.TextBox();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.mtDivider = new MaterialSkin.Controls.MaterialDivider();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +56,9 @@ namespace MultimodeSales.Vistas
             this.IDTalla = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.gBoxCambiar = new System.Windows.Forms.GroupBox();
+            this.roundButton1 = new RoundButton.RoundButton();
             this.gBoxCambio = new System.Windows.Forms.GroupBox();
+            this.roundButton2 = new RoundButton.RoundButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -66,11 +66,9 @@ namespace MultimodeSales.Vistas
             this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.roundButton1 = new RoundButton.RoundButton();
-            this.roundButton2 = new RoundButton.RoundButton();
-            this.roundButton3 = new RoundButton.RoundButton();
-            this.roundButton4 = new RoundButton.RoundButton();
-            this.roundButton5 = new RoundButton.RoundButton();
+            this.rbtnAceptar = new RoundButton.RoundButton();
+            this.rbtnCancelar = new RoundButton.RoundButton();
+            this.rbtnBuscarFolio = new RoundButton.RoundButton();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -161,34 +159,8 @@ namespace MultimodeSales.Vistas
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(179, 37);
             this.btnAgregarMarca.TabIndex = 22;
-            this.btnAgregarMarca.Text = "Seleccionar Pedido";
+            this.btnAgregarMarca.Text = "Seleccionar Modelo";
             this.btnAgregarMarca.UseVisualStyleBackColor = false;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAceptar.Location = new System.Drawing.Point(717, 650);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(155, 45);
-            this.btnAceptar.TabIndex = 23;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Indigo;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCancelar.Location = new System.Drawing.Point(11, 650);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(155, 45);
-            this.btnCancelar.TabIndex = 24;
-            this.btnCancelar.Text = "Cancelar(Esc)";
-            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // mtDivider
             // 
@@ -371,6 +343,21 @@ namespace MultimodeSales.Vistas
             this.gBoxCambiar.TabStop = false;
             this.gBoxCambiar.Text = "Modelos a cambiar";
             // 
+            // roundButton1
+            // 
+            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton1.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton1.Location = new System.Drawing.Point(233, 19);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton1.Size = new System.Drawing.Size(187, 37);
+            this.roundButton1.TabIndex = 64;
+            this.roundButton1.Text = "Seleccionar pedido";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = true;
+            // 
             // gBoxCambio
             // 
             this.gBoxCambio.Controls.Add(this.roundButton2);
@@ -383,6 +370,21 @@ namespace MultimodeSales.Vistas
             this.gBoxCambio.TabIndex = 66;
             this.gBoxCambio.TabStop = false;
             this.gBoxCambio.Text = "Modelo por cambio";
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.Red;
+            this.roundButton2.Location = new System.Drawing.Point(233, 19);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.roundButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.roundButton2.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.roundButton2.Size = new System.Drawing.Size(187, 37);
+            this.roundButton2.TabIndex = 65;
+            this.roundButton2.Text = "Seleccionar pedido";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -476,80 +478,50 @@ namespace MultimodeSales.Vistas
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // roundButton1
+            // rbtnAceptar
             // 
-            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton1.ButtonColor = System.Drawing.Color.Red;
-            this.roundButton1.Location = new System.Drawing.Point(233, 19);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.roundButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.roundButton1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundButton1.Size = new System.Drawing.Size(187, 37);
-            this.roundButton1.TabIndex = 64;
-            this.roundButton1.Text = "Seleccionar pedido";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = true;
+            this.rbtnAceptar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnAceptar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnAceptar.Location = new System.Drawing.Point(732, 650);
+            this.rbtnAceptar.Name = "rbtnAceptar";
+            this.rbtnAceptar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnAceptar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnAceptar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnAceptar.Size = new System.Drawing.Size(140, 40);
+            this.rbtnAceptar.TabIndex = 67;
+            this.rbtnAceptar.Text = "Aceptar";
+            this.rbtnAceptar.TextColor = System.Drawing.Color.White;
+            this.rbtnAceptar.UseVisualStyleBackColor = true;
             // 
-            // roundButton2
+            // rbtnCancelar
             // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.Red;
-            this.roundButton2.Location = new System.Drawing.Point(233, 19);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.roundButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.roundButton2.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundButton2.Size = new System.Drawing.Size(187, 37);
-            this.roundButton2.TabIndex = 65;
-            this.roundButton2.Text = "Seleccionar pedido";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
+            this.rbtnCancelar.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnCancelar.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnCancelar.Location = new System.Drawing.Point(11, 650);
+            this.rbtnCancelar.Name = "rbtnCancelar";
+            this.rbtnCancelar.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnCancelar.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnCancelar.Size = new System.Drawing.Size(140, 40);
+            this.rbtnCancelar.TabIndex = 68;
+            this.rbtnCancelar.Text = "Cancelar(Esc)";
+            this.rbtnCancelar.TextColor = System.Drawing.Color.White;
+            this.rbtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // roundButton3
+            // rbtnBuscarFolio
             // 
-            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonColor = System.Drawing.Color.Red;
-            this.roundButton3.Location = new System.Drawing.Point(607, 650);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.roundButton3.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.roundButton3.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundButton3.Size = new System.Drawing.Size(139, 45);
-            this.roundButton3.TabIndex = 67;
-            this.roundButton3.Text = "Aceptar";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton4.ButtonColor = System.Drawing.Color.Red;
-            this.roundButton4.Location = new System.Drawing.Point(150, 651);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.roundButton4.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.roundButton4.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundButton4.Size = new System.Drawing.Size(139, 45);
-            this.roundButton4.TabIndex = 68;
-            this.roundButton4.Text = "Cancelar(Esc)";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = true;
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton5.ButtonColor = System.Drawing.Color.Red;
-            this.roundButton5.Location = new System.Drawing.Point(482, 142);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.roundButton5.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.roundButton5.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundButton5.Size = new System.Drawing.Size(168, 37);
-            this.roundButton5.TabIndex = 65;
-            this.roundButton5.Text = "Buscar Folio";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = true;
+            this.rbtnBuscarFolio.BorderColor = System.Drawing.Color.Silver;
+            this.rbtnBuscarFolio.ButtonColor = System.Drawing.Color.Red;
+            this.rbtnBuscarFolio.Location = new System.Drawing.Point(502, 142);
+            this.rbtnBuscarFolio.Name = "rbtnBuscarFolio";
+            this.rbtnBuscarFolio.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.rbtnBuscarFolio.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.rbtnBuscarFolio.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.rbtnBuscarFolio.Size = new System.Drawing.Size(148, 37);
+            this.rbtnBuscarFolio.TabIndex = 65;
+            this.rbtnBuscarFolio.Text = "Buscar Folio";
+            this.rbtnBuscarFolio.TextColor = System.Drawing.Color.White;
+            this.rbtnBuscarFolio.UseVisualStyleBackColor = true;
             // 
             // Devolucion
             // 
@@ -557,14 +529,12 @@ namespace MultimodeSales.Vistas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(880, 705);
-            this.Controls.Add(this.roundButton5);
-            this.Controls.Add(this.roundButton4);
-            this.Controls.Add(this.roundButton3);
-            this.Controls.Add(this.btnCancelar);
+            this.ClientSize = new System.Drawing.Size(880, 695);
+            this.Controls.Add(this.rbtnBuscarFolio);
+            this.Controls.Add(this.rbtnCancelar);
+            this.Controls.Add(this.rbtnAceptar);
             this.Controls.Add(this.gBoxCambio);
             this.Controls.Add(this.gBoxCambiar);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.checkCambioModelo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.mtDivider);
@@ -597,8 +567,6 @@ namespace MultimodeSales.Vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDMarca;
         private System.Windows.Forms.Button btnAgregarMarca;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnCancelar;
         private MaterialSkin.Controls.MaterialDivider mtDivider;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
@@ -623,8 +591,8 @@ namespace MultimodeSales.Vistas
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private RoundButton.RoundButton roundButton1;
         private RoundButton.RoundButton roundButton2;
-        private RoundButton.RoundButton roundButton3;
-        private RoundButton.RoundButton roundButton4;
-        private RoundButton.RoundButton roundButton5;
+        private RoundButton.RoundButton rbtnAceptar;
+        private RoundButton.RoundButton rbtnCancelar;
+        private RoundButton.RoundButton rbtnBuscarFolio;
     }
 }

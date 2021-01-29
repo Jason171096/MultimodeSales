@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MultimodeSales.Programacion.Utilerias;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,9 +12,12 @@ namespace MultimodeSales.Vistas
         public Devolucion()
         {
             InitializeComponent();
+            CRoundButton.FormattedRoundButtonAceptar(rbtnAceptar);
+            CRoundButton.FormattedRoundButtonAceptar(rbtnBuscarFolio);
+            CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             Size = new Size(880, 475);
-            btnCancelar.Location = new Point(11, 407);
-            btnAceptar.Location = new Point(718, 407);
+            rbtnCancelar.Location = new Point(11, 407);
+            rbtnAceptar.Location = new Point(718, 407);
             mtDivider.Visible = false;
             gBoxCambio.Visible = false;
         }
@@ -22,17 +26,17 @@ namespace MultimodeSales.Vistas
         {
             if (checkCambioModelo.Checked)
             {
-                Size = new Size(880, 705);
-                btnCancelar.Location = new Point(17, 650);
-                btnAceptar.Location = new Point(718, 650);
+                Size = new Size(880, 695);
+                rbtnCancelar.Location = new Point(17, 650);
+                rbtnAceptar.Location = new Point(718, 650);
                 mtDivider.Visible = true;
                 gBoxCambio.Visible = true;
             }
             else
             {
                 Size = new Size(880, 475);
-                btnCancelar.Location = new Point(11, 407);
-                btnAceptar.Location = new Point(718, 407);
+                rbtnCancelar.Location = new Point(11, 407);
+                rbtnAceptar.Location = new Point(718, 407);
                 mtDivider.Visible = false;
                 gBoxCambio.Visible = false;
             }

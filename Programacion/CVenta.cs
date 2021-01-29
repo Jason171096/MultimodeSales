@@ -14,12 +14,13 @@ namespace MultimodeSales
     {
         Conexion conexion = new Conexion();
         
-        public void ventaFolio(string pIDFolio, DateTime pFecha, double pTotal)
+        public void ventaFolio(string pIDFolio, string pIDCliente, DateTime pFecha, double pTotal)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("VentaFolio", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
+            cmd.Parameters.Add(new MySqlParameter("idcliente", pIDCliente));
             cmd.Parameters.Add(new MySqlParameter("fecha", pFecha));
             cmd.Parameters.Add(new MySqlParameter("total", pTotal));
             cmd.ExecuteNonQuery();

@@ -36,6 +36,15 @@ namespace MultimodeSales.Programacion.Utilerias
             button.OnHoverButtonColor = Color.DarkRed;
             FormatFontRoundButton(button);
         }
+        public static void FormattedRoundButtonExcel(RoundButton.RoundButton button)
+        {
+
+            button.BorderColor = Color.DarkGreen;
+            button.ButtonColor = Color.Green;
+            button.OnHoverBorderColor = Color.Green;
+            button.OnHoverButtonColor = Color.DarkGreen;
+            FormatFontRoundButton(button);
+        }
 
         private static void FormatFontRoundButton(RoundButton.RoundButton button)
         {

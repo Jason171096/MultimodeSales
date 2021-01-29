@@ -143,7 +143,7 @@ namespace MultimodeSales.Vistas.Ventas
                             CMsgBox.DisplayWarning("Folio existente");
                         else
                         {
-                            DialogVenta dialog = new DialogVenta(lbTotal.Text, txtFolio.Text);
+                            DialogVenta dialog = new DialogVenta(txtFolio.Text, cboxCliente.SelectedValue.ToString(), lbTotal.Text);
                             dialog.ShowDialog();
                             ventaCompleta = dialog.ventaCompletada();
                             if(ventaCompleta)

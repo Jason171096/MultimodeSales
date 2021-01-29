@@ -10,14 +10,15 @@ namespace MultimodeSales.Vistas.Ventas
     {
         CVenta venta = new CVenta();
         private bool ventaCompleta;
-        private string total, idfolio;
-        public DialogVenta(string pTotal, string pIDFolio)
+        private string total, idfolio, idcliente;
+        public DialogVenta(string pIDFolio, string pIDCliente, string pTotal)
         {
             InitializeComponent();
             CRoundButton.FormattedRoundButtonAceptar(rbtnVender);
             CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
             total = pTotal;
             idfolio = pIDFolio;
+            idcliente = pIDCliente;
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
@@ -52,7 +53,7 @@ namespace MultimodeSales.Vistas.Ventas
         {
             if (lbCambio.ForeColor != Color.Red)
             {
-                venta.ventaFolio(idfolio, DateTime.Now, Convert.ToDouble(total.Trim('$')));
+                venta.ventaFolio(idfolio, idcliente, DateTime.Now, Convert.ToDouble(total.Trim('$')));
                 CMsgBox.DisplayInfo("Venta concluida");
                 Close();
                 ventaCompleta = true;
