@@ -41,7 +41,11 @@ namespace MultimodeSales.Vistas
                 gBoxCambio.Visible = false;
             }
         }
-
+        private void rbtnBuscarFolio_Click(object sender, EventArgs e)
+        {
+            Folio folio = new Folio(true);
+            folio.ShowDialog();
+        }
         #region Panel Barras
         private void picMinimize_Click(object sender, EventArgs e)
         {
@@ -76,5 +80,7 @@ namespace MultimodeSales.Vistas
             }
         }
         #endregion
+
+
     }
 }

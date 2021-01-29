@@ -29,18 +29,33 @@ namespace MultimodeSales
         /// </summary>
         private void InitializeComponent()
         {
+            this.cboxCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // cboxCliente
+            // 
+            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.cboxCliente.FormattingEnabled = true;
+            this.cboxCliente.Location = new System.Drawing.Point(174, 109);
+            this.cboxCliente.Name = "cboxCliente";
+            this.cboxCliente.Size = new System.Drawing.Size(513, 32);
+            this.cboxCliente.TabIndex = 54;
             // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cboxCliente);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(780, 479);
+            this.Size = new System.Drawing.Size(780, 346);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cboxCliente;
     }
 }

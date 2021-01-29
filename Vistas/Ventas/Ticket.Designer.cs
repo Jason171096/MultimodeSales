@@ -51,7 +51,7 @@ namespace MultimodeSales.Vistas.Ventas
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Image = global::MultimodeSales.Properties.Resources.excel24;
             this.roundButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.roundButton1.Location = new System.Drawing.Point(405, 272);
+            this.roundButton1.Location = new System.Drawing.Point(522, 443);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.OnHoverBorderColor = System.Drawing.Color.Green;
             this.roundButton1.OnHoverButtonColor = System.Drawing.Color.DarkGreen;

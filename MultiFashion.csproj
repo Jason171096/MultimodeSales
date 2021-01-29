@@ -172,6 +172,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl1.Designer.cs">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FlatButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     <Compile Include="Vistas\Ventas\DialogVenta.Designer.cs">
       <DependentUpon>DialogVenta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomControl1.resx">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
