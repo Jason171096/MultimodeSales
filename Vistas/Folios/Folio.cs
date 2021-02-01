@@ -3,6 +3,7 @@ using MultimodeSales.Programacion.Folios;
 using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
+using MultimodeSales.Vistas.Folios;
 
 namespace MultimodeSales.Vistas
 {
@@ -11,12 +12,14 @@ namespace MultimodeSales.Vistas
         CFolio cFolio = new CFolio();
         CVenta cVenta = new CVenta();
         private bool ventanaDevolucion;
+        private bool ventanaFolio;
         private int MX;
         private int MY;
         public Folio(bool pFolio, bool ventanaDevolucion)
         {
             InitializeComponent();
             this.ventanaDevolucion = ventanaDevolucion;
+            ventanaFolio = pFolio;
             CDataGridView.FormattedDataGridView(dgvFolio);
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             if(pFolio)
@@ -91,9 +94,10 @@ namespace MultimodeSales.Vistas
                 cVenta.IDVenta = dgvFolio.Rows[e.RowIndex].Cells[0].Value.ToString();
                 Close();
             }
-            else
+            else if(ventanaFolio)
             {
-
+                FolioVenta folioVenta = new FolioVenta();
+                folioVenta.ShowDialog();
             }
         }
 

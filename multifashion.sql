@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 29-01-2021 a las 15:19:33
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 01-02-2021 a las 20:58:23
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -137,7 +137,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `FoliosVentas` ()  NO SQL
 BEGIN
-	SELECT * FROM venta;
+	SELECT venta.IDVenta, venta.IDFolio as "ID Folio", venta.IDCliente as "ID Cliente", venta.Fecha,  CONCAT('$', FORMAT(venta.Total, 2)) as "Total" FROM venta;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VentaFolio` (IN `idfolio` BIGINT, IN `idcliente` BIGINT, IN `fecha` DATETIME, IN `total` DECIMAL(10,2))  NO SQL
@@ -350,6 +350,13 @@ CREATE TABLE `folio_devolucion` (
 CREATE TABLE `folio_venta` (
   `IDFolio` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `folio_venta`
+--
+
+INSERT INTO `folio_venta` (`IDFolio`) VALUES
+(1);
 
 -- --------------------------------------------------------
 
@@ -735,15 +742,9 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `Fecha`, `Llego`, `Vendido`) VALUES
-(1, '112', 1, 'MORADO', 'G', '2020-10-19 17:13:56', b'0', b'1'),
 (2, '115', 1, 'VERDE', '18', '2020-10-19 17:13:56', b'0', b'0'),
-(3, '346', 1, 'TURQUESA', 'CH', '2020-10-19 17:13:56', b'0', b'1'),
-(4, '2', 1, 'ROJO', 'XG', '2020-10-19 17:13:56', b'0', b'1'),
 (12, '2', 31, 'AMARILLLO', '17', '2020-10-19 10:57:49', b'0', b'0'),
 (13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'0', b'0'),
-(14, '10001', 31, 'ROJO', '17', '2020-10-19 10:57:49', b'0', b'1'),
-(15, '35', 31, 'TURQUESA', 'CH', '2020-10-19 10:57:49', b'0', b'1'),
-(16, '8', 1, 'TURQUESA', '22', '2020-10-19 17:13:56', b'0', b'1'),
 (18, '135', 100, 'AMARILLLO', 'XG', '2021-01-12 16:46:20', b'0', b'0'),
 (20, '109', 100, 'NEGRO', 'M', '2021-01-12 16:46:20', b'0', b'0'),
 (21, '200', 100, 'VERDE', '18', '2021-01-12 16:46:20', b'0', b'0'),
@@ -751,8 +752,6 @@ INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `F
 (23, '135', 93, 'MORADO', '18', '2021-01-12 16:47:09', b'0', b'0'),
 (24, '159', 93, 'AMARILLLO', '22', '2021-01-12 16:47:09', b'0', b'0'),
 (25, '214', 93, 'AZUL', 'M', '2021-01-12 16:47:09', b'0', b'0'),
-(26, '241', 93, 'VERDE', 'G', '2021-01-12 16:47:09', b'0', b'1'),
-(27, '332', 93, 'VERDE', 'G', '2021-01-12 16:47:09', b'0', b'1'),
 (28, '353', 87, 'NEGRO', 'XG', '2021-01-12 16:47:57', b'0', b'0'),
 (29, '376', 87, 'NEGRO', '22', '2021-01-12 16:47:57', b'0', b'0'),
 (30, '95184', 87, 'AZUL', '22', '2021-01-12 16:47:57', b'0', b'0'),
@@ -767,13 +766,8 @@ INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `F
 (39, '152', 32, 'ROJO', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
 (40, '211', 32, 'TURQUESA', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
 (41, '182', 32, 'VERDE', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
-(45, '291', 101, 'ROJO', '17', '2021-01-28 20:13:59', b'0', b'1'),
-(46, '340', 101, 'RUBY', 'CH', '2021-01-28 20:13:59', b'0', b'1'),
-(47, '381', 101, 'TURQUESA', '22', '2021-01-28 20:13:59', b'0', b'1'),
-(48, '1', 101, 'AZUL', '18', '2021-01-28 20:13:59', b'0', b'1'),
-(49, '111', 101, 'RUBY', 'XG', '2021-01-28 20:13:59', b'0', b'1'),
-(50, '10001', 101, 'AMARILLLO', 'XG', '2021-01-28 20:13:59', b'0', b'1'),
-(51, '35', 101, 'ROJO', '17', '2021-01-28 20:13:59', b'1', b'1');
+(53, '108', 101, 'TURQUESA', 'XG', '2021-02-01 10:29:49', b'1', b'1'),
+(54, '131', 101, 'RUBY', 'M', '2021-02-01 10:29:49', b'1', b'1');
 
 -- --------------------------------------------------------
 
@@ -832,6 +826,13 @@ CREATE TABLE `venta` (
   `Fecha` datetime NOT NULL,
   `Total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`IDVenta`, `IDFolio`, `IDCliente`, `Fecha`, `Total`) VALUES
+(26, 1, 101, '2021-02-01 10:31:38', '1645.45');
 
 -- --------------------------------------------------------
 
@@ -960,7 +961,7 @@ ALTER TABLE `folio_devolucion`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT de la tabla `talla`
@@ -978,7 +979,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
