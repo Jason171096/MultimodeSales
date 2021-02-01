@@ -19,14 +19,14 @@ namespace MultimodeSales.Vistas.Folios
 
         private void rbtnFolioVentas_Click(object sender, EventArgs e)
         {
-            Folio folio = new Folio(true);
+            Folio folio = new Folio(true, false);
             Close();
             folio.Show();
         }
 
         private void rbtnFolioDevoluciones_Click(object sender, EventArgs e)
         {
-            Folio folio = new Folio(false);
+            Folio folio = new Folio(false, false);
             Close();
             folio.Show();
         }

@@ -10,7 +10,7 @@ namespace MultimodeSales.Vistas
 {
     public partial class Cliente : Form
     {
-        ClienteDB cliente = new ClienteDB();
+        CClienteDB cliente = new CClienteDB();
         DataTable dt = new DataTable();
         private int MX = 0;
         private int MY = 0;

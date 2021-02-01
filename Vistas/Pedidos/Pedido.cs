@@ -14,8 +14,8 @@ namespace MultimodeSales.Vistas
 {
     public partial class Pedido : Form
     {
-        ClienteDB cliente = new ClienteDB();
-        ModelosDB modelos = new ModelosDB();
+        CClienteDB cliente = new CClienteDB();
+        CModelosDB modelos = new CModelosDB();
         CPedido pedido = new CPedido();
         CColoresyTallas ColoresyTallas = new CColoresyTallas();
         DataTable DataModels = new DataTable();

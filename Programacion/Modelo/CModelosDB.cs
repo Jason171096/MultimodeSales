@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion.Modelo
 {
-    class ModelosDB
+    class CModelosDB
     {
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();

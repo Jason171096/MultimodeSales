@@ -229,6 +229,7 @@ namespace MultimodeSales.Vistas
             this.dgvFolio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFolio.Size = new System.Drawing.Size(592, 370);
             this.dgvFolio.TabIndex = 33;
+            this.dgvFolio.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFolio_CellDoubleClick);
             // 
             // Folio
             // 

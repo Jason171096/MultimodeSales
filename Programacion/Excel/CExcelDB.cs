@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MultimodeSales.Programacion.Excel
 {
-    class ExcelDB
+    class CExcelDB
     {
         Conexion conexion = new Conexion();
         public bool AgregarPedidosFinal(string modelo, string idusuario)

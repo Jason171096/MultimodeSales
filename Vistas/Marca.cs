@@ -10,7 +10,7 @@ namespace MultimodeSales.Vistas
 {
     public partial class Marca : Form
     {
-        MarcaBD marca = new MarcaBD();
+        CMarcaBD marca = new CMarcaBD();
         DataTable dt = new DataTable();
         private int MX = 0;
         private int MY = 0;

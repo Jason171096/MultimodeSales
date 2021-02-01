@@ -15,9 +15,9 @@ namespace MultimodeSales.Vistas
 {
     public partial class ImportarListaMarca : Form
     {
-        MarcaBD marca = new MarcaBD();
+        CMarcaBD marca = new CMarcaBD();
         CImportarCSVyExcel importarCSV = new CImportarCSVyExcel();
-        ModelosDB modelos = new ModelosDB();
+        CModelosDB modelos = new CModelosDB();
         public ImportarListaMarca()
         {
             InitializeComponent();

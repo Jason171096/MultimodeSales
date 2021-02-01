@@ -9,6 +9,7 @@ namespace MultimodeSales.Vistas
     {
         private int MX;
         private int MY;
+        CVenta cVenta = new CVenta();
         public Devolucion()
         {
             InitializeComponent();
@@ -43,8 +44,10 @@ namespace MultimodeSales.Vistas
         }
         private void rbtnBuscarFolio_Click(object sender, EventArgs e)
         {
-            Folio folio = new Folio(true);
+            Folio folio = new Folio(true, true);
             folio.ShowDialog();
+            cVenta = folio.returnVenta();
+            txtIDFolio.Text = cVenta.IDVenta;
         }
         #region Panel Barras
         private void picMinimize_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace MultimodeSales
 {
     public partial class UserControl1 : UserControl
     {
-        ClienteDB cliente = new ClienteDB();
+        CClienteDB cliente = new CClienteDB();
         public UserControl1()
         {
             InitializeComponent();

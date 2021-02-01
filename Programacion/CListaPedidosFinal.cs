@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MultimodeSales.Programacion
 {
-    class ListaPedidosFinal
+    class CListaPedidosFinal
     {
         Conexion conexion = new Conexion();
         public DataTable ObtenerListaPedidosFinal(string pBuscar)

@@ -10,8 +10,11 @@ using System.Windows;
 
 namespace MultimodeSales
 {
-    class CVenta
+    public class CVenta
     {
+        private string idVenta;
+
+        public string IDVenta { get => idVenta; set => idVenta = value; }
         Conexion conexion = new Conexion();
         
         public void ventaFolio(string pIDFolio, string pIDCliente, DateTime pFecha, double pTotal)

@@ -11,8 +11,8 @@ namespace MultimodeSales.Vistas.Modelos
 {
     public partial class EditModelo : Form
     {
-        MarcaBD marca = new MarcaBD();
-        ModelosDB modelo = new ModelosDB();
+        CMarcaBD marca = new CMarcaBD();
+        CModelosDB modelo = new CModelosDB();
         private readonly bool Bandera;
         private int MX;
         private int MY;

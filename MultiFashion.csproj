@@ -185,21 +185,21 @@
     <Compile Include="Programacion\CVenta.cs" />
     <Compile Include="Programacion\ColoresyTallas\CColoresyTallas.cs" />
     <Compile Include="Programacion\Folios\CFolio.cs" />
-    <Compile Include="Programacion\Modelo\Modelo.cs" />
+    <Compile Include="Programacion\Modelo\CModelo.cs" />
     <Compile Include="Programacion\Utilerias\CFormBorder.cs" />
-    <Compile Include="Programacion\Cliente\ClienteDB.cs" />
+    <Compile Include="Programacion\Cliente\CClienteDB.cs" />
     <Compile Include="Programacion\Conexion.cs" />
     <Compile Include="Programacion\Utilerias\CDataGridView.cs" />
     <Compile Include="Programacion\Utilerias\CMsgBox.cs" />
     <Compile Include="Programacion\Utilerias\CPanelBarras.cs" />
-    <Compile Include="Programacion\Excel\ExcelDB.cs" />
+    <Compile Include="Programacion\Excel\CExcelDB.cs" />
     <Compile Include="Programacion\Excel\CImportarCSVyExcel.cs" />
-    <Compile Include="Programacion\ListaPedidosFinal.cs" />
-    <Compile Include="Programacion\Marca\MarcaBD.cs" />
-    <Compile Include="Programacion\Modelo\ModelosDB.cs" />
+    <Compile Include="Programacion\CListaPedidosFinal.cs" />
+    <Compile Include="Programacion\Marca\CMarcaBD.cs" />
+    <Compile Include="Programacion\Modelo\CModelosDB.cs" />
     <Compile Include="Programacion\CPedido.cs" />
     <Compile Include="Programacion\Utilerias\CRoundButton.cs" />
-    <Compile Include="Programacion\Utilerias\Validaciones.cs" />
+    <Compile Include="Programacion\Utilerias\CValidaciones.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

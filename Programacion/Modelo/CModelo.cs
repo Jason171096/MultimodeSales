@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MultimodeSales.Programacion.Modelo
 {
-    public class Modelo
+    public class CModelo
     {
         private string idPedido;
         private string idModelo;

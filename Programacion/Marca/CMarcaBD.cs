@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Programacion.Marca
 {
-    class MarcaBD
+    class CMarcaBD
     {
         Conexion conexion = new Conexion();
         MySqlDataAdapter da = new MySqlDataAdapter();

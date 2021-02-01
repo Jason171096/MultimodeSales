@@ -12,12 +12,12 @@ namespace MultimodeSales.Vistas
     public partial class PedidosFinal : Form
     {
         private int Buscar;
-        ListaPedidosFinal listaPedidosFinal = new ListaPedidosFinal();
+        CListaPedidosFinal listaPedidosFinal = new CListaPedidosFinal();
         private int MX;
         private int MY;
         DataTable dt;
         DataView dv;
-        Modelo modelo = new Modelo();
+        CModelo modelo = new CModelo();
         bool activeCellClick = false;
 
         public PedidosFinal(bool pactiveCellClick)
@@ -230,7 +230,7 @@ namespace MultimodeSales.Vistas
                 }
             }
         }
-        public Modelo returnModelo()
+        public CModelo returnModelo()
         {
             return modelo;
         }

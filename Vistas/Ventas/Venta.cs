@@ -13,10 +13,10 @@ namespace MultimodeSales.Vistas.Ventas
     {
         private int MX;
         private int MY;
-        ListaPedidosFinal pedidosFinal = new ListaPedidosFinal();
-        ClienteDB cliente = new ClienteDB();
+        CListaPedidosFinal pedidosFinal = new CListaPedidosFinal();
+        CClienteDB cliente = new CClienteDB();
         private bool SelectIndexChange = false;
-        Modelo modelo = new Modelo();
+        CModelo modelo = new CModelo();
         DataTable dtPedidos;
         private bool ventaCompleta;
         private string idcliente;

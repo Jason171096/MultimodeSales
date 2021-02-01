@@ -9,11 +9,14 @@ namespace MultimodeSales.Vistas
     public partial class Folio : Form
     {
         CFolio cFolio = new CFolio();
+        CVenta cVenta = new CVenta();
+        private bool ventanaDevolucion;
         private int MX;
         private int MY;
-        public Folio(bool pFolio)
+        public Folio(bool pFolio, bool ventanaDevolucion)
         {
             InitializeComponent();
+            this.ventanaDevolucion = ventanaDevolucion;
             CDataGridView.FormattedDataGridView(dgvFolio);
             Region = Region.FromHrgn(CFormBorder.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             if(pFolio)
@@ -37,13 +40,14 @@ namespace MultimodeSales.Vistas
 
         private void DarFormatoTabla()
         {
+            dgvFolio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dgvFolio.Columns[0].Visible = false;//IDVenta
-            dgvFolio.Columns[1].HeaderText = "ID Folio";//IDFolio
+            //dgvFolio.Columns[1].HeaderText = "ID Folio";//IDFolio
             dgvFolio.Columns[1].Width = 100;
-            dgvFolio.Columns[2].HeaderText = "ID Cliente";//IDCliente
-            dgvFolio.Columns[2].Width = 100;
-            dgvFolio.Columns[3].Width = 300;//Fecha
-            dgvFolio.Columns[4].Width = 200;//Total
+            //dgvFolio.Columns[2].HeaderText = "ID Cliente";//IDCliente
+            dgvFolio.Columns[2].Width = 125;
+            dgvFolio.Columns[3].Width = 250;//Fecha
+            dgvFolio.Columns[4].Width = 150;//Total
         }
 
         #region Barra Superior
@@ -79,5 +83,23 @@ namespace MultimodeSales.Vistas
             }
         }
         #endregion
+
+        private void dgvFolio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(ventanaDevolucion)
+            {
+                cVenta.IDVenta = dgvFolio.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        public CVenta returnVenta()
+        {
+            return cVenta;
+        }
     }
 }

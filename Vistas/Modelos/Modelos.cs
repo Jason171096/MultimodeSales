@@ -13,14 +13,14 @@ namespace MultimodeSales.Vistas
 {
     public partial class Modeloss : Form
     {
-        ModelosDB modelos = new ModelosDB();
+        CModelosDB modelos = new CModelosDB();
         DataTable dt = new DataTable();
         DataTable Data = new DataTable();
         private int MX;
         private int MY;
         private int count = 0, opcion = 1;
         private bool stop = false, activateCellClick = false;
-        Modelo modelo = new Modelo();
+        CModelo modelo = new CModelo();
         public Modeloss(bool pactiveCellClick)
         {
             InitializeComponent();
@@ -158,7 +158,7 @@ namespace MultimodeSales.Vistas
                 Close();
             }
         }
-        public Modelo returnModelo()
+        public CModelo returnModelo()
         {
             return modelo;
         }
