@@ -44,13 +44,12 @@ namespace MultimodeSales.Vistas
         private void DarFormatoTabla()
         {
             dgvFolio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dgvFolio.Columns[0].Visible = false;//IDVenta
-            //dgvFolio.Columns[1].HeaderText = "ID Folio";//IDFolio
-            dgvFolio.Columns[1].Width = 100;
-            //dgvFolio.Columns[2].HeaderText = "ID Cliente";//IDCliente
-            dgvFolio.Columns[2].Width = 125;
-            dgvFolio.Columns[3].Width = 250;//Fecha
-            dgvFolio.Columns[4].Width = 150;//Total
+            //dgvFolio.Columns[0].HeaderText = "ID Folio";//IDFolio
+            dgvFolio.Columns[0].Width = 100;
+            //dgvFolio.Columns[1].HeaderText = "ID Cliente";//IDCliente
+            dgvFolio.Columns[1].Width = 125;
+            dgvFolio.Columns[2].Width = 250;//Fecha
+            dgvFolio.Columns[3].Width = 150;//Total
         }
 
         #region Barra Superior

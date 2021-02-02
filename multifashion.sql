@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 01-02-2021 a las 20:58:23
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.0
+-- Servidor: localhost:3306
+-- Tiempo de generación: 02-02-2021 a las 05:40:32
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -127,7 +127,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `FolioExistente` (IN `idfolio` BIGINT)  NO SQL
 BEGIN
-	SET @var := (SELECT * FROM folio_venta WHERE folio_venta.IDFolio = idfolio);
+	SET @var := (SELECT venta.IDFolio FROM venta WHERE venta.IDFolio = idfolio);
     IF(@var = idfolio) THEN
     	SELECT 1;
     ELSE
@@ -137,12 +137,11 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `FoliosVentas` ()  NO SQL
 BEGIN
-	SELECT venta.IDVenta, venta.IDFolio as "ID Folio", venta.IDCliente as "ID Cliente", venta.Fecha,  CONCAT('$', FORMAT(venta.Total, 2)) as "Total" FROM venta;
+	SELECT venta.IDFolio as "ID Folio", venta.IDCliente as "ID Cliente", venta.Fecha,  CONCAT('$', FORMAT(venta.Total, 2)) as "Total" FROM venta;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `VentaFolio` (IN `idfolio` BIGINT, IN `idcliente` BIGINT, IN `fecha` DATETIME, IN `total` DECIMAL(10,2))  NO SQL
 BEGIN
-	INSERT INTO folio_venta(folio_venta.IDFolio) VALUES (idfolio);
 	INSERT INTO venta(venta.IDFolio, venta.IDCliente, venta.Fecha, venta.Total) VALUES (idfolio, idcliente, fecha, total);
 END$$
 
@@ -330,33 +329,6 @@ CREATE TABLE `devolucion` (
   `IDPedido` bigint(20) NOT NULL,
   `Fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `folio_devolucion`
---
-
-CREATE TABLE `folio_devolucion` (
-  `IDFolio` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `folio_venta`
---
-
-CREATE TABLE `folio_venta` (
-  `IDFolio` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `folio_venta`
---
-
-INSERT INTO `folio_venta` (`IDFolio`) VALUES
-(1);
 
 -- --------------------------------------------------------
 
@@ -742,32 +714,8 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`IDPedido`, `IDModelo`, `IDCliente`, `Color`, `Talla`, `Fecha`, `Llego`, `Vendido`) VALUES
-(2, '115', 1, 'VERDE', '18', '2020-10-19 17:13:56', b'0', b'0'),
-(12, '2', 31, 'AMARILLLO', '17', '2020-10-19 10:57:49', b'0', b'0'),
-(13, '1', 31, 'ROJO', '18', '2020-10-19 10:57:49', b'0', b'0'),
-(18, '135', 100, 'AMARILLLO', 'XG', '2021-01-12 16:46:20', b'0', b'0'),
-(20, '109', 100, 'NEGRO', 'M', '2021-01-12 16:46:20', b'0', b'0'),
-(21, '200', 100, 'VERDE', '18', '2021-01-12 16:46:20', b'0', b'0'),
-(22, '109', 100, 'AMARILLLO', 'XG', '2021-01-12 16:46:20', b'0', b'0'),
-(23, '135', 93, 'MORADO', '18', '2021-01-12 16:47:09', b'0', b'0'),
-(24, '159', 93, 'AMARILLLO', '22', '2021-01-12 16:47:09', b'0', b'0'),
-(25, '214', 93, 'AZUL', 'M', '2021-01-12 16:47:09', b'0', b'0'),
-(28, '353', 87, 'NEGRO', 'XG', '2021-01-12 16:47:57', b'0', b'0'),
-(29, '376', 87, 'NEGRO', '22', '2021-01-12 16:47:57', b'0', b'0'),
-(30, '95184', 87, 'AZUL', '22', '2021-01-12 16:47:57', b'0', b'0'),
-(31, '4', 67, 'AMARILLLO', '17', '2021-01-12 16:49:00', b'0', b'0'),
-(32, '3', 67, 'AZUL', '18', '2021-01-12 16:49:00', b'1', b'0'),
-(33, '8', 67, 'AMARILLLO', '22', '2021-01-12 16:49:00', b'1', b'0'),
-(34, '95184', 67, 'VERDE', '17', '2021-01-12 16:49:00', b'0', b'0'),
-(35, '4', 67, 'VERDE', '17', '2021-01-12 16:49:00', b'0', b'0'),
-(36, '291', 67, 'ROJO', '18', '2021-01-12 16:49:00', b'1', b'0'),
-(37, '111', 32, 'MORADO', 'CH', '2021-01-12 16:50:09', b'1', b'0'),
-(38, '132', 32, 'ROJO', 'CH', '2021-01-12 16:50:09', b'1', b'0'),
-(39, '152', 32, 'ROJO', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
-(40, '211', 32, 'TURQUESA', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
-(41, '182', 32, 'VERDE', 'CH', '2021-01-12 16:50:09', b'0', b'0'),
-(53, '108', 101, 'TURQUESA', 'XG', '2021-02-01 10:29:49', b'1', b'1'),
-(54, '131', 101, 'RUBY', 'M', '2021-02-01 10:29:49', b'1', b'1');
+(55, '104', 101, '', '', '2021-02-01 22:17:49', b'1', b'1'),
+(56, '130', 101, '', '', '2021-02-01 22:17:49', b'1', b'1');
 
 -- --------------------------------------------------------
 
@@ -820,7 +768,6 @@ INSERT INTO `usuario` (`IDUsuario`, `Nombre`, `Contrasena`, `EsAdmin`) VALUES
 --
 
 CREATE TABLE `venta` (
-  `IDVenta` bigint(20) NOT NULL,
   `IDFolio` bigint(11) NOT NULL,
   `IDCliente` bigint(20) NOT NULL,
   `Fecha` datetime NOT NULL,
@@ -831,8 +778,8 @@ CREATE TABLE `venta` (
 -- Volcado de datos para la tabla `venta`
 --
 
-INSERT INTO `venta` (`IDVenta`, `IDFolio`, `IDCliente`, `Fecha`, `Total`) VALUES
-(26, 1, 101, '2021-02-01 10:31:38', '1645.45');
+INSERT INTO `venta` (`IDFolio`, `IDCliente`, `Fecha`, `Total`) VALUES
+(1, 101, '2021-02-01 22:37:12', '1562.70');
 
 -- --------------------------------------------------------
 
@@ -842,7 +789,7 @@ INSERT INTO `venta` (`IDVenta`, `IDFolio`, `IDCliente`, `Fecha`, `Total`) VALUES
 
 CREATE TABLE `venta_pedidos` (
   `IDVentaPedido` bigint(20) NOT NULL,
-  `IDVenta` bigint(20) NOT NULL,
+  `IDFolio` bigint(20) NOT NULL,
   `IDPedido` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -868,18 +815,6 @@ ALTER TABLE `color`
 ALTER TABLE `devolucion`
   ADD PRIMARY KEY (`IDDevolucion`),
   ADD KEY `IDPedido` (`IDPedido`);
-
---
--- Indices de la tabla `folio_devolucion`
---
-ALTER TABLE `folio_devolucion`
-  ADD PRIMARY KEY (`IDFolio`);
-
---
--- Indices de la tabla `folio_venta`
---
-ALTER TABLE `folio_venta`
-  ADD PRIMARY KEY (`IDFolio`);
 
 --
 -- Indices de la tabla `marca`
@@ -918,16 +853,14 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `venta`
 --
 ALTER TABLE `venta`
-  ADD PRIMARY KEY (`IDVenta`),
-  ADD KEY `IDFolio` (`IDFolio`),
+  ADD PRIMARY KEY (`IDFolio`),
   ADD KEY `IDCliente` (`IDCliente`);
 
 --
 -- Indices de la tabla `venta_pedidos`
 --
 ALTER TABLE `venta_pedidos`
-  ADD KEY `IDPedido` (`IDPedido`),
-  ADD KEY `IDVenta` (`IDVenta`);
+  ADD KEY `IDPedido` (`IDPedido`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -952,16 +885,10 @@ ALTER TABLE `devolucion`
   MODIFY `IDDevolucion` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `folio_devolucion`
---
-ALTER TABLE `folio_devolucion`
-  MODIFY `IDFolio` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `IDPedido` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de la tabla `talla`
@@ -974,12 +901,6 @@ ALTER TABLE `talla`
 --
 ALTER TABLE `usuario`
   MODIFY `IDUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `venta`
---
-ALTER TABLE `venta`
-  MODIFY `IDVenta` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
@@ -1008,15 +929,13 @@ ALTER TABLE `pedidos`
 -- Filtros para la tabla `venta`
 --
 ALTER TABLE `venta`
-  ADD CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`IDFolio`) REFERENCES `folio_venta` (`IDFolio`),
   ADD CONSTRAINT `venta_ibfk_2` FOREIGN KEY (`IDCliente`) REFERENCES `clientes` (`IDCliente`);
 
 --
 -- Filtros para la tabla `venta_pedidos`
 --
 ALTER TABLE `venta_pedidos`
-  ADD CONSTRAINT `venta_pedidos_ibfk_1` FOREIGN KEY (`IDPedido`) REFERENCES `pedidos` (`IDPedido`),
-  ADD CONSTRAINT `venta_pedidos_ibfk_2` FOREIGN KEY (`IDVenta`) REFERENCES `venta` (`IDVenta`);
+  ADD CONSTRAINT `venta_pedidos_ibfk_1` FOREIGN KEY (`IDPedido`) REFERENCES `pedidos` (`IDPedido`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
