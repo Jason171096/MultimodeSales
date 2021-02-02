@@ -18,7 +18,7 @@ namespace MultimodeSales
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formulario());
+            Application.Run(new Ticket());
         }
     }
 }

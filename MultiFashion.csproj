@@ -172,14 +172,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControl1.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Componentes\UCBarra.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl1.Designer.cs">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
+    <Compile Include="Componentes\UCBarra.Designer.cs">
+      <DependentUpon>UCBarra.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlatButton.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Componentes\UCcomboBoxCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\UCcomboBoxCliente.Designer.cs">
+      <DependentUpon>UCcomboBoxCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Programacion\CBarraSuperior.cs" />
     <Compile Include="Programacion\CVenta.cs" />
@@ -204,12 +207,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Cliente.cs">
       <SubType>Form</SubType>
@@ -309,11 +306,8 @@
     <Compile Include="Vistas\Ventas\DialogVenta.Designer.cs">
       <DependentUpon>DialogVenta.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomControl1.resx">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Componentes\UCcomboBoxCliente.resx">
+      <DependentUpon>UCcomboBoxCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>

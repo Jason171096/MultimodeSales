@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MultimodeSales
+namespace MultimodeSales.Componentes
 {
-    public partial class CustomControl1 : Control
+    public partial class UCBarra : UserControl
     {
-        public CustomControl1()
+        public UCBarra()
         {
             InitializeComponent();
-        }
-
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
         }
     }
 }

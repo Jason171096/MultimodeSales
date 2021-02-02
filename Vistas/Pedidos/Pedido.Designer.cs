@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.IDPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDModelo = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -39,7 +39,6 @@
             this.IDTalla = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboxCliente = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnAgregarColorTalla = new RoundButton.RoundButton();
             this.rbtnAgregarModelo = new RoundButton.RoundButton();
@@ -51,6 +50,8 @@
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.rbtnCancelar = new RoundButton.RoundButton();
             this.rbtnFinalizarPedido = new RoundButton.RoundButton();
+            this.cboxCliente = new System.Windows.Forms.ComboBox();
+            this.UCcboxCliente = new MultimodeSales.Componentes.UCcomboBoxCliente();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,14 +68,14 @@
             this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedido.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPedido.ColumnHeadersHeight = 50;
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -88,22 +89,22 @@
             this.dgvPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dgvPedido.Location = new System.Drawing.Point(12, 164);
             this.dgvPedido.Name = "dgvPedido";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedido.RowHeadersVisible = false;
             this.dgvPedido.RowHeadersWidth = 30;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPedido.RowTemplate.Height = 30;
             this.dgvPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPedido.Size = new System.Drawing.Size(1028, 431);
@@ -167,18 +168,6 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Cliente:";
             // 
-            // cboxCliente
-            // 
-            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(101, 46);
-            this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(513, 32);
-            this.cboxCliente.TabIndex = 53;
-            this.cboxCliente.SelectedIndexChanged += new System.EventHandler(this.cboxCliente_SelectedIndexChanged);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtnAgregarColorTalla);
@@ -225,8 +214,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.UCcboxCliente);
             this.groupBox2.Controls.Add(this.cboxCliente);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(11, 52);
             this.groupBox2.Name = "groupBox2";
@@ -329,6 +319,26 @@
             this.rbtnFinalizarPedido.UseVisualStyleBackColor = true;
             this.rbtnFinalizarPedido.Click += new System.EventHandler(this.rbtnFinalizarPedido_Click);
             // 
+            // cboxCliente
+            // 
+            this.cboxCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.cboxCliente.FormattingEnabled = true;
+            this.cboxCliente.Location = new System.Drawing.Point(3, 28);
+            this.cboxCliente.Name = "cboxCliente";
+            this.cboxCliente.Size = new System.Drawing.Size(640, 32);
+            this.cboxCliente.TabIndex = 55;
+            // 
+            // UCcboxCliente
+            // 
+            this.UCcboxCliente.Location = new System.Drawing.Point(104, 60);
+            this.UCcboxCliente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.UCcboxCliente.Name = "UCcboxCliente";
+            this.UCcboxCliente.Size = new System.Drawing.Size(533, 34);
+            this.UCcboxCliente.TabIndex = 56;
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,7 +375,6 @@
         private System.Windows.Forms.PictureBox picMinimize;
         private System.Windows.Forms.DataGridView dgvPedido;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboxCliente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
@@ -379,5 +388,8 @@
         private RoundButton.RoundButton rbtnAgregarColorTalla;
         private RoundButton.RoundButton rbtnCancelar;
         private RoundButton.RoundButton rbtnFinalizarPedido;
+        private Componentes.UCcomboBoxCliente uCcomboBoxCliente;
+        public System.Windows.Forms.ComboBox cboxCliente;
+        private Componentes.UCcomboBoxCliente UCcboxCliente;
     }
 }
