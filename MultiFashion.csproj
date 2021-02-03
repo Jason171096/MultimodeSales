@@ -79,10 +79,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Barra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Referencias\Barra.dll</HintPath>
-    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -172,11 +168,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componentes\UCBarra.cs">
+    <Compile Include="Componentes\UCBarraSuperior.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Componentes\UCBarra.Designer.cs">
-      <DependentUpon>UCBarra.cs</DependentUpon>
+    <Compile Include="Componentes\UCBarraSuperior.Designer.cs">
+      <DependentUpon>UCBarraSuperior.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\UCcomboBoxCliente.cs">
       <SubType>UserControl</SubType>
@@ -306,6 +302,9 @@
     <Compile Include="Vistas\Ventas\DialogVenta.Designer.cs">
       <DependentUpon>DialogVenta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Componentes\UCBarraSuperior.resx">
+      <DependentUpon>UCBarraSuperior.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\UCcomboBoxCliente.resx">
       <DependentUpon>UCcomboBoxCliente.cs</DependentUpon>
     </EmbeddedResource>

@@ -30,19 +30,9 @@ namespace MultimodeSales.Vistas.Ventas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
-            this.barraSuperior = new Barra.BarraSuperior();
             this.roundButton1 = new RoundButton.RoundButton();
+            this.UCBarraSuperior = new MultimodeSales.Componentes.UCBarraSuperior();
             this.SuspendLayout();
-            // 
-            // barraSuperior
-            // 
-            this.barraSuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("barraSuperior.BackgroundImage")));
-            this.barraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barraSuperior.Location = new System.Drawing.Point(0, 0);
-            this.barraSuperior.Name = "barraSuperior";
-            this.barraSuperior.Size = new System.Drawing.Size(1016, 51);
-            this.barraSuperior.TabIndex = 0;
-            this.barraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barraSuperior_MouseMove);
             // 
             // roundButton1
             // 
@@ -65,14 +55,23 @@ namespace MultimodeSales.Vistas.Ventas
             this.roundButton1.UseMnemonic = false;
             this.roundButton1.UseVisualStyleBackColor = false;
             // 
+            // UCBarraSuperior
+            // 
+            this.UCBarraSuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UCBarraSuperior.BackgroundImage")));
+            this.UCBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UCBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.UCBarraSuperior.Name = "UCBarraSuperior";
+            this.UCBarraSuperior.Size = new System.Drawing.Size(1016, 48);
+            this.UCBarraSuperior.TabIndex = 2;
+            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(1016, 571);
+            this.Controls.Add(this.UCBarraSuperior);
             this.Controls.Add(this.roundButton1);
-            this.Controls.Add(this.barraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ticket";
             this.Text = "Ticket";
@@ -81,8 +80,7 @@ namespace MultimodeSales.Vistas.Ventas
         }
 
         #endregion
-
-        private Barra.BarraSuperior barraSuperior;
         private RoundButton.RoundButton roundButton1;
+        private Componentes.UCBarraSuperior UCBarraSuperior;
     }
 }

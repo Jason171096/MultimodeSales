@@ -4,8 +4,6 @@ using MultimodeSales.Programacion.Modelo;
 using MultimodeSales.Programacion.Utilerias;
 using MultimodeSales.Vistas.Modelos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -42,11 +40,11 @@ namespace MultimodeSales.Vistas
         private void Clientes()
         {
             DataTable dt = cliente.VerClientes();
-            cboxCliente.DisplayMember = "Nombre";
-            cboxCliente.ValueMember = "IDCliente";
+            UCcboxCliente.cboxCliente.DisplayMember = "Nombre";
+            UCcboxCliente.cboxCliente.ValueMember = "IDCliente";
             dt.Rows.Add(0, "--Seleccione el cliente--");
-            cboxCliente.DataSource = dt;
-            cboxCliente.SelectedIndex = cboxCliente.Items.Count - 1;
+            UCcboxCliente.cboxCliente.DataSource = dt;
+            UCcboxCliente.cboxCliente.SelectedIndex = UCcboxCliente.cboxCliente.Items.Count - 1;
         }
         private void Modelos()
         {
@@ -83,15 +81,15 @@ namespace MultimodeSales.Vistas
         }
         private void rbtnFinalizarPedido_Click(object sender, EventArgs e)
         {
-            int index = cboxCliente.Items.Count - 1;
-            if (index != cboxCliente.SelectedIndex)
+            int index = UCcboxCliente.cboxCliente.Items.Count - 1;
+            if (index != UCcboxCliente.cboxCliente.SelectedIndex)
             {
                 foreach (DataGridViewRow rows in dgvPedido.Rows)
                 {
 
                     if (rows.Cells[1].Value + "" != "")
                     {
-                        pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
+                        pedido.AgregarPedido(rows.Cells[0].Value + "", rows.Cells[1].Value + "", UCcboxCliente.cboxCliente.SelectedValue + "", rows.Cells[3].Value + "", rows.Cells[4].Value + "");
                     }
                 }
                 CMsgBox.DisplayInfo("Pedido ingresado correctamente");
@@ -152,7 +150,7 @@ namespace MultimodeSales.Vistas
             if (SelectIndexChange)
             {
                 dgvPedido.Rows.Clear();
-                DataTable dt = pedido.CargarPedido(cboxCliente.SelectedValue + "");
+                DataTable dt = pedido.CargarPedido(UCcboxCliente.cboxCliente.SelectedValue + "");
                 int i = 0;
                 foreach (DataRow rows in dt.Rows)
                 {

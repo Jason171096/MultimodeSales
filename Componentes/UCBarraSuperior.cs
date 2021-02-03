@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MultimodeSales.Componentes
 {
-    public partial class UCBarra : UserControl
+    public partial class UCBarraSuperior : UserControl
     {
-        public UCBarra()
+        public UCBarraSuperior()
         {
             InitializeComponent();
         }

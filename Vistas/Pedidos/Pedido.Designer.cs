@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.IDPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDModelo = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -43,6 +43,7 @@
             this.rbtnAgregarColorTalla = new RoundButton.RoundButton();
             this.rbtnAgregarModelo = new RoundButton.RoundButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.UCcboxCliente = new MultimodeSales.Componentes.UCcomboBoxCliente();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelBarras = new System.Windows.Forms.Panel();
             this.lbPedido = new System.Windows.Forms.Label();
@@ -50,8 +51,6 @@
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.rbtnCancelar = new RoundButton.RoundButton();
             this.rbtnFinalizarPedido = new RoundButton.RoundButton();
-            this.cboxCliente = new System.Windows.Forms.ComboBox();
-            this.UCcboxCliente = new MultimodeSales.Componentes.UCcomboBoxCliente();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,14 +67,14 @@
             this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedido.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPedido.ColumnHeadersHeight = 50;
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -89,22 +88,22 @@
             this.dgvPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.dgvPedido.Location = new System.Drawing.Point(12, 164);
             this.dgvPedido.Name = "dgvPedido";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPedido.RowHeadersVisible = false;
             this.dgvPedido.RowHeadersWidth = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPedido.RowTemplate.Height = 30;
             this.dgvPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPedido.Size = new System.Drawing.Size(1028, 431);
@@ -215,7 +214,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.UCcboxCliente);
-            this.groupBox2.Controls.Add(this.cboxCliente);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.groupBox2.Location = new System.Drawing.Point(11, 52);
@@ -224,6 +222,14 @@
             this.groupBox2.TabIndex = 55;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clientes";
+            // 
+            // UCcboxCliente
+            // 
+            this.UCcboxCliente.Location = new System.Drawing.Point(98, 46);
+            this.UCcboxCliente.Margin = new System.Windows.Forms.Padding(6);
+            this.UCcboxCliente.Name = "UCcboxCliente";
+            this.UCcboxCliente.Size = new System.Drawing.Size(539, 34);
+            this.UCcboxCliente.TabIndex = 56;
             // 
             // dataGridViewImageColumn1
             // 
@@ -319,26 +325,6 @@
             this.rbtnFinalizarPedido.UseVisualStyleBackColor = true;
             this.rbtnFinalizarPedido.Click += new System.EventHandler(this.rbtnFinalizarPedido_Click);
             // 
-            // cboxCliente
-            // 
-            this.cboxCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(3, 28);
-            this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(640, 32);
-            this.cboxCliente.TabIndex = 55;
-            // 
-            // UCcboxCliente
-            // 
-            this.UCcboxCliente.Location = new System.Drawing.Point(104, 60);
-            this.UCcboxCliente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.UCcboxCliente.Name = "UCcboxCliente";
-            this.UCcboxCliente.Size = new System.Drawing.Size(533, 34);
-            this.UCcboxCliente.TabIndex = 56;
-            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +375,6 @@
         private RoundButton.RoundButton rbtnCancelar;
         private RoundButton.RoundButton rbtnFinalizarPedido;
         private Componentes.UCcomboBoxCliente uCcomboBoxCliente;
-        public System.Windows.Forms.ComboBox cboxCliente;
         private Componentes.UCcomboBoxCliente UCcboxCliente;
     }
 }

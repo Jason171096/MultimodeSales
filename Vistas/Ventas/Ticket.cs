@@ -23,10 +23,12 @@ namespace MultimodeSales.Vistas.Ventas
             printButton.Click += new EventHandler(printButton_Click);
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
             this.Controls.Add(printButton);
-            barraSuperior.picMinimize.Click += new EventHandler(MinimizedClick);
-            barraSuperior.picClose.Click += new EventHandler(CloseClick);
-            barraSuperior.lbTitle.Text = "Estas son las purebas deque si";
-            barraSuperior.panelTitle.Width = barraSuperior.lbTitle.Width + 10;
+            UCBarraSuperior.picMinimize.Click += new EventHandler(MinimizedClick);
+            UCBarraSuperior.picClose.Click += new EventHandler(CloseClick);
+            UCBarraSuperior.MouseMove += new MouseEventHandler(MouseMove);
+            UCBarraSuperior.lbTitle.MouseMove += new MouseEventHandler(MouseMove);
+            UCBarraSuperior.lbTitle.Text = "Estas son las purebas deque si";
+            UCBarraSuperior.panelTitle.Width = UCBarraSuperior.lbTitle.Width + 10;
         }
         
         void printButton_Click(object sender, EventArgs e)
@@ -46,14 +48,13 @@ namespace MultimodeSales.Vistas.Ventas
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
         }
 
-        private void printDocument1_PrintPage(Object sender,
-               PrintPageEventArgs e)
+        private void printDocument1_PrintPage(Object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
         private void MinimizedClick(object sender, EventArgs e)
         {
-            WindowState = CBarraSuperior.Minimized();
+            WindowState = FormWindowState.Minimized;
         }
         private void CloseClick(object sender, EventArgs e)
         {
@@ -71,11 +72,6 @@ namespace MultimodeSales.Vistas.Ventas
                 Left = Left + (e.X - MX);
                 Top = Top + (e.Y - MY);
             }
-        }
-
-        private void barraSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMove(sender, e);
         }
     }
 }
