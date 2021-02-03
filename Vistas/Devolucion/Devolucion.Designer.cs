@@ -45,38 +45,40 @@ namespace MultimodeSales.Vistas
             this.mtDivider = new MaterialSkin.Controls.MaterialDivider();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboxCliente = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.checkCambioModelo = new MaterialSkin.Controls.MaterialCheckBox();
-            this.dgvPedido = new System.Windows.Forms.DataGridView();
-            this.IDPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDModelo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.IDMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDColor = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.IDTalla = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvDevolucion = new System.Windows.Forms.DataGridView();
             this.gBoxCambiar = new System.Windows.Forms.GroupBox();
             this.roundButton1 = new RoundButton.RoundButton();
             this.gBoxCambio = new System.Windows.Forms.GroupBox();
             this.roundButton2 = new RoundButton.RoundButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvDevolucion2 = new System.Windows.Forms.DataGridView();
             this.rbtnAceptar = new RoundButton.RoundButton();
             this.rbtnCancelar = new RoundButton.RoundButton();
             this.rbtnBuscarFolio = new RoundButton.RoundButton();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDTalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.uCcomboBoxCliente1 = new MultimodeSales.Componentes.UCcomboBoxCliente();
             this.panelBarras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion)).BeginInit();
             this.gBoxCambiar.SuspendLayout();
             this.gBoxCambio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBarras
@@ -175,8 +177,8 @@ namespace MultimodeSales.Vistas
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.uCcomboBoxCliente1);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cboxCliente);
             this.groupBox2.Controls.Add(this.txtIDFolio);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -197,17 +199,6 @@ namespace MultimodeSales.Vistas
             this.label4.TabIndex = 41;
             this.label4.Text = "Cliente:";
             // 
-            // cboxCliente
-            // 
-            this.cboxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.cboxCliente.FormattingEnabled = true;
-            this.cboxCliente.Location = new System.Drawing.Point(89, 31);
-            this.cboxCliente.Name = "cboxCliente";
-            this.cboxCliente.Size = new System.Drawing.Size(405, 32);
-            this.cboxCliente.TabIndex = 53;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SlateBlue;
@@ -225,7 +216,7 @@ namespace MultimodeSales.Vistas
             // 
             this.checkCambioModelo.AutoSize = true;
             this.checkCambioModelo.Depth = 0;
-            this.checkCambioModelo.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkCambioModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.checkCambioModelo.Location = new System.Drawing.Point(666, 147);
             this.checkCambioModelo.Margin = new System.Windows.Forms.Padding(0);
             this.checkCambioModelo.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -238,11 +229,13 @@ namespace MultimodeSales.Vistas
             this.checkCambioModelo.UseVisualStyleBackColor = true;
             this.checkCambioModelo.CheckedChanged += new System.EventHandler(this.checkCambioModelo_CheckedChanged);
             // 
-            // dgvPedido
+            // dgvDevolucion
             // 
-            this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPedido.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dgvPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDevolucion.AllowUserToAddRows = false;
+            this.dgvDevolucion.AllowUserToDeleteRows = false;
+            this.dgvDevolucion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDevolucion.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvDevolucion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -250,20 +243,22 @@ namespace MultimodeSales.Vistas
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPedido.ColumnHeadersHeight = 50;
-            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDPedido,
+            this.dgvDevolucion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDevolucion.ColumnHeadersHeight = 50;
+            this.dgvDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDevolucion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
             this.IDModelo,
             this.IDMarca,
             this.IDColor,
             this.IDTalla,
+            this.Column1,
             this.Eliminar});
-            this.dgvPedido.EnableHeadersVisualStyles = false;
-            this.dgvPedido.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgvPedido.Location = new System.Drawing.Point(8, 62);
-            this.dgvPedido.Name = "dgvPedido";
+            this.dgvDevolucion.EnableHeadersVisualStyles = false;
+            this.dgvDevolucion.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dgvDevolucion.Location = new System.Drawing.Point(8, 62);
+            this.dgvDevolucion.Name = "dgvDevolucion";
+            this.dgvDevolucion.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -271,69 +266,24 @@ namespace MultimodeSales.Vistas
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPedido.RowHeadersVisible = false;
-            this.dgvPedido.RowHeadersWidth = 30;
+            this.dgvDevolucion.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDevolucion.RowHeadersVisible = false;
+            this.dgvDevolucion.RowHeadersWidth = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dgvPedido.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPedido.RowTemplate.Height = 30;
-            this.dgvPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvPedido.Size = new System.Drawing.Size(850, 150);
-            this.dgvPedido.TabIndex = 63;
-            // 
-            // IDPedido
-            // 
-            this.IDPedido.HeaderText = "Pedido";
-            this.IDPedido.Name = "IDPedido";
-            // 
-            // IDModelo
-            // 
-            this.IDModelo.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.IDModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IDModelo.HeaderText = "Modelo";
-            this.IDModelo.Name = "IDModelo";
-            this.IDModelo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IDModelo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // IDMarca
-            // 
-            this.IDMarca.HeaderText = "Marca";
-            this.IDMarca.Name = "IDMarca";
-            // 
-            // IDColor
-            // 
-            this.IDColor.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.IDColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IDColor.HeaderText = "Color";
-            this.IDColor.Name = "IDColor";
-            this.IDColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IDColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // IDTalla
-            // 
-            this.IDTalla.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.IDTalla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IDTalla.HeaderText = "Talla";
-            this.IDTalla.Name = "IDTalla";
-            this.IDTalla.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IDTalla.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::MultimodeSales.Properties.Resources.basura24px;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvDevolucion.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDevolucion.RowTemplate.Height = 30;
+            this.dgvDevolucion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDevolucion.Size = new System.Drawing.Size(850, 150);
+            this.dgvDevolucion.TabIndex = 63;
             // 
             // gBoxCambiar
             // 
             this.gBoxCambiar.Controls.Add(this.roundButton1);
-            this.gBoxCambiar.Controls.Add(this.dgvPedido);
+            this.gBoxCambiar.Controls.Add(this.dgvDevolucion);
             this.gBoxCambiar.Controls.Add(this.btnAgregarMarca);
             this.gBoxCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.gBoxCambiar.Location = new System.Drawing.Point(11, 180);
@@ -361,7 +311,7 @@ namespace MultimodeSales.Vistas
             // gBoxCambio
             // 
             this.gBoxCambio.Controls.Add(this.roundButton2);
-            this.gBoxCambio.Controls.Add(this.dataGridView1);
+            this.gBoxCambio.Controls.Add(this.dgvDevolucion2);
             this.gBoxCambio.Controls.Add(this.button3);
             this.gBoxCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.gBoxCambio.Location = new System.Drawing.Point(11, 423);
@@ -386,11 +336,13 @@ namespace MultimodeSales.Vistas
             this.roundButton2.TextColor = System.Drawing.Color.White;
             this.roundButton2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvDevolucion2
             // 
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDevolucion2.AllowUserToAddRows = false;
+            this.dgvDevolucion2.AllowUserToDeleteRows = false;
+            this.dgvDevolucion2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDevolucion2.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvDevolucion2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -398,20 +350,22 @@ namespace MultimodeSales.Vistas
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeight = 50;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.dgvDevolucion2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDevolucion2.ColumnHeadersHeight = 50;
+            this.dgvDevolucion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDevolucion2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewComboBoxColumn2,
             this.dataGridViewComboBoxColumn3,
+            this.Column2,
             this.dataGridViewImageColumn1});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 62);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dgvDevolucion2.EnableHeadersVisualStyles = false;
+            this.dgvDevolucion2.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.dgvDevolucion2.Location = new System.Drawing.Point(5, 62);
+            this.dgvDevolucion2.Name = "dgvDevolucion2";
+            this.dgvDevolucion2.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -419,64 +373,19 @@ namespace MultimodeSales.Vistas
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 30;
+            this.dgvDevolucion2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDevolucion2.RowHeadersVisible = false;
+            this.dgvDevolucion2.RowHeadersWidth = 30;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(850, 150);
-            this.dataGridView1.TabIndex = 64;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Pedido";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewComboBoxColumn1
-            // 
-            this.dataGridViewComboBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewComboBoxColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn1.HeaderText = "Modelo";
-            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
-            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewComboBoxColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn2.HeaderText = "Color";
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewComboBoxColumn3
-            // 
-            this.dataGridViewComboBoxColumn3.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewComboBoxColumn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn3.HeaderText = "Talla";
-            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
-            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
-            this.dataGridViewImageColumn1.Image = global::MultimodeSales.Properties.Resources.basura24px;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvDevolucion2.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDevolucion2.RowTemplate.Height = 30;
+            this.dgvDevolucion2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvDevolucion2.Size = new System.Drawing.Size(850, 150);
+            this.dgvDevolucion2.TabIndex = 64;
             // 
             // rbtnAceptar
             // 
@@ -524,6 +433,112 @@ namespace MultimodeSales.Vistas
             this.rbtnBuscarFolio.UseVisualStyleBackColor = true;
             this.rbtnBuscarFolio.Click += new System.EventHandler(this.rbtnBuscarFolio_Click);
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Pedido";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // dataGridViewComboBoxColumn1
+            // 
+            this.dataGridViewComboBoxColumn1.HeaderText = "Modelo";
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.ReadOnly = true;
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "Color";
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.ReadOnly = true;
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewComboBoxColumn3
+            // 
+            this.dataGridViewComboBoxColumn3.HeaderText = "Talla";
+            this.dataGridViewComboBoxColumn3.Name = "dataGridViewComboBoxColumn3";
+            this.dataGridViewComboBoxColumn3.ReadOnly = true;
+            this.dataGridViewComboBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PrecioCliente";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn1.Image = global::MultimodeSales.Properties.Resources.basura24px;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Pedido";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // IDModelo
+            // 
+            this.IDModelo.HeaderText = "Modelo";
+            this.IDModelo.Name = "IDModelo";
+            this.IDModelo.ReadOnly = true;
+            this.IDModelo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // IDMarca
+            // 
+            this.IDMarca.HeaderText = "Marca";
+            this.IDMarca.Name = "IDMarca";
+            this.IDMarca.ReadOnly = true;
+            // 
+            // IDColor
+            // 
+            this.IDColor.HeaderText = "Color";
+            this.IDColor.Name = "IDColor";
+            this.IDColor.ReadOnly = true;
+            this.IDColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // IDTalla
+            // 
+            this.IDTalla.HeaderText = "Talla";
+            this.IDTalla.Name = "IDTalla";
+            this.IDTalla.ReadOnly = true;
+            this.IDTalla.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "PrecioCliente";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::MultimodeSales.Properties.Resources.basura24px;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // uCcomboBoxCliente1
+            // 
+            this.uCcomboBoxCliente1.Location = new System.Drawing.Point(92, 31);
+            this.uCcomboBoxCliente1.Margin = new System.Windows.Forms.Padding(6);
+            this.uCcomboBoxCliente1.Name = "uCcomboBoxCliente1";
+            this.uCcomboBoxCliente1.Size = new System.Drawing.Size(410, 34);
+            this.uCcomboBoxCliente1.TabIndex = 42;
+            // 
             // Devolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,10 +565,10 @@ namespace MultimodeSales.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion)).EndInit();
             this.gBoxCambiar.ResumeLayout(false);
             this.gBoxCambio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,29 +586,31 @@ namespace MultimodeSales.Vistas
         private MaterialSkin.Controls.MaterialDivider mtDivider;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboxCliente;
         private System.Windows.Forms.Button button3;
         private MaterialSkin.Controls.MaterialCheckBox checkCambioModelo;
-        private System.Windows.Forms.DataGridView dgvPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPedido;
-        private System.Windows.Forms.DataGridViewComboBoxColumn IDModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDMarca;
-        private System.Windows.Forms.DataGridViewComboBoxColumn IDColor;
-        private System.Windows.Forms.DataGridViewComboBoxColumn IDTalla;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridView dgvDevolucion;
         private System.Windows.Forms.GroupBox gBoxCambiar;
         private System.Windows.Forms.GroupBox gBoxCambio;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridView dgvDevolucion2;
         private RoundButton.RoundButton roundButton1;
         private RoundButton.RoundButton roundButton2;
         private RoundButton.RoundButton rbtnAceptar;
         private RoundButton.RoundButton rbtnCancelar;
         private RoundButton.RoundButton rbtnBuscarFolio;
+        private Componentes.UCcomboBoxCliente uCcomboBoxCliente1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDTalla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

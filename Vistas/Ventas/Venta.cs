@@ -150,7 +150,7 @@ namespace MultimodeSales.Vistas.Ventas
                             {
                                 foreach (DataGridViewRow rows in dgvVentasPedido.Rows)
                                 {
-                                    venta.ventaPedido(rows.Cells[0].Value.ToString());
+                                    venta.ventaPedido(txtFolio.Text, rows.Cells[0].Value.ToString());
                                 }
                                 txtFolio.Text = "";
                                 CargarPedidos(idcliente);
@@ -208,6 +208,10 @@ namespace MultimodeSales.Vistas.Ventas
                 darformatoTabla();
             }
         }
+        private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
         #region Panel Barras
         private void lbVentas_MouseMove(object sender, MouseEventArgs e)
         {
@@ -216,7 +220,8 @@ namespace MultimodeSales.Vistas.Ventas
 
         private void panelVentas_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMove(sender, e);
+            CBarraSuperior.ReleaseCapture();
+            CBarraSuperior.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private new void MouseMove(object sender, MouseEventArgs e)
@@ -246,9 +251,6 @@ namespace MultimodeSales.Vistas.Ventas
 
         #endregion
 
-        private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.SoloNumeros(e);
-        }
+        
     }
 }

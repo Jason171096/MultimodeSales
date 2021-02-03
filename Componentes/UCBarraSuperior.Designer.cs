@@ -106,6 +106,7 @@ namespace MultimodeSales.Componentes
             this.Controls.Add(this.panel2);
             this.Name = "UCBarraSuperior";
             this.Size = new System.Drawing.Size(720, 48);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCBarraSuperior_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();

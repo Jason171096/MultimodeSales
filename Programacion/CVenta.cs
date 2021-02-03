@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using MultimodeSales.Programacion.Modelo;
 
 namespace MultimodeSales
 {
@@ -16,7 +17,8 @@ namespace MultimodeSales
 
         public string IDVenta { get => idVenta; set => idVenta = value; }
         Conexion conexion = new Conexion();
-        
+        MySqlDataAdapter da = new MySqlDataAdapter();
+
         public void ventaFolio(string pIDFolio, string pIDCliente, DateTime pFecha, double pTotal)
         {
             conexion.OpenConnection();
@@ -43,14 +45,29 @@ namespace MultimodeSales
             return 0;
         }
 
-        public void ventaPedido(string pIDPedido)
+        public void ventaPedido(string pIDFolio, string pIDPedido)
         {
             conexion.OpenConnection();
             MySqlCommand cmd = new MySqlCommand("VentaPedido", conexion.GetConnection());
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
             cmd.Parameters.Add(new MySqlParameter("idpedido", pIDPedido));
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
+        }
+
+        public DataTable verVentaPedidoModelo(string pIDFolio)
+        {
+            DataTable dt = new DataTable();
+            conexion.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand("VerVentaPedidoModelo", conexion.GetConnection());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("idfolio", pIDFolio));
+            da.SelectCommand = cmd;
+            dt.Clear();
+            da.Fill(dt);
+            conexion.CloseConnection();
+            return dt;
         }
     }
 }

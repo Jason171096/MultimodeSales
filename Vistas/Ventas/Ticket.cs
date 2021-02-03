@@ -12,6 +12,7 @@ namespace MultimodeSales.Vistas.Ventas
 {
     public partial class Ticket : Form
     {
+
         private Button printButton = new Button();
         private PrintDocument printDocument1 = new PrintDocument();
         private int MX = 0;

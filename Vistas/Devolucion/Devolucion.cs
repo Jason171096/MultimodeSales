@@ -1,5 +1,7 @@
-﻿using MultimodeSales.Programacion.Utilerias;
+﻿using MultimodeSales.Programacion;
+using MultimodeSales.Programacion.Utilerias;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,9 +12,11 @@ namespace MultimodeSales.Vistas
         private int MX;
         private int MY;
         CVenta cVenta = new CVenta();
+        DataTable dt = new DataTable();
         public Devolucion()
         {
             InitializeComponent();
+            CDataGridView.FormattedDataGridView(dgvDevolucion);
             CRoundButton.FormattedRoundButtonAceptar(rbtnAceptar);
             CRoundButton.FormattedRoundButtonAceptar(rbtnBuscarFolio);
             CRoundButton.FormattedRoundButtonCancelar(rbtnCancelar);
@@ -48,7 +52,17 @@ namespace MultimodeSales.Vistas
             folio.ShowDialog();
             cVenta = folio.returnVenta();
             txtIDFolio.Text = cVenta.IDVenta;
+            dt = cVenta.verVentaPedidoModelo(cVenta.IDVenta);
+            foreach (DataRow rows in dt.Rows)
+            {
+                dgvDevolucion.Rows.Add(rows[0].ToString(), rows[1].ToString(), rows[2].ToString(), rows[3].ToString(), rows[4].ToString(), rows[5].ToString());
+            }
         }
+        private void darFormatoTabla()
+        {
+
+        }
+
         #region Panel Barras
         private void picMinimize_Click(object sender, EventArgs e)
         {
@@ -83,7 +97,6 @@ namespace MultimodeSales.Vistas
             }
         }
         #endregion
-
 
     }
 }
